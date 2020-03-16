@@ -15,12 +15,12 @@ imgflags?=-i
 all: install tests build
 
 # Build the TCCM model python library
-python: tccm/model.py
+python: tccm/tccm.py
 docs: docs/index.md
 shex: tccm.shex tccmn.shex tccm.shexj tccmn.shexj
 json-schema: json-schema/tccm.json
 
-build: python docs/index.md tccm.graphql gen-graphviz java context.jsonld contextn.jsonld \
+build: python docs/index.md tccm.graphql gen-graphviz java context.jsonld \
 json-schema/tccm.json tccm.owl tccm.shex tccm.ttl
 
 # TODO: Get this working
@@ -44,7 +44,7 @@ env.lock:
 # ~~~~~~~~~~~~~~~~~~~~
 # Python
 # ~~~~~~~~~~~~~~~~~~~~
-tccm/model.py: tccm.yaml env.lock
+tccm/tccm.py: tccm.yaml env.lock
 	pipenv run gen-py-classes $< > tmp.py && pipenv run python tmp.py &&  (pipenv run comparefiles tmp.py $@ && cp $@ $@-PREV && cp tmp.py $@); rm tmp.py
 
 
