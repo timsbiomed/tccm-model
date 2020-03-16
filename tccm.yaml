@@ -1,0 +1,153 @@
+id: https://hotecosystem.org/tccm
+name: tccm
+description: Terminology Core Common Model
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+prefixes:
+  ctslite: https://w3id.org/biolink/vocab/
+
+default_prefix: tccm
+default_range: string
+
+default_curi_maps:
+  - semweb_context
+
+types:
+  string:
+    uri: xsd:string
+    base: str
+    description: A character string
+
+  datetime:
+    uri: xsd:dateTime
+    repr: str
+    base: XSDDateTime
+    description: The combination of a date and time
+
+  naturalNumber:
+    uri: xsd:nonNegativeInteger
+    base: int
+    description: An integer
+
+  localIdentifier:
+    typeof: string
+    description: An identifier that uniquely references a class, individual, property, or other resource
+
+  namespaceIdentifier:
+    uri: xsd:NMTOKEN
+    base: str
+    description: An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)
+
+  uri:
+    uri: xsd:anyURI
+    base: URI
+    repr: str
+    description: A Universal Resource Identifier (URI) as defined in IETF RFC 3986
+
+  uriorcurie:
+    uri: xsd:anyURI
+    base: URIorCURIE
+    repr: str
+    description: a URI or a CURIE
+
+  designationRole:
+    typeof: string
+    notes:
+      - TODO this needs to be a enumerated list of values
+
+  contextReference:
+
+
+slots:
+
+  about:
+    range: uriorcurie
+    domain: entityDescription
+    identifier: true
+
+  code:
+    range: string
+    domain: entityDescription
+    required: true
+
+  alternateURI:
+    range: uriorcurie
+    domain: entityDescription
+    multivalued: true
+
+  designationRole:
+    domain: designation
+    range: designationRole
+    required: true
+
+  usageContext:
+    domain: designation
+    range: contextReference
+    multivalued: true
+
+  language:
+    domain: opaqueData
+    range: string
+
+  value:
+    domain: opaqueData
+    range: string
+    required: true
+
+  designation:
+    domain: entityDescription
+    range: designation
+    inlined: true
+
+classes:
+  opaqueData:
+    slots:
+      - value
+      - language
+
+  designation:
+    is_a: opaqueData
+    slots:
+      - designationRole
+      - usageContext
+      - value
+      - language
+
+  entityDescription:
+    slots:
+      - about
+      - code
+      - alternateURI
+      - designation
+
+
+
+#classes:
+#  named thing:
+#    description: "a databased entity or concept/class"
+#    slots:
+#      - id
+#      - name
+#      - category
+#
+#  entity description:
+#    is_a: named thing
+#    slots:
+#      - about
+#      - namespace
+#      - code
+#      - href
+#      - designation
+#
+#  value set:
+#    description: ''
+#    slots:
+#
+#  resolved value set:
+#    is_a: value set
+#
+#  iterable resolved value set:
+#    is_a: resolved value set
+#    slots:
+#      - resolution info
+#      - entry uri
