@@ -4,7 +4,7 @@ description: Terminology Core Common Model
 license: https://creativecommons.org/publicdomain/zero/1.0/
 
 prefixes:
-  ctslite: https://w3id.org/biolink/vocab/
+  tccm: https://hotecosystem.org/tccm
 
 default_prefix: tccm
 default_range: string
@@ -55,35 +55,31 @@ types:
     notes:
       - TODO this needs to be a enumerated list of values
 
-  contextReference:
+  persistentURI:
+    typeof: uriorcurie
 
+  localURI:
+    typeof: uriorcurie
+
+  changeSetURI:
+    typeof: persistentURI
+
+  documentURI:
+    typeof: persistentURI
+
+  externalURI:
+    typeof: persistentURI
+
+  serviceURI:
+    typeof: localURI
+
+  renderingURI:
+    typeof: localURI
+
+  directoryURI:
+    typeof: localURI
 
 slots:
-
-  about:
-    range: uriorcurie
-    domain: entityDescription
-    identifier: true
-
-  code:
-    range: string
-    domain: entityDescription
-    required: true
-
-  alternateURI:
-    range: uriorcurie
-    domain: entityDescription
-    multivalued: true
-
-  designationRole:
-    domain: designation
-    range: designationRole
-    required: true
-
-  usageContext:
-    domain: designation
-    range: contextReference
-    multivalued: true
 
   language:
     domain: opaqueData
@@ -94,10 +90,30 @@ slots:
     range: string
     required: true
 
-  designation:
-    domain: entityDescription
-    range: designation
-    inlined: true
+  name:
+    domain: nameAndMeaningReference
+    range: string
+    required: true
+
+  uri:
+    domain: nameAndMeaningReference
+    range: externalURI
+
+  href:
+    range: renderingURI
+
+  meaningHref:
+    range: renderingURI
+    alias: href
+
+  about:
+    domain: entityReference
+    range: persistentURI
+    required: true
+
+  code:
+    domain: entityReference
+    range: string
 
 classes:
   opaqueData:
@@ -105,22 +121,17 @@ classes:
       - value
       - language
 
-  designation:
-    is_a: opaqueData
+  nameAndMeaningReference:
     slots:
-      - designationRole
-      - usageContext
-      - value
-      - language
+      - name
+      - uri
+      - meaningHref
 
-  entityDescription:
+  entityReference:
     slots:
       - about
       - code
-      - alternateURI
-      - designation
-
-
+      - href
 
 #classes:
 #  named thing:
