@@ -1,0 +1,68 @@
+BASE <https://hotecosystem.org/tccm/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<https://hotecosystem.org/tccmString> xsd:string
+
+<https://hotecosystem.org/tccmDatetime> xsd:dateTime
+
+<https://hotecosystem.org/tccmNaturalNumber> xsd:nonNegativeInteger
+
+<https://hotecosystem.org/tccmLocalIdentifier> xsd:string
+
+<https://hotecosystem.org/tccmNamespaceIdentifier> xsd:NMTOKEN
+
+<https://hotecosystem.org/tccmUri> IRI
+
+<https://hotecosystem.org/tccmUriorcurie> IRI
+
+<https://hotecosystem.org/tccmDesignationRole> xsd:string
+
+<https://hotecosystem.org/tccmPersistentURI> IRI
+
+<https://hotecosystem.org/tccmLocalURI> IRI
+
+<https://hotecosystem.org/tccmChangeSetURI> IRI
+
+<https://hotecosystem.org/tccmDocumentURI> IRI
+
+<https://hotecosystem.org/tccmExternalURI> IRI
+
+<https://hotecosystem.org/tccmServiceURI> IRI
+
+<https://hotecosystem.org/tccmRenderingURI> IRI
+
+<https://hotecosystem.org/tccmDirectoryURI> IRI
+
+<https://hotecosystem.org/tccmEntityReference> CLOSED {
+    (  $<https://hotecosystem.org/tccmEntityReference_tes> (  <https://hotecosystem.org/tccmabout>
+          @<https://hotecosystem.org/tccmPersistentURI> ;
+          <https://hotecosystem.org/tccmcode> @<https://hotecosystem.org/tccmString> ? ;
+          <https://hotecosystem.org/tccmhref> @<https://hotecosystem.org/tccmRenderingURI> ?
+       ) ;
+       rdf:type [ <https://hotecosystem.org/tccmEntityReference> ] ?
+    )
+}
+
+<https://hotecosystem.org/tccmNameAndMeaningReference> CLOSED {
+    (  $<https://hotecosystem.org/tccmNameAndMeaningReference_tes> (  <https://hotecosystem.org/tccmname>
+          @<https://hotecosystem.org/tccmString> ;
+          <https://hotecosystem.org/tccmuri> @<https://hotecosystem.org/tccmExternalURI> ? ;
+          <https://hotecosystem.org/tccmhref> @<https://hotecosystem.org/tccmRenderingURI> ?
+       ) ;
+       rdf:type [ <https://hotecosystem.org/tccmNameAndMeaningReference> ] ?
+    )
+}
+
+<https://hotecosystem.org/tccmOpaqueData> CLOSED {
+    (  $<https://hotecosystem.org/tccmOpaqueData_tes> (  <https://hotecosystem.org/tccmvalue>
+          @<https://hotecosystem.org/tccmString> ;
+          <https://hotecosystem.org/tccmlanguage> @<https://hotecosystem.org/tccmString> ?
+       ) ;
+       rdf:type [ <https://hotecosystem.org/tccmOpaqueData> ] ?
+    )
+}
+
+
+

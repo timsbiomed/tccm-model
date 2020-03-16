@@ -1,0 +1,18 @@
+{
+   "_comments": "Auto generated from tccm.yaml by jsonldcontextgen.py version: 0.1.1\nGeneration date: 2020-03-16 09:29\nSchema: tccm\n\nid: https://hotecosystem.org/tccm\ndescription: Terminology Core Common Model\nlicense: https://creativecommons.org/publicdomain/zero/1.0/\n",
+   "@context": {
+      "type": "@type",
+      "tccm": "https://hotecosystem.org/tccm",
+      "@vocab": "https://hotecosystem.org/tccm",
+      "about": {
+         "@type": "@id"
+      },
+      "href": {
+         "@type": "@id"
+      },
+      "uri": {
+         "@type": "@id"
+      }
+   }
+}
+

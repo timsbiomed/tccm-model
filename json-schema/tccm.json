@@ -1,0 +1,80 @@
+{
+   "$id": "https://hotecosystem.org/tccm",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "definitions": {
+      "about": {
+         "type": "string"
+      },
+      "code": {
+         "type": "string"
+      },
+      "href": {
+         "type": "string"
+      },
+      "language": {
+         "type": "string"
+      },
+      "name": {
+         "type": "string"
+      },
+      "uri": {
+         "type": "string"
+      },
+      "value": {
+         "type": "string"
+      }
+   },
+   "properties": {
+      "EntityReference": {
+         "description": "",
+         "properties": {
+            "about": {
+               "required": true,
+               "type": "string"
+            },
+            "code": {
+               "type": "string"
+            },
+            "href": {
+               "type": "string"
+            }
+         },
+         "title": "EntityReference",
+         "type": "object"
+      },
+      "NameAndMeaningReference": {
+         "description": "",
+         "properties": {
+            "href": {
+               "type": "string"
+            },
+            "name": {
+               "required": true,
+               "type": "string"
+            },
+            "uri": {
+               "type": "string"
+            }
+         },
+         "title": "NameAndMeaningReference",
+         "type": "object"
+      },
+      "OpaqueData": {
+         "description": "",
+         "properties": {
+            "language": {
+               "type": "string"
+            },
+            "value": {
+               "required": true,
+               "type": "string"
+            }
+         },
+         "title": "OpaqueData",
+         "type": "object"
+      }
+   },
+   "title": "tccm",
+   "type": "object"
+}
+

@@ -1,0 +1,202 @@
+@prefix OIO: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix meta: <https://w3id.org/biolink/biolinkml/meta/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://hotecosystem.org/tccm> a owl:Ontology ;
+    rdfs:label "tccm" ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    skos:definition "Terminology Core Common Model" ;
+    meta:generation_date "2020-03-16 09:29" ;
+    meta:metamodel_version "1.4.3" ;
+    meta:source_file "tccm.yaml" ;
+    meta:source_file_date "Mon Mar 16 09:29:11 2020" ;
+    meta:source_file_size 2798 .
+
+meta:SubsetDefinition a owl:Class ;
+    rdfs:label "subset_definition" ;
+    skos:definition "the name and description of a subset" .
+
+meta:about a owl:AnnotationProperty,
+        meta:SlotDefinition ;
+    rdfs:label "about" ;
+    rdfs:domain meta:EntityReference ;
+    rdfs:range meta:persistentURI .
+
+meta:changeSetURI a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "changeSetURI" ;
+    rdfs:subClassOf meta:persistentURI .
+
+meta:code a owl:AnnotationProperty,
+        meta:SlotDefinition ;
+    rdfs:label "code" ;
+    rdfs:domain meta:EntityReference ;
+    rdfs:range meta:string .
+
+meta:datetime a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "datetime" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "The combination of a date and time" .
+
+meta:designationRole a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "designationRole" ;
+    rdfs:subClassOf meta:string ;
+    skos:editorialNote "TODO this needs to be a enumerated list of values" .
+
+meta:directoryURI a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "directoryURI" ;
+    rdfs:subClassOf meta:localURI .
+
+meta:documentURI a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "documentURI" ;
+    rdfs:subClassOf meta:persistentURI .
+
+meta:href a owl:AnnotationProperty,
+        meta:SlotDefinition ;
+    rdfs:label "href" ;
+    rdfs:range meta:renderingURI .
+
+meta:language a owl:AnnotationProperty,
+        meta:SlotDefinition ;
+    rdfs:label "language" ;
+    rdfs:domain meta:OpaqueData ;
+    rdfs:range meta:string .
+
+meta:localIdentifier a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "localIdentifier" ;
+    rdfs:subClassOf meta:string ;
+    skos:definition "An identifier that uniquely references a class, individual, property, or other resource" .
+
+meta:meaningHref a owl:AnnotationProperty,
+        meta:SlotDefinition ;
+    rdfs:label "meaningHref" ;
+    rdfs:range meta:renderingURI .
+
+meta:name a owl:AnnotationProperty,
+        meta:SlotDefinition ;
+    rdfs:label "name" ;
+    rdfs:domain meta:NameAndMeaningReference ;
+    rdfs:range meta:string .
+
+meta:namespaceIdentifier a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "namespaceIdentifier" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:NMTOKEN ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)" .
+
+meta:naturalNumber a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "naturalNumber" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:nonNegativeInteger ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "An integer" .
+
+meta:serviceURI a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "serviceURI" ;
+    rdfs:subClassOf meta:localURI .
+
+meta:uri a owl:AnnotationProperty,
+        owl:Class,
+        meta:SlotDefinition,
+        meta:TypeDefinition ;
+    rdfs:label "uri" ;
+    rdfs:domain meta:NameAndMeaningReference ;
+    rdfs:range meta:externalURI ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:anyURI ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A Universal Resource Identifier (URI) as defined in IETF RFC 3986" .
+
+meta:value a owl:AnnotationProperty,
+        meta:SlotDefinition ;
+    rdfs:label "value" ;
+    rdfs:domain meta:OpaqueData ;
+    rdfs:range meta:string .
+
+meta:externalURI a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "externalURI" ;
+    rdfs:subClassOf meta:persistentURI .
+
+meta:EntityReference a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "entityReference" .
+
+meta:NameAndMeaningReference a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "nameAndMeaningReference" .
+
+meta:OpaqueData a owl:Class,
+        meta:ClassDefinition ;
+    rdfs:label "opaqueData" .
+
+meta:renderingURI a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "renderingURI" ;
+    rdfs:subClassOf meta:localURI .
+
+meta:uriorcurie a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "uriorcurie" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:anyURI ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "a URI or a CURIE" .
+
+meta:ClassDefinition a owl:Class ;
+    rdfs:label "class_definition" ;
+    skos:definition "the definition of a class or interface" .
+
+meta:localURI a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "localURI" ;
+    rdfs:subClassOf meta:uriorcurie .
+
+meta:persistentURI a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "persistentURI" ;
+    rdfs:subClassOf meta:uriorcurie .
+
+meta:string a owl:Class,
+        meta:TypeDefinition ;
+    rdfs:label "string" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty meta:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A character string" .
+
+meta:topValue a owl:DatatypeProperty ;
+    rdfs:label "value" .
+
+meta:SlotDefinition a owl:Class ;
+    rdfs:label "slot_definition" ;
+    skos:definition "the definition of a property or a slot" .
+
+meta:TypeDefinition a owl:Class ;
+    rdfs:label "type_definition" ;
+    skos:definition "A data type definition." .
+

@@ -1,0 +1,269 @@
+@prefix : <https://w3id.org/biolink/biolinkml/meta/> .
+@prefix OIO: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix biolinkml: <https://w3id.org/biolink/biolinkml/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix meta: <https://w3id.org/biolink/biolinkml/meta/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://hotecosystem.org/changeSetURI> a meta:TypeDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URIorCURIE" ;
+    meta:definition_uri <tccm:ChangeSetURI> ;
+    meta:repr "str" ;
+    meta:typeof <https://hotecosystem.org/persistentURI> ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/datetime> a meta:TypeDefinition ;
+    skos:definition "The combination of a date and time" ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "XSDDateTime" ;
+    meta:definition_uri <tccm:Datetime> ;
+    meta:repr "str" ;
+    meta:uri xsd:dateTime .
+
+<https://hotecosystem.org/designationRole> a meta:TypeDefinition ;
+    skos:editorialNote "TODO this needs to be a enumerated list of values" ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "str" ;
+    meta:definition_uri <tccm:DesignationRole> ;
+    meta:typeof <https://hotecosystem.org/string> ;
+    meta:uri xsd:string .
+
+<https://hotecosystem.org/directoryURI> a meta:TypeDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URIorCURIE" ;
+    meta:definition_uri <tccm:DirectoryURI> ;
+    meta:repr "str" ;
+    meta:typeof <https://hotecosystem.org/localURI> ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/documentURI> a meta:TypeDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URIorCURIE" ;
+    meta:definition_uri <tccm:DocumentURI> ;
+    meta:repr "str" ;
+    meta:typeof <https://hotecosystem.org/persistentURI> ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/localIdentifier> a meta:TypeDefinition ;
+    skos:definition "An identifier that uniquely references a class, individual, property, or other resource" ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "str" ;
+    meta:definition_uri <tccm:LocalIdentifier> ;
+    meta:typeof <https://hotecosystem.org/string> ;
+    meta:uri xsd:string .
+
+<https://hotecosystem.org/namespaceIdentifier> a meta:TypeDefinition ;
+    skos:definition "An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)" ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "str" ;
+    meta:definition_uri <tccm:NamespaceIdentifier> ;
+    meta:uri xsd:NMTOKEN .
+
+<https://hotecosystem.org/naturalNumber> a meta:TypeDefinition ;
+    skos:definition "An integer" ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "int" ;
+    meta:definition_uri <tccm:NaturalNumber> ;
+    meta:uri xsd:nonNegativeInteger .
+
+<https://hotecosystem.org/serviceURI> a meta:TypeDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URIorCURIE" ;
+    meta:definition_uri <tccm:ServiceURI> ;
+    meta:repr "str" ;
+    meta:typeof <https://hotecosystem.org/localURI> ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/about> a meta:SlotDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:definition_uri <tccm:about> ;
+    meta:domain <https://hotecosystem.org/EntityReference> ;
+    meta:owner <https://hotecosystem.org/EntityReference> ;
+    meta:range <https://hotecosystem.org/persistentURI> ;
+    meta:required true ;
+    meta:slot_uri <https://hotecosystem.org/tccmabout> .
+
+<https://hotecosystem.org/code> a meta:SlotDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:definition_uri <tccm:code> ;
+    meta:domain <https://hotecosystem.org/EntityReference> ;
+    meta:owner <https://hotecosystem.org/EntityReference> ;
+    meta:range <https://hotecosystem.org/string> ;
+    meta:slot_uri <https://hotecosystem.org/tccmcode> .
+
+<https://hotecosystem.org/externalURI> a meta:TypeDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URIorCURIE" ;
+    meta:definition_uri <tccm:ExternalURI> ;
+    meta:repr "str" ;
+    meta:typeof <https://hotecosystem.org/persistentURI> ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/href> a meta:SlotDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:definition_uri <tccm:href> ;
+    meta:owner <https://hotecosystem.org/EntityReference> ;
+    meta:range <https://hotecosystem.org/renderingURI> ;
+    meta:slot_uri <https://hotecosystem.org/tccmhref> .
+
+<https://hotecosystem.org/language> a meta:SlotDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:definition_uri <tccm:language> ;
+    meta:domain <https://hotecosystem.org/OpaqueData> ;
+    meta:owner <https://hotecosystem.org/OpaqueData> ;
+    meta:range <https://hotecosystem.org/string> ;
+    meta:slot_uri <https://hotecosystem.org/tccmlanguage> .
+
+<https://hotecosystem.org/meaningHref> a meta:SlotDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:alias "href" ;
+    meta:definition_uri <tccm:meaningHref> ;
+    meta:owner <https://hotecosystem.org/NameAndMeaningReference> ;
+    meta:range <https://hotecosystem.org/renderingURI> ;
+    meta:slot_uri <https://hotecosystem.org/tccmhref> .
+
+<https://hotecosystem.org/name> a meta:SlotDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:definition_uri <tccm:name> ;
+    meta:domain <https://hotecosystem.org/NameAndMeaningReference> ;
+    meta:owner <https://hotecosystem.org/NameAndMeaningReference> ;
+    meta:range <https://hotecosystem.org/string> ;
+    meta:required true ;
+    meta:slot_uri <https://hotecosystem.org/tccmname> .
+
+<https://hotecosystem.org/value> a meta:SlotDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:definition_uri <tccm:value> ;
+    meta:domain <https://hotecosystem.org/OpaqueData> ;
+    meta:owner <https://hotecosystem.org/OpaqueData> ;
+    meta:range <https://hotecosystem.org/string> ;
+    meta:required true ;
+    meta:slot_uri <https://hotecosystem.org/tccmvalue> .
+
+<https://hotecosystem.org/renderingURI> a meta:TypeDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URIorCURIE" ;
+    meta:definition_uri <tccm:RenderingURI> ;
+    meta:repr "str" ;
+    meta:typeof <https://hotecosystem.org/localURI> ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/uri> a meta:SlotDefinition,
+        meta:TypeDefinition ;
+    skos:definition "A Universal Resource Identifier (URI) as defined in IETF RFC 3986" ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URI" ;
+    meta:definition_uri <tccm:Uri>,
+        <tccm:uri> ;
+    meta:domain <https://hotecosystem.org/NameAndMeaningReference> ;
+    meta:owner <https://hotecosystem.org/NameAndMeaningReference> ;
+    meta:range <https://hotecosystem.org/externalURI> ;
+    meta:repr "str" ;
+    meta:slot_uri <https://hotecosystem.org/tccmuri> ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/uriorcurie> a meta:TypeDefinition ;
+    skos:definition "a URI or a CURIE" ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URIorCURIE" ;
+    meta:definition_uri <tccm:Uriorcurie> ;
+    meta:repr "str" ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/localURI> a meta:TypeDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URIorCURIE" ;
+    meta:definition_uri <tccm:LocalURI> ;
+    meta:repr "str" ;
+    meta:typeof <https://hotecosystem.org/uriorcurie> ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/OpaqueData> a meta:ClassDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:class_uri <https://hotecosystem.org/tccmOpaqueData> ;
+    meta:definition_uri <tccm:OpaqueData> ;
+    meta:slots <https://hotecosystem.org/language>,
+        <https://hotecosystem.org/value> .
+
+<https://hotecosystem.org/persistentURI> a meta:TypeDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "URIorCURIE" ;
+    meta:definition_uri <tccm:PersistentURI> ;
+    meta:repr "str" ;
+    meta:typeof <https://hotecosystem.org/uriorcurie> ;
+    meta:uri xsd:anyURI .
+
+<https://hotecosystem.org/EntityReference> a meta:ClassDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:class_uri <https://hotecosystem.org/tccmEntityReference> ;
+    meta:definition_uri <tccm:EntityReference> ;
+    meta:slots <https://hotecosystem.org/about>,
+        <https://hotecosystem.org/code>,
+        <https://hotecosystem.org/href> .
+
+<https://hotecosystem.org/NameAndMeaningReference> a meta:ClassDefinition ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:class_uri <https://hotecosystem.org/tccmNameAndMeaningReference> ;
+    meta:definition_uri <tccm:NameAndMeaningReference> ;
+    meta:slots <https://hotecosystem.org/meaningHref>,
+        <https://hotecosystem.org/name>,
+        <https://hotecosystem.org/uri> .
+
+<https://hotecosystem.org/string> a meta:TypeDefinition ;
+    skos:definition "A character string" ;
+    skos:inScheme <https://hotecosystem.org/tccm> ;
+    meta:base "str" ;
+    meta:definition_uri <tccm:String> ;
+    meta:uri xsd:string .
+
+<https://hotecosystem.org/tccm> a meta:SchemaDefinition ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    skos:definition "Terminology Core Common Model" ;
+    meta:classes <https://hotecosystem.org/EntityReference>,
+        <https://hotecosystem.org/NameAndMeaningReference>,
+        <https://hotecosystem.org/OpaqueData> ;
+    meta:default_curi_maps "semweb_context" ;
+    meta:default_prefix "tccm" ;
+    meta:default_range <https://hotecosystem.org/string> ;
+    meta:generation_date "2020-03-16 09:29"^^xsd:dateTime ;
+    meta:id <https://hotecosystem.org/tccm> ;
+    meta:metamodel_version "1.4.3" ;
+    meta:prefixes [ meta:prefix_prefix "tccm" ;
+            meta:prefix_reference <https://hotecosystem.org/tccm> ] ;
+    meta:slots <https://hotecosystem.org/about>,
+        <https://hotecosystem.org/code>,
+        <https://hotecosystem.org/href>,
+        <https://hotecosystem.org/language>,
+        <https://hotecosystem.org/meaningHref>,
+        <https://hotecosystem.org/name>,
+        <https://hotecosystem.org/uri>,
+        <https://hotecosystem.org/value> ;
+    meta:source_file "tccm.yaml" ;
+    meta:source_file_date "Mon Mar 16 09:29:11 2020"^^xsd:dateTime ;
+    meta:source_file_size 2798 ;
+    meta:types <https://hotecosystem.org/changeSetURI>,
+        <https://hotecosystem.org/datetime>,
+        <https://hotecosystem.org/designationRole>,
+        <https://hotecosystem.org/directoryURI>,
+        <https://hotecosystem.org/documentURI>,
+        <https://hotecosystem.org/externalURI>,
+        <https://hotecosystem.org/localIdentifier>,
+        <https://hotecosystem.org/localURI>,
+        <https://hotecosystem.org/namespaceIdentifier>,
+        <https://hotecosystem.org/naturalNumber>,
+        <https://hotecosystem.org/persistentURI>,
+        <https://hotecosystem.org/renderingURI>,
+        <https://hotecosystem.org/serviceURI>,
+        <https://hotecosystem.org/string>,
+        <https://hotecosystem.org/uri>,
+        <https://hotecosystem.org/uriorcurie> .
+
+
+

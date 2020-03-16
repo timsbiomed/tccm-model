@@ -1,0 +1,28 @@
+digraph {
+	graph [bb="0,0,142.78,122"];
+	node [label="\N"];
+	opaqueData	[height=0.5,
+		label=opaqueData,
+		pos="69.251,104",
+		width=1.4538];
+	value	[color=blue,
+		height=0.5,
+		label=string,
+		pos="30.251,18",
+		width=0.8403];
+	opaqueData -> value	[color=blue,
+		label=value,
+		lp="67.409,61",
+		pos="e,37.998,35.687 61.359,86.001 55.878,74.197 48.474,58.25 42.264,44.875",
+		style=solid];
+	language	[color=blue,
+		height=0.5,
+		label=string,
+		pos="109.25,18",
+		width=0.8403];
+	opaqueData -> language	[color=blue,
+		label=language,
+		lp="117.52,61",
+		pos="e,101.43,35.808 77.597,85.932 80.367,80.237 83.456,73.852 86.251,68 89.759,60.654 93.526,52.669 96.976,45.318",
+		style=solid];
+}

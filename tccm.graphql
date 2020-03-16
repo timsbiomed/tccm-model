@@ -1,0 +1,21 @@
+type EntityReference
+  {
+    about: PersistentURI!
+    code: String
+    href: RenderingURI
+  }
+
+type NameAndMeaningReference
+  {
+    name: String!
+    uri: ExternalURI
+    href: RenderingURI
+  }
+
+type OpaqueData
+  {
+    value: String!
+    language: String
+  }
+
+
