@@ -20,8 +20,8 @@ docs: docs/index.md
 shex: tccm.shex tccmn.shex tccm.shexj tccmn.shexj
 json-schema: json-schema/tccm.json
 
-build: python docs/index.md gen-golr-views tccm.graphql gen-graphviz java context.jsonld contextn.jsonld \
-json-schema/tccm.json tccm.owl tccm.proto tccm.shex tccm.ttl
+build: python docs/index.md tccm.graphql gen-graphviz java context.jsonld contextn.jsonld \
+json-schema/tccm.json tccm.owl tccm.shex tccm.ttl
 
 # TODO: Get this working
 build_contrib: contrib_build_monarch contrib_build_translator contrib_build_go
@@ -53,13 +53,6 @@ tccm/model.py: tccm.yaml env.lock
 # ~~~~~~~~~~~~~~~~~~~~
 docs/index.md: tccm.yaml env.lock
 	pipenv run gen-markdown --dir docs $(imgflags) $<
-
-
-# ~~~~~~~~~~~~~~~~~~~~
-# Solr
-# ~~~~~~~~~~~~~~~~~~~~
-gen-golr-views: tccm.yaml dir-golr-views env.lock
-	pipenv run gen-golr-views -d golr-views $<
 
 
 # ~~~~~~~~~~~~~~~~~~~~
@@ -107,12 +100,6 @@ json-schema/tccm.json: tccm.yaml dir-json-schema env.lock
 tccm.owl: tccm.yaml env.lock
 	pipenv run gen-owl -o $@ $<
 
-
-# ~~~~~~~~~~~~~~~~~~~~
-# Proto
-# ~~~~~~~~~~~~~~~~~~~~
-tccm.proto: tccm.yaml env.lock
-	pipenv run gen-proto $< > $@
 
 # ~~~~~~~~~~~~~~~~~~~~
 # RDF
