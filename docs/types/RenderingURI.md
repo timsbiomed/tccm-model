@@ -2,9 +2,9 @@
 # Type: renderingURI
 
 
+A URI or CURI that is directly readable by a specific instance of a service implementation.
 
-
-URI: [https://hotecosystem.org/tccm/RenderingURI](https://hotecosystem.org/tccm/RenderingURI)
+URI: [tccm:RenderingURI](https://hotecosystem.org/tccm/RenderingURI)
 
 |  |  |  |
 | --- | --- | --- |

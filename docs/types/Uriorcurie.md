@@ -4,7 +4,7 @@
 
 a URI or a CURIE
 
-URI: [https://hotecosystem.org/tccm/Uriorcurie](https://hotecosystem.org/tccm/Uriorcurie)
+URI: [tccm:Uriorcurie](https://hotecosystem.org/tccm/Uriorcurie)
 
 |  |  |  |
 | --- | --- | --- |

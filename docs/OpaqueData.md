@@ -4,10 +4,14 @@
 
 
 
-URI: [tccm:OpaqueData](https://hotecosystem.org/tccmOpaqueData)
+URI: [tccm:OpaqueData](https://hotecosystem.org/tccm/OpaqueData)
 
 
 ![img](images/OpaqueData.png)
+
+## Children
+
+ * [Designation](Designation.md)
 
 ## Referenced by class
 

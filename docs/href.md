@@ -4,7 +4,7 @@
 
 
 
-URI: [tccm:href](https://hotecosystem.org/tccmhref)
+URI: [tccm:href](https://hotecosystem.org/tccm/href)
 
 
 ## Domain and Range

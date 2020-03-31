@@ -4,10 +4,14 @@
 
 
 
-URI: [tccm:NameAndMeaningReference](https://hotecosystem.org/tccmNameAndMeaningReference)
+URI: [tccm:NameAndMeaningReference](https://hotecosystem.org/tccm/NameAndMeaningReference)
 
 
 ![img](images/NameAndMeaningReference.png)
+
+## Children
+
+ * [ContextReference](ContextReference.md)
 
 ## Referenced by class
 

@@ -4,7 +4,7 @@
 
 
 
-URI: [tccm:language](https://hotecosystem.org/tccmlanguage)
+URI: [tccm:language](https://hotecosystem.org/tccm/language)
 
 
 ## Domain and Range
@@ -19,4 +19,5 @@ URI: [tccm:language](https://hotecosystem.org/tccmlanguage)
 
 ## Used by
 
+ * [Designation](Designation.md)
  * [OpaqueData](OpaqueData.md)

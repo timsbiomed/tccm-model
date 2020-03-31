@@ -2,9 +2,9 @@
 # Type: localURI
 
 
+A URI or CURIE whose scope is local to the implementing service.
 
-
-URI: [https://hotecosystem.org/tccm/LocalURI](https://hotecosystem.org/tccm/LocalURI)
+URI: [tccm:LocalURI](https://hotecosystem.org/tccm/LocalURI)
 
 |  |  |  |
 | --- | --- | --- |
