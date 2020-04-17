@@ -2,9 +2,9 @@
 # Type: serviceURI
 
 
+The URI or CURIE of a service implementation
 
-
-URI: [https://hotecosystem.org/tccm/ServiceURI](https://hotecosystem.org/tccm/ServiceURI)
+URI: [tccm:ServiceURI](https://hotecosystem.org/tccm/ServiceURI)
 
 |  |  |  |
 | --- | --- | --- |

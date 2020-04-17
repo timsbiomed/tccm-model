@@ -4,7 +4,7 @@
 
 A character string
 
-URI: [https://hotecosystem.org/tccm/String](https://hotecosystem.org/tccm/String)
+URI: [tccm:String](https://hotecosystem.org/tccm/String)
 
 |  |  |  |
 | --- | --- | --- |

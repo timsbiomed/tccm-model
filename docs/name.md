@@ -4,7 +4,7 @@
 
 
 
-URI: [tccm:name](https://hotecosystem.org/tccmname)
+URI: [tccm:name](https://hotecosystem.org/tccm/name)
 
 
 ## Domain and Range
@@ -19,4 +19,5 @@ URI: [tccm:name](https://hotecosystem.org/tccmname)
 
 ## Used by
 
+ * [ContextReference](ContextReference.md)
  * [NameAndMeaningReference](NameAndMeaningReference.md)

@@ -4,7 +4,7 @@
 
 
 
-URI: [tccm:meaningHref](https://hotecosystem.org/tccmmeaningHref)
+URI: [tccm:meaningHref](https://hotecosystem.org/tccm/meaningHref)
 
 
 ## Domain and Range
@@ -19,4 +19,5 @@ None ->  <sub>OPT</sub> [RenderingURI](types/RenderingURI.md)
 
 ## Used by
 
+ * [ContextReference](ContextReference.md)
  * [NameAndMeaningReference](NameAndMeaningReference.md)

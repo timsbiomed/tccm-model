@@ -4,7 +4,7 @@
 
 
 
-URI: [https://hotecosystem.org/tccm/DesignationRole](https://hotecosystem.org/tccm/DesignationRole)
+URI: [tccm:DesignationRole](https://hotecosystem.org/tccm/DesignationRole)
 
 |  |  |  |
 | --- | --- | --- |

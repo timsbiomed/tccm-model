@@ -2,9 +2,9 @@
 # Type: documentURI
 
 
+A reference to a "work" in the bibliographic sense. It's not necessary to be directly or indirectly resolvable to a digital resource - it may simply be the name of a book, publication, or other abstraction.
 
-
-URI: [https://hotecosystem.org/tccm/DocumentURI](https://hotecosystem.org/tccm/DocumentURI)
+URI: [tccm:DocumentURI](https://hotecosystem.org/tccm/DocumentURI)
 
 |  |  |  |
 | --- | --- | --- |

@@ -2,9 +2,9 @@
 # Type: naturalNumber
 
 
-An integer
+A non-negative integer (N). NatrualNumber is used exclusively for representing quantities.
 
-URI: [https://hotecosystem.org/tccm/NaturalNumber](https://hotecosystem.org/tccm/NaturalNumber)
+URI: [tccm:NaturalNumber](https://hotecosystem.org/tccm/NaturalNumber)
 
 |  |  |  |
 | --- | --- | --- |

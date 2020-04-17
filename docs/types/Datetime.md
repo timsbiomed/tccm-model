@@ -4,7 +4,7 @@
 
 The combination of a date and time
 
-URI: [https://hotecosystem.org/tccm/Datetime](https://hotecosystem.org/tccm/Datetime)
+URI: [tccm:Datetime](https://hotecosystem.org/tccm/Datetime)
 
 |  |  |  |
 | --- | --- | --- |

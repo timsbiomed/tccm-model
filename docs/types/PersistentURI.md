@@ -2,9 +2,9 @@
 # Type: persistentURI
 
 
+A persistent URI is a URI or CURIE that persists across service instances.
 
-
-URI: [https://hotecosystem.org/tccm/PersistentURI](https://hotecosystem.org/tccm/PersistentURI)
+URI: [tccm:PersistentURI](https://hotecosystem.org/tccm/PersistentURI)
 
 |  |  |  |
 | --- | --- | --- |

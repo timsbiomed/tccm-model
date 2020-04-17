@@ -4,7 +4,7 @@
 
 
 
-URI: [tccm:value](https://hotecosystem.org/tccmvalue)
+URI: [tccm:value](https://hotecosystem.org/tccm/value)
 
 
 ## Domain and Range
@@ -19,4 +19,5 @@ URI: [tccm:value](https://hotecosystem.org/tccmvalue)
 
 ## Used by
 
+ * [Designation](Designation.md)
  * [OpaqueData](OpaqueData.md)

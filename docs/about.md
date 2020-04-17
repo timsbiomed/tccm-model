@@ -4,7 +4,7 @@
 
 
 
-URI: [tccm:about](https://hotecosystem.org/tccmabout)
+URI: [tccm:about](https://hotecosystem.org/tccm/about)
 
 
 ## Domain and Range
@@ -19,4 +19,5 @@ URI: [tccm:about](https://hotecosystem.org/tccmabout)
 
 ## Used by
 
+ * [EntityDescription](EntityDescription.md)
  * [EntityReference](EntityReference.md)
