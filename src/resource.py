@@ -2,24 +2,29 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Optional
 
+from biolinkml.utils.yamlutils import YAMLRoot
+
 from src.tccm import ExternalURI
 
 # TODO: Review FHIR Terminology Services and CTS2 for the appropriate metadata to place here
 @dataclass
-class Resource:
-    uri:  ExternalURI               # The resource identifier
+class Resource(YAMLRoot):
+    uri:  ExternalURI               # The permanant resource identifier
     name: str                       # The name of the resource
     description: Optional[str] = None   # A description
 
 
-class FinalizableState(Enum):
-    OPEN = 1            # Item is not static and its URI is not immutable
-    FINAL = 2           # Item is locked and will not change
+class FinalizableState(str, Enum):
+    """
+    Terminology resources frequently depend on immutability
+    """
+    OPEN = "OPEN"           # Item is not static and its URI is not immutable
+    FINAL = "FINAL"          # Item is locked and will not change
 
 
-class EntryState(Enum):
-    DEPRECATED = 1      # Entry should no longer be used -- has been superceded
-    ACTIVE = 2          # Entry is active
+class EntryState(str, Enum):
+    DEPRECATED = "DEPRECATED"      # Entry should no longer be used -- has been superceded
+    ACTIVE = "ACTIVE"          # Entry is active
 
 
 @dataclass

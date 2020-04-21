@@ -6,7 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-biolinkml = "==1.4.11.dev26"
+biolinkml = "*"
+rdflib = "==5.0.0rc1"
+rdflib-jsonld = "*"
 
-[requires]
-python_version = "3.7"
+[pipenv]
+allow_prereleases = true

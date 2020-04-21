@@ -4,15 +4,17 @@ Core TCCM Module.
 TODO: Update tccm.yaml to include these elements
 """
 from dataclasses import dataclass
-from typing import Union, List, Optional
+from typing import Union, List, Optional, NewType
 
-from src.tccm import ExternalURI, NameAndMeaningReference, EntityReference
+from biolinkml.utils.yamlutils import YAMLRoot
+
+from src.tccm import ExternalURI, NameAndMeaningReference, EntityReference, PersistentURI, RenderingURI
 
 ExternalURIList = List[ExternalURI]
 NameAndMeaningReferenceList = List[NameAndMeaningReference]
 EntityReferenceList = List[EntityReference]
 
-EntityList = Union[ExternalURIList, EntityReferenceList]
+EntityList: object = Union[ExternalURIList, EntityReferenceList]
 
 
 @dataclass
@@ -38,8 +40,53 @@ def EntityReferenceToExternalURI(erl: Union[EntityReference, ExternalURIList]) -
     pass
 
 
-CodeSystemReference = Union[ExternalURI, NameAndMeaningReference]
-CodeSystemVersionReference = Union[ExternalURI, VersionedReference]
-ValueSetDescriptionReference = Union[ExternalURI, NameAndMeaningReference]
-ValueSetDefinitionReference = Union[ExternalURI, NameAndMeaningReference]
-ValueSetReference = Union[ValueSetDefinitionReference, ValueSetDescriptionReference]
+ConceptURI = NewType('ConceptURI', ExternalURI)
+CodeSystemURI = NewType('CodeSystemURI', ExternalURI)
+CodeSystemVersionURI = NewType('CodeSystemVewrsionURI', ExternalURI)
+ValueSetDescriptionURI = NewType('ValueSetDescriptionURI', ExternalURI)
+ValueSetDefinitionURI = NewType('ValueSetDefinitionURI', ExternalURI)
+ResolvedValueSetURI = NewType('ResolvedValueSetURI', ExternalURI)
+
+
+@dataclass
+class EntityReference(YAMLRoot):
+    about: Union[PersistentURI, str]
+    code: Optional[str] = None
+    href: Optional[Union[RenderingURI, str]] = None
+    description: Optional[str] = None
+
+
+@dataclass
+class ConceptReference(EntityReference):
+    about: Union[ConceptURI, str]
+
+@dataclass
+class CodeSystemSummary(NameAndMeaningReference):
+    uri: Optional[CodeSystemURI] = None
+
+
+@dataclass
+class CodeSystemVersionSummary(NameAndMeaningReference):
+    uri: Optional[Union[CodeSystemVersionURI]] = None
+
+
+@dataclass
+class ValueSetDescriptionSummary(NameAndMeaningReference):
+    uri: Optional[Union[str, ValueSetDescriptionURI]] = None
+
+
+@dataclass
+class ValueSetDefinitionSummary(NameAndMeaningReference):
+    uri: Optional[Union[str, ValueSetDefinitionURI]] = None
+
+
+@dataclass
+class ResolvedValueSetSummary(NameAndMeaningReference):
+    uri: Optional[Union[str, ResolvedValueSetURI]] = None
+
+
+CodeSystemReference = Union[CodeSystemURI, CodeSystemSummary]
+CodeSystemVersionReference = NewType('CodeSystemVersionReference', Union[CodeSystemVersionURI, CodeSystemVersionSummary])
+ValueSetDescriptionReference = NewType('ValueSetDescriptionReference', Union[ValueSetDescriptionURI, ValueSetDescriptionSummary])
+ValueSetDefinitionReference = NewType('ValueSetDefinitionReference', Union[ValueSetDefinitionURI, ValueSetDefinitionSummary])
+ResolvedValuesetReference = NewType('ResolvedValuesetReference', Union[ResolvedValueSetURI, ResolvedValueSetSummary])

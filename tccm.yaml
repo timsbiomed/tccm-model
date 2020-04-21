@@ -119,6 +119,9 @@ slots:
   href:
     range: renderingURI
 
+  description:
+    range: string
+
   meaningHref:
     range: renderingURI
     alias: href
@@ -170,6 +173,7 @@ classes:
       - about
       - code
       - href
+      - description
 
   contextReference:
     is_a: nameAndMeaningReference

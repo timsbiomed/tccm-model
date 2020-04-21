@@ -1,33 +1,33 @@
 from dataclasses import dataclass
 from enum import Enum
+from typing import Optional
 
 from rdflib import SKOS
 
+from core import ConceptReference
 from src.tccm import EntityReference
 
 
-class AssociationDirection(Enum):
-    SOURCE_TO_TARGET = 1            # Follow predicate from source to target direction
-    TARGET_TO_SOURCE = 2            # Follow predicate from target to source
+# TODO: find appropriate wording for this concept (in / out from graph theory) (down / up from hierarchy, look at ShEx nomenclature)
+class AssociationDirection(str, Enum):
+    INBOUND = "INBOUND"             # Follow predicate from source to target direction
+    OUTBOUND = "OUTBOUND"           # Follow predicate from target to source
 
 
-class TransitiveClosure(Enum):
-    DIRECTLY_ASSOCIATED = 1         # Follow predicate one level
-    TRANSITIVE_CLOSURE = 2          # Follow transitive closure of predicate
-
-
-class IncludeElements(Enum):
-    CHILDREN = 0                    # Include only direct children (same as DIRECTLY_ASSOCIATED)
-    CHILDREN_AND_SELF = 1           # Include both children and referencedEntity
-    DESCENDENTS = 2                 # Include all elements in closure
-    DESCENDENTS_AND_SELF = 3        # Include referencedEntity in closure
-    LEAVES = 4                      # Only include elements in the leaves of the closure
+# TODO: Need different words (or synonyms) to cover the ancestor case
+class IncludeElements(str, Enum):
+    ALL = "ALL"                      # All nodes
+    ALL_BUT_FOCUS = "ALL_BUT_FOCUS"  # All nodes except the focus node
+    DISTAL = "DISTAL"                # Most distal nodes only
+    EDGE_NODE = "EDGE_NODE"          # Synonym for DISTAL
 
 
 @dataclass
 class GraphSelector:
-    referencedEntity: EntityReference
+    focus: ConceptReference
     predicate: EntityReference = SKOS.broader
-    direction: AssociationDirection = AssociationDirection.TARGET_TO_SOURCE
-    transitive: TransitiveClosure = TransitiveClosure.DIRECTLY_ASSOCIATED
-    include: IncludeElements = IncludeElements.DESCENDENTS
+    direction: AssociationDirection = AssociationDirection.INBOUND
+    max_hops: Optional[int] = None
+    include_elements: IncludeElements = IncludeElements.ALL_BUT_FOCUS
+
+# TODO: we have to define what this means in an OWL environment
