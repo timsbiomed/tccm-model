@@ -9,7 +9,7 @@ from src.tccm import ExternalURI
 # TODO: Review FHIR Terminology Services and CTS2 for the appropriate metadata to place here
 @dataclass
 class Resource(YAMLRoot):
-    uri:  ExternalURI               # The permanant resource identifier
+    about:  ExternalURI             # The permanant resource identifier
     name: str                       # The name of the resource
     description: Optional[str] = None   # A description
 

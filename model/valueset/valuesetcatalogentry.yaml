@@ -1,0 +1,15 @@
+id: https://hotecosystem.org/tccm/valuesetcatalogentry
+name: valuesetcatalogentry
+title: Value Set Catalog Entry
+license: https://creativecommons.org/publicdomain/zero/1.0/
+description: >-
+  A ValueSetCatalogEntry carries information about the creators, distributors, purpose, use, etc. about a value set.
+  The catalog does not carry the actual definition of a value set as (a) this may vary over time and (b) it is possible
+  for more than one definition to be in use at any given point in time.
+
+prefixes:
+  tccm: https://hotecosystem.org/tccm/
+  biolinkml: https://w3id.org/biolink/biolinkml/
+
+default_prefix: tccm
+default_range: string

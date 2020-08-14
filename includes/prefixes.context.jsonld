@@ -1,0 +1,11 @@
+{
+   "_comments": "Auto generated from prefixes.yaml by jsonldcontextgen.py version: 0.1.1\nGeneration date: 2020-08-13 16:19\nSchema: prefixes\n\nid: https://hotecosystem.org/tccm/prefixes\ndescription: URI Prefixes used in the TCCM Model\nlicense: https://creativecommons.org/publicdomain/zero/1.0/\n",
+   "@context": {
+      "type": "@type",
+      "biolinkml": "https://w3id.org/biolink/biolinkml/",
+      "tccm": "https://hotecosystem.org/tccm/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "@vocab": "https://hotecosystem.org/tccm/"
+   }
+}
+

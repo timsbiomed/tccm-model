@@ -1,0 +1,125 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://example.org/magic8ball",
+  "name": "magic8ball",
+  "title": "Magic 8 Ball Fortune Codes",
+  "status": "active",
+  "publisher": "Harold Solbrig",
+  "contact": [
+    {
+      "type": "author",
+      "name": "Harold Solbrig",
+      "contact": {
+        "telecom": "email",
+        "value": "solbrig@jhu.edu"
+      }
+    }
+  ],
+  "description": "Codes for the 20 possible answers to the standard Magic 8 Ball",
+  "purpose": "This is a sample code system used to demonstrate how to attach value sets to FHIR",
+  "hierarchyMeaning": "classified-with",
+  "compositional": false,
+  "versionNeeded": false,
+  "content": "complete",
+  "count": 23,
+  "concept": [
+    {
+      "code": "Y",
+      "display": "Affirmative response",
+      "concept": [
+        {
+          "code": "P1",
+          "display": "It is certain"
+        },
+        {
+          "code": "P2",
+          "display": "It is decidedly so"
+        },
+        {
+          "code": "P3",
+          "display": "Without a doubt"
+        },
+        {
+          "code": "P4",
+          "display": "Yes - definitely"
+        },
+        {
+          "code": "P5",
+          "display": "You may rely on it"
+        },
+        {
+          "code": "P6",
+          "display": "As I see it, yes"
+        },
+        {
+          "code": "P7",
+          "display": "Most Likely"
+        },
+        {
+          "code": "P8",
+          "display": "Outlook good"
+        },
+        {
+          "code": "P9",
+          "display": "Yes"
+        },
+        {
+          "code": "P10",
+          "display": "Signs point to yes"
+        }
+      ]
+    },
+    {
+      "code": "N",
+      "display": "Negative response",
+      "concept": [
+        {
+          "code": "N1",
+          "display": "Don't count on it"
+        },
+        {
+          "code": "N2",
+          "display": "My reply is no"
+        },
+        {
+          "code": "N3",
+          "display": "My sources say no"
+        },
+        {
+          "code": "N4",
+          "display": "Outlook not so good"
+        },
+        {
+          "code": "N5",
+          "display": "Very doubtful"
+        }
+      ]
+    },
+    {
+      "code": "U",
+      "display": "Uncertain response",
+      "concept": [
+        {
+          "code": "U1",
+          "display": "Reply hazy, try again"
+        },
+        {
+          "code": "U2",
+          "display": "Ask again later"
+        },
+        {
+          "code": "U3",
+          "display": "Better not tell you now"
+        },
+        {
+          "code": "U4",
+          "display": "Cannot predict now"
+        },
+        {
+          "code": "U5",
+          "display": "Concentrate and ask again"
+        }
+      ]
+    }
+  ]
+}
