@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-biolinkml = {editable = true,path = "./../../biolink/biolinkml"}
+biolinkml = {editable=true, git="https://github.com/biolink/biolinkml.git", ref="tccm_fixes"}
 rdflib = "~=5.0"
 rdflib-jsonld = "*"
 
