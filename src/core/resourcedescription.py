@@ -1,12 +1,9 @@
 # Auto generated from resourcedescription.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-13 16:18
+# Generation date: 2020-08-14 09:49
 # Schema: resourcedescription
 #
 # id: https://hotecosystem.org/tccm/resourcedescription
-# description: ResourceDescription represents the shared characteristics common to both abstract and resource
-#              version descriptions. ResourceDescription is an abstract type and, as such, cannot be directly
-#              created. Resource descriptions are Changeable, meaning that they have identity and can be created,
-#              updated, and deleted.
+# description:
 # license: https://creativecommons.org/publicdomain/zero/1.0/
 
 import dataclasses

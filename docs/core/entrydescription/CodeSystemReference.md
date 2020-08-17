@@ -7,7 +7,7 @@ A reference to a code system or ontology.
 URI: [tccm:CodeSystemReference](https://hotecosystem.org/tccm/CodeSystemReference)
 
 
-![img](images/CodeSystemReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[CodeSystemVersionReference],[CodeSystemVersionReference]++-%20codeSystem%200..1>[CodeSystemReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference]^-[CodeSystemReference])
 
 ## Parents
 

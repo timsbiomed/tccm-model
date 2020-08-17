@@ -7,7 +7,7 @@ A name or identifier that uniquely names an association instance in a code syste
 URI: [tccm:AssociationReference](https://hotecosystem.org/tccm/AssociationReference)
 
 
-![img](images/AssociationReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[AssociationReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

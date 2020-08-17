@@ -7,7 +7,7 @@ A reference to a formal algorithm for making inferences about an ontology.
 URI: [tccm:ReasoningAlgorithmReference](https://hotecosystem.org/tccm/ReasoningAlgorithmReference)
 
 
-![img](images/ReasoningAlgorithmReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[ReasoningAlgorithmReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

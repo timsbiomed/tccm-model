@@ -2,10 +2,6 @@ id: https://hotecosystem.org/tccm/valuesetcatalogentry
 name: valuesetcatalogentry
 title: Value Set Catalog Entry
 license: https://creativecommons.org/publicdomain/zero/1.0/
-description: >-
-  A ValueSetCatalogEntry carries information about the creators, distributors, purpose, use, etc. about a value set.
-  The catalog does not carry the actual definition of a value set as (a) this may vary over time and (b) it is possible
-  for more than one definition to be in use at any given point in time.
 
 prefixes:
   tccm: https://hotecosystem.org/tccm/
@@ -13,3 +9,32 @@ prefixes:
 
 default_prefix: tccm
 default_range: string
+
+classes:
+  ValueSetCatalogEntryOrReference:
+    description: Either a description of ana abstract value set or a reference to an official entry
+
+  ValueSetDescription:
+    is_a: ValueSetCatalogEntryOrReference
+    mixins: NameAndMeaningReference
+    description: A description of a value
+
+  ValueSetCatalogEntry:
+    is_a: ValueSetCatalogEntryOrReference
+    mixins:
+      - AbstractResourceDescription
+    description: >-
+      A ValueSetCatalogEntry carries information about the creators, distributors, purpose, use, etc. about a value set.
+      The catalog does not carry the actual definition of a value set as (a) this may vary over time and (b) it is
+      possible for more than one definition to be in use at any given point in time.
+    slot_usage:
+      valueSetName:
+        range: ValueSetName
+        required: true
+      definitions:
+        range: ValueSetDefinitionReference
+        multivalued: true
+      currentDefinition:
+        range: ValueSetDefinitionReference
+      currentResolution:
+        range: ValueSetResolutionReference

@@ -7,7 +7,7 @@ A reference to an entity that describes significance of the case in term or desi
 URI: [tccm:CaseSignificanceReference](https://hotecosystem.org/tccm/CaseSignificanceReference)
 
 
-![img](images/CaseSignificanceReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[CaseSignificanceReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

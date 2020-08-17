@@ -7,7 +7,7 @@ A reference to a syntax in which an ontology may be represented.
 URI: [tccm:OntologySyntaxReference](https://hotecosystem.org/tccm/OntologySyntaxReference)
 
 
-![img](images/OntologySyntaxReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[SourceAndNotation],[SourceAndNotation]++-%20sourceDocumentSyntax%200..1>[OntologySyntaxReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference]^-[OntologySyntaxReference],[NameAndMeaningReference])
 
 ## Parents
 

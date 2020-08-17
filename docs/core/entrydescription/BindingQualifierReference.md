@@ -7,7 +7,7 @@ A reference to an entity that describes the role that a given value set binding 
 URI: [tccm:BindingQualifierReference](https://hotecosystem.org/tccm/BindingQualifierReference)
 
 
-![img](images/BindingQualifierReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[BindingQualifierReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

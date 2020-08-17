@@ -7,7 +7,7 @@ A reference to a designation type or form such as “short name,” “abbreviat
 URI: [tccm:DesignationTypeReference](https://hotecosystem.org/tccm/DesignationTypeReference)
 
 
-![img](images/DesignationTypeReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[DesignationTypeReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

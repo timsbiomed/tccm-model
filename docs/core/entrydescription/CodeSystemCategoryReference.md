@@ -7,7 +7,7 @@ A reference to information about a paradigm model used to create an ontology (a.
 URI: [tccm:CodeSystemCategoryReference](https://hotecosystem.org/tccm/CodeSystemCategoryReference)
 
 
-![img](images/CodeSystemCategoryReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[CodeSystemCategoryReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

@@ -7,7 +7,7 @@ A reference to a tool that can be used to create an ontology.
 URI: [tccm:OntologyEngineeringToolReference](https://hotecosystem.org/tccm/OntologyEngineeringToolReference)
 
 
-![img](images/OntologyEngineeringToolReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[OntologyEngineeringToolReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

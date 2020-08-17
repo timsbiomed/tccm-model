@@ -7,7 +7,7 @@ A reference to an abstract map.
 URI: [tccm:MapReference](https://hotecosystem.org/tccm/MapReference)
 
 
-![img](images/MapReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[MapVersionReference],[MapVersionReference]++-%20map%200..1>[MapReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference]^-[MapReference])
 
 ## Parents
 

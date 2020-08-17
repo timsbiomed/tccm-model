@@ -7,7 +7,7 @@ A reference to a role that an individual, organization, or bibliographic referen
 URI: [tccm:RoleReference](https://hotecosystem.org/tccm/RoleReference)
 
 
-![img](images/RoleReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[SourceAndRoleReference],[SourceAndRoleReference]++-%20role%200..1>[RoleReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference]^-[RoleReference],[NameAndMeaningReference])
 
 ## Parents
 

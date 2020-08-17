@@ -7,7 +7,7 @@ A reference to a specific version of code system and, if known, the code system 
 URI: [tccm:CodeSystemVersionReference](https://hotecosystem.org/tccm/CodeSystemVersionReference)
 
 
-![img](images/CodeSystemVersionReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[CodeSystemReference]<codeSystem%200..1-++[CodeSystemVersionReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference]^-[CodeSystemVersionReference],[CodeSystemReference])
 
 ## Parents
 

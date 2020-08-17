@@ -18,6 +18,19 @@ imports:
   - biolinkml:extensions
   - biolinkml:annotations
 
+slots:
+    resourceSynopsis:
+      description: A textual summary of the resource - what it is, what it is for, etc.
+      range: string
+
+    resourceID:
+      description: >-
+        A local identifier that uniquely names the resource within the context of the describedResourceType and
+        implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a
+        SNOMED-CT code system version.
+      range: LocalIdentifier
+      key: true
+      required: true
 
 classes:
   ResourceDescription:
@@ -29,6 +42,9 @@ classes:
       - extensible
       - annotatable
     abstract: true
+    slots:
+      - resourceSynopsis
+      - resourceID
     slot_usage:
       about:
         description: >-
@@ -40,13 +56,6 @@ classes:
           be “urn:oid:2.16.840. 1.113883.3.26.1.1”
         range: ExternalURI
         required: true
-      resourceID:
-        description: >-
-          A local identifier that uniquely names the resource within the context of the describedResourceType and
-          implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a
-          SNOMED-CT code system version.
-        range: LocalIdentifier
-        required: true
       formalName:
         description: The formal or officially assigned name of this resource, if any.
         range: string
@@ -54,9 +63,6 @@ classes:
         description: Additional identifiers that are used to index and locate the resource.
         range: string
         multivalued: true
-      resourceSynopsis:
-        description: A textual summary of the resource - what it is, what it is for, etc.
-        range: string
       additionalDocumentation:
         description: A reference to a document that provide additional information about the resource.
         range: PersistentURI

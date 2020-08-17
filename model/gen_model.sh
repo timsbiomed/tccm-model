@@ -4,6 +4,7 @@ for filename in core/*.yaml; do
     BASE="${basename%.*}"
     echo Generating $filename
     gen-python $PARMS core/$BASE.yaml > ../src/core/$BASE.py
-    gen-markdown $PARMS core/$BASE.yaml -d ../docs/core/$BASE -i
+    rm -rf ../docs/core/$BASE
+    gen-markdown $PARMS core/$BASE.yaml -d ../docs/core/$BASE
 done
 gen-jsonld-context $PARMS core/prefixes.yaml > ../includes/prefixes.context.jsonld

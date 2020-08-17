@@ -7,7 +7,7 @@ The URI, namespace/name (if known) and a list of code systems that make assertio
 URI: [tccm:EntityReference](https://hotecosystem.org/tccm/EntityReference)
 
 
-![img](images/EntityReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[EntityReference&#124;about:PersistentURI;name:string%20%3F;designation:string%20%3F;href:RenderingURI%20%3F])
 
 ## Referenced by class
 

@@ -7,7 +7,7 @@ A reference to a way that the source and target in a map can be related or asses
 URI: [tccm:MapCorrelationReference](https://hotecosystem.org/tccm/MapCorrelationReference)
 
 
-![img](images/MapCorrelationReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[MapCorrelationReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

@@ -1,0 +1,40 @@
+id: https://hotecosystem.org/tccm/valuesetdefinition
+name: valuesetdefinition
+title: ValueSetDefinition
+license: https://creativecommons.org/publicdomain/zero/1.0/
+description: >-
+  A ValueSetDefinition describes the rules that determine which entity references (value meanings) belong to a value
+  set at a given point in time. The definition of what belongs in a value set can evolve over time, and it is possible
+  for there to be multiple definitions active at any given point in time - perhaps one for a system in general use, a
+  second for a newer system, and a third for testing. A ValueSetDefinition may or may not identify a specific version
+  of a code system. The decision of which version is to be used depends on the context and needs of the community.
+  ValueSetDefinition and the supporting model has been designed to allow multiple variations on the “binding” of
+  definitions to value sets, code system versions to definitions, and the combination to concept domains.
+
+prefixes:
+  tccm: https://hotecosystem.org/tccm/
+  biolinkml: https://w3id.org/biolink/biolinkml/
+
+default_prefix: tccm
+default_range: string
+
+
+classes:
+  ValueSetDefinitionOrReference:
+    description: Either a reference to a the definition of a value set or the actual definition itself
+    slot_usage:
+      definedValueSet:
+        description: A description of or reference to the abstract value set being defined
+        range: ValueSetCatalogEntryOrReference
+        required: True
+
+  ValueSetDefinitionReference:
+    is_a: ValueSetDefinitionOrReference
+    mixins: NameAndMeaningReference
+
+  ValueSetDefinition:
+    is_a: ValueSetDefinitionOrReference
+    mixins: ResourceVersionDescription
+    slot_usage:
+      definedValueSet:
+        range: ValueSet

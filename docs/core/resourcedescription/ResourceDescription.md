@@ -7,7 +7,7 @@ ResourceDescription represents the shared characteristics common to both abstrac
 URI: [tccm:ResourceDescription](https://hotecosystem.org/tccm/ResourceDescription)
 
 
-![img](images/ResourceDescription.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[Extension],[Extensible],[Annotation],[Annotatable],[ResourceVersionDescription],[ResourceDescription&#124;about:ExternalURI;resourceID:LocalIdentifier;formalName:string%20%3F;keyword:string%20*;resourceSynopsis:string%20%3F;additionalDocumentation:PersistentURI%20*;rights:string%20%3F;alternateID:string%20%3F]uses%20-.->[Extensible],[ResourceDescription]uses%20-.->[Annotatable],[ResourceDescription]^-[ResourceVersionDescription],[ResourceDescription]^-[AbstractResourceDescription],[AbstractResourceDescription])
 
 ## Uses Mixins
 

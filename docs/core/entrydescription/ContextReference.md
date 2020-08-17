@@ -7,7 +7,7 @@ A reference to a realm or context.
 URI: [tccm:ContextReference](https://hotecosystem.org/tccm/ContextReference)
 
 
-![img](images/ContextReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[ContextReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

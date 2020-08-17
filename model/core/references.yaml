@@ -39,8 +39,13 @@ classes:
       identifier.
     slot_usage:
       name:
+        description: An identifier that uniquely names the reference within the context of the particular reference type.
         range: LocalIdentifier
-        required: True
+        key: true
+        required: true
+      synopsis:
+        description: A summary of the role and purpose of the actual reference
+        range: string
       uri:
         range: ExternalURI
       href:

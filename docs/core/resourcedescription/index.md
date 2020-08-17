@@ -2,7 +2,7 @@
 # Resourcedescription schema
 
 
-ResourceDescription represents the shared characteristics common to both abstract and resource version descriptions. ResourceDescription is an abstract type and, as such, cannot be directly created. Resource descriptions are Changeable, meaning that they have identity and can be created, updated, and deleted.
+
 
 
 ### Classes

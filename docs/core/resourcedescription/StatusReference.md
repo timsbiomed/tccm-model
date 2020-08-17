@@ -7,7 +7,7 @@ A reference to a state in an external ontology authoring workflow.
 URI: [tccm:StatusReference](https://hotecosystem.org/tccm/StatusReference)
 
 
-![img](images/StatusReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[StatusReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

@@ -7,7 +7,7 @@ a tag/value pair with the semantics of OWL Annotation
 URI: [tccm:Annotation](https://hotecosystem.org/tccm/Annotation)
 
 
-![img](images/Annotation.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[Extension],[Annotation]<annotations%200..*-++[Annotation&#124;value:boolean;tag(i):uriorcurie],[Extension]^-[Annotation],[Annotatable])
 
 ## Parents
 

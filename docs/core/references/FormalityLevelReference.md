@@ -7,7 +7,7 @@ A reference to a description of the relative formality an ontology.
 URI: [tccm:FormalityLevelReference](https://hotecosystem.org/tccm/FormalityLevelReference)
 
 
-![img](images/FormalityLevelReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[FormalityLevelReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

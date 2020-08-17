@@ -7,7 +7,7 @@ A reference to a spoken or written human language.
 URI: [tccm:LanguageReference](https://hotecosystem.org/tccm/LanguageReference)
 
 
-![img](images/LanguageReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[LanguageReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

@@ -7,7 +7,7 @@ A reference to a set of rules for constructing a value set along with the corres
 URI: [tccm:ValueSetDefinitionReference](https://hotecosystem.org/tccm/ValueSetDefinitionReference)
 
 
-![img](images/ValueSetDefinitionReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[ValueSetDefinitionReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

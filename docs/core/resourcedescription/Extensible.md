@@ -7,7 +7,7 @@ mixin for classes that support extension
 URI: [tccm:Extensible](https://hotecosystem.org/tccm/Extensible)
 
 
-![img](images/Extensible.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[Extension],[Extension]<extensions%200..*-++[Extensible],[ResourceDescription]uses%20-.->[Extensible],[ResourceDescription])
 
 ## Mixin for
 

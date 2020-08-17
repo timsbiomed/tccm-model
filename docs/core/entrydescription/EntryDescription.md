@@ -7,7 +7,7 @@ EntryDescription is a subclass of OpaqueData. The purpose behind this is that th
 URI: [tccm:EntryDescription](https://hotecosystem.org/tccm/EntryDescription)
 
 
-![img](images/EntryDescription.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[OpaqueData],[LanguageReference],[FormatReference],[OpaqueData]^-[EntryDescription&#124;schema(i):DocumentURI%20%3F;value(i):string])
 
 ## Parents
 

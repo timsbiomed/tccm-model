@@ -7,7 +7,7 @@ A reference to the nature of the content of an ontology.
 URI: [tccm:OntologyTypeReference](https://hotecosystem.org/tccm/OntologyTypeReference)
 
 
-![img](images/OntologyTypeReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[OntologyTypeReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

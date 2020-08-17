@@ -7,7 +7,7 @@ The description of the characteristics of a resource that are independent of the
 URI: [tccm:AbstractResourceDescription](https://hotecosystem.org/tccm/AbstractResourceDescription)
 
 
-![img](images/AbstractResourceDescription.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[Extension],[Annotation],[SourceAndNotation],[ResourceDescription],[SourceAndNotation]<releaseFormat%200..*-++[AbstractResourceDescription&#124;releaseDocumentation:string%20%3F;about(i):ExternalURI;resourceID(i):LocalIdentifier;formalName(i):string%20%3F;keyword(i):string%20*;resourceSynopsis(i):string%20%3F;additionalDocumentation(i):PersistentURI%20*;rights(i):string%20%3F;alternateID(i):string%20%3F],[ResourceDescription]^-[AbstractResourceDescription])
 
 ## Parents
 

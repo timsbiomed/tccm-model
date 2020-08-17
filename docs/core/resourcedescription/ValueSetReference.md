@@ -7,7 +7,7 @@ A reference to a named set of entity references.
 URI: [tccm:ValueSetReference](https://hotecosystem.org/tccm/ValueSetReference)
 
 
-![img](images/ValueSetReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[ValueSetReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

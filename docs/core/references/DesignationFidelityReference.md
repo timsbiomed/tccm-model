@@ -7,7 +7,7 @@ A reference to a description about designation faithfulness or accuracy.
 URI: [tccm:DesignationFidelityReference](https://hotecosystem.org/tccm/DesignationFidelityReference)
 
 
-![img](images/DesignationFidelityReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[DesignationFidelityReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

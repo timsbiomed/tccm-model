@@ -7,7 +7,7 @@ a tag/value pair used to add non-model information to an entry
 URI: [tccm:Extension](https://hotecosystem.org/tccm/Extension)
 
 
-![img](images/Extension.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[Extension]<extensions%200..*-++[Extension&#124;tag:uriorcurie;value:string],[Extension]^-[Annotation],[Extensible],[Annotation])
 
 ## Children
 

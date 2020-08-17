@@ -7,7 +7,7 @@ A reference to an attribute defined in the CTS2 specification.
 URI: [tccm:ModelAttributeReference](https://hotecosystem.org/tccm/ModelAttributeReference)
 
 
-![img](images/ModelAttributeReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[ModelAttributeReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

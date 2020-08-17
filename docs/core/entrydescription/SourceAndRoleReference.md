@@ -7,7 +7,7 @@ A reference to a source that also includes the role that the source played and/o
 URI: [tccm:SourceAndRoleReference](https://hotecosystem.org/tccm/SourceAndRoleReference)
 
 
-![img](images/SourceAndRoleReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[RoleReference]<role%200..1-++[SourceAndRoleReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference]^-[SourceAndRoleReference],[RoleReference],[NameAndMeaningReference])
 
 ## Parents
 

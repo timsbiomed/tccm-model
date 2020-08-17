@@ -7,7 +7,7 @@ A reference to a tag that can be assigned to versionable resources within the co
 URI: [tccm:VersionTagReference](https://hotecosystem.org/tccm/VersionTagReference)
 
 
-![img](images/VersionTagReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[VersionTagReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

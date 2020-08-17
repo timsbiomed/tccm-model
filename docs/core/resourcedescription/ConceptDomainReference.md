@@ -7,7 +7,7 @@ A reference to a concept domain.
 URI: [tccm:ConceptDomainReference](https://hotecosystem.org/tccm/ConceptDomainReference)
 
 
-![img](images/ConceptDomainReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[ConceptDomainReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

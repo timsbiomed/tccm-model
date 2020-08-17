@@ -7,7 +7,7 @@ A reference to a conceptual space that groups identifiers to avoid conflict with
 URI: [tccm:NamespaceReference](https://hotecosystem.org/tccm/NamespaceReference)
 
 
-![img](images/NamespaceReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[NamespaceReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

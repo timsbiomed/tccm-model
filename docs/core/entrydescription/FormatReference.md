@@ -7,7 +7,7 @@ A reference to a particular way that information is encoded for storage or trans
 URI: [tccm:FormatReference](https://hotecosystem.org/tccm/FormatReference)
 
 
-![img](images/FormatReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[OpaqueData],[NameAndMeaningReference],[OpaqueData]++-%20format%200..1>[FormatReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference]^-[FormatReference])
 
 ## Parents
 

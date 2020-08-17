@@ -7,7 +7,7 @@ A reference to a language in which an ontology may be implemented.
 URI: [tccm:OntologyLanguageReference](https://hotecosystem.org/tccm/OntologyLanguageReference)
 
 
-![img](images/OntologyLanguageReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[SourceAndNotation],[SourceAndNotation]++-%20sourceLanguage%200..1>[OntologyLanguageReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference]^-[OntologyLanguageReference],[NameAndMeaningReference])
 
 ## Parents
 

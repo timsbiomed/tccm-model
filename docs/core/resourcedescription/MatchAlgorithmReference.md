@@ -7,7 +7,7 @@ A reference to an algorithm used for selecting and filtering data.
 URI: [tccm:MatchAlgorithmReference](https://hotecosystem.org/tccm/MatchAlgorithmReference)
 
 
-![img](images/MatchAlgorithmReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[NameAndMeaningReference]^-[MatchAlgorithmReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F])
 
 ## Parents
 

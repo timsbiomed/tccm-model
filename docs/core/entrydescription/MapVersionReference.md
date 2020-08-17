@@ -7,7 +7,7 @@ A reference to a map version and the corresponding map, if known.
 URI: [tccm:MapVersionReference](https://hotecosystem.org/tccm/MapVersionReference)
 
 
-![img](images/MapVersionReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference],[MapReference]<map%200..1-++[MapVersionReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference]^-[MapVersionReference],[MapReference])
 
 ## Parents
 

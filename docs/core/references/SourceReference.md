@@ -7,7 +7,7 @@ A reference to an individual, organization of bibliographic reference.
 URI: [tccm:SourceReference](https://hotecosystem.org/tccm/SourceReference)
 
 
-![img](images/SourceReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[SourceReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

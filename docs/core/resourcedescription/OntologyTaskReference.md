@@ -7,7 +7,7 @@ A reference to a purpose for which an ontology can be designed.
 URI: [tccm:OntologyTaskReference](https://hotecosystem.org/tccm/OntologyTaskReference)
 
 
-![img](images/OntologyTaskReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[OntologyTaskReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 

@@ -8,7 +8,7 @@ The OpaqueData data type must be encoded in such a way that the content can be r
 URI: [tccm:OpaqueData](https://hotecosystem.org/tccm/OpaqueData)
 
 
-![img](images/OpaqueData.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[LanguageReference]<language%200..1-++[OpaqueData&#124;schema:DocumentURI%20%3F;value:string],[FormatReference]<format%200..1-++[OpaqueData],[OpaqueData]^-[EntryDescription],[LanguageReference],[FormatReference],[EntryDescription])
 
 ## Children
 

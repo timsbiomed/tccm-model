@@ -7,7 +7,7 @@ A reference to a method model that can be used to create an ontology.
 URI: [tccm:OntologyEngineeringMethodologyReference](https://hotecosystem.org/tccm/OntologyEngineeringMethodologyReference)
 
 
-![img](images/OntologyEngineeringMethodologyReference.svg)
+![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[OntologyEngineeringMethodologyReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
 
 ## Parents
 
