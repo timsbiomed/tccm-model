@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e8fe1c1a881009b12b3dad9b26bd13e2d7606d2c0cdddb9ccd56d17c77b12220"
+            "sha256": "66a7c8513366b023f4862b908cf7fd3b02a6c203a74255a01d2553b1591692b0"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -36,9 +36,12 @@
             "version": "==19.3.0"
         },
         "biolinkml": {
-            "editable": true,
-            "git": "https://github.com/biolink/biolinkml.git",
-            "ref": "ba7a404f8880ad0f2dba50c0e1327317c4340911"
+            "hashes": [
+                "sha256:0c8b335819dc59d40fbab3fed9e9d543607e4dfffcde9ce9fded0de75f837b1c",
+                "sha256:269954af305a9beb9bd41e37277f7d45038b254c28a120ac239ad07e3693067d"
+            ],
+            "index": "pypi",
+            "version": "==1.5.7"
         },
         "certifi": {
             "hashes": [
@@ -125,8 +128,8 @@
         },
         "prefixcommons": {
             "hashes": [
-                "sha256:a4a6decd6c1a2497b2b10193fa4ed69ed91cea20deb3a9781815b6bf3f3e1003",
                 "sha256:2ff99e9f2c27f41e6beb831742ca88ddae129b2de6dcc81b0b27f0de69cb2e8a",
+                "sha256:a4a6decd6c1a2497b2b10193fa4ed69ed91cea20deb3a9781815b6bf3f3e1003",
                 "sha256:f820dc69f0eba1f6fd80bdb2e78420e4970f20dfb4c307fed77c607198ca69f2"
             ],
             "version": "==0.1.9"
@@ -239,11 +242,11 @@
         },
         "sparqlwrapper": {
             "hashes": [
-                "sha256:8cf6c21126ed76edc85c5c232fd6f77b9f61f8ad1db90a7147cdde2104aff145",
+                "sha256:17ec44b08b8ae2888c801066249f74fe328eec25d90203ce7eadaf82e64484c7",
                 "sha256:357ee8a27bc910ea13d77836dbddd0b914991495b8cc1bf70676578155e962a8",
+                "sha256:8cf6c21126ed76edc85c5c232fd6f77b9f61f8ad1db90a7147cdde2104aff145",
                 "sha256:c7f9c9d8ebb13428771bc3b6dee54197422507dcc3dea34e30d5dcfc53478dec",
-                "sha256:d6a66b5b8cda141660e07aeb00472db077a98d22cb588c973209c7336850fb3c",
-                "sha256:17ec44b08b8ae2888c801066249f74fe328eec25d90203ce7eadaf82e64484c7"
+                "sha256:d6a66b5b8cda141660e07aeb00472db077a98d22cb588c973209c7336850fb3c"
             ],
             "version": "==1.8.5"
         },
