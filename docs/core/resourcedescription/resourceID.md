@@ -1,19 +1,18 @@
 
-# Type: ResourceDescription_resourceID
+# Type: resourceID
 
 
 A local identifier that uniquely names the resource within the context of the describedResourceType and implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a SNOMED-CT code system version.
 
-URI: [tccm:ResourceDescription_resourceID](https://hotecosystem.org/tccm/ResourceDescription_resourceID)
+URI: [tccm:resourceID](https://hotecosystem.org/tccm/resourceID)
 
 
 ## Domain and Range
 
-[ResourceDescription](ResourceDescription.md) ->  <sub>REQ</sub> [LocalIdentifier](types/LocalIdentifier.md)
+None ->  <sub>REQ</sub> [LocalIdentifier](types/LocalIdentifier.md)
 
 ## Parents
 
- *  is_a: [resourceID](resourceID.md)
 
 ## Children
 

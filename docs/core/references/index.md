@@ -60,11 +60,13 @@ For each specific reference below we attempt to identify an ontology or value se
     * [PredicateReference➞href](PredicateReference_href.md)
  * [map](map.md)
     * [MapVersionReference➞map](MapVersionReference_map.md)
- * [name](name.md)
+ * [name](name.md) - An identifier that uniquely names the reference within the context of the particular reference type.
     * [NameAndMeaningReference➞name](NameAndMeaningReference_name.md)
     * [PredicateReference➞name](PredicateReference_name.md)
  * [role](role.md)
     * [SourceAndRoleReference➞role](SourceAndRoleReference_role.md)
+ * [synopsis](synopsis.md) - A summary of the role and purpose of the actual reference
+    * [NameAndMeaningReference➞synopsis](NameAndMeaningReference_synopsis.md)
  * [uri](uri.md)
     * [NameAndMeaningReference➞uri](NameAndMeaningReference_uri.md)
     * [PredicateReference➞uri](PredicateReference_uri.md)

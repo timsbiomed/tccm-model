@@ -83,7 +83,7 @@
     * [ResourceDescription➞keyword](ResourceDescription_keyword.md)
  * [map](map.md)
     * [MapVersionReference➞map](MapVersionReference_map.md)
- * [name](name.md)
+ * [name](name.md) - An identifier that uniquely names the reference within the context of the particular reference type.
     * [NameAndMeaningReference➞name](NameAndMeaningReference_name.md)
     * [PredicateReference➞name](PredicateReference_name.md)
  * [officialActivationDate](officialActivationDate.md) - The date that this version of the resource is stated by its publishers to go into effect.
@@ -99,9 +99,7 @@
  * [releaseFormat](releaseFormat.md) - A format and notation that the releases (versions) of this resource are published in.
     * [AbstractResourceDescription➞releaseFormat](AbstractResourceDescription_releaseFormat.md)
  * [resourceID](resourceID.md) - A local identifier that uniquely names the resource within the context of the describedResourceType and implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a SNOMED-CT code system version.
-    * [ResourceDescription➞resourceID](ResourceDescription_resourceID.md)
  * [resourceSynopsis](resourceSynopsis.md) - A textual summary of the resource - what it is, what it is for, etc.
-    * [ResourceDescription➞resourceSynopsis](ResourceDescription_resourceSynopsis.md)
  * [rights](rights.md) - Copyright and IP information. Note that rights applies to the source resource, not the CTS2 rendering.
     * [ResourceDescription➞rights](ResourceDescription_rights.md)
  * [role](role.md)
@@ -116,6 +114,8 @@
     * [SourceAndNotation➞sourceDocumentSyntax](SourceAndNotation_sourceDocumentSyntax.md)
  * [sourceLanguage](sourceLanguage.md) - The formal language, if any, that the source for the resource version is expressed in. Examples include Common Logic, OWL, OWL-DL, CLAML26, etc.
     * [SourceAndNotation➞sourceLanguage](SourceAndNotation_sourceLanguage.md)
+ * [synopsis](synopsis.md) - A summary of the role and purpose of the actual reference
+    * [NameAndMeaningReference➞synopsis](NameAndMeaningReference_synopsis.md)
  * [uri](uri.md)
     * [NameAndMeaningReference➞uri](NameAndMeaningReference_uri.md)
     * [PredicateReference➞uri](PredicateReference_uri.md)

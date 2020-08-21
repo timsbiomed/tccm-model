@@ -1,5 +1,5 @@
 # Auto generated from references.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-14 09:49
+# Generation date: 2020-08-17 08:43
 # Schema: references
 #
 # id: https://hotecosystem.org/tccm/references
@@ -50,7 +50,148 @@ DEFAULT_ = TCCM
 # Types
 
 # Class references
+class NameAndMeaningReferenceName(LocalIdentifier):
+    pass
 
+
+class AssociationReferenceName(LocalIdentifier):
+    pass
+
+
+class BindingQualifierReferenceName(LocalIdentifier):
+    pass
+
+
+class CaseSignificanceReferenceName(LocalIdentifier):
+    pass
+
+
+class CodeSystemCategoryReferenceName(LocalIdentifier):
+    pass
+
+
+class CodeSystemReferenceName(LocalIdentifier):
+    pass
+
+
+class CodeSystemVersionReferenceName(LocalIdentifier):
+    pass
+
+
+class ConceptDomainReferenceName(LocalIdentifier):
+    pass
+
+
+class ContextReferenceName(LocalIdentifier):
+    pass
+
+
+class DesignationFidelityReferenceName(LocalIdentifier):
+    pass
+
+
+class DesignationTypeReferenceName(LocalIdentifier):
+    pass
+
+
+class FormalityLevelReferenceName(LocalIdentifier):
+    pass
+
+
+class FormatReferenceName(LocalIdentifier):
+    pass
+
+
+class LanguageReferenceName(LocalIdentifier):
+    pass
+
+
+class MapCorrelationReferenceName(LocalIdentifier):
+    pass
+
+
+class MapReferenceName(LocalIdentifier):
+    pass
+
+
+class MapVersionReferenceName(LocalIdentifier):
+    pass
+
+
+class MatchAlgorithmReferenceName(LocalIdentifier):
+    pass
+
+
+class ModelAttributeReferenceName(LocalIdentifier):
+    pass
+
+
+class NamespaceReferenceName(LocalIdentifier):
+    pass
+
+
+class OntologyDomainReferenceName(LocalIdentifier):
+    pass
+
+
+class OntologyEngineeringMethodologyReferenceName(LocalIdentifier):
+    pass
+
+
+class OntologyEngineeringToolReferenceName(LocalIdentifier):
+    pass
+
+
+class OntologyLanguageReferenceName(LocalIdentifier):
+    pass
+
+
+class OntologySyntaxReferenceName(LocalIdentifier):
+    pass
+
+
+class OntologyTaskReferenceName(LocalIdentifier):
+    pass
+
+
+class OntologyTypeReferenceName(LocalIdentifier):
+    pass
+
+
+class PredicateReferenceName(Curie):
+    pass
+
+
+class ReasoningAlgorithmReferenceName(LocalIdentifier):
+    pass
+
+
+class RoleReferenceName(LocalIdentifier):
+    pass
+
+
+class SourceAndRoleReferenceName(LocalIdentifier):
+    pass
+
+
+class SourceReferenceName(LocalIdentifier):
+    pass
+
+
+class StatusReferenceName(LocalIdentifier):
+    pass
+
+
+class ValueSetDefinitionReferenceName(LocalIdentifier):
+    pass
+
+
+class ValueSetReferenceName(LocalIdentifier):
+    pass
+
+
+class VersionTagReferenceName(LocalIdentifier):
+    pass
 
 
 @dataclass
@@ -67,15 +208,16 @@ class NameAndMeaningReference(YAMLRoot):
     class_name: ClassVar[str] = "NameAndMeaningReference"
     class_model_uri: ClassVar[URIRef] = TCCM.NameAndMeaningReference
 
-    name: Union[str, LocalIdentifier]
+    name: Union[str, NameAndMeaningReferenceName]
+    synopsis: Optional[str] = None
     uri: Optional[Union[str, ExternalURI]] = None
     href: Optional[Union[str, RenderingURI]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
         if self.name is None:
             raise ValueError(f"name must be supplied")
-        if not isinstance(self.name, LocalIdentifier):
-            self.name = LocalIdentifier(self.name)
+        if not isinstance(self.name, NameAndMeaningReferenceName):
+            self.name = NameAndMeaningReferenceName(self.name)
         if self.uri is not None and not isinstance(self.uri, ExternalURI):
             self.uri = ExternalURI(self.uri)
         if self.href is not None and not isinstance(self.href, RenderingURI):
@@ -95,7 +237,15 @@ class AssociationReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "AssociationReference"
     class_model_uri: ClassVar[URIRef] = TCCM.AssociationReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, AssociationReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, AssociationReferenceName):
+            self.name = AssociationReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class BindingQualifierReference(NameAndMeaningReference):
@@ -111,7 +261,15 @@ class BindingQualifierReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "BindingQualifierReference"
     class_model_uri: ClassVar[URIRef] = TCCM.BindingQualifierReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, BindingQualifierReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, BindingQualifierReferenceName):
+            self.name = BindingQualifierReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class CaseSignificanceReference(NameAndMeaningReference):
@@ -125,7 +283,15 @@ class CaseSignificanceReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "CaseSignificanceReference"
     class_model_uri: ClassVar[URIRef] = TCCM.CaseSignificanceReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, CaseSignificanceReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, CaseSignificanceReferenceName):
+            self.name = CaseSignificanceReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class CodeSystemCategoryReference(NameAndMeaningReference):
@@ -140,7 +306,15 @@ class CodeSystemCategoryReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "CodeSystemCategoryReference"
     class_model_uri: ClassVar[URIRef] = TCCM.CodeSystemCategoryReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, CodeSystemCategoryReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, CodeSystemCategoryReferenceName):
+            self.name = CodeSystemCategoryReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class CodeSystemReference(NameAndMeaningReference):
@@ -154,7 +328,15 @@ class CodeSystemReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "CodeSystemReference"
     class_model_uri: ClassVar[URIRef] = TCCM.CodeSystemReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, CodeSystemReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, CodeSystemReferenceName):
+            self.name = CodeSystemReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class CodeSystemVersionReference(NameAndMeaningReference):
@@ -168,10 +350,14 @@ class CodeSystemVersionReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "CodeSystemVersionReference"
     class_model_uri: ClassVar[URIRef] = TCCM.CodeSystemVersionReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, CodeSystemVersionReferenceName] = None
     codeSystem: Optional[Union[dict, CodeSystemReference]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, CodeSystemVersionReferenceName):
+            self.name = CodeSystemVersionReferenceName(self.name)
         if self.codeSystem is not None and not isinstance(self.codeSystem, CodeSystemReference):
             self.codeSystem = CodeSystemReference(**self.codeSystem)
         super().__post_init__(**kwargs)
@@ -189,7 +375,15 @@ class ConceptDomainReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "ConceptDomainReference"
     class_model_uri: ClassVar[URIRef] = TCCM.ConceptDomainReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, ConceptDomainReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, ConceptDomainReferenceName):
+            self.name = ConceptDomainReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class ContextReference(NameAndMeaningReference):
@@ -203,7 +397,15 @@ class ContextReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "ContextReference"
     class_model_uri: ClassVar[URIRef] = TCCM.ContextReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, ContextReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, ContextReferenceName):
+            self.name = ContextReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class DesignationFidelityReference(NameAndMeaningReference):
@@ -217,7 +419,15 @@ class DesignationFidelityReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "DesignationFidelityReference"
     class_model_uri: ClassVar[URIRef] = TCCM.DesignationFidelityReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, DesignationFidelityReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, DesignationFidelityReferenceName):
+            self.name = DesignationFidelityReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class DesignationTypeReference(NameAndMeaningReference):
@@ -231,7 +441,15 @@ class DesignationTypeReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "DesignationTypeReference"
     class_model_uri: ClassVar[URIRef] = TCCM.DesignationTypeReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, DesignationTypeReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, DesignationTypeReferenceName):
+            self.name = DesignationTypeReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class FormalityLevelReference(NameAndMeaningReference):
@@ -245,7 +463,15 @@ class FormalityLevelReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "FormalityLevelReference"
     class_model_uri: ClassVar[URIRef] = TCCM.FormalityLevelReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, FormalityLevelReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, FormalityLevelReferenceName):
+            self.name = FormalityLevelReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class FormatReference(NameAndMeaningReference):
@@ -259,7 +485,15 @@ class FormatReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "FormatReference"
     class_model_uri: ClassVar[URIRef] = TCCM.FormatReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, FormatReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, FormatReferenceName):
+            self.name = FormatReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class LanguageReference(NameAndMeaningReference):
@@ -273,7 +507,15 @@ class LanguageReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "LanguageReference"
     class_model_uri: ClassVar[URIRef] = TCCM.LanguageReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, LanguageReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, LanguageReferenceName):
+            self.name = LanguageReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class MapCorrelationReference(NameAndMeaningReference):
@@ -287,7 +529,15 @@ class MapCorrelationReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "MapCorrelationReference"
     class_model_uri: ClassVar[URIRef] = TCCM.MapCorrelationReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, MapCorrelationReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, MapCorrelationReferenceName):
+            self.name = MapCorrelationReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class MapReference(NameAndMeaningReference):
@@ -301,7 +551,15 @@ class MapReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "MapReference"
     class_model_uri: ClassVar[URIRef] = TCCM.MapReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, MapReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, MapReferenceName):
+            self.name = MapReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class MapVersionReference(NameAndMeaningReference):
@@ -315,10 +573,14 @@ class MapVersionReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "MapVersionReference"
     class_model_uri: ClassVar[URIRef] = TCCM.MapVersionReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, MapVersionReferenceName] = None
     map: Optional[Union[dict, MapReference]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, MapVersionReferenceName):
+            self.name = MapVersionReferenceName(self.name)
         if self.map is not None and not isinstance(self.map, MapReference):
             self.map = MapReference(**self.map)
         super().__post_init__(**kwargs)
@@ -336,7 +598,15 @@ class MatchAlgorithmReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "MatchAlgorithmReference"
     class_model_uri: ClassVar[URIRef] = TCCM.MatchAlgorithmReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, MatchAlgorithmReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, MatchAlgorithmReferenceName):
+            self.name = MatchAlgorithmReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class ModelAttributeReference(NameAndMeaningReference):
@@ -350,7 +620,15 @@ class ModelAttributeReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "ModelAttributeReference"
     class_model_uri: ClassVar[URIRef] = TCCM.ModelAttributeReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, ModelAttributeReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, ModelAttributeReferenceName):
+            self.name = ModelAttributeReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class NamespaceReference(NameAndMeaningReference):
@@ -365,7 +643,15 @@ class NamespaceReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "NamespaceReference"
     class_model_uri: ClassVar[URIRef] = TCCM.NamespaceReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, NamespaceReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, NamespaceReferenceName):
+            self.name = NamespaceReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class OntologyDomainReference(NameAndMeaningReference):
@@ -379,7 +665,15 @@ class OntologyDomainReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "OntologyDomainReference"
     class_model_uri: ClassVar[URIRef] = TCCM.OntologyDomainReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, OntologyDomainReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, OntologyDomainReferenceName):
+            self.name = OntologyDomainReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class OntologyEngineeringMethodologyReference(NameAndMeaningReference):
@@ -393,7 +687,15 @@ class OntologyEngineeringMethodologyReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "OntologyEngineeringMethodologyReference"
     class_model_uri: ClassVar[URIRef] = TCCM.OntologyEngineeringMethodologyReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, OntologyEngineeringMethodologyReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, OntologyEngineeringMethodologyReferenceName):
+            self.name = OntologyEngineeringMethodologyReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class OntologyEngineeringToolReference(NameAndMeaningReference):
@@ -407,7 +709,15 @@ class OntologyEngineeringToolReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "OntologyEngineeringToolReference"
     class_model_uri: ClassVar[URIRef] = TCCM.OntologyEngineeringToolReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, OntologyEngineeringToolReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, OntologyEngineeringToolReferenceName):
+            self.name = OntologyEngineeringToolReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class OntologyLanguageReference(NameAndMeaningReference):
@@ -421,7 +731,15 @@ class OntologyLanguageReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "OntologyLanguageReference"
     class_model_uri: ClassVar[URIRef] = TCCM.OntologyLanguageReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, OntologyLanguageReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, OntologyLanguageReferenceName):
+            self.name = OntologyLanguageReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class OntologySyntaxReference(NameAndMeaningReference):
@@ -435,7 +753,15 @@ class OntologySyntaxReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "OntologySyntaxReference"
     class_model_uri: ClassVar[URIRef] = TCCM.OntologySyntaxReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, OntologySyntaxReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, OntologySyntaxReferenceName):
+            self.name = OntologySyntaxReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class OntologyTaskReference(NameAndMeaningReference):
@@ -449,7 +775,15 @@ class OntologyTaskReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "OntologyTaskReference"
     class_model_uri: ClassVar[URIRef] = TCCM.OntologyTaskReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, OntologyTaskReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, OntologyTaskReferenceName):
+            self.name = OntologyTaskReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class OntologyTypeReference(NameAndMeaningReference):
@@ -463,7 +797,15 @@ class OntologyTypeReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "OntologyTypeReference"
     class_model_uri: ClassVar[URIRef] = TCCM.OntologyTypeReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, OntologyTypeReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, OntologyTypeReferenceName):
+            self.name = OntologyTypeReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class PredicateReference(YAMLRoot):
@@ -479,18 +821,20 @@ class PredicateReference(YAMLRoot):
     class_name: ClassVar[str] = "PredicateReference"
     class_model_uri: ClassVar[URIRef] = TCCM.PredicateReference
 
+    name: Union[Curie, PredicateReferenceName]
     uri: Union[str, ExternalURI]
-    name: Curie
     href: Optional[Union[str, RenderingURI]] = None
     designation: Optional[str] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, PredicateReferenceName):
+            self.name = PredicateReferenceName(self.name)
         if self.uri is None:
             raise ValueError(f"uri must be supplied")
         if not isinstance(self.uri, ExternalURI):
             self.uri = ExternalURI(self.uri)
-        if self.name is None:
-            raise ValueError(f"name must be supplied")
         if self.href is not None and not isinstance(self.href, RenderingURI):
             self.href = RenderingURI(self.href)
         super().__post_init__(**kwargs)
@@ -508,7 +852,15 @@ class ReasoningAlgorithmReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "ReasoningAlgorithmReference"
     class_model_uri: ClassVar[URIRef] = TCCM.ReasoningAlgorithmReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, ReasoningAlgorithmReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, ReasoningAlgorithmReferenceName):
+            self.name = ReasoningAlgorithmReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class RoleReference(NameAndMeaningReference):
@@ -523,7 +875,15 @@ class RoleReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "RoleReference"
     class_model_uri: ClassVar[URIRef] = TCCM.RoleReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, RoleReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, RoleReferenceName):
+            self.name = RoleReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class SourceAndRoleReference(NameAndMeaningReference):
@@ -538,10 +898,14 @@ class SourceAndRoleReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "SourceAndRoleReference"
     class_model_uri: ClassVar[URIRef] = TCCM.SourceAndRoleReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, SourceAndRoleReferenceName] = None
     role: Optional[Union[dict, RoleReference]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, SourceAndRoleReferenceName):
+            self.name = SourceAndRoleReferenceName(self.name)
         if self.role is not None and not isinstance(self.role, RoleReference):
             self.role = RoleReference(**self.role)
         super().__post_init__(**kwargs)
@@ -559,7 +923,15 @@ class SourceReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "SourceReference"
     class_model_uri: ClassVar[URIRef] = TCCM.SourceReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, SourceReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, SourceReferenceName):
+            self.name = SourceReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class StatusReference(NameAndMeaningReference):
@@ -573,7 +945,15 @@ class StatusReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "StatusReference"
     class_model_uri: ClassVar[URIRef] = TCCM.StatusReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, StatusReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, StatusReferenceName):
+            self.name = StatusReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class ValueSetDefinitionReference(NameAndMeaningReference):
@@ -587,7 +967,15 @@ class ValueSetDefinitionReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "ValueSetDefinitionReference"
     class_model_uri: ClassVar[URIRef] = TCCM.ValueSetDefinitionReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, ValueSetDefinitionReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, ValueSetDefinitionReferenceName):
+            self.name = ValueSetDefinitionReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class ValueSetReference(NameAndMeaningReference):
@@ -601,7 +989,15 @@ class ValueSetReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "ValueSetReference"
     class_model_uri: ClassVar[URIRef] = TCCM.ValueSetReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, ValueSetReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, ValueSetReferenceName):
+            self.name = ValueSetReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 @dataclass
 class VersionTagReference(NameAndMeaningReference):
@@ -615,7 +1011,15 @@ class VersionTagReference(NameAndMeaningReference):
     class_name: ClassVar[str] = "VersionTagReference"
     class_model_uri: ClassVar[URIRef] = TCCM.VersionTagReference
 
-    name: Union[str, LocalIdentifier] = None
+    name: Union[str, VersionTagReferenceName] = None
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.name is None:
+            raise ValueError(f"name must be supplied")
+        if not isinstance(self.name, VersionTagReferenceName):
+            self.name = VersionTagReferenceName(self.name)
+        super().__post_init__(**kwargs)
+
 
 
 # Slots
@@ -623,7 +1027,10 @@ class slots:
     pass
 
 slots.name = Slot(uri=TCCM.name, name="name", curie=TCCM.curie('name'),
-                      model_uri=TCCM.name, domain=None, range=Union[str, LocalIdentifier])
+                      model_uri=TCCM.name, domain=None, range=URIRef)
+
+slots.synopsis = Slot(uri=TCCM.synopsis, name="synopsis", curie=TCCM.curie('synopsis'),
+                      model_uri=TCCM.synopsis, domain=None, range=Optional[str])
 
 slots.uri = Slot(uri=TCCM.uri, name="uri", curie=TCCM.curie('uri'),
                       model_uri=TCCM.uri, domain=None, range=Optional[Union[str, ExternalURI]])
@@ -644,7 +1051,10 @@ slots.role = Slot(uri=TCCM.role, name="role", curie=TCCM.curie('role'),
                       model_uri=TCCM.role, domain=None, range=Optional[Union[dict, RoleReference]])
 
 slots.NameAndMeaningReference_name = Slot(uri=TCCM.name, name="NameAndMeaningReference_name", curie=TCCM.curie('name'),
-                      model_uri=TCCM.NameAndMeaningReference_name, domain=NameAndMeaningReference, range=Union[str, LocalIdentifier])
+                      model_uri=TCCM.NameAndMeaningReference_name, domain=NameAndMeaningReference, range=Union[str, NameAndMeaningReferenceName])
+
+slots.NameAndMeaningReference_synopsis = Slot(uri=TCCM.synopsis, name="NameAndMeaningReference_synopsis", curie=TCCM.curie('synopsis'),
+                      model_uri=TCCM.NameAndMeaningReference_synopsis, domain=NameAndMeaningReference, range=Optional[str])
 
 slots.NameAndMeaningReference_uri = Slot(uri=TCCM.uri, name="NameAndMeaningReference_uri", curie=TCCM.curie('uri'),
                       model_uri=TCCM.NameAndMeaningReference_uri, domain=NameAndMeaningReference, range=Optional[Union[str, ExternalURI]])
@@ -662,7 +1072,7 @@ slots.PredicateReference_uri = Slot(uri=TCCM.uri, name="PredicateReference_uri",
                       model_uri=TCCM.PredicateReference_uri, domain=PredicateReference, range=Union[str, ExternalURI])
 
 slots.PredicateReference_name = Slot(uri=TCCM.name, name="PredicateReference_name", curie=TCCM.curie('name'),
-                      model_uri=TCCM.PredicateReference_name, domain=PredicateReference, range=Curie)
+                      model_uri=TCCM.PredicateReference_name, domain=PredicateReference, range=Union[Curie, PredicateReferenceName])
 
 slots.PredicateReference_href = Slot(uri=TCCM.href, name="PredicateReference_href", curie=TCCM.curie('href'),
                       model_uri=TCCM.PredicateReference_href, domain=PredicateReference, range=Optional[Union[str, RenderingURI]])

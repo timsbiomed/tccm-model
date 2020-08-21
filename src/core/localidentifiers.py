@@ -1,5 +1,5 @@
 # Auto generated from localidentifiers.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-14 09:49
+# Generation date: 2020-08-17 08:43
 # Schema: localidentifiers
 #
 # id: https://hotecosystem.org/tccm/localidentifiers

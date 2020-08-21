@@ -7,7 +7,7 @@ Format and notation that some or all the releases (versions) of this resource ar
 URI: [tccm:SourceAndNotation](https://hotecosystem.org/tccm/SourceAndNotation)
 
 
-![img](http://yuml.me/diagram/nofunky;dir:TB/class/[OntologySyntaxReference]<sourceDocumentSyntax%200..1-++[SourceAndNotation&#124;sourceAndNotationDescription:string%20%3F;sourceDocument:PersistentURI%20%3F],[OntologyLanguageReference]<sourceLanguage%200..1-++[SourceAndNotation],[AbstractResourceDescription]++-%20releaseFormat%200..*>[SourceAndNotation],[ResourceVersionDescription]++-%20sourceAndNotation%200..1>[SourceAndNotation],[ResourceVersionDescription],[OntologySyntaxReference],[OntologyLanguageReference],[AbstractResourceDescription])
+![img](images/SourceAndNotation.svg)
 
 ## Referenced by class
 

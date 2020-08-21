@@ -7,7 +7,7 @@ Information about the source, format, release date, version identifier, etc. of 
 URI: [tccm:ResourceVersionDescription](https://hotecosystem.org/tccm/ResourceVersionDescription)
 
 
-![img](http://yuml.me/diagram/nofunky;dir:TB/class/[Extension],[Annotation],[SourceAndNotation],[NameAndMeaningReference]<predecessor%200..1-++[ResourceVersionDescription&#124;documentURI:DocumentURI%20%3F;officialResourceVersionID:string%20%3F;officialReleaseDate:DateAndTime%20%3F;officialActivationDate:DateAndTime%20%3F;about(i):ExternalURI;resourceID(i):LocalIdentifier;formalName(i):string%20%3F;keyword(i):string%20*;resourceSynopsis(i):string%20%3F;additionalDocumentation(i):PersistentURI%20*;rights(i):string%20%3F;alternateID(i):string%20%3F],[SourceAndNotation]<sourceAndNotation%200..1-++[ResourceVersionDescription],[ResourceDescription]^-[ResourceVersionDescription],[ResourceDescription],[NameAndMeaningReference])
+![img](images/ResourceVersionDescription.svg)
 
 ## Parents
 
@@ -57,12 +57,12 @@ URI: [tccm:ResourceVersionDescription](https://hotecosystem.org/tccm/ResourceVer
  * [ResourceDescription➞keyword](ResourceDescription_keyword.md)  <sub>0..*</sub>
     * Description: Additional identifiers that are used to index and locate the resource.
     * range: [String](types/String.md)
- * [ResourceDescription➞resourceID](ResourceDescription_resourceID.md)  <sub>REQ</sub>
-    * Description: A local identifier that uniquely names the resource within the context of the describedResourceType and implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a SNOMED-CT code system version.
-    * range: [LocalIdentifier](types/LocalIdentifier.md)
- * [ResourceDescription➞resourceSynopsis](ResourceDescription_resourceSynopsis.md)  <sub>OPT</sub>
-    * Description: A textual summary of the resource - what it is, what it is for, etc.
-    * range: [String](types/String.md)
  * [ResourceDescription➞rights](ResourceDescription_rights.md)  <sub>OPT</sub>
     * Description: Copyright and IP information. Note that rights applies to the source resource, not the CTS2 rendering.
+    * range: [String](types/String.md)
+ * [resourceID](resourceID.md)  <sub>REQ</sub>
+    * Description: A local identifier that uniquely names the resource within the context of the describedResourceType and implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a SNOMED-CT code system version.
+    * range: [LocalIdentifier](types/LocalIdentifier.md)
+ * [resourceSynopsis](resourceSynopsis.md)  <sub>OPT</sub>
+    * Description: A textual summary of the resource - what it is, what it is for, etc.
     * range: [String](types/String.md)

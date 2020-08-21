@@ -7,7 +7,7 @@ A NameAndMeaningReference consists of a local identifier that references a uniqu
 URI: [tccm:NameAndMeaningReference](https://hotecosystem.org/tccm/NameAndMeaningReference)
 
 
-![img](http://yuml.me/diagram/nofunky;dir:TB/class/[VersionTagReference],[ValueSetReference],[ValueSetDefinitionReference],[StatusReference],[SourceReference],[SourceAndRoleReference],[RoleReference],[ResourceVersionDescription],[ReasoningAlgorithmReference],[OntologyTypeReference],[OntologyTaskReference],[OntologySyntaxReference],[OntologyLanguageReference],[OntologyEngineeringToolReference],[OntologyEngineeringMethodologyReference],[OntologyDomainReference],[NamespaceReference],[ResourceVersionDescription]++-%20predecessor%200..1>[NameAndMeaningReference&#124;name:LocalIdentifier;uri:ExternalURI%20%3F;href:RenderingURI%20%3F],[NameAndMeaningReference]^-[VersionTagReference],[NameAndMeaningReference]^-[ValueSetReference],[NameAndMeaningReference]^-[ValueSetDefinitionReference],[NameAndMeaningReference]^-[StatusReference],[NameAndMeaningReference]^-[SourceReference],[NameAndMeaningReference]^-[SourceAndRoleReference],[NameAndMeaningReference]^-[RoleReference],[NameAndMeaningReference]^-[ReasoningAlgorithmReference],[NameAndMeaningReference]^-[OntologyTypeReference],[NameAndMeaningReference]^-[OntologyTaskReference],[NameAndMeaningReference]^-[OntologySyntaxReference],[NameAndMeaningReference]^-[OntologyLanguageReference],[NameAndMeaningReference]^-[OntologyEngineeringToolReference],[NameAndMeaningReference]^-[OntologyEngineeringMethodologyReference],[NameAndMeaningReference]^-[OntologyDomainReference],[NameAndMeaningReference]^-[NamespaceReference],[NameAndMeaningReference]^-[ModelAttributeReference],[NameAndMeaningReference]^-[MatchAlgorithmReference],[NameAndMeaningReference]^-[MapVersionReference],[NameAndMeaningReference]^-[MapReference],[NameAndMeaningReference]^-[MapCorrelationReference],[NameAndMeaningReference]^-[LanguageReference],[NameAndMeaningReference]^-[FormatReference],[NameAndMeaningReference]^-[FormalityLevelReference],[NameAndMeaningReference]^-[DesignationTypeReference],[NameAndMeaningReference]^-[DesignationFidelityReference],[NameAndMeaningReference]^-[ContextReference],[NameAndMeaningReference]^-[ConceptDomainReference],[NameAndMeaningReference]^-[CodeSystemVersionReference],[NameAndMeaningReference]^-[CodeSystemReference],[NameAndMeaningReference]^-[CodeSystemCategoryReference],[NameAndMeaningReference]^-[CaseSignificanceReference],[NameAndMeaningReference]^-[BindingQualifierReference],[NameAndMeaningReference]^-[AssociationReference],[ModelAttributeReference],[MatchAlgorithmReference],[MapVersionReference],[MapReference],[MapCorrelationReference],[LanguageReference],[FormatReference],[FormalityLevelReference],[DesignationTypeReference],[DesignationFidelityReference],[ContextReference],[ConceptDomainReference],[CodeSystemVersionReference],[CodeSystemReference],[CodeSystemCategoryReference],[CaseSignificanceReference],[BindingQualifierReference],[AssociationReference])
+![img](images/NameAndMeaningReference.svg)
 
 ## Children
 
@@ -59,6 +59,10 @@ URI: [tccm:NameAndMeaningReference](https://hotecosystem.org/tccm/NameAndMeaning
  * [NameAndMeaningReference➞href](NameAndMeaningReference_href.md)  <sub>OPT</sub>
     * range: [RenderingURI](types/RenderingURI.md)
  * [NameAndMeaningReference➞name](NameAndMeaningReference_name.md)  <sub>REQ</sub>
+    * Description: An identifier that uniquely names the reference within the context of the particular reference type.
     * range: [LocalIdentifier](types/LocalIdentifier.md)
+ * [NameAndMeaningReference➞synopsis](NameAndMeaningReference_synopsis.md)  <sub>OPT</sub>
+    * Description: A summary of the role and purpose of the actual reference
+    * range: [String](types/String.md)
  * [NameAndMeaningReference➞uri](NameAndMeaningReference_uri.md)  <sub>OPT</sub>
     * range: [ExternalURI](types/ExternalURI.md)

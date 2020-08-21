@@ -7,7 +7,7 @@ mixin for classes that support annotations
 URI: [tccm:Annotatable](https://hotecosystem.org/tccm/Annotatable)
 
 
-![img](http://yuml.me/diagram/nofunky;dir:TB/class/[Annotation],[Annotation]<annotations%200..*-++[Annotatable],[ResourceDescription]uses%20-.->[Annotatable],[ResourceDescription])
+![img](images/Annotatable.svg)
 
 ## Mixin for
 

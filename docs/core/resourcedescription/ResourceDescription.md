@@ -7,7 +7,7 @@ ResourceDescription represents the shared characteristics common to both abstrac
 URI: [tccm:ResourceDescription](https://hotecosystem.org/tccm/ResourceDescription)
 
 
-![img](http://yuml.me/diagram/nofunky;dir:TB/class/[Extension],[Extensible],[Annotation],[Annotatable],[ResourceVersionDescription],[ResourceDescription&#124;about:ExternalURI;resourceID:LocalIdentifier;formalName:string%20%3F;keyword:string%20*;resourceSynopsis:string%20%3F;additionalDocumentation:PersistentURI%20*;rights:string%20%3F;alternateID:string%20%3F]uses%20-.->[Extensible],[ResourceDescription]uses%20-.->[Annotatable],[ResourceDescription]^-[ResourceVersionDescription],[ResourceDescription]^-[AbstractResourceDescription],[AbstractResourceDescription])
+![img](images/ResourceDescription.svg)
 
 ## Uses Mixins
 
@@ -42,14 +42,14 @@ URI: [tccm:ResourceDescription](https://hotecosystem.org/tccm/ResourceDescriptio
  * [ResourceDescription➞keyword](ResourceDescription_keyword.md)  <sub>0..*</sub>
     * Description: Additional identifiers that are used to index and locate the resource.
     * range: [String](types/String.md)
- * [ResourceDescription➞resourceID](ResourceDescription_resourceID.md)  <sub>REQ</sub>
-    * Description: A local identifier that uniquely names the resource within the context of the describedResourceType and implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a SNOMED-CT code system version.
-    * range: [LocalIdentifier](types/LocalIdentifier.md)
- * [ResourceDescription➞resourceSynopsis](ResourceDescription_resourceSynopsis.md)  <sub>OPT</sub>
-    * Description: A textual summary of the resource - what it is, what it is for, etc.
-    * range: [String](types/String.md)
  * [ResourceDescription➞rights](ResourceDescription_rights.md)  <sub>OPT</sub>
     * Description: Copyright and IP information. Note that rights applies to the source resource, not the CTS2 rendering.
+    * range: [String](types/String.md)
+ * [resourceID](resourceID.md)  <sub>REQ</sub>
+    * Description: A local identifier that uniquely names the resource within the context of the describedResourceType and implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a SNOMED-CT code system version.
+    * range: [LocalIdentifier](types/LocalIdentifier.md)
+ * [resourceSynopsis](resourceSynopsis.md)  <sub>OPT</sub>
+    * Description: A textual summary of the resource - what it is, what it is for, etc.
     * range: [String](types/String.md)
 
 ### Mixed in from annotatable:

@@ -64,13 +64,15 @@
     * [OpaqueData➞language](OpaqueData_language.md)
  * [map](map.md)
     * [MapVersionReference➞map](MapVersionReference_map.md)
- * [name](name.md)
+ * [name](name.md) - An identifier that uniquely names the reference within the context of the particular reference type.
     * [NameAndMeaningReference➞name](NameAndMeaningReference_name.md)
     * [PredicateReference➞name](PredicateReference_name.md)
  * [role](role.md)
     * [SourceAndRoleReference➞role](SourceAndRoleReference_role.md)
  * [schema](schema.md) - If the format of the document involves an XML encoding, this contains the URI of a document that carries the corresponding XML Schema or DTD.
     * [OpaqueData➞schema](OpaqueData_schema.md)
+ * [synopsis](synopsis.md) - A summary of the role and purpose of the actual reference
+    * [NameAndMeaningReference➞synopsis](NameAndMeaningReference_synopsis.md)
  * [uri](uri.md)
     * [NameAndMeaningReference➞uri](NameAndMeaningReference_uri.md)
     * [PredicateReference➞uri](PredicateReference_uri.md)

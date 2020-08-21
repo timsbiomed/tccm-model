@@ -16,3 +16,101 @@ comparison does
 10) Namespacemanager line 169 -- should have a file/line reference.
 11) Mixins are not showing on diagrams that have the things they are mixed in to - see ResourceDescription as an example
 12) Need to add Any type -- note that you can set it as the default range if needed
+13) If no default prefix, use the model ID (?) 
+14) Context generater should have an option to emit JSON-LD 1.1 prefixes when necessary
+
+15) default_prefix should work against imported prefixes as well as prefixcommons prefixes
+
+16) Priority on prefixes in imports vs. local
+
+17) Mappings -- are they emitted *anywhere*?  Should they be?  It seems at bare minimum they should be in the
+    markdown.  Also, does ADM:Specimen.id work?
+    
+18) slot_usage -- injects a global slot into the namespace -- can be ugly.  We need a policy on this.
+
+19) Mappings doesn't check prefixes (!) (Fixed 8/21)
+
+20) Mappings on slot_usage don't show up ... (see Specimen.yaml in ccdhmodel) (Fixed 8/21)
+
+21) Broader, narrower, etc. mappings -- are they ALL in the metamodel?  Should they be?  Should their behavior be the 
+    same as generic mappings?
+    
+22) for unqualified imports, add a '.' in python
+
+23) Import Id on the ccdh Specimen -- should be EntityId
+
+24) SpecimenId should be EntityId
+
+25) Importmap should be part of the package and generator should ALWAYS map biolinkml stuff
+
+26) setup.cfg - includes should be INSIDE biolinkml. (look at how w3id redirects work before you continue)
+ 
+---- Input ---
+classes:
+   c1:
+      slot_usage:
+         s1:
+            key: true
+            required: true
+            
+         
+   c2:
+      slot_usage:
+         s1:
+            identifier: true
+            required: false
+
+   
+------- output ---
+slots:
+    s1:
+        key: true
+        identifier: true
+        required: ???
+    c1_s1:
+        is_a: s1
+    c2_s1:
+        is_a: s1
+
+        
+classes:
+    c1:
+        slots:
+            - c1_s1
+    c2:
+        slots:
+            - c2_s1
+            
+        
+
+classes:
+    c1:
+        slots
+        - s1
+        
+    c2:
+       is_a: c1
+       slot_usage:
+          s1:
+            required: true
+slots:
+    s1: 
+       domain_of:
+       - c1
+    c2_s1:
+       is_a: s1
+       domain_of:
+       - c2
+         
+classes:
+    c1:
+        slots:
+        - s1
+        
+    c2:
+        slots:
+        - c2_s1
+        
+    slot_usage:
+        - s1
+   

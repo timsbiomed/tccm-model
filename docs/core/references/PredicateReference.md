@@ -7,7 +7,7 @@ An EntityReference that serves the role of predicate. Note that this varies slig
 URI: [tccm:PredicateReference](https://hotecosystem.org/tccm/PredicateReference)
 
 
-![img](http://yuml.me/diagram/nofunky;dir:TB/class/[PredicateReference&#124;uri:ExternalURI;name:CURIE;href:RenderingURI%20%3F;designation:string%20%3F])
+![img](images/PredicateReference.svg)
 
 ## Referenced by class
 

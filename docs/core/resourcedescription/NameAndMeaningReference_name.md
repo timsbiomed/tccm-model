@@ -2,7 +2,7 @@
 # Type: NameAndMeaningReference_name
 
 
-
+An identifier that uniquely names the reference within the context of the particular reference type.
 
 URI: [tccm:NameAndMeaningReference_name](https://hotecosystem.org/tccm/NameAndMeaningReference_name)
 

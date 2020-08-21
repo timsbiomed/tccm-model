@@ -7,7 +7,7 @@ A reference to a formal algorithm for making inferences about an ontology.
 URI: [tccm:ReasoningAlgorithmReference](https://hotecosystem.org/tccm/ReasoningAlgorithmReference)
 
 
-![img](http://yuml.me/diagram/nofunky;dir:TB/class/[NameAndMeaningReference]^-[ReasoningAlgorithmReference&#124;name(i):LocalIdentifier;uri(i):ExternalURI%20%3F;href(i):RenderingURI%20%3F],[NameAndMeaningReference])
+![img](images/ReasoningAlgorithmReference.svg)
 
 ## Parents
 
@@ -21,6 +21,10 @@ URI: [tccm:ReasoningAlgorithmReference](https://hotecosystem.org/tccm/ReasoningA
  * [NameAndMeaningReference➞href](NameAndMeaningReference_href.md)  <sub>OPT</sub>
     * range: [RenderingURI](types/RenderingURI.md)
  * [NameAndMeaningReference➞name](NameAndMeaningReference_name.md)  <sub>REQ</sub>
+    * Description: An identifier that uniquely names the reference within the context of the particular reference type.
     * range: [LocalIdentifier](types/LocalIdentifier.md)
+ * [NameAndMeaningReference➞synopsis](NameAndMeaningReference_synopsis.md)  <sub>OPT</sub>
+    * Description: A summary of the role and purpose of the actual reference
+    * range: [String](types/String.md)
  * [NameAndMeaningReference➞uri](NameAndMeaningReference_uri.md)  <sub>OPT</sub>
     * range: [ExternalURI](types/ExternalURI.md)
