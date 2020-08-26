@@ -2,7 +2,7 @@ id: https://hotecosystem.org/tccm/resolvedvalueset
 name: resolvedvalueset
 title: Resolved Value Set
 license: https://creativecommons.org/publicdomain/zero/1.0/
-description: >-
+description: |-
   ValueSet definitions can be resolved dynamically on an as needed basis, but they also can be transferred between
   systems without the necessity of maintaining complete copies of the code system versions that are used to resolve
   them. This model defines the output of a value set resolution request. It contains sufficient information that the
@@ -30,10 +30,13 @@ classes:
         range: CodeSystemVersionReference
         mutivalued: true
       includesResolvedValueSet:
-        description: >-
+        description: |-
           If the value set includes other value sets, this contains the resolution information used to resolve the
           inner value sets.
         range: ResolvedValueSetHeader
         multivalued: true
 
   ResolvedValueSet:
+    slot_usage:
+      header:
+        range: ResolvedValueSetHeader

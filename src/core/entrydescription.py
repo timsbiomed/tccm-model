@@ -1,5 +1,5 @@
 # Auto generated from entrydescription.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-17 08:42
+# Generation date: 2020-08-25 13:57
 # Schema: entrydescription
 #
 # id: https://hotecosystem.org/tccm/entrydescription
@@ -20,11 +20,11 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
+from ...core.datatypes import CURIE, LocalIdentifier, URIorCurie
+from ...core.references import CodeSystemReference, CodeSystemVersionReference, FormatReference, LanguageReference, MapReference, MapVersionReference, NameAndMeaningReference, PredicateReference, RoleReference, SourceAndRoleReference
+from ...core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import Curie, URIorCURIE
-from datatypes import CURIE, LocalIdentifier, URIorCurie
 from includes.types import String
-from references import CodeSystemReference, CodeSystemVersionReference, FormatReference, LanguageReference, MapReference, MapVersionReference, NameAndMeaningReference, PredicateReference, RoleReference, SourceAndRoleReference
-from uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 
 metamodel_version = "1.5.3"
 
@@ -45,11 +45,12 @@ DEFAULT_ = TCCM
 @dataclass
 class OpaqueData(YAMLRoot):
     """
-    Opaque data is the equivalent of an ASN.1 External Type or the XML Schema anyType . An OpaqueData instance may
-    represent text with an optional spoken or written language code or a formal structure such as embedded HTML, XML,
-    or MIME encoded data. When a formal structure is included, its type should be specified in the format attribute
-    and, when the type is an XML variant, the corresponding schema (or DTD) should be included in the schema
-    parameter.
+    Opaque data is the equivalent of an ASN.1 External Type or the XML Schema anyType . An OpaqueData instance
+    may represent text with an optional spoken or written language code or a formal structure such as embedded HTML,
+    XML, or MIME encoded data. When a formal structure is included, its type should be specified in the format
+    attribute and, when the type is an XML variant, the corresponding schema (or DTD) should be included in the
+    schema parameter.
+
     The OpaqueData data type must be encoded in such a way that the content can be represented by a character string.
     Binary data is not permitted, although hyperlinks to binary data are.
     """
@@ -84,8 +85,8 @@ class EntryDescription(OpaqueData):
     that some CTS2 service implementations may want to constrain. As an example, Designation text is of type
     EntryDescription, but implementations may want to restrict the OpaqueData value attribute to a simple string
     rather than xs: anyType. When OpaqueData appears directly as a model element, implementations must be able to
-    support the full OpaqueData model. EntryDescription, however, may be constrained by implementations or specialized
-    PSM.
+    support the full OpaqueData model. EntryDescription, however, may be constrained by implementations or
+    specialized PSM.
     """
     _inherited_slots: ClassVar[List[str]] = []
 

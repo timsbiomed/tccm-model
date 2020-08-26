@@ -1,5 +1,5 @@
 # Auto generated from references.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-17 08:43
+# Generation date: 2020-08-25 13:58
 # Schema: references
 #
 # id: https://hotecosystem.org/tccm/references
@@ -32,10 +32,10 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
+from ...core.datatypes import CURIE, LocalIdentifier, URIorCurie
+from ...core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import Curie, URIorCURIE
-from datatypes import CURIE, LocalIdentifier, URIorCurie
 from includes.types import String
-from uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
 
 metamodel_version = "1.5.3"
 
@@ -54,107 +54,107 @@ class NameAndMeaningReferenceName(LocalIdentifier):
     pass
 
 
-class AssociationReferenceName(LocalIdentifier):
+class AssociationReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class BindingQualifierReferenceName(LocalIdentifier):
+class BindingQualifierReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class CaseSignificanceReferenceName(LocalIdentifier):
+class CaseSignificanceReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class CodeSystemCategoryReferenceName(LocalIdentifier):
+class CodeSystemCategoryReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class CodeSystemReferenceName(LocalIdentifier):
+class CodeSystemReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class CodeSystemVersionReferenceName(LocalIdentifier):
+class CodeSystemVersionReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class ConceptDomainReferenceName(LocalIdentifier):
+class ConceptDomainReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class ContextReferenceName(LocalIdentifier):
+class ContextReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class DesignationFidelityReferenceName(LocalIdentifier):
+class DesignationFidelityReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class DesignationTypeReferenceName(LocalIdentifier):
+class DesignationTypeReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class FormalityLevelReferenceName(LocalIdentifier):
+class FormalityLevelReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class FormatReferenceName(LocalIdentifier):
+class FormatReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class LanguageReferenceName(LocalIdentifier):
+class LanguageReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class MapCorrelationReferenceName(LocalIdentifier):
+class MapCorrelationReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class MapReferenceName(LocalIdentifier):
+class MapReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class MapVersionReferenceName(LocalIdentifier):
+class MapVersionReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class MatchAlgorithmReferenceName(LocalIdentifier):
+class MatchAlgorithmReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class ModelAttributeReferenceName(LocalIdentifier):
+class ModelAttributeReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class NamespaceReferenceName(LocalIdentifier):
+class NamespaceReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class OntologyDomainReferenceName(LocalIdentifier):
+class OntologyDomainReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class OntologyEngineeringMethodologyReferenceName(LocalIdentifier):
+class OntologyEngineeringMethodologyReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class OntologyEngineeringToolReferenceName(LocalIdentifier):
+class OntologyEngineeringToolReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class OntologyLanguageReferenceName(LocalIdentifier):
+class OntologyLanguageReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class OntologySyntaxReferenceName(LocalIdentifier):
+class OntologySyntaxReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class OntologyTaskReferenceName(LocalIdentifier):
+class OntologyTaskReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class OntologyTypeReferenceName(LocalIdentifier):
+class OntologyTypeReferenceName(NameAndMeaningReferenceName):
     pass
 
 
@@ -162,43 +162,43 @@ class PredicateReferenceName(Curie):
     pass
 
 
-class ReasoningAlgorithmReferenceName(LocalIdentifier):
+class ReasoningAlgorithmReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class RoleReferenceName(LocalIdentifier):
+class RoleReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class SourceAndRoleReferenceName(LocalIdentifier):
+class SourceAndRoleReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class SourceReferenceName(LocalIdentifier):
+class SourceReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class StatusReferenceName(LocalIdentifier):
+class StatusReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class ValueSetDefinitionReferenceName(LocalIdentifier):
+class ValueSetDefinitionReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class ValueSetReferenceName(LocalIdentifier):
+class ValueSetReferenceName(NameAndMeaningReferenceName):
     pass
 
 
-class VersionTagReferenceName(LocalIdentifier):
+class VersionTagReferenceName(NameAndMeaningReferenceName):
     pass
 
 
 @dataclass
 class NameAndMeaningReference(YAMLRoot):
     """
-    A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of a
-    given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the
+    A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of
+    a given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the
     identifier.
     """
     _inherited_slots: ClassVar[List[str]] = []
@@ -251,8 +251,8 @@ class AssociationReference(NameAndMeaningReference):
 class BindingQualifierReference(NameAndMeaningReference):
     """
     A reference to an entity that describes the role that a given value set binding plays for a concept domain. T
-    ypical values represent “overall,” “minimum” or “maximum,” the significance of which can be found in H L7 Version
-    3 documentation.
+    ypical values represent “overall,” “minimum” or “maximum,” the significance of which can be found in H
+    L7 Version 3 documentation.
     """
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -296,8 +296,8 @@ class CaseSignificanceReference(NameAndMeaningReference):
 @dataclass
 class CodeSystemCategoryReference(NameAndMeaningReference):
     """
-    A reference to information about a paradigm model used to create an ontology (a.k.a. knowledge representation
-    paradigm).
+    A reference to information about a paradigm model used to create an ontology (a.k.a. knowledge
+    representation paradigm).
     """
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -633,8 +633,8 @@ class ModelAttributeReference(NameAndMeaningReference):
 @dataclass
 class NamespaceReference(NameAndMeaningReference):
     """
-    A reference to a conceptual space that groups identifiers to avoid conflict with items that have the same name but
-    different meanings.
+    A reference to a conceptual space that groups identifiers to avoid conflict with items that have the same name
+    but different meanings.
     """
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -865,8 +865,8 @@ class ReasoningAlgorithmReference(NameAndMeaningReference):
 @dataclass
 class RoleReference(NameAndMeaningReference):
     """
-    A reference to a role that an individual, organization, or bibliographic reference can play in the construction of
-    a resource or resource component.
+    A reference to a role that an individual, organization, or bibliographic reference can play in the construction
+    of a resource or resource component.
     """
     _inherited_slots: ClassVar[List[str]] = []
 

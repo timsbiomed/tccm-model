@@ -58,6 +58,17 @@ alternative -- mark the containing directory as a source directory in PyCharm (D
 25) Importmap should be part of the package and generator should ALWAYS map biolinkml stuff
 
 26) setup.cfg - includes should be INSIDE biolinkml. (look at how w3id redirects work before you continue)
+
+27) Relative import issue:
+    core:
+        prefixes.yaml
+        datatypes.yaml
+    valueset
+        valuesetdefinition.yaml
+        
+    valuesetdefinition imports ../core/prefixes
+    prefixes imports datatypes
+    datatypes resolves to valueset/datatypes
  
 ---- Input ---
 classes:

@@ -10,13 +10,13 @@ default_prefix: tccm
 default_range: string
 
 imports:
-  - prefixes
-  - references
+  - ../core/prefixes
+  - ../core/references
 
 
 classes:
   OpaqueData:
-    description: >-
+    description: |-
       Opaque data is the equivalent of an ASN.1 External Type or the XML Schema anyType . An OpaqueData instance
       may represent text with an optional spoken or written language code or a formal structure such as embedded HTML,
       XML, or MIME encoded data. When a formal structure is included, its type should be specified in the format
@@ -32,7 +32,7 @@ classes:
         range: FormatReference
 
       schema:
-        description: >-
+        description: |-
           If the format of the document involves an XML encoding, this contains the URI of a document that carries
           the corresponding XML Schema or DTD.
         range: DocumentURI
@@ -42,7 +42,7 @@ classes:
         range: LanguageReference
 
       value:
-        description: >-
+        description: |-
           The instance value. Note that instance value should be encoded in such a way that it allows embedded
           structures. As an example, in XML Schema, this encoding should be to xs:anyType or an equivalent.
         range: string
@@ -50,7 +50,7 @@ classes:
 
   EntryDescription:
     is_a: OpaqueData
-    description: >-
+    description: |-
       EntryDescription is a subclass of OpaqueData. The purpose behind this is that there are certain textual fields
       that some CTS2 service implementations may want to constrain. As an example, Designation text is of type
       EntryDescription, but implementations may want to restrict the OpaqueData value attribute to a simple string

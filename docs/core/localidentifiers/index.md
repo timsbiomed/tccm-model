@@ -2,7 +2,13 @@
 # Localidentifiers schema
 
 
-This sub clause lists the specific types of local identifiers that are used within the TCCM specification. Instances  of each type of local identifier must be unique within the context of the service instance. As an example, “SCT” might uniquely name the SNOMED-CT code system within the context of one service, while another service might use “SMD-CT.”  As a consequence, local identifiers can never be used in interchanges between services - URIs must be used instead.  Note, also, that it is okay to have the same local identifier for different types of resource. As an example, the  identifier “SCT” could be a CodeSystemName for the SNOMED-CT code system and a ValueSetName for the “ Standardized Category Terms” value set.
+This sub clause lists the specific types of local identifiers that are used within the TCCM specification. Instances 
+of each type of local identifier must be unique within the context of the service instance. As an example, “SCT” might
+uniquely name the SNOMED-CT code system within the context of one service, while another service might use “SMD-CT.” 
+As a consequence, local identifiers can never be used in interchanges between services - URIs must be used instead. 
+Note, also, that it is okay to have the same local identifier for different types of resource. As an example, the 
+identifier “SCT” could be a CodeSystemName for the SNOMED-CT code system and a ValueSetName for the “
+Standardized Category Terms” value set.
 
 
 ### Classes
@@ -39,13 +45,13 @@ This sub clause lists the specific types of local identifiers that are used with
  * [CodeSystemName](types/CodeSystemName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a CodeSystem.
  * [CodeSystemVersionName](types/CodeSystemVersionName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a CodeSystemVersion.
  * [ConceptDomainName](types/ConceptDomainName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a ConceptDomain.
- * [DateAndTime](types/DateAndTime.md)  (**XSDDateTime**)  - Represents an “Instant” as defined in the OWL Time Specification . Implementations must be able to support temporal units of second, minute, hour, day, month, and year, and be able to represent and compare instances represented in any of these units. DateAndTime can only provide a partial ordering and, as a consequence, i s never used as an index, unique identifier, or to sequence data or events.
- * [LocalIdentifier](types/LocalIdentifier.md)  ([String](types/String.md))  - An identifier that uniquely references a class, individual, property, or other resource within the context of a specific TCCM service implementation. LocalIdentifier syntax must match the PNAME production as defined in the SPARQL Query Specification . LocalIdentifiers may begin with leading digits, where XML Local Identifiers and NameSpaceIdentifiers may not.
+ * [DateAndTime](types/DateAndTime.md)  (**XSDDateTime**)  - Represents an “Instant” as defined in the OWL Time Specification . Implementations must be able to support
+ * [LocalIdentifier](types/LocalIdentifier.md)  ([String](types/String.md))  - An identifier that uniquely references a class, individual, property, or other resource within the context of a
  * [MapName](types/MapName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a Map.
  * [MapVersionName](types/MapVersionName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a MapVersion.
- * [NamespaceIdentifier](types/NamespaceIdentifier.md)  (**NCName**)  - An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual) within the context of a TCCM service. NameSpaceIdentifier syntax must match the PNAME NS production as defined in the SPARQL Query Specification - meaning that it must begin with an alphabetic character
+ * [NamespaceIdentifier](types/NamespaceIdentifier.md)  (**NCName**)  - An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)
  * [NaturalNumber](types/NaturalNumber.md)  (**int**)  - A non-negative integer (N). NatrualNumber is used exclusively for representing quantities.
- * [URI](types/URI.md)  (**URI**)  - A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to consider implementing this data type using the IRI (RFC3987) specification
+ * [URI](types/URI.md)  (**URI**)  - A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
  * [URIorCurie](types/URIorCurie.md)  (**URIorCURIE**)  - a URI or a CURIE
  * [ValueSetName](types/ValueSetName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a ValueSet.
  * [VersionTagName](types/VersionTagName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a VersionTag.

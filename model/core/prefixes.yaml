@@ -8,6 +8,10 @@ prefixes:
     tccm: https://hotecosystem.org/tccm/
     xsd: http://www.w3.org/2001/XMLSchema#
     biolinkml: https://w3id.org/biolink/biolinkml/
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    rdfs: http://www.w3.org/2000/01/rdf-schema#
+    owl: http://www.w3.org/2002/07/owl#
+    skos: http://www.w3.org/2004/02/skos/core#
 
 default_prefix: tccm
 

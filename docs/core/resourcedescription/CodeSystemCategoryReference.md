@@ -2,7 +2,8 @@
 # Type: CodeSystemCategoryReference
 
 
-A reference to information about a paradigm model used to create an ontology (a.k.a. knowledge representation paradigm).
+A reference to information about a paradigm model used to create an ontology (a.k.a. knowledge
+representation paradigm).
 
 URI: [tccm:CodeSystemCategoryReference](https://hotecosystem.org/tccm/CodeSystemCategoryReference)
 
@@ -11,7 +12,7 @@ URI: [tccm:CodeSystemCategoryReference](https://hotecosystem.org/tccm/CodeSystem
 
 ## Parents
 
- *  is_a: [NameAndMeaningReference](NameAndMeaningReference.md) - A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of a given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the identifier.
+ *  is_a: [NameAndMeaningReference](NameAndMeaningReference.md) - A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of
 
 ## Attributes
 

@@ -2,7 +2,8 @@
 # Type: NamespaceReference
 
 
-A reference to a conceptual space that groups identifiers to avoid conflict with items that have the same name but different meanings.
+A reference to a conceptual space that groups identifiers to avoid conflict with items that have the same name
+but different meanings.
 
 URI: [tccm:NamespaceReference](https://hotecosystem.org/tccm/NamespaceReference)
 
@@ -11,7 +12,7 @@ URI: [tccm:NamespaceReference](https://hotecosystem.org/tccm/NamespaceReference)
 
 ## Parents
 
- *  is_a: [NameAndMeaningReference](NameAndMeaningReference.md) - A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of a given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the identifier.
+ *  is_a: [NameAndMeaningReference](NameAndMeaningReference.md) - A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of
 
 ## Attributes
 

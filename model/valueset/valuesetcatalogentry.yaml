@@ -23,7 +23,7 @@ classes:
     is_a: ValueSetCatalogEntryOrReference
     mixins:
       - AbstractResourceDescription
-    description: >-
+    description: |-
       A ValueSetCatalogEntry carries information about the creators, distributors, purpose, use, etc. about a value set.
       The catalog does not carry the actual definition of a value set as (a) this may vary over time and (b) it is
       possible for more than one definition to be in use at any given point in time.

@@ -2,7 +2,8 @@
 # Type: ASSOCIATION
 
 
-A formal “semantic” assertion about a named entity, in the form of subject, predicate, and object including any provenance, qualifiers, or internal BNODEs.
+A formal “semantic” assertion about a named entity, in the form of subject, predicate, and object including any
+provenance, qualifiers, or internal BNODEs.
 
 URI: [tccm:ASSOCIATION](https://hotecosystem.org/tccm/ASSOCIATION)
 

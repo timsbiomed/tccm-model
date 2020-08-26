@@ -2,7 +2,8 @@
 # Type: RoleReference
 
 
-A reference to a role that an individual, organization, or bibliographic reference can play in the construction of a resource or resource component.
+A reference to a role that an individual, organization, or bibliographic reference can play in the construction
+of a resource or resource component.
 
 URI: [tccm:RoleReference](https://hotecosystem.org/tccm/RoleReference)
 
@@ -11,7 +12,7 @@ URI: [tccm:RoleReference](https://hotecosystem.org/tccm/RoleReference)
 
 ## Parents
 
- *  is_a: [NameAndMeaningReference](NameAndMeaningReference.md) - A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of a given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the identifier.
+ *  is_a: [NameAndMeaningReference](NameAndMeaningReference.md) - A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of
 
 ## Referenced by class
 

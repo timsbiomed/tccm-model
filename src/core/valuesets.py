@@ -1,5 +1,5 @@
 # Auto generated from valuesets.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-17 08:45
+# Generation date: 2020-08-25 14:01
 # Schema: ValueSets
 #
 # id: https://hotecosystem.org/tccm/ValueSets
@@ -20,8 +20,8 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
+from ...core.datatypes import URIorCurie
 from biolinkml.utils.metamodelcore import URIorCURIE
-from datatypes import URIorCurie
 
 metamodel_version = "1.5.3"
 
@@ -44,7 +44,8 @@ class ValueSet(URIorCurie):
 
 
 class ASSOCIATION(ValueSet):
-    """ A formal “semantic” assertion about a named entity, in the form of subject, predicate, and object including any provenance, qualifiers, or internal BNODEs. """
+    """ A formal “semantic” assertion about a named entity, in the form of subject, predicate, and object including any
+provenance, qualifiers, or internal BNODEs. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "ASSOCIATION"
@@ -52,8 +53,13 @@ class ASSOCIATION(ValueSet):
 
 
 class BINDINGQUALIFIER(ValueSet):
-    """ An assertion about the semantics of a concept domain / value set binding. This model element exists specifically to address section 2.4.2.23 of the HL7 SFM14, which needs a qualifier that indicates whether the binding is “overall,” “minimal,” or “maximum.”
-The TCCM specification does not formally define the semantics of the various possible BINDING_QUALIFIER elements: it is up to specific implementations and service clients to interpret the meaning of the specific binding qualifiers that may be represented in references of this type. """
+    """ An assertion about the semantics of a concept domain / value set binding. This model element exists specifically
+to address section 2.4.2.23 of the HL7 SFM14, which needs a qualifier that indicates whether the binding is
+“overall,” “minimal,” or “maximum.”
+
+The TCCM specification does not formally define the semantics of the various possible BINDING_QUALIFIER elements:
+it is up to specific implementations and service clients to interpret the meaning of the specific binding
+qualifiers that may be represented in references of this type. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "BINDING_QUALIFIER"
@@ -69,7 +75,9 @@ class CASESIGNIFICANCE(ValueSet):
 
 
 class CODESYSTEMCATEGORY(ValueSet):
-    """ The general category of a code system (flat list, subject heading system, taxonomy, thesaurus, classification, terminology, description logic ontology, first order predicate logic, etc.) (same as KnowledgeRepresentationParadigm: OMV 5.8). """
+    """ The general category of a code system (flat list, subject heading system, taxonomy, thesaurus, classification,
+terminology, description logic ontology, first order predicate logic, etc.) (same as
+KnowledgeRepresentationParadigm: OMV 5.8). """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "CODE_SYSTEM_CATEGORY"
@@ -93,7 +101,8 @@ class CODESYSTEMVERSION(ValueSet):
 
 
 class CONCEPTDOMAIN(ValueSet):
-    """ The description of the conceptual domain of a field in a message, column in a database, field on a form, etc. Equivalent to the ISO 11179-3 “Data Element Concept.” """
+    """ The description of the conceptual domain of a field in a message, column in a database, field on a form, etc.
+Equivalent to the ISO 11179-3 “Data Element Concept.” """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "CONCEPT_DOMAIN"
@@ -101,7 +110,10 @@ class CONCEPTDOMAIN(ValueSet):
 
 
 class CONTEXT(ValueSet):
-    """ External and environmental factors that serve to discriminate among multiple possible selections. While it is assumed that the specific contexts referenced by CONTEXT are represented by entity descriptions contained in some ontology or coding scheme, the CTS2 specification does not recommend any targets. Note, however, the TCCM context is intended to represent the notion of “jurisdictional domain” or “realm” as described in the HL7 CTS2 SFM . """
+    """ External and environmental factors that serve to discriminate among multiple possible selections. While it is
+assumed that the specific contexts referenced by CONTEXT are represented by entity descriptions contained in
+some ontology or coding scheme, the CTS2 specification does not recommend any targets. Note, however, the TCCM
+context is intended to represent the notion of “jurisdictional domain” or “realm” as described in the HL7 CTS2 SFM . """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "CONTEXT"
@@ -109,7 +121,8 @@ class CONTEXT(ValueSet):
 
 
 class DESIGNATIONFIDELITY(ValueSet):
-    """ Identifies how well a particular designation represents the intended meaning of the referenced entity. TCCM implementations may consider using the SKOS16 semantic relations to represent this relationship. """
+    """ Identifies how well a particular designation represents the intended meaning of the referenced entity. TCCM
+implementations may consider using the SKOS16 semantic relations to represent this relationship. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "DESIGNATION_FIDELITY"
@@ -149,7 +162,8 @@ class LANGUAGE(ValueSet):
 
 
 class MATCHALGORITHM(ValueSet):
-    """ A predicate that determines whether an entity resource qualities for membership in a set based on supplied matching criteria. """
+    """ A predicate that determines whether an entity resource qualities for membership in a set based on supplied
+matching criteria. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "MATCH_ALGORITHM"
@@ -213,7 +227,10 @@ class ONTOLOGYENGINEERINGTOOL(ValueSet):
 
 
 class ONTOLOGYDOMAIN(ValueSet):
-    """ While the domain can refer to any topic ontology it is advised to use one of the established general purpose topic hierarchy like DMOZ or domain specific topic like ACM for the computer science domain. Only this way it can be ensured that meaningful information about the relation of the domains of two separate ontologies can be deduced (OMV 5.1 1)(sic). """
+    """ While the domain can refer to any topic ontology it is advised to use one of the established general purpose
+topic hierarchy like DMOZ or domain specific topic like ACM for the computer science domain. Only this way it can
+be ensured that meaningful information about the relation of the domains of two separate ontologies can be
+deduced (OMV 5.1 1)(sic). """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "ONTOLOGY_DOMAIN"
@@ -261,7 +278,8 @@ class PREDICATE(ValueSet):
 
 
 class REASONINGALGORITHM(ValueSet):
-    """ A set of formal rules that allow the deduction of additional assertions from a supplied list of axioms. """
+    """ A set of formal rules that allow the deduction of additional assertions from a
+supplied list of axioms. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "REASONING_ALGORITHM"
@@ -317,7 +335,8 @@ class VALUESET(ValueSet):
 
 
 class VALUESETDEFINITION(ValueSet):
-    """ A set of rules that can be applied to specified versions or one or more code systems to yield a set of entity references. """
+    """ A set of rules that can be applied to specified versions or one or more code systems to yield a set of entity
+references. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "VALUE_SET_DEFINITION"
@@ -325,7 +344,8 @@ class VALUESETDEFINITION(ValueSet):
 
 
 class VERSIONTAG(ValueSet):
-    """ An identifier that can be assigned to resource versions by a service implementation to identify their state in the service workflow. Examples might include “development,” “test,” “production,” etc. """
+    """ An identifier that can be assigned to resource versions by a service implementation to identify their state
+in the service workflow. Examples might include “development,” “test,” “production,” etc. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "VERSION_TAG"

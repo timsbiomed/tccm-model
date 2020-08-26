@@ -1,1 +1,5 @@
-from core import datatypes, entrydescription, localidentifiers, prefixes, references, uritypes, valuesets, entityreference
+__all__ = ['datatypes', 'entityreference', 'entrydescription', 'filtersandsorting', 'localidentifiers',
+           'prefixes', 'references', 'resourcedescription', 'uritypes', 'valuesets']
+
+from core import datatypes, entityreference, entrydescription, filtersandsorting, localidentifiers, prefixes, \
+    references, resourcedescription, uritypes, valuesets

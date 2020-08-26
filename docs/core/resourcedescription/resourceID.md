@@ -2,7 +2,9 @@
 # Type: resourceID
 
 
-A local identifier that uniquely names the resource within the context of the describedResourceType and implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a SNOMED-CT code system version.
+A local identifier that uniquely names the resource within the context of the describedResourceType and
+implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a
+SNOMED-CT code system version.
 
 URI: [tccm:resourceID](https://hotecosystem.org/tccm/resourceID)
 

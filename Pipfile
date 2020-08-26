@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-biolinkml = ">=1.5.7"
+biolinkml = "==1.5.8"
 rdflib = "~=5.0"
 rdflib-jsonld = "*"
 

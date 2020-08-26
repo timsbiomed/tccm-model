@@ -1,7 +1,7 @@
 id: https://hotecosystem.org/tccm/datatype
 name: datatypes
 title: Axiomatic data types
-description: >-
+description: |-
   Ths module identifies the core data types that are used in the TCCM. The term “data type” refers to
   “a type whose instances are identified only by their value".
 license: https://creativecommons.org/publicdomain/zero/1.0/
@@ -12,7 +12,7 @@ prefixes:
 default_prefix: tccm
 
 imports:
-  - prefixes
+  - ../core/prefixes
 
 types:
 
@@ -20,7 +20,7 @@ types:
     uri: xsd:dateTime
     repr: str
     base: XSDDateTime
-    description: >-
+    description: |-
       Represents an “Instant” as defined in the OWL Time Specification . Implementations must be able to support
       temporal units of second, minute, hour, day, month, and year, and be able to represent and compare instances
       represented in any of these units. DateAndTime can only provide a partial ordering and, as a consequence, i
@@ -33,7 +33,7 @@ types:
 
   LocalIdentifier:
     typeof: string
-    description: >-
+    description: |-
       An identifier that uniquely references a class, individual, property, or other resource within the context of a
       specific TCCM service implementation. LocalIdentifier syntax must match the PNAME
       production as defined in the SPARQL Query Specification . LocalIdentifiers may begin with leading digits,
@@ -42,7 +42,7 @@ types:
   NamespaceIdentifier:
     uri: xsd:NMTOKEN
     base: NCName
-    description: >-
+    description: |-
       An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)
       within the context of a TCCM service. NameSpaceIdentifier syntax must match the PNAME NS production as defined
       in the SPARQL Query Specification - meaning that it must begin with an alphabetic character
@@ -51,7 +51,7 @@ types:
     uri: xsd:anyURI
     base: URI
     repr: str
-    description: >-
+    description: |-
       A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
       consider implementing this data type using the IRI (RFC3987) specification
 

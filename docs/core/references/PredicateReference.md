@@ -2,7 +2,9 @@
 # Type: PredicateReference
 
 
-An EntityReference that serves the role of predicate. Note that this varies slightly from the base class of NameAndMeaningReference because the name attribute is a namespace/name combination rather than a simple name scoped exclusively by the domain.
+An EntityReference that serves the role of predicate. Note that this varies slightly from the base class of
+NameAndMeaningReference because the name attribute is a namespace/name combination rather than a simple name
+scoped exclusively by the domain.
 
 URI: [tccm:PredicateReference](https://hotecosystem.org/tccm/PredicateReference)
 

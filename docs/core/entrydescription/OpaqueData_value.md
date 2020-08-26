@@ -2,7 +2,8 @@
 # Type: OpaqueData_value
 
 
-The instance value. Note that instance value should be encoded in such a way that it allows embedded structures. As an example, in XML Schema, this encoding should be to xs:anyType or an equivalent.
+The instance value. Note that instance value should be encoded in such a way that it allows embedded
+structures. As an example, in XML Schema, this encoding should be to xs:anyType or an equivalent.
 
 URI: [tccm:OpaqueData_value](https://hotecosystem.org/tccm/OpaqueData_value)
 

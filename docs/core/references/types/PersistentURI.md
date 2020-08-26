@@ -2,7 +2,8 @@
 # Type: PersistentURI
 
 
-A Universal Resource Identifier (URI) that persists across service instances. PersistentURIs have enduring reference and meaning.
+A Universal Resource Identifier (URI) that persists across service instances. PersistentURIs have enduring
+reference and meaning.
 
 URI: [tccm:PersistentURI](https://hotecosystem.org/tccm/PersistentURI)
 

@@ -1,5 +1,5 @@
 # Auto generated from localidentifiers.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-17 08:43
+# Generation date: 2020-08-25 13:58
 # Schema: localidentifiers
 #
 # id: https://hotecosystem.org/tccm/localidentifiers
@@ -27,7 +27,7 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from datatypes import LocalIdentifier
+from ...core.datatypes import LocalIdentifier
 from includes.types import String
 
 metamodel_version = "1.5.3"

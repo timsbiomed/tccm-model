@@ -9,7 +9,7 @@ URI: [tccm:EntityReference_about](https://hotecosystem.org/tccm/EntityReference_
 
 ## Domain and Range
 
-[EntityReference](EntityReference.md) ->  <sub>REQ</sub> [PersistentURI](types/PersistentURI.md)
+[EntityReference](EntityReference.md) ->  <sub>OPT</sub> [PersistentURI](types/PersistentURI.md)
 
 ## Parents
 

@@ -1,0 +1,36 @@
+id: https://hotecosystem.org/tccm/filtersandsorting
+name: filtersandsorting
+title: TCCM Filter and Sort Criteria definitions
+description: The elements that are used in the construction of query filters and return sort criteria.
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+
+imports:
+  - ../core/prefixes
+  - ../core/datatypes
+  - ../core/valuesets
+  - ../core/references
+
+classes:
+  SortCriteria:
+    description: |-
+      An ordered list of sort criterion. The first entry in the list identifies the primary sort order, the second
+      entry the sub sort order, etc.
+    slot_usage:
+      entry:
+        description: a rule for sorting
+        multivalued: true
+        range: SortCriterion
+        inlined: true
+
+  SortCriterion:
+    description: |-
+      The particular attribute, property, or special element to be sorted along with the sort direction.
+    slot_usage:
+      sortElement:
+        description: The type and name of the attribute, property, or special element to be sorted.
+        range: PredicateReference
+        required: true
+      sortDescending:
+        description: True means ascending, false descending order
+        range: boolean

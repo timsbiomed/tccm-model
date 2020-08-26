@@ -2,7 +2,8 @@
 # Type: OpaqueData_schema
 
 
-If the format of the document involves an XML encoding, this contains the URI of a document that carries the corresponding XML Schema or DTD.
+If the format of the document involves an XML encoding, this contains the URI of a document that carries
+the corresponding XML Schema or DTD.
 
 URI: [tccm:OpaqueData_schema](https://hotecosystem.org/tccm/OpaqueData_schema)
 

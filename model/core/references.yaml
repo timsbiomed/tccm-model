@@ -2,7 +2,7 @@ id: https://hotecosystem.org/tccm/references
 name: references
 title: Decorated value set references
 license: https://creativecommons.org/publicdomain/zero/1.0/
-description: >-
+description: |-
   his diagram identifies all of the value domains that are used within the TCCM service itself. Each reference has a 
   domain, which frequently isn’t necessary to carry through to PSMs with strong type systems, a name that serves as a 
   unique permissible value within the context of the domain, a uri that references the intended meaning of name, and an 
@@ -26,14 +26,14 @@ default_prefix: tccm
 default_range: string
 
 imports:
-  - prefixes
-  - valuesets
-  - uritypes
+  - ../core/prefixes
+  - ../core/valuesets
+  - ../core/uritypes
 
 
 classes:
   NameAndMeaningReference:
-    description: >-
+    description: |-
       A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of
       a given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the
       identifier.
@@ -53,35 +53,35 @@ classes:
 
   AssociationReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A name or identifier that uniquely names an association instance in a code system.
       
   BindingQualifierReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to an entity that describes the role that a given value set binding plays for a concept domain. T
       ypical values represent “overall,” “minimum” or “maximum,” the significance of which can be found in H
       L7 Version 3 documentation.
       
   CaseSignificanceReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to an entity that describes significance of the case in term or designation.
 
   CodeSystemCategoryReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to information about a paradigm model used to create an ontology (a.k.a. knowledge
       representation paradigm).
 
   CodeSystemReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a code system or ontology.
 
   CodeSystemVersionReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a specific version of code system and, if known, the code system which it is a version of.
     slot_usage:
       codeSystem:
@@ -89,52 +89,52 @@ classes:
 
   ConceptDomainReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a concept domain.
 
   ContextReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a realm or context.
 
   DesignationFidelityReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a description about designation faithfulness or accuracy.
 
   DesignationTypeReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a designation type or form such as “short name,” “abbreviation,” “eponym.”
 
   FormalityLevelReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a description of the relative formality an ontology.
 
   FormatReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a particular way that information is encoded for storage or transmission.
 
   LanguageReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a spoken or written human language.
 
   MapCorrelationReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a way that the source and target in a map can be related or assessed.
 
   MapReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to an abstract map.
 
   MapVersionReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a map version and the corresponding map, if known.
     slot_usage:
       map:
@@ -142,57 +142,57 @@ classes:
 
   MatchAlgorithmReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to an algorithm used for selecting and filtering data.
 
   ModelAttributeReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to an attribute defined in the CTS2 specification.
 
   NamespaceReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a conceptual space that groups identifiers to avoid conflict with items that have the same name
       but different meanings.
 
   OntologyDomainReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a subject domain for an ontology.
 
   OntologyEngineeringMethodologyReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a method model that can be used to create an ontology.
 
   OntologyEngineeringToolReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a tool that can be used to create an ontology.
 
   OntologyLanguageReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a language in which an ontology may be implemented.
 
   OntologySyntaxReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a syntax in which an ontology may be represented.
 
   OntologyTaskReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a purpose for which an ontology can be designed.
 
   OntologyTypeReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to the nature of the content of an ontology.
 
   PredicateReference:
-    description: >-
+    description: |-
       An EntityReference that serves the role of predicate. Note that this varies slightly from the base class of
       NameAndMeaningReference because the name attribute is a namespace/name combination rather than a simple name
       scoped exclusively by the domain.
@@ -209,18 +209,18 @@ classes:
 
   ReasoningAlgorithmReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a formal algorithm for making inferences about an ontology.
 
   RoleReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a role that an individual, organization, or bibliographic reference can play in the construction
       of a resource or resource component.
 
   SourceAndRoleReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a source that also includes the role that the source played and/or fixes the particular chapter,
       page, or other element within the reference.
     slot_usage:
@@ -231,25 +231,25 @@ classes:
 
   SourceReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to an individual, organization of bibliographic reference.
 
   StatusReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a state in an external ontology authoring workflow.
 
   ValueSetDefinitionReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a set of rules for constructing a value set along with the corresponding value set if known.
 
   ValueSetReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a named set of entity references.
 
   VersionTagReference:
     is_a: NameAndMeaningReference
-    description: >-
+    description: |-
       A reference to a tag that can be assigned to versionable resources within the context of a service implementation.

@@ -1,5 +1,5 @@
 # Auto generated from datatypes.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-17 08:42
+# Generation date: 2020-08-25 13:57
 # Schema: datatypes
 #
 # id: https://hotecosystem.org/tccm/datatype
@@ -37,7 +37,10 @@ DEFAULT_ = TCCM
 
 # Types
 class DateAndTime(XSDDateTime):
-    """ Represents an “Instant” as defined in the OWL Time Specification . Implementations must be able to support temporal units of second, minute, hour, day, month, and year, and be able to represent and compare instances represented in any of these units. DateAndTime can only provide a partial ordering and, as a consequence, i s never used as an index, unique identifier, or to sequence data or events. """
+    """ Represents an “Instant” as defined in the OWL Time Specification . Implementations must be able to support
+temporal units of second, minute, hour, day, month, and year, and be able to represent and compare instances
+represented in any of these units. DateAndTime can only provide a partial ordering and, as a consequence, i
+s never used as an index, unique identifier, or to sequence data or events. """
     type_class_uri = XSD.dateTime
     type_class_curie = "xsd:dateTime"
     type_name = "DateAndTime"
@@ -53,7 +56,10 @@ class NaturalNumber(int):
 
 
 class LocalIdentifier(String):
-    """ An identifier that uniquely references a class, individual, property, or other resource within the context of a specific TCCM service implementation. LocalIdentifier syntax must match the PNAME production as defined in the SPARQL Query Specification . LocalIdentifiers may begin with leading digits, where XML Local Identifiers and NameSpaceIdentifiers may not. """
+    """ An identifier that uniquely references a class, individual, property, or other resource within the context of a
+specific TCCM service implementation. LocalIdentifier syntax must match the PNAME
+production as defined in the SPARQL Query Specification . LocalIdentifiers may begin with leading digits,
+where XML Local Identifiers and NameSpaceIdentifiers may not. """
     type_class_uri = XSD.string
     type_class_curie = "xsd:string"
     type_name = "LocalIdentifier"
@@ -61,7 +67,9 @@ class LocalIdentifier(String):
 
 
 class NamespaceIdentifier(NCName):
-    """ An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual) within the context of a TCCM service. NameSpaceIdentifier syntax must match the PNAME NS production as defined in the SPARQL Query Specification - meaning that it must begin with an alphabetic character """
+    """ An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)
+within the context of a TCCM service. NameSpaceIdentifier syntax must match the PNAME NS production as defined
+in the SPARQL Query Specification - meaning that it must begin with an alphabetic character """
     type_class_uri = XSD.NMTOKEN
     type_class_curie = "xsd:NMTOKEN"
     type_name = "NamespaceIdentifier"
@@ -69,7 +77,8 @@ class NamespaceIdentifier(NCName):
 
 
 class URI(URI):
-    """ A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to consider implementing this data type using the IRI (RFC3987) specification """
+    """ A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
+consider implementing this data type using the IRI (RFC3987) specification """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "URI"

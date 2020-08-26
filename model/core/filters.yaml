@@ -1,0 +1,51 @@
+id: https://hotecosystem.org/tccm/filtersandsorting
+name: filtersandsorting
+title: TCCM Filter and Sort Criteria definitions
+description: The elements that are used in the construction of query filters and return sort criteria.
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+imports:
+  - ../core/prefixes
+  - ../core/datatypes
+  - ../core/valuesets
+  - ../core/references
+
+classes:
+  Filter:
+    description: |-
+      A collection of one or more filters. The result of applying a Filter component is the intersection of the sets of
+      qualifying elements. As an example, a filter having two components - one which says that the rights attribute must
+      exist and a second that says that the text “SNOMED” must appear in the synopsis would return all resources having
+      BOTH a rights attribute and “SNOMED” in the description.
+    slot_usage:
+      component:
+        description: An entry in a filter
+        range: FilterComponent
+        required: true
+        multivalued: true
+        inlined: true
+      description:
+        description: A textual description of the intent and purpose of the filter
+        range: string
+
+  FilterComponent:
+    description: A restriction on an attribute, property, or special field.
+    slot_usage:
+      filterComponent:
+        description: |-
+          The name or URI of the property or model element to be filtered. Properties are referenced by
+          their predicate and model elements all have URIs that are established by this specification.
+        range: PredicateReference
+        multivalued: true
+      matchAlgorithm:
+        description: |-
+          The algorithm to be used for testing the referenced component. Examples might include “starts with,”
+          “regular expression match,” “exists,” “inRange,” etc.
+        range: MatchAlgorithmReference
+        required: true
+      matchValue:
+        description: |-
+          The value to be used in comparison. The structure and format of matchValue depends on the specific
+          matchAlgorithm. As an example, a “startsWith” algorithm would be plain text, a “regularExpression” algorithm
+          would have a regular expression while an “exists” algorithm would have nothing in the matchValue attribute.
+        range: string

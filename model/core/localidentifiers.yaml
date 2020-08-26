@@ -1,7 +1,7 @@
 id: https://hotecosystem.org/tccm/localidentifiers
 name: localidentifiers
 title: TCCM Local Identifiers Model
-description: >-
+description: |-
   This sub clause lists the specific types of local identifiers that are used within the TCCM specification. Instances 
   of each type of local identifier must be unique within the context of the service instance. As an example, “SCT” might
   uniquely name the SNOMED-CT code system within the context of one service, while another service might use “SMD-CT.” 
@@ -18,7 +18,7 @@ default_prefix: tccm
 default_range: string
 
 imports:
-  - datatypes
+  - ../core/datatypes
 
 types:
   CodeSystemName:

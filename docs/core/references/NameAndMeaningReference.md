@@ -2,7 +2,9 @@
 # Type: NameAndMeaningReference
 
 
-A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of a given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the identifier.
+A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of
+a given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the
+identifier.
 
 URI: [tccm:NameAndMeaningReference](https://hotecosystem.org/tccm/NameAndMeaningReference)
 
@@ -12,9 +14,9 @@ URI: [tccm:NameAndMeaningReference](https://hotecosystem.org/tccm/NameAndMeaning
 ## Children
 
  * [AssociationReference](AssociationReference.md) - A name or identifier that uniquely names an association instance in a code system.
- * [BindingQualifierReference](BindingQualifierReference.md) - A reference to an entity that describes the role that a given value set binding plays for a concept domain. T ypical values represent “overall,” “minimum” or “maximum,” the significance of which can be found in H L7 Version 3 documentation.
+ * [BindingQualifierReference](BindingQualifierReference.md) - A reference to an entity that describes the role that a given value set binding plays for a concept domain. T
  * [CaseSignificanceReference](CaseSignificanceReference.md) - A reference to an entity that describes significance of the case in term or designation.
- * [CodeSystemCategoryReference](CodeSystemCategoryReference.md) - A reference to information about a paradigm model used to create an ontology (a.k.a. knowledge representation paradigm).
+ * [CodeSystemCategoryReference](CodeSystemCategoryReference.md) - A reference to information about a paradigm model used to create an ontology (a.k.a. knowledge
  * [CodeSystemReference](CodeSystemReference.md) - A reference to a code system or ontology.
  * [CodeSystemVersionReference](CodeSystemVersionReference.md) - A reference to a specific version of code system and, if known, the code system which it is a version of.
  * [ConceptDomainReference](ConceptDomainReference.md) - A reference to a concept domain.
@@ -29,7 +31,7 @@ URI: [tccm:NameAndMeaningReference](https://hotecosystem.org/tccm/NameAndMeaning
  * [MapVersionReference](MapVersionReference.md) - A reference to a map version and the corresponding map, if known.
  * [MatchAlgorithmReference](MatchAlgorithmReference.md) - A reference to an algorithm used for selecting and filtering data.
  * [ModelAttributeReference](ModelAttributeReference.md) - A reference to an attribute defined in the CTS2 specification.
- * [NamespaceReference](NamespaceReference.md) - A reference to a conceptual space that groups identifiers to avoid conflict with items that have the same name but different meanings.
+ * [NamespaceReference](NamespaceReference.md) - A reference to a conceptual space that groups identifiers to avoid conflict with items that have the same name
  * [OntologyDomainReference](OntologyDomainReference.md) - A reference to a subject domain for an ontology.
  * [OntologyEngineeringMethodologyReference](OntologyEngineeringMethodologyReference.md) - A reference to a method model that can be used to create an ontology.
  * [OntologyEngineeringToolReference](OntologyEngineeringToolReference.md) - A reference to a tool that can be used to create an ontology.
@@ -38,8 +40,8 @@ URI: [tccm:NameAndMeaningReference](https://hotecosystem.org/tccm/NameAndMeaning
  * [OntologyTaskReference](OntologyTaskReference.md) - A reference to a purpose for which an ontology can be designed.
  * [OntologyTypeReference](OntologyTypeReference.md) - A reference to the nature of the content of an ontology.
  * [ReasoningAlgorithmReference](ReasoningAlgorithmReference.md) - A reference to a formal algorithm for making inferences about an ontology.
- * [RoleReference](RoleReference.md) - A reference to a role that an individual, organization, or bibliographic reference can play in the construction of a resource or resource component.
- * [SourceAndRoleReference](SourceAndRoleReference.md) - A reference to a source that also includes the role that the source played and/or fixes the particular chapter, page, or other element within the reference.
+ * [RoleReference](RoleReference.md) - A reference to a role that an individual, organization, or bibliographic reference can play in the construction
+ * [SourceAndRoleReference](SourceAndRoleReference.md) - A reference to a source that also includes the role that the source played and/or fixes the particular chapter,
  * [SourceReference](SourceReference.md) - A reference to an individual, organization of bibliographic reference.
  * [StatusReference](StatusReference.md) - A reference to a state in an external ontology authoring workflow.
  * [ValueSetDefinitionReference](ValueSetDefinitionReference.md) - A reference to a set of rules for constructing a value set along with the corresponding value set if known.

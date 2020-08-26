@@ -2,7 +2,9 @@
 # Type: DocumentURI
 
 
-A reference to a “work” in the bibliographic sense. It is not necessary that a Document URI be directly or indirectly resolvable to a digital resource - it may simply be the name of a book, publication, or other abstraction.
+A reference to a “work” in the bibliographic sense. It is not necessary that a Document URI be directly or
+indirectly resolvable to a digital resource - it may simply be the name of a book, publication, or other
+abstraction.
 
 URI: [tccm:DocumentURI](https://hotecosystem.org/tccm/DocumentURI)
 

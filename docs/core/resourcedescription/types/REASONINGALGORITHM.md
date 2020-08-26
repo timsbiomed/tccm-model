@@ -2,7 +2,8 @@
 # Type: REASONING_ALGORITHM
 
 
-A set of formal rules that allow the deduction of additional assertions from a supplied list of axioms.
+A set of formal rules that allow the deduction of additional assertions from a
+supplied list of axioms.
 
 URI: [tccm:REASONINGALGORITHM](https://hotecosystem.org/tccm/REASONINGALGORITHM)
 

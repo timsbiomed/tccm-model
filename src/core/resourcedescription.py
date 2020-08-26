@@ -1,5 +1,5 @@
 # Auto generated from resourcedescription.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-17 08:44
+# Generation date: 2020-08-25 13:59
 # Schema: resourcedescription
 #
 # id: https://hotecosystem.org/tccm/resourcedescription
@@ -20,13 +20,13 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
+from ...core.datatypes import CURIE, DateAndTime, LocalIdentifier, URIorCurie
+from ...core.references import CodeSystemReference, CodeSystemVersionReference, MapReference, MapVersionReference, NameAndMeaningReference, OntologyLanguageReference, OntologySyntaxReference, PredicateReference, RoleReference, SourceAndRoleReference
+from ...core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import Bool, Curie, URIorCURIE, XSDDateTime
-from datatypes import CURIE, DateAndTime, LocalIdentifier, URIorCurie
 from includes.annotations import Annotation
 from includes.extensions import Extension
 from includes.types import Boolean, String
-from references import CodeSystemReference, CodeSystemVersionReference, MapReference, MapVersionReference, NameAndMeaningReference, OntologyLanguageReference, OntologySyntaxReference, PredicateReference, RoleReference, SourceAndRoleReference
-from uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 
 metamodel_version = "1.5.3"
 
@@ -46,11 +46,11 @@ class ResourceDescriptionResourceID(LocalIdentifier):
     pass
 
 
-class AbstractResourceDescriptionResourceID(LocalIdentifier):
+class AbstractResourceDescriptionResourceID(ResourceDescriptionResourceID):
     pass
 
 
-class ResourceVersionDescriptionResourceID(LocalIdentifier):
+class ResourceVersionDescriptionResourceID(ResourceDescriptionResourceID):
     pass
 
 
@@ -153,8 +153,8 @@ class AbstractResourceDescription(ResourceDescription):
 @dataclass
 class ResourceVersionDescription(ResourceDescription):
     """
-    Information about the source, format, release date, version identifier, etc. of a specific version of an abstract
-    resource.
+    Information about the source, format, release date, version identifier, etc. of a specific version of an
+    abstract resource.
     """
     _inherited_slots: ClassVar[List[str]] = []
 

@@ -11,7 +11,7 @@ URI: [tccm:LanguageReference](https://hotecosystem.org/tccm/LanguageReference)
 
 ## Parents
 
- *  is_a: [NameAndMeaningReference](NameAndMeaningReference.md) - A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of a given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the identifier.
+ *  is_a: [NameAndMeaningReference](NameAndMeaningReference.md) - A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of
 
 ## Attributes
 

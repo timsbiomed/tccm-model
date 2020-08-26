@@ -2,7 +2,7 @@ id: https://hotecosystem.org/tccm/valuesetdefinition
 name: valuesetdefinition
 title: ValueSetDefinition
 license: https://creativecommons.org/publicdomain/zero/1.0/
-description: >-
+description: |-
   A ValueSetDefinition describes the rules that determine which entity references (value meanings) belong to a value
   set at a given point in time. The definition of what belongs in a value set can evolve over time, and it is possible
   for there to be multiple definitions active at any given point in time - perhaps one for a system in general use, a
@@ -18,23 +18,220 @@ prefixes:
 default_prefix: tccm
 default_range: string
 
+imports:
+  - ../core/prefixes
+  - ../core/entityreference
+  - ../core/references
+  - ../core/filters
+  - ../core/resourcedescription
 
 classes:
-  ValueSetDefinitionOrReference:
-    description: Either a reference to a the definition of a value set or the actual definition itself
-    slot_usage:
-      definedValueSet:
-        description: A description of or reference to the abstract value set being defined
-        range: ValueSetCatalogEntryOrReference
-        required: True
-
-  ValueSetDefinitionReference:
-    is_a: ValueSetDefinitionOrReference
-    mixins: NameAndMeaningReference
-
   ValueSetDefinition:
-    is_a: ValueSetDefinitionOrReference
-    mixins: ResourceVersionDescription
+    is_a: ResourceVersionDescription
+    description: |-
+      A ValueSetDefinition describes the rules that determine which entity references (value meanings) belong to a
+      value set at a given point in time. The definition of what belongs in a value set can evolve over time, and it
+      is possible for there to be multiple definitions active at any given point in time - perhaps one for a system
+      in general use, a second for a newer system, and a third for testing. A ValueSetDefinition may or may not
+      identify a specific version of a code system. The decision of which version is to be used depends on the context
+      and needs of the community. ValueSetDefinition and the supporting model has been designed to allow multiple
+      variations on the “binding” of definitions to value sets, code system versions to definitions, and the
+      combination to concept domains.
     slot_usage:
-      definedValueSet:
-        range: ValueSet
+      definitionOf:
+        description: A reference to the value set being defined.
+        range: ValueSetReference
+        inlined: true
+      versionTag:
+        description: A version tag assigned to this definition by the implementing service.
+        range: VersionTagReference
+        inlined: true
+        multivalued: true
+      entry:
+        description: A component in a value set definitio
+        range: ValueSetDefinitionEntry
+        inlined: true
+        multivalued: true
+        required: true
+
+  ValueSetDefinitionEntry:
+    description: |-
+      An element of a value set definition that, when resolved yields a set of entity references that are to be included
+      in, excluded from or intersected with the set of elements that represent the full resolution of the definition.
+
+      Note that only ACTIVE entity references are included. INACTIVE entity references may never be considered for
+      inclusion or exclusion in the resolution of a value set definition.
+    abstract: true
+    slot_usage:
+      operator:
+        description: |-
+          Instructions for how the results of the entry evaluation will be applied to the set of entities in the base
+          definition. Results can be added to the set (+), intersected with members already in the set (and),
+          or be removed from the set (-).
+        range: string
+      definition:
+        description: |-
+          The definition itself
+        range: FormalDefinition
+        required: true
+        inlined: true
+        
+  FormalDefinition:
+    description: A value set definition choice
+    abstract: true
+        
+  AssociatedEntitiesReference:
+    description: |-
+      The description of a set of entities that are associated with a referenced entity. This description names a
+      reference entity and an association predicate, which identifies a set of entities that are related to the
+      reference entity according to a given code system. The description can reference the direct targets of the
+      association (children), the direct sources of the association (parents), the transitive closure of the
+      association targets (descendants), the transitive closure of the association sources (ancestors) and can state
+      whether all intermediate nodes are included in the closure or just the leaf nodes.
+
+      Note that the terms “parent” and “children” are asserted in reference to the predicate itself. As an example, in
+      the association “arm subClassOf bodyPart,” the “parent” is arm and the “child” is bodyPart.
+    is_a: FormalDefinition
+    slot_usage:
+      referencedEntity:
+        description: |-
+          The entity reference that is the root of the association description. referencedEntity is not considered to
+          be part of the resolution of AssociatedEntitiesReference. If it is to be included in the final set, it must
+          be explicitly named in a second SpecificEntityList construct.
+        range: EntityReference
+        required: true
+        inlined: true
+      codeSystem:
+        description: |-
+          The code system that makes the association assertions.
+        range: CodeSystemReference
+        required: true
+        inlined: true
+      codeSystemVersion:
+        description: |-
+           The version of the code system that makes the association assertions. If present, codeSystemVersion must be
+           a version of codeSystem. If this attribute is present, the referenced version of the code system will always
+           be used to resolve the associations. If absent, the specific version of the code system to be used in
+           resolution is determined in the resolve value set definition call itself.
+        range: CodeSystemVersionReference
+        inlined: true
+      predicate:
+        description: |-
+          The association predicate to be used in resolving the definition entry. Depending on the setting of `reverse`,
+          entity references that are the `object` or `predicate` (False) or `subject` of `predicate`
+          (True) qualify.
+        range: PredicateReference
+        required: true
+        inlined: true
+      objectToSubject:
+        description: |-
+          False means that `rererencedEntity` serves in the subject role.  True means object.
+        range: boolean
+      transitiveClosure:
+        description: |-
+          If true and `predicate` is defined as being transitive, the transitive closure of `predicate` selects the
+          candidates
+        range: boolean
+      leafOnly:
+        description: |-
+          False means that all entities in a transitive closure are included.  True means only entities that are not
+          the subject (or object of objectToSubject is True) of a triple with `predicate` qualify.
+        notes:
+          - Question: do subjects of BNodes qualify?
+        range: boolean
+
+  SpecificEntityList:
+    description: |-
+      A list of specific entity references that are to be included in the definition. When specified in this form,
+      the service must include all entities in this list whether they are known to the service or not, and whether
+      they are currently ACTIVE or not.
+    is_a: FormalDefinition
+    mixins:
+      - EntityReferenceList
+
+  PropertyQueryReference:
+    is_a: FormalDefinition
+    description: |-
+      A description of a set of entity references that are determined by applying a filter to the attribute(s) or
+      property(s) that appear in an EntityDescription in a specified code system.
+    slot_usage:
+      codeSystem:
+        description: The code system that contains the assertions that form the attributes or properties to be tested.
+        range: CodeSystemReference
+        inlined: true
+        required: true
+      codeSystemVersion:
+        description: |-
+          The version of the code system that makes the assertions. If present, codeSystemVersion must be a version of
+          codeSystem. If this attribute is present, the referenced version of the code system will always be used to
+          resolve the attributes or properties. If absent, the specific version of the code system to be used in
+          resolution is determined in the resolve value set definition call itself.
+        range: CodeSystemVersionReference
+        inlined: true
+      filter:
+        description: The filter to be applied to entities in the referenced code system.
+        range: FilterComponent
+        required: true
+
+  CompleteCodeSystemReference:
+    description: |-
+      An entry that, when resolved, returns all of the active entity references in a given code system. This includes
+      all entity references that appear as the source of one or more statements in the code system, whether the
+      assertions are made directly by a version of the code system or indirectly by a version of a different code
+      system that is imported. Note that targets are not included to prevent codes from rdf, rdfs, owl, etc. being
+      included in this resolution set.
+    is_a: FormalDefinition
+    slot_usage:
+      codeSystem:
+        description: A reference to the code system whose codes are to be included.
+        range: CodeSystemReference
+        required: true
+        inlined: true
+      codeSystemVersion:
+        description: |-
+          A reference to the specific version of the code system to include. If not supplied, the specific
+          version of the code system is determined in the resolution call itself.
+        range: CodeSystemVersionReference
+        inlined: true
+
+  CompleteValueSet:
+    description:
+    abstract: true
+
+  CompleteValueSetReference:
+    is_a: CompleteValueSet
+    description: |-
+      A reference to a value set that, when resolved, results in a set of entity references that are included in this
+      entry. An entry of this type can just name a value set, meaning that the specific definition is determined in the
+      resolve value set call, can name both a value set and value set definition, meaning that the specific definition
+      is always used in the resolution. It can also specify one or more code system versions to be used in the
+      resolution of the named value set.
+    slot_usage:
+      valueSet:
+        description: A reference to the value set whose definition supplies a set of entity references.
+        range: ValueSetReference
+        inlined: true
+        required: true
+      valueSetDefinition:
+        description: |-
+          A reference to a particular definition of valueSet that is to be used in resolving this reference. If absent,
+          the specific definition is determined by the resolve value set call. If present, valueSetDefinition must be
+          a definition of valueSet and will always be used to resolve this entity set.
+        range: ValueSetDefinitionReference
+        inlined: true
+      referenceCodeSystemVersion:
+        description: |-
+          A reference to a CodeSystemVersion that will be used to resolve this call. referenceCodeSy will only be used
+          if one or more components of the resolution of value Set identify a code system without specifying a specific
+          version. At most, only one version of a given code system may appear in the referenceCodeSystemVersion list.
+          While CTS2 service implementations must resolve resolution calls for definitions that carry unused reference
+          Code SystemV entries, they may choose to issue a warning at the time the definition is created or loaded.
+        range: CodeSystemVersionReference
+        inlined: true
+
+  CompleteValueSetDefinition:
+    description: |-
+      An embedded value set definition
+    is_a: CompleteValueSet
+    mixins:
+      - FormalDefinition
