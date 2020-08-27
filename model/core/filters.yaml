@@ -1,5 +1,5 @@
-id: https://hotecosystem.org/tccm/filtersandsorting
-name: filtersandsorting
+id: https://hotecosystem.org/tccm/filters
+name: filters
 title: TCCM Filter and Sort Criteria definitions
 description: The elements that are used in the construction of query filters and return sort criteria.
 license: https://creativecommons.org/publicdomain/zero/1.0/
@@ -9,6 +9,12 @@ imports:
   - ../core/datatypes
   - ../core/valuesets
   - ../core/references
+
+prefixes:
+    tccm: https://hotecosystem.org/tccm/
+
+# TODO: Remove this once we get the imports issue fixed
+default_prefix: tccm
 
 classes:
   Filter:
@@ -36,6 +42,7 @@ classes:
           The name or URI of the property or model element to be filtered. Properties are referenced by
           their predicate and model elements all have URIs that are established by this specification.
         range: PredicateReference
+        inlined: true
         multivalued: true
       matchAlgorithm:
         description: |-

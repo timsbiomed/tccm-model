@@ -16,13 +16,15 @@ imports:
 types:
 
   PersistentURI:
-    typeof: URIorCurie
+    base: URIorCURIE
+    uri: xsd:anyURI
     description: |-
       A Universal Resource Identifier (URI) that persists across service instances. PersistentURIs have enduring
       reference and meaning.
 
   LocalURI:
-    typeof: URIorCurie
+    base: URIorCURIE
+    uri: xsd:anyURI
     description: |-
       A URI or handle whose scope is local to the implementing service. LocalURI cannot be used as a permanent
       identifier in a message or a data record.

@@ -47,23 +47,23 @@ types:
       within the context of a TCCM service. NameSpaceIdentifier syntax must match the PNAME NS production as defined
       in the SPARQL Query Specification - meaning that it must begin with an alphabetic character
 
-  URI:
-    uri: xsd:anyURI
-    base: URI
-    repr: str
-    description: |-
-      A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
-      consider implementing this data type using the IRI (RFC3987) specification
-
-  CURIE:
-    uri: xsd:anyURI
-    base: Curie
-
-  URIorCurie:
-    uri: xsd:anyURI
-    base: URIorCURIE
-    repr: str
-    description: a URI or a CURIE
+#  Uri:
+#    uri: xsd:anyURI
+#    base: URI
+#    repr: str
+#    description: |-
+#      A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
+#      consider implementing this data type using the IRI (RFC3987) specification
+#
+#  Curie:
+#    uri: xsd:anyURI
+#    base: CURIE
+#
+#  UriOrCurie:
+#    uri: xsd:anyURI
+#    base: URIorCURIE
+#    repr: str
+#    description: a URI or a CURIE
 
 
 

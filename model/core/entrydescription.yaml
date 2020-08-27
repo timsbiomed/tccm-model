@@ -30,16 +30,19 @@ classes:
       format:
         description: The format or encoding for value. This is typically recorded as the URI of a Mime Type
         range: FormatReference
+        inlined: true
 
       schema:
         description: |-
           If the format of the document involves an XML encoding, this contains the URI of a document that carries
           the corresponding XML Schema or DTD.
         range: DocumentURI
+        inlined: true
 
       language:
         description: A reference to the written or spoken language used in value.
         range: LanguageReference
+        inlined: true
 
       value:
         description: |-

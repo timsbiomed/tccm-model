@@ -21,3 +21,4 @@ URI: [tccm:EntityReferenceList_namespaceName](https://hotecosystem.org/tccm/Enti
 ## Used by
 
  * [EntityReferenceList](EntityReferenceList.md)
+ * [SpecificEntityList](SpecificEntityList.md)

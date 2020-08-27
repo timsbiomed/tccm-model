@@ -63,18 +63,19 @@ classes:
       inclusion or exclusion in the resolution of a value set definition.
     abstract: true
     slot_usage:
-      operator:
-        description: |-
-          Instructions for how the results of the entry evaluation will be applied to the set of entities in the base
-          definition. Results can be added to the set (+), intersected with members already in the set (and),
-          or be removed from the set (-).
-        range: string
-      definition:
-        description: |-
-          The definition itself
+      include:
+        description: Include the resolution of this definition in the valueset
         range: FormalDefinition
-        required: true
         inlined: true
+      exclude:
+        description: Exclude the resolution of this definition in the valueset
+        range: FormalDefinition
+        inlined: true
+      intersect:
+        description: Include only the elements that are common between this definition and the valueset to this point
+        range: FormalDefinition
+        inlined: true
+
         
   FormalDefinition:
     description: A value set definition choice

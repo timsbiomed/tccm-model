@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-biolinkml = "==1.5.8"
+biolinkml = {editable = true,path = "./../../biolink/biolinkml"}
 rdflib = "~=5.0"
 rdflib-jsonld = "*"
 

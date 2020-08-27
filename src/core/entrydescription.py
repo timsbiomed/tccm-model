@@ -1,5 +1,5 @@
 # Auto generated from entrydescription.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-25 13:57
+# Generation date: 2020-08-26 15:38
 # Schema: entrydescription
 #
 # id: https://hotecosystem.org/tccm/entrydescription
@@ -20,10 +20,10 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from ...core.datatypes import CURIE, LocalIdentifier, URIorCurie
-from ...core.references import CodeSystemReference, CodeSystemVersionReference, FormatReference, LanguageReference, MapReference, MapVersionReference, NameAndMeaningReference, PredicateReference, RoleReference, SourceAndRoleReference
-from ...core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
-from biolinkml.utils.metamodelcore import Curie, URIorCURIE
+from src.core.datatypes import LocalIdentifier, URIorCurie
+from src.core.references import CodeSystemReference, CodeSystemReferenceName, FormatReference, FormatReferenceName, LanguageReference, LanguageReferenceName, MapReference, MapReferenceName, RoleReference, RoleReferenceName
+from src.core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
+from biolinkml.utils.metamodelcore import URIorCURIE
 from includes.types import String
 
 metamodel_version = "1.5.3"
@@ -68,11 +68,11 @@ class OpaqueData(YAMLRoot):
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
         if self.format is not None and not isinstance(self.format, FormatReference):
-            self.format = FormatReference(**self.format)
+            self.format = FormatReference(self.format)
         if self.schema is not None and not isinstance(self.schema, DocumentURI):
             self.schema = DocumentURI(self.schema)
         if self.language is not None and not isinstance(self.language, LanguageReference):
-            self.language = LanguageReference(**self.language)
+            self.language = LanguageReference(self.language)
         if self.value is None:
             raise ValueError(f"value must be supplied")
         super().__post_init__(**kwargs)
@@ -149,36 +149,3 @@ slots.OpaqueData_language = Slot(uri=TCCM.language, name="OpaqueData_language", 
 
 slots.OpaqueData_value = Slot(uri=TCCM.value, name="OpaqueData_value", curie=TCCM.curie('value'),
                       model_uri=TCCM.OpaqueData_value, domain=OpaqueData, range=str)
-
-slots.NameAndMeaningReference_name = Slot(uri=TCCM.name, name="NameAndMeaningReference_name", curie=TCCM.curie('name'),
-                      model_uri=TCCM.NameAndMeaningReference_name, domain=NameAndMeaningReference, range=Union[str, NameAndMeaningReferenceName])
-
-slots.NameAndMeaningReference_synopsis = Slot(uri=TCCM.synopsis, name="NameAndMeaningReference_synopsis", curie=TCCM.curie('synopsis'),
-                      model_uri=TCCM.NameAndMeaningReference_synopsis, domain=NameAndMeaningReference, range=Optional[str])
-
-slots.NameAndMeaningReference_uri = Slot(uri=TCCM.uri, name="NameAndMeaningReference_uri", curie=TCCM.curie('uri'),
-                      model_uri=TCCM.NameAndMeaningReference_uri, domain=NameAndMeaningReference, range=Optional[Union[str, ExternalURI]])
-
-slots.NameAndMeaningReference_href = Slot(uri=TCCM.href, name="NameAndMeaningReference_href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.NameAndMeaningReference_href, domain=NameAndMeaningReference, range=Optional[Union[str, RenderingURI]])
-
-slots.CodeSystemVersionReference_codeSystem = Slot(uri=TCCM.codeSystem, name="CodeSystemVersionReference_codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.CodeSystemVersionReference_codeSystem, domain=CodeSystemVersionReference, range=Optional[Union[dict, CodeSystemReference]])
-
-slots.MapVersionReference_map = Slot(uri=TCCM.map, name="MapVersionReference_map", curie=TCCM.curie('map'),
-                      model_uri=TCCM.MapVersionReference_map, domain=MapVersionReference, range=Optional[Union[dict, MapReference]])
-
-slots.PredicateReference_uri = Slot(uri=TCCM.uri, name="PredicateReference_uri", curie=TCCM.curie('uri'),
-                      model_uri=TCCM.PredicateReference_uri, domain=PredicateReference, range=Union[str, ExternalURI])
-
-slots.PredicateReference_name = Slot(uri=TCCM.name, name="PredicateReference_name", curie=TCCM.curie('name'),
-                      model_uri=TCCM.PredicateReference_name, domain=PredicateReference, range=Union[Curie, PredicateReferenceName])
-
-slots.PredicateReference_href = Slot(uri=TCCM.href, name="PredicateReference_href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.PredicateReference_href, domain=PredicateReference, range=Optional[Union[str, RenderingURI]])
-
-slots.PredicateReference_designation = Slot(uri=TCCM.designation, name="PredicateReference_designation", curie=TCCM.curie('designation'),
-                      model_uri=TCCM.PredicateReference_designation, domain=PredicateReference, range=Optional[str])
-
-slots.SourceAndRoleReference_role = Slot(uri=TCCM.role, name="SourceAndRoleReference_role", curie=TCCM.curie('role'),
-                      model_uri=TCCM.SourceAndRoleReference_role, domain=SourceAndRoleReference, range=Optional[Union[dict, RoleReference]])

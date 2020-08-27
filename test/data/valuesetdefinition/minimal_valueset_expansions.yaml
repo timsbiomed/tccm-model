@@ -1,0 +1,13 @@
+#  This is a variant on the minimal valueset that includes all informational expansions
+#  When formally expanding LOINC, we would have to decide how Long Common, Fully specified, Short and Display names
+#   should be mapped to designation and description
+include:
+  namespace: LOINC
+  codes:
+    10368-9:
+      about: https://loinc.org/10368-9
+      designation:  Lead BldC-mCnc
+      description: Lead [Mass/volume] in Capillary blood
+      href: https://loinc.org/10368-9
+      see_also:
+        - https://loinc.org/?s=10368-9

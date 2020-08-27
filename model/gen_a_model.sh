@@ -4,8 +4,12 @@
 #  exit 1
 #fi
 
+MODULE=core/entityreference
 PARMS="--no-mergeimports"
-gen-python $PARMS valueset/valuesetdefinition.yaml > ../src/valueset/valuesetdefinition.py
-if [[ $? -eq 0 ]]; then
-  gen-markdown $parms valueset/valuesetdefinition.yaml -d ../docs/valueset/valuesetdefinition -i
-fi
+gen-python $PARMS $MODULE.yaml > ../src/$MODULE.py
+#if [[ $? -eq 0 ]]; then
+#  gen-markdown $parms $MODULE.yaml -d ../docs/$MODULE -i
+#fi
+sed -i '' 's/from \.\./from src./' ../src/$MODULE.py
+
+

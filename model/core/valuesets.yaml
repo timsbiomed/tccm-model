@@ -15,7 +15,9 @@ imports:
 
 types:
   ValueSet:
-    typeof: URIorCurie
+    uri: xsd:anyURI
+    base: URIorCURIE
+    repr: str
     description: A URI that can be indirectly resolved to a set of entity descriptions
 
   ASSOCIATION:

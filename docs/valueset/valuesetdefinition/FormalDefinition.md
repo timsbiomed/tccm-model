@@ -22,8 +22,12 @@ URI: [tccm:FormalDefinition](https://hotecosystem.org/tccm/FormalDefinition)
 
 ## Referenced by class
 
- *  **[ValueSetDefinitionEntry](ValueSetDefinitionEntry.md)** *[ValueSetDefinitionEntry➞definition](ValueSetDefinitionEntry_definition.md)*  <sub>REQ</sub>  **[FormalDefinition](FormalDefinition.md)**
- *  **None** *[definition](definition.md)*  <sub>REQ</sub>  **[FormalDefinition](FormalDefinition.md)**
+ *  **[ValueSetDefinitionEntry](ValueSetDefinitionEntry.md)** *[ValueSetDefinitionEntry➞exclude](ValueSetDefinitionEntry_exclude.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
+ *  **[ValueSetDefinitionEntry](ValueSetDefinitionEntry.md)** *[ValueSetDefinitionEntry➞include](ValueSetDefinitionEntry_include.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
+ *  **[ValueSetDefinitionEntry](ValueSetDefinitionEntry.md)** *[ValueSetDefinitionEntry➞intersect](ValueSetDefinitionEntry_intersect.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
+ *  **None** *[exclude](exclude.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
+ *  **None** *[include](include.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
+ *  **None** *[intersect](intersect.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
 
 ## Attributes
 

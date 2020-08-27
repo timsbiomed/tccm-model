@@ -34,6 +34,11 @@ comments:
 prefixes:
   tccm: https://hotecosystem.org/tccm/
 
+# NOTE: Remove this once we get the prefix issues resolved
+emit_prefixes:
+  - rdf
+  - skos
+
 default_prefix: tccm
 default_range: string
 
@@ -74,16 +79,16 @@ classes:
         range: string
         required: true
         key: true
-        slot_uri: RDF:id
+        slot_uri: rdf:id
       designation:
         description: The preferred label for the entity in the context of the service
         range: string
-        slot_uri: SKOS:prefLabel
+        slot_uri: skos:prefLabel
         readonly: This is supplied by the TCCM service
       description:
         description: A description or definition of the referenced entity determined by the service
         range: string
-        slot_uri: SKOS:definition
+        slot_uri: skos:definition
         readonly: This is supplied by the TCCM service
       href:
         description: A reference to the "official" description of the entity in the context of the defining code system

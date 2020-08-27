@@ -1,5 +1,5 @@
 # Auto generated from uritypes.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-25 14:01
+# Generation date: 2020-08-26 15:38
 # Schema: tccm
 #
 # id: https://hotecosystem.org/tccm
@@ -20,7 +20,7 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from ...core.datatypes import URIorCurie
+from src.core.datatypes import URIorCurie
 from biolinkml.utils.metamodelcore import URIorCURIE
 
 metamodel_version = "1.5.3"

@@ -23,11 +23,12 @@ URI: [tccm:ValueSetDefinitionEntry](https://hotecosystem.org/tccm/ValueSetDefini
 
 ### Own
 
- * [ValueSetDefinitionEntry➞definition](ValueSetDefinitionEntry_definition.md)  <sub>REQ</sub>
-    * Description: The definition itself
+ * [ValueSetDefinitionEntry➞exclude](ValueSetDefinitionEntry_exclude.md)  <sub>OPT</sub>
+    * Description: Exclude the resolution of this definition in the valueset
     * range: [FormalDefinition](FormalDefinition.md)
- * [ValueSetDefinitionEntry➞operator](ValueSetDefinitionEntry_operator.md)  <sub>OPT</sub>
-    * Description: Instructions for how the results of the entry evaluation will be applied to the set of entities in the base
-definition. Results can be added to the set (+), intersected with members already in the set (and),
-or be removed from the set (-).
-    * range: [String](types/String.md)
+ * [ValueSetDefinitionEntry➞include](ValueSetDefinitionEntry_include.md)  <sub>OPT</sub>
+    * Description: Include the resolution of this definition in the valueset
+    * range: [FormalDefinition](FormalDefinition.md)
+ * [ValueSetDefinitionEntry➞intersect](ValueSetDefinitionEntry_intersect.md)  <sub>OPT</sub>
+    * Description: Include only the elements that are common between this definition and the valueset to this point
+    * range: [FormalDefinition](FormalDefinition.md)

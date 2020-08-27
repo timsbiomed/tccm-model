@@ -1,5 +1,5 @@
 # Auto generated from valuesetdefinition.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-25 13:53
+# Generation date: 2020-08-26 11:39
 # Schema: valuesetdefinition
 #
 # id: https://hotecosystem.org/tccm/valuesetdefinition
@@ -28,15 +28,20 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from core.datatypes import CURIE, DateAndTime, LocalIdentifier, URIorCurie
-from core.entityreference import EntityReference, EntityReferenceList
-from core.filters import Filter, FilterComponent
-from core.localidentifiers import CodeSystemName
-from core.references import CodeSystemReference, CodeSystemVersionReference, MapReference, MapVersionReference, MatchAlgorithmReference, NameAndMeaningReference, OntologyLanguageReference, OntologySyntaxReference, PredicateReference, RoleReference, SourceAndRoleReference, ValueSetDefinitionReference, ValueSetReference, VersionTagReference
-from core.resourcedescription import AbstractResourceDescription, ResourceDescription, ResourceVersionDescription, ResourceVersionDescriptionResourceID, SourceAndNotation
-from core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
+from src.core.datatypes import CURIE, DateAndTime, LocalIdentifier, URIorCurie
+from src.core.entityreference import EntityReference, EntityReferenceList, EntityReferenceCode, \
+    EntityReferenceListNamespaceURI
+from src.core.filters import Filter, FilterComponent
+from src.core.localidentifiers import CodeSystemName
+from src.core.references import CodeSystemReference, CodeSystemVersionReference, MapReference, MapVersionReference, \
+    MatchAlgorithmReference, NameAndMeaningReference, OntologyLanguageReference, OntologySyntaxReference, \
+    PredicateReference, RoleReference, SourceAndRoleReference, ValueSetDefinitionReference, ValueSetReference, \
+    VersionTagReference, VersionTagReferenceName, PredicateReferenceName, NameAndMeaningReferenceName
+from src.core.resourcedescription import AbstractResourceDescription, ResourceDescription, ResourceVersionDescription, ResourceVersionDescriptionResourceID, SourceAndNotation
+from src.core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import Bool, Curie, URIorCURIE, XSDDateTime
 from includes.annotations import Annotation
+from src.core.prefixes import RDF, SKOS
 from includes.extensions import Extension
 from includes.types import Boolean, String
 
@@ -46,8 +51,6 @@ metamodel_version = "1.5.3"
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-RDF = CurieNamespace('RDF', 'http://example.org/UNKNOWN/RDF/')
-SKOS = CurieNamespace('SKOS', 'http://example.org/UNKNOWN/SKOS/')
 BIOLINKML = CurieNamespace('biolinkml', 'https://w3id.org/biolink/biolinkml/')
 TCCM = CurieNamespace('tccm', 'https://hotecosystem.org/tccm/')
 DEFAULT_ = TCCM
@@ -56,6 +59,10 @@ DEFAULT_ = TCCM
 # Types
 
 # Class references
+class SpecificEntityListNamespaceURI(ExternalURI):
+    pass
+
+
 class ValueSetDefinitionResourceID(ResourceVersionDescriptionResourceID):
     pass
 
@@ -76,14 +83,17 @@ class ValueSetDefinitionEntry(YAMLRoot):
     class_name: ClassVar[str] = "ValueSetDefinitionEntry"
     class_model_uri: ClassVar[URIRef] = TCCM.ValueSetDefinitionEntry
 
-    definition: Union[dict, "FormalDefinition"]
-    operator: Optional[str] = None
+    include: Optional[Union[dict, "FormalDefinition"]] = None
+    exclude: Optional[Union[dict, "FormalDefinition"]] = None
+    intersect: Optional[Union[dict, "FormalDefinition"]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
-        if self.definition is None:
-            raise ValueError(f"definition must be supplied")
-        if not isinstance(self.definition, FormalDefinition):
-            self.definition = FormalDefinition()
+        if self.include is not None and not isinstance(self.include, FormalDefinition):
+            self.include = FormalDefinition()
+        if self.exclude is not None and not isinstance(self.exclude, FormalDefinition):
+            self.exclude = FormalDefinition()
+        if self.intersect is not None and not isinstance(self.intersect, FormalDefinition):
+            self.intersect = FormalDefinition()
         super().__post_init__(**kwargs)
 
 
@@ -145,6 +155,7 @@ class AssociatedEntitiesReference(FormalDefinition):
         super().__post_init__(**kwargs)
 
 
+@dataclass
 class SpecificEntityList(FormalDefinition):
     """
     A list of specific entity references that are to be included in the definition. When specified in this form,
@@ -157,6 +168,22 @@ class SpecificEntityList(FormalDefinition):
     class_class_curie: ClassVar[str] = "tccm:SpecificEntityList"
     class_name: ClassVar[str] = "SpecificEntityList"
     class_model_uri: ClassVar[URIRef] = TCCM.SpecificEntityList
+
+    namespaceURI: Union[str, SpecificEntityListNamespaceURI] = None
+    namespaceName: Optional[Union[str, CodeSystemName]] = None
+    entities: Dict[Union[str, EntityReferenceCode], Union[dict, EntityReference]] = empty_dict()
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.namespaceURI is None:
+            raise ValueError(f"namespaceURI must be supplied")
+        if not isinstance(self.namespaceURI, SpecificEntityListNamespaceURI):
+            self.namespaceURI = SpecificEntityListNamespaceURI(self.namespaceURI)
+        if self.namespaceName is not None and not isinstance(self.namespaceName, CodeSystemName):
+            self.namespaceName = CodeSystemName(self.namespaceName)
+        for k, v in self.entities.items():
+            if not isinstance(v, EntityReference):
+                self.entities[k] = EntityReference(code=k, **({} if v is None else v))
+        super().__post_init__(**kwargs)
 
 
 @dataclass
@@ -292,6 +319,7 @@ class ValueSetDefinition(ResourceVersionDescription):
     class_model_uri: ClassVar[URIRef] = TCCM.ValueSetDefinition
 
     resourceID: Union[str, ValueSetDefinitionResourceID] = None
+    about: Union[str, ExternalURI] = None
     entry: List[Union[dict, "ValueSetDefinitionEntry"]] = empty_list()
     definitionOf: Optional[Union[dict, ValueSetReference]] = None
     versionTag: Dict[Union[str, VersionTagReferenceName], Union[dict, VersionTagReference]] = empty_dict()
@@ -364,11 +392,14 @@ slots.versionTag = Slot(uri=TCCM.versionTag, name="versionTag", curie=TCCM.curie
 slots.entry = Slot(uri=TCCM.entry, name="entry", curie=TCCM.curie('entry'),
                       model_uri=TCCM.entry, domain=None, range=List[Union[dict, ValueSetDefinitionEntry]])
 
-slots.operator = Slot(uri=TCCM.operator, name="operator", curie=TCCM.curie('operator'),
-                      model_uri=TCCM.operator, domain=None, range=Optional[str])
+slots.include = Slot(uri=TCCM.include, name="include", curie=TCCM.curie('include'),
+                      model_uri=TCCM.include, domain=None, range=Optional[Union[dict, FormalDefinition]])
 
-slots.definition = Slot(uri=TCCM.definition, name="definition", curie=TCCM.curie('definition'),
-                      model_uri=TCCM.definition, domain=None, range=Union[dict, FormalDefinition])
+slots.exclude = Slot(uri=TCCM.exclude, name="exclude", curie=TCCM.curie('exclude'),
+                      model_uri=TCCM.exclude, domain=None, range=Optional[Union[dict, FormalDefinition]])
+
+slots.intersect = Slot(uri=TCCM.intersect, name="intersect", curie=TCCM.curie('intersect'),
+                      model_uri=TCCM.intersect, domain=None, range=Optional[Union[dict, FormalDefinition]])
 
 slots.referencedEntity = Slot(uri=TCCM.referencedEntity, name="referencedEntity", curie=TCCM.curie('referencedEntity'),
                       model_uri=TCCM.referencedEntity, domain=None, range=Union[dict, EntityReference])
@@ -481,11 +512,14 @@ slots.ValueSetDefinition_versionTag = Slot(uri=TCCM.versionTag, name="ValueSetDe
 slots.ValueSetDefinition_entry = Slot(uri=TCCM.entry, name="ValueSetDefinition_entry", curie=TCCM.curie('entry'),
                       model_uri=TCCM.ValueSetDefinition_entry, domain=ValueSetDefinition, range=List[Union[dict, "ValueSetDefinitionEntry"]])
 
-slots.ValueSetDefinitionEntry_operator = Slot(uri=TCCM.operator, name="ValueSetDefinitionEntry_operator", curie=TCCM.curie('operator'),
-                      model_uri=TCCM.ValueSetDefinitionEntry_operator, domain=ValueSetDefinitionEntry, range=Optional[str])
+slots.ValueSetDefinitionEntry_include = Slot(uri=TCCM.include, name="ValueSetDefinitionEntry_include", curie=TCCM.curie('include'),
+                      model_uri=TCCM.ValueSetDefinitionEntry_include, domain=ValueSetDefinitionEntry, range=Optional[Union[dict, "FormalDefinition"]])
 
-slots.ValueSetDefinitionEntry_definition = Slot(uri=TCCM.definition, name="ValueSetDefinitionEntry_definition", curie=TCCM.curie('definition'),
-                      model_uri=TCCM.ValueSetDefinitionEntry_definition, domain=ValueSetDefinitionEntry, range=Union[dict, "FormalDefinition"])
+slots.ValueSetDefinitionEntry_exclude = Slot(uri=TCCM.exclude, name="ValueSetDefinitionEntry_exclude", curie=TCCM.curie('exclude'),
+                      model_uri=TCCM.ValueSetDefinitionEntry_exclude, domain=ValueSetDefinitionEntry, range=Optional[Union[dict, "FormalDefinition"]])
+
+slots.ValueSetDefinitionEntry_intersect = Slot(uri=TCCM.intersect, name="ValueSetDefinitionEntry_intersect", curie=TCCM.curie('intersect'),
+                      model_uri=TCCM.ValueSetDefinitionEntry_intersect, domain=ValueSetDefinitionEntry, range=Optional[Union[dict, "FormalDefinition"]])
 
 slots.AssociatedEntitiesReference_referencedEntity = Slot(uri=TCCM.referencedEntity, name="AssociatedEntitiesReference_referencedEntity", curie=TCCM.curie('referencedEntity'),
                       model_uri=TCCM.AssociatedEntitiesReference_referencedEntity, domain=AssociatedEntitiesReference, range=Union[dict, EntityReference])

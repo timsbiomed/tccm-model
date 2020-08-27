@@ -1,5 +1,5 @@
-id: https://hotecosystem.org/tccm/filtersandsorting
-name: filtersandsorting
+id: https://hotecosystem.org/tccm/sorting
+name: sorting
 title: TCCM Filter and Sort Criteria definitions
 description: The elements that are used in the construction of query filters and return sort criteria.
 license: https://creativecommons.org/publicdomain/zero/1.0/

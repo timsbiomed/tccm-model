@@ -21,3 +21,4 @@ URI: [tccm:ResourceVersionDescription_officialActivationDate](https://hotecosyst
 ## Used by
 
  * [ResourceVersionDescription](ResourceVersionDescription.md)
+ * [ValueSetDefinition](ValueSetDefinition.md)

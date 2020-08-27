@@ -22,3 +22,5 @@ URI: [tccm:ResourceDescription_formalName](https://hotecosystem.org/tccm/Resourc
 
  * [AbstractResourceDescription](AbstractResourceDescription.md)
  * [ResourceDescription](ResourceDescription.md)
+ * [ResourceVersionDescription](ResourceVersionDescription.md)
+ * [ValueSetDefinition](ValueSetDefinition.md)

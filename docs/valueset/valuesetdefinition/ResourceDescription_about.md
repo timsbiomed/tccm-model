@@ -27,3 +27,5 @@ URI: [tccm:ResourceDescription_about](https://hotecosystem.org/tccm/ResourceDesc
 
  * [AbstractResourceDescription](AbstractResourceDescription.md)
  * [ResourceDescription](ResourceDescription.md)
+ * [ResourceVersionDescription](ResourceVersionDescription.md)
+ * [ValueSetDefinition](ValueSetDefinition.md)

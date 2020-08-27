@@ -21,3 +21,4 @@ URI: [tccm:ResourceVersionDescription_officialResourceVersionID](https://hotecos
 ## Used by
 
  * [ResourceVersionDescription](ResourceVersionDescription.md)
+ * [ValueSetDefinition](ValueSetDefinition.md)

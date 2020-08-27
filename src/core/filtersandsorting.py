@@ -25,6 +25,8 @@ from core.references import CodeSystemReference, CodeSystemVersionReference, Map
 from core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import Bool, Curie, URIorCURIE
 from includes.types import Boolean, String
+from core.prefixes import TCCM
+from core.references import NameAndMeaningReferenceName, PredicateReferenceName
 
 metamodel_version = "1.5.3"
 

@@ -21,3 +21,4 @@ URI: [tccm:ResourceVersionDescription_documentURI](https://hotecosystem.org/tccm
 ## Used by
 
  * [ResourceVersionDescription](ResourceVersionDescription.md)
+ * [ValueSetDefinition](ValueSetDefinition.md)

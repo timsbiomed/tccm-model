@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c56071e97c150a8de550b06f4b094209ef3559c1669da6cf0992c4b02cea5b61"
+            "sha256": "15929b329b419d9748fd0e69c20a07307313a374b54986e97bb343b68afc4e1c"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -35,12 +35,8 @@
             "version": "==20.1.0"
         },
         "biolinkml": {
-            "hashes": [
-                "sha256:011fd728438554173deb60ed9969179d603dc76a25fda36841ae02a0a2848ebd",
-                "sha256:3bd15a0fced4e3d32d356d42fed8fcf77c9a4a1ddf086f6e8f6fab03ab400eed"
-            ],
-            "index": "pypi",
-            "version": "==1.5.8"
+            "editable": true,
+            "path": "./../../biolink/biolinkml"
         },
         "certifi": {
             "hashes": [

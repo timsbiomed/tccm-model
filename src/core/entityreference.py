@@ -1,5 +1,5 @@
 # Auto generated from entityreference.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-25 13:57
+# Generation date: 2020-08-26 15:38
 # Schema: entityreference
 #
 # id: https://hotecosystem.org/tccm/entityreference
@@ -32,9 +32,9 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from ...core.datatypes import LocalIdentifier, URIorCurie
-from ...core.localidentifiers import CodeSystemName
-from ...core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
+from src.core.datatypes import LocalIdentifier, URIorCurie
+from src.core.localidentifiers import CodeSystemName
+from src.core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import URIorCURIE
 from includes.types import String
 
@@ -44,8 +44,8 @@ metamodel_version = "1.5.3"
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-RDF = CurieNamespace('RDF', 'http://example.org/UNKNOWN/RDF/')
-SKOS = CurieNamespace('SKOS', 'http://example.org/UNKNOWN/SKOS/')
+RDF = CurieNamespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+SKOS = CurieNamespace('skos', 'http://www.w3.org/2004/02/skos/core#')
 TCCM = CurieNamespace('tccm', 'https://hotecosystem.org/tccm/')
 DEFAULT_ = TCCM
 

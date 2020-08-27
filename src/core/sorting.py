@@ -1,8 +1,8 @@
 # Auto generated from sorting.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-25 14:00
-# Schema: filtersandsorting
+# Generation date: 2020-08-26 15:38
+# Schema: sorting
 #
-# id: https://hotecosystem.org/tccm/filtersandsorting
+# id: https://hotecosystem.org/tccm/sorting
 # description: The elements that are used in the construction of query filters and return sort criteria.
 # license: https://creativecommons.org/publicdomain/zero/1.0/
 
@@ -20,10 +20,10 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from ...core.datatypes import CURIE, LocalIdentifier, URIorCurie
-from ...core.references import CodeSystemReference, CodeSystemVersionReference, MapReference, MapVersionReference, NameAndMeaningReference, PredicateReference, RoleReference, SourceAndRoleReference
-from ...core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
-from biolinkml.utils.metamodelcore import Bool, Curie, URIorCURIE
+from src.core.datatypes import LocalIdentifier, URIorCurie
+from src.core.references import CodeSystemReference, CodeSystemReferenceName, MapReference, MapReferenceName, PredicateReference, PredicateReferenceName, RoleReference, RoleReferenceName
+from src.core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
+from biolinkml.utils.metamodelcore import Bool, URIorCURIE
 from includes.types import Boolean, String
 
 metamodel_version = "1.5.3"
@@ -32,7 +32,7 @@ metamodel_version = "1.5.3"
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-DEFAULT_ = CurieNamespace('', 'https://hotecosystem.org/tccm/filtersandsorting/')
+DEFAULT_ = CurieNamespace('', 'https://hotecosystem.org/tccm/sorting/')
 
 
 # Types
@@ -49,10 +49,10 @@ class SortCriteria(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = TCCM["filtersandsorting/SortCriteria"]
-    class_class_curie: ClassVar[str] = "tccm:filtersandsorting/SortCriteria"
+    class_class_uri: ClassVar[URIRef] = TCCM["sorting/SortCriteria"]
+    class_class_curie: ClassVar[str] = "tccm:sorting/SortCriteria"
     class_name: ClassVar[str] = "SortCriteria"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://hotecosystem.org/tccm/filtersandsorting/SortCriteria")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://hotecosystem.org/tccm/sorting/SortCriteria")
 
     entry: List[Union[dict, "SortCriterion"]] = empty_list()
 
@@ -70,10 +70,10 @@ class SortCriterion(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = TCCM["filtersandsorting/SortCriterion"]
-    class_class_curie: ClassVar[str] = "tccm:filtersandsorting/SortCriterion"
+    class_class_uri: ClassVar[URIRef] = TCCM["sorting/SortCriterion"]
+    class_class_curie: ClassVar[str] = "tccm:sorting/SortCriterion"
     class_name: ClassVar[str] = "SortCriterion"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://hotecosystem.org/tccm/filtersandsorting/SortCriterion")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://hotecosystem.org/tccm/sorting/SortCriterion")
 
     sortElement: Union[dict, PredicateReference]
     sortDescending: Optional[Bool] = None
@@ -82,7 +82,7 @@ class SortCriterion(YAMLRoot):
         if self.sortElement is None:
             raise ValueError(f"sortElement must be supplied")
         if not isinstance(self.sortElement, PredicateReference):
-            self.sortElement = PredicateReference(**self.sortElement)
+            self.sortElement = PredicateReference(self.sortElement)
         super().__post_init__(**kwargs)
 
 
@@ -132,36 +132,3 @@ slots.SortCriterion_sortElement = Slot(uri=DEFAULT_.sortElement, name="SortCrite
 
 slots.SortCriterion_sortDescending = Slot(uri=DEFAULT_.sortDescending, name="SortCriterion_sortDescending", curie=DEFAULT_.curie('sortDescending'),
                       model_uri=DEFAULT_.SortCriterion_sortDescending, domain=SortCriterion, range=Optional[Bool])
-
-slots.NameAndMeaningReference_name = Slot(uri=DEFAULT_.name, name="NameAndMeaningReference_name", curie=DEFAULT_.curie('name'),
-                      model_uri=DEFAULT_.NameAndMeaningReference_name, domain=NameAndMeaningReference, range=Union[str, NameAndMeaningReferenceName])
-
-slots.NameAndMeaningReference_synopsis = Slot(uri=DEFAULT_.synopsis, name="NameAndMeaningReference_synopsis", curie=DEFAULT_.curie('synopsis'),
-                      model_uri=DEFAULT_.NameAndMeaningReference_synopsis, domain=NameAndMeaningReference, range=Optional[str])
-
-slots.NameAndMeaningReference_uri = Slot(uri=DEFAULT_.uri, name="NameAndMeaningReference_uri", curie=DEFAULT_.curie('uri'),
-                      model_uri=DEFAULT_.NameAndMeaningReference_uri, domain=NameAndMeaningReference, range=Optional[Union[str, ExternalURI]])
-
-slots.NameAndMeaningReference_href = Slot(uri=DEFAULT_.href, name="NameAndMeaningReference_href", curie=DEFAULT_.curie('href'),
-                      model_uri=DEFAULT_.NameAndMeaningReference_href, domain=NameAndMeaningReference, range=Optional[Union[str, RenderingURI]])
-
-slots.CodeSystemVersionReference_codeSystem = Slot(uri=DEFAULT_.codeSystem, name="CodeSystemVersionReference_codeSystem", curie=DEFAULT_.curie('codeSystem'),
-                      model_uri=DEFAULT_.CodeSystemVersionReference_codeSystem, domain=CodeSystemVersionReference, range=Optional[Union[dict, CodeSystemReference]])
-
-slots.MapVersionReference_map = Slot(uri=DEFAULT_.map, name="MapVersionReference_map", curie=DEFAULT_.curie('map'),
-                      model_uri=DEFAULT_.MapVersionReference_map, domain=MapVersionReference, range=Optional[Union[dict, MapReference]])
-
-slots.PredicateReference_uri = Slot(uri=DEFAULT_.uri, name="PredicateReference_uri", curie=DEFAULT_.curie('uri'),
-                      model_uri=DEFAULT_.PredicateReference_uri, domain=PredicateReference, range=Union[str, ExternalURI])
-
-slots.PredicateReference_name = Slot(uri=DEFAULT_.name, name="PredicateReference_name", curie=DEFAULT_.curie('name'),
-                      model_uri=DEFAULT_.PredicateReference_name, domain=PredicateReference, range=Union[Curie, PredicateReferenceName])
-
-slots.PredicateReference_href = Slot(uri=DEFAULT_.href, name="PredicateReference_href", curie=DEFAULT_.curie('href'),
-                      model_uri=DEFAULT_.PredicateReference_href, domain=PredicateReference, range=Optional[Union[str, RenderingURI]])
-
-slots.PredicateReference_designation = Slot(uri=DEFAULT_.designation, name="PredicateReference_designation", curie=DEFAULT_.curie('designation'),
-                      model_uri=DEFAULT_.PredicateReference_designation, domain=PredicateReference, range=Optional[str])
-
-slots.SourceAndRoleReference_role = Slot(uri=DEFAULT_.role, name="SourceAndRoleReference_role", curie=DEFAULT_.curie('role'),
-                      model_uri=DEFAULT_.SourceAndRoleReference_role, domain=SourceAndRoleReference, range=Optional[Union[dict, RoleReference]])

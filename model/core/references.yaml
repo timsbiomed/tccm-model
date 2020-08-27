@@ -201,7 +201,7 @@ classes:
         range: ExternalURI
         required: True
       name:
-        range: CURIE
+        range: LocalIdentifier
       href:
         range: RenderingURI
       designation:

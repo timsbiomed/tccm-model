@@ -21,3 +21,21 @@ URI: [tccm:SpecificEntityList](https://hotecosystem.org/tccm/SpecificEntityList)
 
 ## Attributes
 
+
+### Mixed in from EntityReferenceList:
+
+ * [EntityReferenceList➞entities](EntityReferenceList_entities.md)  <sub>0..*</sub>
+    * Description: The entity references ("concept codes") in the list
+    * range: [EntityReference](EntityReference.md)
+
+### Mixed in from EntityReferenceList:
+
+ * [EntityReferenceList➞namespaceName](EntityReferenceList_namespaceName.md)  <sub>OPT</sub>
+    * Description: The local identifier assigned to this namespace
+    * range: [CodeSystemName](types/CodeSystemName.md)
+
+### Mixed in from EntityReferenceList:
+
+ * [EntityReferenceList➞namespaceURI](EntityReferenceList_namespaceURI.md)  <sub>REQ</sub>
+    * Description: The URI associated with the supplied namespace as determined by the author/service instance
+    * range: [ExternalURI](types/ExternalURI.md)

@@ -1,5 +1,5 @@
 # Auto generated from references.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-25 13:58
+# Generation date: 2020-08-26 15:38
 # Schema: references
 #
 # id: https://hotecosystem.org/tccm/references
@@ -32,8 +32,8 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from ...core.datatypes import CURIE, LocalIdentifier, URIorCurie
-from ...core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
+from src.core.datatypes import CURIE, LocalIdentifier, URIorCurie
+from src.core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import Curie, URIorCURIE
 from includes.types import String
 
@@ -359,7 +359,7 @@ class CodeSystemVersionReference(NameAndMeaningReference):
         if not isinstance(self.name, CodeSystemVersionReferenceName):
             self.name = CodeSystemVersionReferenceName(self.name)
         if self.codeSystem is not None and not isinstance(self.codeSystem, CodeSystemReference):
-            self.codeSystem = CodeSystemReference(**self.codeSystem)
+            self.codeSystem = CodeSystemReference(self.codeSystem)
         super().__post_init__(**kwargs)
 
 
@@ -582,7 +582,7 @@ class MapVersionReference(NameAndMeaningReference):
         if not isinstance(self.name, MapVersionReferenceName):
             self.name = MapVersionReferenceName(self.name)
         if self.map is not None and not isinstance(self.map, MapReference):
-            self.map = MapReference(**self.map)
+            self.map = MapReference(self.map)
         super().__post_init__(**kwargs)
 
 
@@ -907,7 +907,7 @@ class SourceAndRoleReference(NameAndMeaningReference):
         if not isinstance(self.name, SourceAndRoleReferenceName):
             self.name = SourceAndRoleReferenceName(self.name)
         if self.role is not None and not isinstance(self.role, RoleReference):
-            self.role = RoleReference(**self.role)
+            self.role = RoleReference(self.role)
         super().__post_init__(**kwargs)
 
 

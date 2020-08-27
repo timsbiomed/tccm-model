@@ -97,8 +97,6 @@ definitions to value sets, code system versions to definitions, and the combinat
     * [PropertyQueryReference➞codeSystemVersion](PropertyQueryReference_codeSystemVersion.md) - The version of the code system that makes the assertions. If present, codeSystemVersion must be a version of
  * [component](component.md) - An entry in a filter
     * [Filter➞component](Filter_component.md)
- * [definition](definition.md) - The definition itself
-    * [ValueSetDefinitionEntry➞definition](ValueSetDefinitionEntry_definition.md)
  * [definitionOf](definitionOf.md) - A reference to the value set being defined.
     * [ValueSetDefinition➞definitionOf](ValueSetDefinition_definitionOf.md)
  * [description](description.md) - A description or definition of the referenced entity determined by the service
@@ -113,6 +111,8 @@ definitions to value sets, code system versions to definitions, and the combinat
     * [EntityReferenceList➞entities](EntityReferenceList_entities.md)
  * [entry](entry.md) - A component in a value set definitio
     * [ValueSetDefinition➞entry](ValueSetDefinition_entry.md)
+ * [exclude](exclude.md) - Exclude the resolution of this definition in the valueset
+    * [ValueSetDefinitionEntry➞exclude](ValueSetDefinitionEntry_exclude.md)
  * [extension➞tag](extension_tag.md) - a tag associated with an extension
  * [extension➞value](extension_value.md) - the actual annotation
     * [annotation➞value](annotation_extension_value.md)
@@ -128,6 +128,10 @@ definitions to value sets, code system versions to definitions, and the combinat
     * [EntityReference➞href](EntityReference_href.md)
     * [NameAndMeaningReference➞href](NameAndMeaningReference_href.md)
     * [PredicateReference➞href](PredicateReference_href.md)
+ * [include](include.md) - Include the resolution of this definition in the valueset
+    * [ValueSetDefinitionEntry➞include](ValueSetDefinitionEntry_include.md)
+ * [intersect](intersect.md) - Include only the elements that are common between this definition and the valueset to this point
+    * [ValueSetDefinitionEntry➞intersect](ValueSetDefinitionEntry_intersect.md)
  * [keyword](keyword.md) - Additional identifiers that are used to index and locate the resource.
     * [ResourceDescription➞keyword](ResourceDescription_keyword.md)
  * [leafOnly](leafOnly.md) - False means that all entities in a transitive closure are included.  True means only entities that are not
@@ -153,8 +157,6 @@ definitions to value sets, code system versions to definitions, and the combinat
     * [ResourceVersionDescription➞officialReleaseDate](ResourceVersionDescription_officialReleaseDate.md)
  * [officialResourceVersionID](officialResourceVersionID.md) - An official label or identifier that was assigned to this version by its publisher
     * [ResourceVersionDescription➞officialResourceVersionID](ResourceVersionDescription_officialResourceVersionID.md)
- * [operator](operator.md) - Instructions for how the results of the entry evaluation will be applied to the set of entities in the base
-    * [ValueSetDefinitionEntry➞operator](ValueSetDefinitionEntry_operator.md)
  * [predecessor](predecessor.md) - A reference to the name and URI version of the resource from which this current version is derived - the
     * [ResourceVersionDescription➞predecessor](ResourceVersionDescription_predecessor.md)
  * [predicate](predicate.md) - The association predicate to be used in resolving the definition entry. Depending on the setting of `reverse`,
