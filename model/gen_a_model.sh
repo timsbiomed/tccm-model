@@ -4,7 +4,7 @@
 #  exit 1
 #fi
 
-MODULE=core/entityreference
+MODULE=valueset/valuesetdefinition
 PARMS="--no-mergeimports"
 gen-python $PARMS $MODULE.yaml > ../src/$MODULE.py
 #if [[ $? -eq 0 ]]; then

@@ -24,6 +24,64 @@ imports:
   - ../core/references
   - ../core/filters
   - ../core/resourcedescription
+  - ../core/entrydescription
+
+
+# TODO: Move these to attributes once that gets implemented in biolinkml
+slots:
+  # ValueSetDefinition slots
+  definitionOf:
+    description: A reference to the value set being defined.
+    range: ValueSetReference
+    inlined: true
+  versionTag:
+    description: A version tag assigned to this definition by the implementing service.
+    range: VersionTagReference
+    inlined: true
+    multivalued: true
+  entry:
+    description: A component in a value set definitio
+    range: ValueSetDefinitionEntry
+    inlined: true
+    multivalued: true
+    required: true
+
+  # ValueSetDefinitionEntry slots
+  include:
+    description: Include the resolution of this definition in the valueset
+    range: FormalDefinition
+    inlined: true
+  exclude:
+    description: Exclude the resolution of this definition in the valueset
+    range: FormalDefinition
+    inlined: true
+  intersect:
+    description: Include only the elements that are common between this definition and the valueset to this point
+    range: FormalDefinition
+    inlined: true
+
+  # FormalDefinitionEntry slots
+  associated_entities:
+    alias: entityquery
+    range: AssociatedEntitiesReference
+  property_query:
+    alias: valuequery
+    range: PropertyQueryReference
+  entity_list:
+    alias: entitylist
+    range: SpecificEntityList
+  complete_value_set:
+    alias: valueset
+    range: CompleteValueSetReference
+  complete_code_system:
+    alias: codesystem
+    range: CompleteCodeSystemReference
+  external_value_set_definition:
+    alias: externaldefinition
+    range: ExternalValueSetDefinition
+  value_set_definition:
+    alias: definition
+    range: ValueSetDefinitionEntry
 
 classes:
   ValueSetDefinition:
@@ -37,22 +95,11 @@ classes:
       and needs of the community. ValueSetDefinition and the supporting model has been designed to allow multiple
       variations on the “binding” of definitions to value sets, code system versions to definitions, and the
       combination to concept domains.
-    slot_usage:
-      definitionOf:
-        description: A reference to the value set being defined.
-        range: ValueSetReference
-        inlined: true
-      versionTag:
-        description: A version tag assigned to this definition by the implementing service.
-        range: VersionTagReference
-        inlined: true
-        multivalued: true
-      entry:
-        description: A component in a value set definitio
-        range: ValueSetDefinitionEntry
-        inlined: true
-        multivalued: true
-        required: true
+    slots:
+      - definitionOf
+      - versionTag
+      - entry
+
 
   ValueSetDefinitionEntry:
     description: |-
@@ -62,25 +109,24 @@ classes:
       Note that only ACTIVE entity references are included. INACTIVE entity references may never be considered for
       inclusion or exclusion in the resolution of a value set definition.
     abstract: true
-    slot_usage:
-      include:
-        description: Include the resolution of this definition in the valueset
-        range: FormalDefinition
-        inlined: true
-      exclude:
-        description: Exclude the resolution of this definition in the valueset
-        range: FormalDefinition
-        inlined: true
-      intersect:
-        description: Include only the elements that are common between this definition and the valueset to this point
-        range: FormalDefinition
-        inlined: true
+    slots:
+      - include
+      - exclude
+      - intersect
+
 
         
   FormalDefinition:
     description: A value set definition choice
-    abstract: true
-        
+    slots:
+      - associated_entities
+      - property_query
+      - entity_list
+      - complete_value_set
+      - value_set_definition
+      - complete_code_system
+      - external_value_set_definition
+
   AssociatedEntitiesReference:
     description: |-
       The description of a set of entities that are associated with a referenced entity. This description names a
@@ -92,7 +138,6 @@ classes:
 
       Note that the terms “parent” and “children” are asserted in reference to the predicate itself. As an example, in
       the association “arm subClassOf bodyPart,” the “parent” is arm and the “child” is bodyPart.
-    is_a: FormalDefinition
     slot_usage:
       referencedEntity:
         description: |-
@@ -142,16 +187,13 @@ classes:
         range: boolean
 
   SpecificEntityList:
+    is_a: EntityReferenceList
     description: |-
       A list of specific entity references that are to be included in the definition. When specified in this form,
       the service must include all entities in this list whether they are known to the service or not, and whether
       they are currently ACTIVE or not.
-    is_a: FormalDefinition
-    mixins:
-      - EntityReferenceList
 
   PropertyQueryReference:
-    is_a: FormalDefinition
     description: |-
       A description of a set of entity references that are determined by applying a filter to the attribute(s) or
       property(s) that appear in an EntityDescription in a specified code system.
@@ -195,12 +237,7 @@ classes:
         range: CodeSystemVersionReference
         inlined: true
 
-  CompleteValueSet:
-    description:
-    abstract: true
-
   CompleteValueSetReference:
-    is_a: CompleteValueSet
     description: |-
       A reference to a value set that, when resolved, results in a set of entity references that are included in this
       entry. An entry of this type can just name a value set, meaning that the specific definition is determined in the
@@ -230,9 +267,12 @@ classes:
         range: CodeSystemVersionReference
         inlined: true
 
-  CompleteValueSetDefinition:
+  ExternalValueSetDefinition:
+    is_a: OpaqueData
     description: |-
-      An embedded value set definition
-    is_a: CompleteValueSet
-    mixins:
-      - FormalDefinition
+      A definition of a value set whose format and semantics is specified outside of the core
+      TCCM specification. If a given CTTCCMS2 service recognizes the syntax and semantics of this definition, it may
+      call the appropriate process to resolve it. If the definition is not recognized, a TCCM service implementation
+      must not process the containing value set definition and, instead, return an error.
+
+

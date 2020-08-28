@@ -29,6 +29,7 @@ slots:
         implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a
         SNOMED-CT code system version.
       range: LocalIdentifier
+      alias: id
       key: true
       required: true
 

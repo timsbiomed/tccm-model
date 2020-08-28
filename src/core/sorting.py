@@ -1,5 +1,5 @@
 # Auto generated from sorting.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-26 15:38
+# Generation date: 2020-08-27 15:28
 # Schema: sorting
 #
 # id: https://hotecosystem.org/tccm/sorting
@@ -20,7 +20,7 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from src.core.datatypes import LocalIdentifier, URIorCurie
+from src.core.datatypes import LocalIdentifier
 from src.core.references import CodeSystemReference, CodeSystemReferenceName, MapReference, MapReferenceName, PredicateReference, PredicateReferenceName, RoleReference, RoleReferenceName
 from src.core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import Bool, URIorCURIE
@@ -32,6 +32,7 @@ metamodel_version = "1.5.3"
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
+TCCM = CurieNamespace('tccm', 'https://hotecosystem.org/tccm/')
 DEFAULT_ = CurieNamespace('', 'https://hotecosystem.org/tccm/sorting/')
 
 
@@ -107,10 +108,10 @@ slots.synopsis = Slot(uri=DEFAULT_.synopsis, name="synopsis", curie=DEFAULT_.cur
                       model_uri=DEFAULT_.synopsis, domain=None, range=Optional[str])
 
 slots.uri = Slot(uri=DEFAULT_.uri, name="uri", curie=DEFAULT_.curie('uri'),
-                      model_uri=DEFAULT_.uri, domain=None, range=Optional[Union[str, ExternalURI]])
+                      model_uri=DEFAULT_.uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
 
 slots.href = Slot(uri=DEFAULT_.href, name="href", curie=DEFAULT_.curie('href'),
-                      model_uri=DEFAULT_.href, domain=None, range=Optional[Union[str, RenderingURI]])
+                      model_uri=DEFAULT_.href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
 slots.codeSystem = Slot(uri=DEFAULT_.codeSystem, name="codeSystem", curie=DEFAULT_.curie('codeSystem'),
                       model_uri=DEFAULT_.codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])

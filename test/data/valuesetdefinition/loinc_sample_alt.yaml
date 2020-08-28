@@ -1,0 +1,16 @@
+resourceID: HEIDIS_LOINC
+about: http://loinc.org/79541-9
+include:
+  namespace: http://loinc.org/
+  codes:
+    - 10368-9
+    - 10912-4
+    - 14807-2
+    - 17052-2
+    - 25459-9
+    - 27129-6
+    - 32325-3
+    - 5671-3
+    - 5674-7
+    - 77307-7
+

@@ -1,5 +1,5 @@
 # Auto generated from valuesets.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-26 15:38
+# Generation date: 2020-08-27 15:28
 # Schema: ValueSets
 #
 # id: https://hotecosystem.org/tccm/ValueSets
@@ -20,7 +20,6 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from src.core.datatypes import URIorCurie
 from biolinkml.utils.metamodelcore import URIorCURIE
 
 metamodel_version = "1.5.3"
@@ -35,7 +34,7 @@ DEFAULT_ = TCCM
 
 
 # Types
-class ValueSet(URIorCurie):
+class ValueSet(URIorCURIE):
     """ A URI that can be indirectly resolved to a set of entity descriptions """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"

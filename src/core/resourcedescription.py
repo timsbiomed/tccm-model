@@ -1,5 +1,5 @@
 # Auto generated from resourcedescription.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-26 15:38
+# Generation date: 2020-08-27 15:27
 # Schema: resourcedescription
 #
 # id: https://hotecosystem.org/tccm/resourcedescription
@@ -20,7 +20,7 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from src.core.datatypes import DateAndTime, LocalIdentifier, URIorCurie
+from src.core.datatypes import DateAndTime, LocalIdentifier
 from src.core.references import CodeSystemReference, CodeSystemReferenceName, MapReference, MapReferenceName, NameAndMeaningReference, NameAndMeaningReferenceName, OntologyLanguageReference, OntologyLanguageReferenceName, OntologySyntaxReference, OntologySyntaxReferenceName, RoleReference, RoleReferenceName
 from src.core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import URIorCURIE, XSDDateTime
@@ -42,15 +42,15 @@ DEFAULT_ = TCCM
 # Types
 
 # Class references
-class ResourceDescriptionResourceID(LocalIdentifier):
+class ResourceDescriptionId(LocalIdentifier):
     pass
 
 
-class AbstractResourceDescriptionResourceID(ResourceDescriptionResourceID):
+class AbstractResourceDescriptionId(ResourceDescriptionId):
     pass
 
 
-class ResourceVersionDescriptionResourceID(ResourceDescriptionResourceID):
+class ResourceVersionDescriptionId(ResourceDescriptionId):
     pass
 
 
@@ -68,28 +68,26 @@ class ResourceDescription(YAMLRoot):
     class_name: ClassVar[str] = "ResourceDescription"
     class_model_uri: ClassVar[URIRef] = TCCM.ResourceDescription
 
-    resourceID: Union[str, ResourceDescriptionResourceID]
-    about: Union[str, ExternalURI]
+    id: Union[str, ResourceDescriptionId]
+    about: Union[URIorCURIE, ExternalURI]
     resourceSynopsis: Optional[str] = None
     formalName: Optional[str] = None
     keyword: List[str] = empty_list()
-    additionalDocumentation: List[Union[str, PersistentURI]] = empty_list()
+    additionalDocumentation: List[URIorCURIE] = empty_list()
     rights: Optional[str] = None
     alternateID: Optional[str] = None
     extensions: List[Union[dict, Extension]] = empty_list()
     annotations: List[Union[dict, Annotation]] = empty_list()
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
-        if self.resourceID is None:
-            raise ValueError(f"resourceID must be supplied")
-        if not isinstance(self.resourceID, ResourceDescriptionResourceID):
-            self.resourceID = ResourceDescriptionResourceID(self.resourceID)
+        if self.id is None:
+            raise ValueError(f"id must be supplied")
+        if not isinstance(self.id, ResourceDescriptionId):
+            self.id = ResourceDescriptionId(self.id)
         if self.about is None:
             raise ValueError(f"about must be supplied")
         if not isinstance(self.about, ExternalURI):
             self.about = ExternalURI(self.about)
-        self.additionalDocumentation = [v if isinstance(v, PersistentURI)
-                                        else PersistentURI(v) for v in ([self.additionalDocumentation] if isinstance(self.additionalDocumentation, str) else self.additionalDocumentation)]
         self.extensions = [Extension(*e) for e in self.extensions.items()] if isinstance(self.extensions, dict) \
                            else [v if isinstance(v, Extension) else Extension(**v)
                                  for v in ([self.extensions] if isinstance(self.extensions, str) else self.extensions)]
@@ -112,13 +110,11 @@ class SourceAndNotation(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = TCCM.SourceAndNotation
 
     sourceAndNotationDescription: Optional[str] = None
-    sourceDocument: Optional[Union[str, PersistentURI]] = None
+    sourceDocument: Optional[URIorCURIE] = None
     sourceLanguage: Optional[Union[dict, OntologyLanguageReference]] = None
     sourceDocumentSyntax: Optional[Union[dict, OntologySyntaxReference]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
-        if self.sourceDocument is not None and not isinstance(self.sourceDocument, PersistentURI):
-            self.sourceDocument = PersistentURI(self.sourceDocument)
         if self.sourceLanguage is not None and not isinstance(self.sourceLanguage, OntologyLanguageReference):
             self.sourceLanguage = OntologyLanguageReference(self.sourceLanguage)
         if self.sourceDocumentSyntax is not None and not isinstance(self.sourceDocumentSyntax, OntologySyntaxReference):
@@ -138,8 +134,8 @@ class AbstractResourceDescription(ResourceDescription):
     class_name: ClassVar[str] = "AbstractResourceDescription"
     class_model_uri: ClassVar[URIRef] = TCCM.AbstractResourceDescription
 
-    resourceID: Union[str, AbstractResourceDescriptionResourceID] = None
-    about: Union[str, ExternalURI] = None
+    id: Union[str, AbstractResourceDescriptionId] = None
+    about: Union[URIorCURIE, ExternalURI] = None
     releaseDocumentation: Optional[str] = None
     releaseFormat: List[Union[dict, SourceAndNotation]] = empty_list()
 
@@ -163,9 +159,9 @@ class ResourceVersionDescription(ResourceDescription):
     class_name: ClassVar[str] = "ResourceVersionDescription"
     class_model_uri: ClassVar[URIRef] = TCCM.ResourceVersionDescription
 
-    resourceID: Union[str, ResourceVersionDescriptionResourceID] = None
-    about: Union[str, ExternalURI] = None
-    documentURI: Optional[Union[str, DocumentURI]] = None
+    id: Union[str, ResourceVersionDescriptionId] = None
+    about: Union[URIorCURIE, ExternalURI] = None
+    documentURI: Optional[Union[URIorCURIE, DocumentURI]] = None
     sourceAndNotation: Optional[Union[dict, SourceAndNotation]] = None
     predecessor: Optional[Union[dict, NameAndMeaningReference]] = None
     officialResourceVersionID: Optional[str] = None
@@ -194,11 +190,11 @@ class slots:
 slots.resourceSynopsis = Slot(uri=TCCM.resourceSynopsis, name="resourceSynopsis", curie=TCCM.curie('resourceSynopsis'),
                       model_uri=TCCM.resourceSynopsis, domain=None, range=Optional[str])
 
-slots.resourceID = Slot(uri=TCCM.resourceID, name="resourceID", curie=TCCM.curie('resourceID'),
+slots.resourceID = Slot(uri=TCCM.id, name="resourceID", curie=TCCM.curie('id'),
                       model_uri=TCCM.resourceID, domain=None, range=URIRef)
 
 slots.about = Slot(uri=TCCM.about, name="about", curie=TCCM.curie('about'),
-                      model_uri=TCCM.about, domain=None, range=Union[str, ExternalURI])
+                      model_uri=TCCM.about, domain=None, range=Union[URIorCURIE, ExternalURI])
 
 slots.formalName = Slot(uri=TCCM.formalName, name="formalName", curie=TCCM.curie('formalName'),
                       model_uri=TCCM.formalName, domain=None, range=Optional[str])
@@ -207,7 +203,7 @@ slots.keyword = Slot(uri=TCCM.keyword, name="keyword", curie=TCCM.curie('keyword
                       model_uri=TCCM.keyword, domain=None, range=List[str])
 
 slots.additionalDocumentation = Slot(uri=TCCM.additionalDocumentation, name="additionalDocumentation", curie=TCCM.curie('additionalDocumentation'),
-                      model_uri=TCCM.additionalDocumentation, domain=None, range=List[Union[str, PersistentURI]])
+                      model_uri=TCCM.additionalDocumentation, domain=None, range=List[URIorCURIE])
 
 slots.rights = Slot(uri=TCCM.rights, name="rights", curie=TCCM.curie('rights'),
                       model_uri=TCCM.rights, domain=None, range=Optional[str])
@@ -219,7 +215,7 @@ slots.sourceAndNotationDescription = Slot(uri=TCCM.sourceAndNotationDescription,
                       model_uri=TCCM.sourceAndNotationDescription, domain=None, range=Optional[str])
 
 slots.sourceDocument = Slot(uri=TCCM.sourceDocument, name="sourceDocument", curie=TCCM.curie('sourceDocument'),
-                      model_uri=TCCM.sourceDocument, domain=None, range=Optional[Union[str, PersistentURI]])
+                      model_uri=TCCM.sourceDocument, domain=None, range=Optional[URIorCURIE])
 
 slots.sourceLanguage = Slot(uri=TCCM.sourceLanguage, name="sourceLanguage", curie=TCCM.curie('sourceLanguage'),
                       model_uri=TCCM.sourceLanguage, domain=None, range=Optional[Union[dict, OntologyLanguageReference]])
@@ -234,7 +230,7 @@ slots.releaseFormat = Slot(uri=TCCM.releaseFormat, name="releaseFormat", curie=T
                       model_uri=TCCM.releaseFormat, domain=None, range=List[Union[dict, SourceAndNotation]])
 
 slots.documentURI = Slot(uri=TCCM.documentURI, name="documentURI", curie=TCCM.curie('documentURI'),
-                      model_uri=TCCM.documentURI, domain=None, range=Optional[Union[str, DocumentURI]])
+                      model_uri=TCCM.documentURI, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
 
 slots.sourceAndNotation = Slot(uri=TCCM.sourceAndNotation, name="sourceAndNotation", curie=TCCM.curie('sourceAndNotation'),
                       model_uri=TCCM.sourceAndNotation, domain=None, range=Optional[Union[dict, SourceAndNotation]])
@@ -258,10 +254,10 @@ slots.synopsis = Slot(uri=TCCM.synopsis, name="synopsis", curie=TCCM.curie('syno
                       model_uri=TCCM.synopsis, domain=None, range=Optional[str])
 
 slots.uri = Slot(uri=TCCM.uri, name="uri", curie=TCCM.curie('uri'),
-                      model_uri=TCCM.uri, domain=None, range=Optional[Union[str, ExternalURI]])
+                      model_uri=TCCM.uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
 
 slots.href = Slot(uri=TCCM.href, name="href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.href, domain=None, range=Optional[Union[str, RenderingURI]])
+                      model_uri=TCCM.href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
 slots.codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystem", curie=TCCM.curie('codeSystem'),
                       model_uri=TCCM.codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
@@ -276,7 +272,7 @@ slots.role = Slot(uri=TCCM.role, name="role", curie=TCCM.curie('role'),
                       model_uri=TCCM.role, domain=None, range=Optional[Union[dict, RoleReference]])
 
 slots.ResourceDescription_about = Slot(uri=TCCM.about, name="ResourceDescription_about", curie=TCCM.curie('about'),
-                      model_uri=TCCM.ResourceDescription_about, domain=ResourceDescription, range=Union[str, ExternalURI])
+                      model_uri=TCCM.ResourceDescription_about, domain=ResourceDescription, range=Union[URIorCURIE, ExternalURI])
 
 slots.ResourceDescription_formalName = Slot(uri=TCCM.formalName, name="ResourceDescription_formalName", curie=TCCM.curie('formalName'),
                       model_uri=TCCM.ResourceDescription_formalName, domain=ResourceDescription, range=Optional[str])
@@ -285,7 +281,7 @@ slots.ResourceDescription_keyword = Slot(uri=TCCM.keyword, name="ResourceDescrip
                       model_uri=TCCM.ResourceDescription_keyword, domain=ResourceDescription, range=List[str])
 
 slots.ResourceDescription_additionalDocumentation = Slot(uri=TCCM.additionalDocumentation, name="ResourceDescription_additionalDocumentation", curie=TCCM.curie('additionalDocumentation'),
-                      model_uri=TCCM.ResourceDescription_additionalDocumentation, domain=ResourceDescription, range=List[Union[str, PersistentURI]])
+                      model_uri=TCCM.ResourceDescription_additionalDocumentation, domain=ResourceDescription, range=List[URIorCURIE])
 
 slots.ResourceDescription_rights = Slot(uri=TCCM.rights, name="ResourceDescription_rights", curie=TCCM.curie('rights'),
                       model_uri=TCCM.ResourceDescription_rights, domain=ResourceDescription, range=Optional[str])
@@ -297,7 +293,7 @@ slots.SourceAndNotation_sourceAndNotationDescription = Slot(uri=TCCM.sourceAndNo
                       model_uri=TCCM.SourceAndNotation_sourceAndNotationDescription, domain=SourceAndNotation, range=Optional[str])
 
 slots.SourceAndNotation_sourceDocument = Slot(uri=TCCM.sourceDocument, name="SourceAndNotation_sourceDocument", curie=TCCM.curie('sourceDocument'),
-                      model_uri=TCCM.SourceAndNotation_sourceDocument, domain=SourceAndNotation, range=Optional[Union[str, PersistentURI]])
+                      model_uri=TCCM.SourceAndNotation_sourceDocument, domain=SourceAndNotation, range=Optional[URIorCURIE])
 
 slots.SourceAndNotation_sourceLanguage = Slot(uri=TCCM.sourceLanguage, name="SourceAndNotation_sourceLanguage", curie=TCCM.curie('sourceLanguage'),
                       model_uri=TCCM.SourceAndNotation_sourceLanguage, domain=SourceAndNotation, range=Optional[Union[dict, OntologyLanguageReference]])
@@ -312,7 +308,7 @@ slots.AbstractResourceDescription_releaseFormat = Slot(uri=TCCM.releaseFormat, n
                       model_uri=TCCM.AbstractResourceDescription_releaseFormat, domain=AbstractResourceDescription, range=List[Union[dict, SourceAndNotation]])
 
 slots.ResourceVersionDescription_documentURI = Slot(uri=TCCM.documentURI, name="ResourceVersionDescription_documentURI", curie=TCCM.curie('documentURI'),
-                      model_uri=TCCM.ResourceVersionDescription_documentURI, domain=ResourceVersionDescription, range=Optional[Union[str, DocumentURI]])
+                      model_uri=TCCM.ResourceVersionDescription_documentURI, domain=ResourceVersionDescription, range=Optional[Union[URIorCURIE, DocumentURI]])
 
 slots.ResourceVersionDescription_sourceAndNotation = Slot(uri=TCCM.sourceAndNotation, name="ResourceVersionDescription_sourceAndNotation", curie=TCCM.curie('sourceAndNotation'),
                       model_uri=TCCM.ResourceVersionDescription_sourceAndNotation, domain=ResourceVersionDescription, range=Optional[Union[dict, SourceAndNotation]])

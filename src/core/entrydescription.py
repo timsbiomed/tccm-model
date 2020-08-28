@@ -1,5 +1,5 @@
 # Auto generated from entrydescription.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-26 15:38
+# Generation date: 2020-08-27 15:27
 # Schema: entrydescription
 #
 # id: https://hotecosystem.org/tccm/entrydescription
@@ -20,7 +20,7 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from src.core.datatypes import LocalIdentifier, URIorCurie
+from src.core.datatypes import LocalIdentifier
 from src.core.references import CodeSystemReference, CodeSystemReferenceName, FormatReference, FormatReferenceName, LanguageReference, LanguageReferenceName, MapReference, MapReferenceName, RoleReference, RoleReferenceName
 from src.core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import URIorCURIE
@@ -63,7 +63,7 @@ class OpaqueData(YAMLRoot):
 
     value: str
     format: Optional[Union[dict, FormatReference]] = None
-    schema: Optional[Union[str, DocumentURI]] = None
+    schema: Optional[Union[URIorCURIE, DocumentURI]] = None
     language: Optional[Union[dict, LanguageReference]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
@@ -106,7 +106,7 @@ slots.format = Slot(uri=TCCM.format, name="format", curie=TCCM.curie('format'),
                       model_uri=TCCM.format, domain=None, range=Optional[Union[dict, FormatReference]])
 
 slots.schema = Slot(uri=TCCM.schema, name="schema", curie=TCCM.curie('schema'),
-                      model_uri=TCCM.schema, domain=None, range=Optional[Union[str, DocumentURI]])
+                      model_uri=TCCM.schema, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
 
 slots.language = Slot(uri=TCCM.language, name="language", curie=TCCM.curie('language'),
                       model_uri=TCCM.language, domain=None, range=Optional[Union[dict, LanguageReference]])
@@ -121,10 +121,10 @@ slots.synopsis = Slot(uri=TCCM.synopsis, name="synopsis", curie=TCCM.curie('syno
                       model_uri=TCCM.synopsis, domain=None, range=Optional[str])
 
 slots.uri = Slot(uri=TCCM.uri, name="uri", curie=TCCM.curie('uri'),
-                      model_uri=TCCM.uri, domain=None, range=Optional[Union[str, ExternalURI]])
+                      model_uri=TCCM.uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
 
 slots.href = Slot(uri=TCCM.href, name="href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.href, domain=None, range=Optional[Union[str, RenderingURI]])
+                      model_uri=TCCM.href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
 slots.codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystem", curie=TCCM.curie('codeSystem'),
                       model_uri=TCCM.codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
@@ -142,7 +142,7 @@ slots.OpaqueData_format = Slot(uri=TCCM.format, name="OpaqueData_format", curie=
                       model_uri=TCCM.OpaqueData_format, domain=OpaqueData, range=Optional[Union[dict, FormatReference]])
 
 slots.OpaqueData_schema = Slot(uri=TCCM.schema, name="OpaqueData_schema", curie=TCCM.curie('schema'),
-                      model_uri=TCCM.OpaqueData_schema, domain=OpaqueData, range=Optional[Union[str, DocumentURI]])
+                      model_uri=TCCM.OpaqueData_schema, domain=OpaqueData, range=Optional[Union[URIorCURIE, DocumentURI]])
 
 slots.OpaqueData_language = Slot(uri=TCCM.language, name="OpaqueData_language", curie=TCCM.curie('language'),
                       model_uri=TCCM.OpaqueData_language, domain=OpaqueData, range=Optional[Union[dict, LanguageReference]])

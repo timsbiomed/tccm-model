@@ -1,5 +1,5 @@
 # Auto generated from filters.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-26 15:38
+# Generation date: 2020-08-27 15:27
 # Schema: filters
 #
 # id: https://hotecosystem.org/tccm/filters
@@ -20,7 +20,7 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from src.core.datatypes import LocalIdentifier, URIorCurie
+from src.core.datatypes import LocalIdentifier
 from src.core.references import CodeSystemReference, CodeSystemReferenceName, MapReference, MapReferenceName, MatchAlgorithmReference, MatchAlgorithmReferenceName, PredicateReference, PredicateReferenceName, RoleReference, RoleReferenceName
 from src.core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import URIorCURIE
@@ -82,7 +82,7 @@ class FilterComponent(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = TCCM.FilterComponent
 
     matchAlgorithm: Union[dict, MatchAlgorithmReference]
-    filterComponent: Dict[Union[Curie, PredicateReferenceName], Union[dict, PredicateReference]] = empty_dict()
+    filterComponent: Dict[Union[str, PredicateReferenceName], Union[dict, PredicateReference]] = empty_dict()
     matchValue: Optional[str] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
@@ -108,7 +108,7 @@ slots.description = Slot(uri=TCCM.description, name="description", curie=TCCM.cu
                       model_uri=TCCM.description, domain=None, range=Optional[str])
 
 slots.filterComponent = Slot(uri=TCCM.filterComponent, name="filterComponent", curie=TCCM.curie('filterComponent'),
-                      model_uri=TCCM.filterComponent, domain=None, range=Dict[Union[Curie, PredicateReferenceName], Union[dict, PredicateReference]])
+                      model_uri=TCCM.filterComponent, domain=None, range=Dict[Union[str, PredicateReferenceName], Union[dict, PredicateReference]])
 
 slots.matchAlgorithm = Slot(uri=TCCM.matchAlgorithm, name="matchAlgorithm", curie=TCCM.curie('matchAlgorithm'),
                       model_uri=TCCM.matchAlgorithm, domain=None, range=Union[dict, MatchAlgorithmReference])
@@ -123,10 +123,10 @@ slots.synopsis = Slot(uri=TCCM.synopsis, name="synopsis", curie=TCCM.curie('syno
                       model_uri=TCCM.synopsis, domain=None, range=Optional[str])
 
 slots.uri = Slot(uri=TCCM.uri, name="uri", curie=TCCM.curie('uri'),
-                      model_uri=TCCM.uri, domain=None, range=Optional[Union[str, ExternalURI]])
+                      model_uri=TCCM.uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
 
 slots.href = Slot(uri=TCCM.href, name="href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.href, domain=None, range=Optional[Union[str, RenderingURI]])
+                      model_uri=TCCM.href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
 slots.codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystem", curie=TCCM.curie('codeSystem'),
                       model_uri=TCCM.codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
@@ -147,7 +147,7 @@ slots.Filter_description = Slot(uri=TCCM.description, name="Filter_description",
                       model_uri=TCCM.Filter_description, domain=Filter, range=Optional[str])
 
 slots.FilterComponent_filterComponent = Slot(uri=TCCM.filterComponent, name="FilterComponent_filterComponent", curie=TCCM.curie('filterComponent'),
-                      model_uri=TCCM.FilterComponent_filterComponent, domain=FilterComponent, range=Dict[Union[Curie, PredicateReferenceName], Union[dict, PredicateReference]])
+                      model_uri=TCCM.FilterComponent_filterComponent, domain=FilterComponent, range=Dict[Union[str, PredicateReferenceName], Union[dict, PredicateReference]])
 
 slots.FilterComponent_matchAlgorithm = Slot(uri=TCCM.matchAlgorithm, name="FilterComponent_matchAlgorithm", curie=TCCM.curie('matchAlgorithm'),
                       model_uri=TCCM.FilterComponent_matchAlgorithm, domain=FilterComponent, range=Union[dict, MatchAlgorithmReference])

@@ -11,6 +11,10 @@ imports:
   - ../core/valuesets
   - ../core/references
 
+
+prefixes:
+    tccm: https://hotecosystem.org/tccm/
+
 classes:
   SortCriteria:
     description: |-

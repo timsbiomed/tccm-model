@@ -1,13 +1,39 @@
 #  This is a variant on the minimal valueset that includes all informational expansions
 #  When formally expanding LOINC, we would have to decide how Long Common, Fully specified, Short and Display names
 #   should be mapped to designation and description
-include:
-  namespace: LOINC
-  codes:
-    10368-9:
-      about: https://loinc.org/10368-9
-      designation:  Lead BldC-mCnc
-      description: Lead [Mass/volume] in Capillary blood
-      href: https://loinc.org/10368-9
-      see_also:
-        - https://loinc.org/?s=10368-9
+#  This is a sample of a constructed SNOMED map.
+valuesetdefinition:
+  resourceID: TEST
+  about: http://example.org/TEST
+  include:
+    entities:
+      namespace: http://snomed.info/id/
+      codes:
+        10368-9:
+          about: http://loinc.org/10368-9
+          designation: A loinc test to do something
+          description: A description of this test
+          href: http://ontologies.r.us/entitydescription/loinc/10368-9
+          error_message:
+          see_also:
+            - http://loinc.org/10368-9
+            - https://wikidata.org/jklklllll
+            - https://bioportal.org/....
+
+
+value set resolution(valuesetdefinition, [using versions], expansion rules, return format) --> valuesetresolution
+
+Philosophy for the openAPI spec:  Leverage http as much as posbile
+Note, however, that we also need a python API
+formats: YAML, JSON, CSV
+
+expansion rules:
+  count         - don't return anything, just the number of entities
+  valid         - boolean
+  expansion     - parameters are the possible expansion elements or "ALL"
+  meessages/remove - remove errors
+  simple list   - minimal
+    codes:
+        -  11111
+        -  11113
+

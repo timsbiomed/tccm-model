@@ -1,5 +1,5 @@
 # Auto generated from datatypes.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-26 15:38
+# Generation date: 2020-08-27 15:27
 # Schema: datatypes
 #
 # id: https://hotecosystem.org/tccm/datatype
@@ -21,7 +21,7 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from biolinkml.utils.metamodelcore import Curie, NCName, URI, URIorCURIE, XSDDateTime
+from biolinkml.utils.metamodelcore import NCName, XSDDateTime
 from includes.types import String
 
 metamodel_version = "1.5.3"
@@ -74,30 +74,6 @@ in the SPARQL Query Specification - meaning that it must begin with an alphabeti
     type_class_curie = "xsd:NMTOKEN"
     type_name = "NamespaceIdentifier"
     type_model_uri = TCCM.NamespaceIdentifier
-
-
-class URI(URI):
-    """ A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
-consider implementing this data type using the IRI (RFC3987) specification """
-    type_class_uri = XSD.anyURI
-    type_class_curie = "xsd:anyURI"
-    type_name = "URI"
-    type_model_uri = TCCM.URI
-
-
-class CURIE(Curie):
-    type_class_uri = XSD.anyURI
-    type_class_curie = "xsd:anyURI"
-    type_name = "CURIE"
-    type_model_uri = TCCM.CURIE
-
-
-class URIorCurie(URIorCURIE):
-    """ a URI or a CURIE """
-    type_class_uri = XSD.anyURI
-    type_class_curie = "xsd:anyURI"
-    type_name = "URIorCurie"
-    type_model_uri = TCCM.URIorCurie
 
 
 # Class references

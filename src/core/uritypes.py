@@ -1,5 +1,5 @@
 # Auto generated from uritypes.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-26 15:38
+# Generation date: 2020-08-27 15:28
 # Schema: tccm
 #
 # id: https://hotecosystem.org/tccm
@@ -20,7 +20,6 @@ else:
 from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
-from src.core.datatypes import URIorCurie
 from biolinkml.utils.metamodelcore import URIorCURIE
 
 metamodel_version = "1.5.3"
@@ -35,7 +34,7 @@ DEFAULT_ = TCCM
 
 
 # Types
-class PersistentURI(URIorCurie):
+class PersistentURI(URIorCURIE):
     """ A Universal Resource Identifier (URI) that persists across service instances. PersistentURIs have enduring
 reference and meaning. """
     type_class_uri = XSD.anyURI
@@ -44,7 +43,7 @@ reference and meaning. """
     type_model_uri = TCCM.PersistentURI
 
 
-class LocalURI(URIorCurie):
+class LocalURI(URIorCURIE):
     """ A URI or handle whose scope is local to the implementing service. LocalURI cannot be used as a permanent
 identifier in a message or a data record. """
     type_class_uri = XSD.anyURI
