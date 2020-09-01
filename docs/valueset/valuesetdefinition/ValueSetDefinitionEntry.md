@@ -23,12 +23,12 @@ URI: [tccm:ValueSetDefinitionEntry](https://hotecosystem.org/tccm/ValueSetDefini
 
 ### Own
 
- * [➞exclude](valueSetDefinitionEntry__exclude.md)  <sub>OPT</sub>
+ * [➞exclude](valueSetDefinitionEntry__exclude.md)  <sub>0..*</sub>
     * Description: Exclude the resolution of this definition in the valueset
     * range: [FormalDefinition](FormalDefinition.md)
- * [➞include](valueSetDefinitionEntry__include.md)  <sub>OPT</sub>
+ * [➞include](valueSetDefinitionEntry__include.md)  <sub>0..*</sub>
     * Description: Include the resolution of this definition in the valueset
     * range: [FormalDefinition](FormalDefinition.md)
- * [➞intersect](valueSetDefinitionEntry__intersect.md)  <sub>OPT</sub>
+ * [➞intersect](valueSetDefinitionEntry__intersect.md)  <sub>0..*</sub>
     * Description: Include only the elements that are common between this definition and the valueset to this point
     * range: [FormalDefinition](FormalDefinition.md)

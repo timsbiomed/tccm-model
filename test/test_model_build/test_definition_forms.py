@@ -21,5 +21,6 @@ class DefinitionFormTestCase(unittest.TestCase):
         print(as_yaml(defn))
         print(dump(defn))
 
+
 if __name__ == '__main__':
     unittest.main()

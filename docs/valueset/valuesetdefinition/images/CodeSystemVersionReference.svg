@@ -50,7 +50,7 @@
 <path d='M303.31,-158.878C320.519,-138.591 345.197,-109.5 365.932,-85.0557' fill='none' stroke='black'/>
 <polygon fill='black' points='296.593,-166.797 299.63,-156.26 299.827,-162.984 303.062,-159.171 303.062,-159.171 303.062,-159.171 299.827,-162.984 306.493,-162.082 296.593,-166.797 296.593,-166.797' stroke='black'/>
 <polygon fill='black' points='366.192,-84.7495 367.023,-77.5864 373.954,-75.5984 373.123,-82.7615 366.192,-84.7495' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='313.967' y='-153.19'>codeSystem 0..1</text>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='313.967' y='-153.19'>codeSystem 1..1</text>
 </g><g class='node' id='node4'><title>AssociatedEntitiesReference</title>
 <polygon fill='white' points='119,-295 119,-331 303,-331 303,-295 119,-295' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='211' y='-309.3'>AssociatedEntitiesReference</text>

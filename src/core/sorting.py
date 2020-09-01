@@ -1,5 +1,5 @@
 # Auto generated from sorting.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-31 11:40
+# Generation date: 2020-09-01 13:08
 # Schema: sorting
 #
 # id: https://hotecosystem.org/tccm/sorting
@@ -115,7 +115,7 @@ slots.nameAndMeaningReference__href = Slot(uri=DEFAULT_.href, name="nameAndMeani
                       model_uri=DEFAULT_.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
 slots.codeSystemVersionReference__codeSystem = Slot(uri=DEFAULT_.codeSystem, name="codeSystemVersionReference__codeSystem", curie=DEFAULT_.curie('codeSystem'),
-                      model_uri=DEFAULT_.codeSystemVersionReference__codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
+                      model_uri=DEFAULT_.codeSystemVersionReference__codeSystem, domain=None, range=Union[dict, CodeSystemReference])
 
 slots.mapVersionReference__map = Slot(uri=DEFAULT_.map, name="mapVersionReference__map", curie=DEFAULT_.curie('map'),
                       model_uri=DEFAULT_.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])

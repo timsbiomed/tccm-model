@@ -63,6 +63,6 @@
 <path d='M582.381,-123.83C530.231,-100.529 448.784,-64.1374 397.46,-41.2057' fill='none' stroke='black'/>
 <polygon fill='black' points='582.719,-123.981 589.828,-122.776 593.675,-128.876 586.565,-130.08 582.719,-123.981' stroke='black'/>
 <polygon fill='black' points='388.241,-37.0866 399.207,-37.0575 392.807,-39.1263 397.372,-41.1661 397.372,-41.1661 397.372,-41.1661 392.807,-39.1263 395.536,-45.2746 388.241,-37.0866 388.241,-37.0866' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='402.61' y='-47.2987'> valueset 0..1</text>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='402.61' y='-47.2987'> valueSet 0..1</text>
 </g></g>
 <text style='fill: lightslategray; font-size: 6pt; font-family: Verdana' x='605' y='194'>CREATED WITH YUML</text></svg>

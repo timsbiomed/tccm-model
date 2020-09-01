@@ -14,14 +14,15 @@ definitions to value sets, code system versions to definitions, and the combinat
 ### Classes
 
  * [AssociatedEntitiesReference](AssociatedEntitiesReference.md) - The description of a set of entities that are associated with a referenced entity. This description names a
+ * [CompleteCodeSystemReference](CompleteCodeSystemReference.md) - An entry that, when resolved, returns all of the active entity references in a given code system. This includes
  * [CompleteValueSetReference](CompleteValueSetReference.md) - A reference to a value set that, when resolved, results in a set of entity references that are included in this
+ * [EntityExpression](EntityExpression.md) - An expression in a given ontology language and syntax that describes or defines an entity. Examples might include
  * [EntityReference](EntityReference.md) - The URI, namespace/name (if known) and a list of code systems that make assertions about the entity.
  * [EntityReferenceList](EntityReferenceList.md) - A collection (set) of zero or more entity references that belong to the same scoping namespace
     * [SpecificEntityList](SpecificEntityList.md) - A list of specific entity references that are to be included in the definition. When specified in this form,
  * [Filter](Filter.md) - A collection of one or more filters. The result of applying a Filter component is the intersection of the sets of
  * [FilterComponent](FilterComponent.md) - A restriction on an attribute, property, or special field.
  * [FormalDefinition](FormalDefinition.md) - A value set definition choice
-    * [CompleteCodeSystemReference](CompleteCodeSystemReference.md) - An entry that, when resolved, returns all of the active entity references in a given code system. This includes
  * [NameAndMeaningReference](NameAndMeaningReference.md) - A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of
     * [AssociationReference](AssociationReference.md) - A name or identifier that uniquely names an association instance in a code system.
     * [BindingQualifierReference](BindingQualifierReference.md) - A reference to an entity that describes the role that a given value set binding plays for a concept domain. T
@@ -93,6 +94,8 @@ definitions to value sets, code system versions to definitions, and the combinat
  * [➞referenceCodeSystemVersion](completeValueSetReference__referenceCodeSystemVersion.md) - A reference to a CodeSystemVersion that will be used to resolve this call. referenceCodeSy will only be used
  * [➞valueSet](completeValueSetReference__valueSet.md) - A reference to the value set whose definition supplies a set of entity references.
  * [➞valueSetDefinition](completeValueSetReference__valueSetDefinition.md) - A reference to a particular definition of valueSet that is to be used in resolving this reference. If absent,
+ * [➞expression](entityExpression__expression.md) - The actual Expression.
+ * [➞ontologyLanguage](entityExpression__ontologyLanguage.md) - The ontology language of the expression.
  * [➞entities](entityReferenceList__entities.md) - The entity references ("concept codes") in the list
  * [➞namespaceName](entityReferenceList__namespaceName.md) - The local identifier assigned to this namespace
  * [➞namespaceURI](entityReferenceList__namespaceURI.md) - The URI associated with the supplied namespace as determined by the author/service instance
@@ -112,12 +115,12 @@ definitions to value sets, code system versions to definitions, and the combinat
  * [➞matchValue](filterComponent__matchValue.md) - The value to be used in comparison. The structure and format of matchValue depends on the specific
  * [➞component](filter__component.md) - An entry in a filter
  * [➞description](filter__description.md) - A textual description of the intent and purpose of the filter
- * [➞entityquery](formalDefinition__associated_entities.md)
- * [➞codesystem](formalDefinition__complete_code_system.md)
- * [➞valueset](formalDefinition__complete_value_set.md)
+ * [➞entityQuery](formalDefinition__associated_entities.md)
+ * [➞codeSystem](formalDefinition__complete_code_system.md)
+ * [➞valueSet](formalDefinition__complete_value_set.md)
  * [➞entitylist](formalDefinition__entity_list.md)
- * [➞externaldefinition](formalDefinition__external_value_set_definition.md)
- * [➞valuequery](formalDefinition__property_query.md)
+ * [➞externalDefinition](formalDefinition__external_value_set_definition.md)
+ * [➞valueQuery](formalDefinition__property_query.md)
  * [➞definition](formalDefinition__value_set_definition.md)
  * [➞map](mapVersionReference__map.md)
  * [➞href](nameAndMeaningReference__href.md)
@@ -138,6 +141,7 @@ definitions to value sets, code system versions to definitions, and the combinat
  * [➞about](resourceDescription__about.md) - The (or a) definitive URI that represents the resource being described. Note that this is NOT the URI of the
  * [➞additionalDocumentation](resourceDescription__additionalDocumentation.md) - A reference to a document that provide additional information about the resource.
  * [➞alternateID](resourceDescription__alternateID.md) - An alternative identifier that uniquely names this resource in other environments as contexts.
+ * [➞describedResourceType](resourceDescription__describedResourceType.md) - Enumeration of possible types
  * [➞formalName](resourceDescription__formalName.md) - The formal or officially assigned name of this resource, if any.
  * [➞keyword](resourceDescription__keyword.md) - Additional identifiers that are used to index and locate the resource.
  * [➞id](resourceDescription__resourceID.md) - A local identifier that uniquely names the resource within the context of the describedResourceType and

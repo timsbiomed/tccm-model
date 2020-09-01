@@ -15,7 +15,7 @@ URI: [tccm:CompleteValueSetReference](https://hotecosystem.org/tccm/CompleteValu
 
 ## Referenced by class
 
- *  **None** *[➞valueset](formalDefinition__complete_value_set.md)*  <sub>OPT</sub>  **[CompleteValueSetReference](CompleteValueSetReference.md)**
+ *  **None** *[➞valueSet](formalDefinition__complete_value_set.md)*  <sub>OPT</sub>  **[CompleteValueSetReference](CompleteValueSetReference.md)**
 
 ## Attributes
 

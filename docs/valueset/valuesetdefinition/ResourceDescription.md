@@ -46,6 +46,9 @@ As an example, if a resource had both an ISO Object Identifier and a DNS name, t
 as the entryID of the resource by one service while the ISO OID would be recorded as an alternateURI using
 the “urn:oid” prefix. Note that alternateIds can be added or removed during resource updates.
     * range: [String](types/String.md)
+ * [➞describedResourceType](resourceDescription__describedResourceType.md)  <sub>OPT</sub>
+    * Description: Enumeration of possible types
+    * range: [String](types/String.md)
  * [➞formalName](resourceDescription__formalName.md)  <sub>OPT</sub>
     * Description: The formal or officially assigned name of this resource, if any.
     * range: [String](types/String.md)

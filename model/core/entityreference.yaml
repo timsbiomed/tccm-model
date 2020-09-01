@@ -46,6 +46,7 @@ imports:
   - ../core/datatypes
   - ../core/uritypes
   - ../core/localidentifiers
+  - ../core/references
 
 
 classes:
@@ -99,3 +100,23 @@ classes:
         range: RenderingURI
         multivalued: true
 
+
+  EntityExpression:
+    description: |-
+      An expression in a given ontology language and syntax that describes or defines an entity. Examples might include
+      descriptions of entities in Manchester OWL Syntax, RDF, SNOMED Concept Expression, etc.
+    notes:
+      - |-
+        The CTS2 specification had an OntologyLanguageAndSyntaxReference.  We believe that the syntax portion fits in
+        OpaqueData
+    attributes:
+      ontologyLanguage:
+        description: The ontology language of the expression.
+        range: OntologyLanguageReference
+        required: true
+        inlined: true
+      expression:
+        description: The actual Expression.
+        range: OpaqueData
+        required: true
+        inlined: true

@@ -1,5 +1,5 @@
 # Auto generated from references.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-31 11:39
+# Generation date: 2020-09-01 13:06
 # Schema: references
 #
 # id: https://hotecosystem.org/tccm/references
@@ -348,14 +348,16 @@ class CodeSystemVersionReference(NameAndMeaningReference):
     class_model_uri: ClassVar[URIRef] = TCCM.CodeSystemVersionReference
 
     name: Union[str, CodeSystemVersionReferenceName] = None
-    codeSystem: Optional[Union[dict, CodeSystemReference]] = None
+    codeSystem: Union[dict, CodeSystemReference] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
         if self.name is None:
             raise ValueError(f"name must be supplied")
         if not isinstance(self.name, CodeSystemVersionReferenceName):
             self.name = CodeSystemVersionReferenceName(self.name)
-        if self.codeSystem is not None and not isinstance(self.codeSystem, CodeSystemReference):
+        if self.codeSystem is None:
+            raise ValueError(f"codeSystem must be supplied")
+        if not isinstance(self.codeSystem, CodeSystemReference):
             self.codeSystem = CodeSystemReference(self.codeSystem)
         super().__post_init__(**kwargs)
 
@@ -1037,7 +1039,7 @@ slots.nameAndMeaningReference__href = Slot(uri=TCCM.href, name="nameAndMeaningRe
                       model_uri=TCCM.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
 slots.codeSystemVersionReference__codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystemVersionReference__codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
+                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Union[dict, CodeSystemReference])
 
 slots.mapVersionReference__map = Slot(uri=TCCM.map, name="mapVersionReference__map", curie=TCCM.curie('map'),
                       model_uri=TCCM.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])

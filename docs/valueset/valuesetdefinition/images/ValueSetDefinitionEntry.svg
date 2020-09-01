@@ -39,17 +39,17 @@
 <path d='M65.0059,-118.862C60.7756,-98.2033 60.6675,-69.8313 64.6817,-48.7787' fill='none' stroke='black'/>
 <polygon fill='black' points='67.5494,-128.744 60.6989,-120.182 66.3031,-123.902 65.0569,-119.06 65.0569,-119.06 65.0569,-119.06 66.3031,-123.902 69.4148,-117.938 67.5494,-128.744 67.5494,-128.744' stroke='black'/>
 <polygon fill='black' points='64.7042,-48.6884 62.2801,-41.8969 67.6168,-37.0472 70.0409,-43.8386 64.7042,-48.6884' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='69.4896' y='-105.139'>intersect 0..1</text>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='69.4896' y='-105.139'>intersect 0..*</text>
 </g><g class='edge' id='edge2'><title>FormalDefinition-&gt;ValueSetDefinitionEntry</title>
 <path d='M76.3127,-118.529C74.9301,-97.9773 74.8966,-69.932 76.2121,-49.0173' fill='none' stroke='black'/>
 <polygon fill='black' points='77.1831,-128.744 71.8503,-119.163 76.7586,-123.762 76.3341,-118.781 76.3341,-118.781 76.3341,-118.781 76.7586,-123.762 80.8179,-118.398 77.1831,-128.744 77.1831,-128.744' stroke='black'/>
 <polygon fill='black' points='76.213,-49.0061 72.723,-42.6957 77.2056,-37.0472 80.6956,-43.3575 76.213,-49.0061' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='82.4033' y='-105.738'>exclude 0..1</text>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='82.4033' y='-105.738'>exclude 0..*</text>
 </g><g class='edge' id='edge3'><title>FormalDefinition-&gt;ValueSetDefinitionEntry</title>
 <path d='M87.6873,-118.529C89.0699,-97.9773 89.1034,-69.932 87.7879,-49.0173' fill='none' stroke='black'/>
 <polygon fill='black' points='86.8169,-128.744 83.1821,-118.398 87.2414,-123.762 87.6659,-118.781 87.6659,-118.781 87.6659,-118.781 87.2414,-123.762 92.1497,-119.163 86.8169,-128.744 86.8169,-128.744' stroke='black'/>
 <polygon fill='black' points='87.787,-49.0061 83.3044,-43.3575 86.7944,-37.0472 91.277,-42.6957 87.787,-49.0061' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='95.2281' y='-106.899'>include 0..1</text>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='95.2281' y='-106.899'>include 0..*</text>
 </g><g class='edge' id='edge4'><title>FormalDefinition-&gt;ValueSetDefinitionEntry</title>
 <path d='M99.3898,-116.843C103.357,-95.6903 103.197,-67.2987 98.9097,-46.7299' fill='none' stroke='black'/>
 <polygon fill='black' points='99.3278,-117.094 101.773,-123.879 96.4506,-128.744 94.0059,-121.96 99.3278,-117.094' stroke='black'/>

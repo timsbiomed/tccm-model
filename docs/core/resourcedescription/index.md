@@ -83,6 +83,7 @@
  * [➞about](resourceDescription__about.md) - The (or a) definitive URI that represents the resource being described. Note that this is NOT the URI of the
  * [➞additionalDocumentation](resourceDescription__additionalDocumentation.md) - A reference to a document that provide additional information about the resource.
  * [➞alternateID](resourceDescription__alternateID.md) - An alternative identifier that uniquely names this resource in other environments as contexts.
+ * [➞describedResourceType](resourceDescription__describedResourceType.md) - Enumeration of possible types
  * [➞formalName](resourceDescription__formalName.md) - The formal or officially assigned name of this resource, if any.
  * [➞keyword](resourceDescription__keyword.md) - Additional identifiers that are used to index and locate the resource.
  * [➞id](resourceDescription__resourceID.md) - A local identifier that uniquely names the resource within the context of the describedResourceType and

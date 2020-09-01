@@ -16,7 +16,7 @@ URI: [tccm:CodeSystemReference](https://hotecosystem.org/tccm/CodeSystemReferenc
 ## Referenced by class
 
  *  **None** *[➞codeSystem](associatedEntitiesReference__codeSystem.md)*  <sub>REQ</sub>  **[CodeSystemReference](CodeSystemReference.md)**
- *  **None** *[➞codeSystem](codeSystemVersionReference__codeSystem.md)*  <sub>OPT</sub>  **[CodeSystemReference](CodeSystemReference.md)**
+ *  **None** *[➞codeSystem](codeSystemVersionReference__codeSystem.md)*  <sub>REQ</sub>  **[CodeSystemReference](CodeSystemReference.md)**
  *  **None** *[➞codeSystem](completeCodeSystemReference__codeSystem.md)*  <sub>REQ</sub>  **[CodeSystemReference](CodeSystemReference.md)**
  *  **None** *[➞codeSystem](propertyQueryReference__codeSystem.md)*  <sub>REQ</sub>  **[CodeSystemReference](CodeSystemReference.md)**
 

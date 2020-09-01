@@ -29,6 +29,9 @@ classes:
       - annotatable
     abstract: true
     attributes:
+      describedResourceType:
+        description: Enumeration of possible types
+        range: string
       resourceSynopsis:
         description: A textual summary of the resource - what it is, what it is for, etc.
         range: string

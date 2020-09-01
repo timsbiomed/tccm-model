@@ -1,5 +1,5 @@
 # Auto generated from valuesetdefinition.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-31 12:53
+# Generation date: 2020-09-01 13:12
 # Schema: valuesetdefinition
 #
 # id: https://hotecosystem.org/tccm/valuesetdefinition
@@ -81,17 +81,20 @@ class ValueSetDefinitionEntry(YAMLRoot):
     class_name: ClassVar[str] = "ValueSetDefinitionEntry"
     class_model_uri: ClassVar[URIRef] = TCCM.ValueSetDefinitionEntry
 
-    include: Optional[Union[dict, "FormalDefinition"]] = None
-    exclude: Optional[Union[dict, "FormalDefinition"]] = None
-    intersect: Optional[Union[dict, "FormalDefinition"]] = None
+    include: List[Union[dict, "FormalDefinition"]] = empty_list()
+    exclude: List[Union[dict, "FormalDefinition"]] = empty_list()
+    intersect: List[Union[dict, "FormalDefinition"]] = empty_list()
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
-        if self.include is not None and not isinstance(self.include, FormalDefinition):
-            self.include = FormalDefinition(**self.include)
-        if self.exclude is not None and not isinstance(self.exclude, FormalDefinition):
-            self.exclude = FormalDefinition(**self.exclude)
-        if self.intersect is not None and not isinstance(self.intersect, FormalDefinition):
-            self.intersect = FormalDefinition(**self.intersect)
+        self.include = [FormalDefinition(*e) for e in self.include.items()] if isinstance(self.include, dict) \
+                        else [v if isinstance(v, FormalDefinition) else FormalDefinition(**v)
+                              for v in ([self.include] if isinstance(self.include, str) else self.include)]
+        self.exclude = [FormalDefinition(*e) for e in self.exclude.items()] if isinstance(self.exclude, dict) \
+                        else [v if isinstance(v, FormalDefinition) else FormalDefinition(**v)
+                              for v in ([self.exclude] if isinstance(self.exclude, str) else self.exclude)]
+        self.intersect = [FormalDefinition(*e) for e in self.intersect.items()] if isinstance(self.intersect, dict) \
+                          else [v if isinstance(v, FormalDefinition) else FormalDefinition(**v)
+                                for v in ([self.intersect] if isinstance(self.intersect, str) else self.intersect)]
         super().__post_init__(**kwargs)
 
 
@@ -107,27 +110,27 @@ class FormalDefinition(YAMLRoot):
     class_name: ClassVar[str] = "FormalDefinition"
     class_model_uri: ClassVar[URIRef] = TCCM.FormalDefinition
 
-    entityquery: Optional[Union[dict, "AssociatedEntitiesReference"]] = None
-    valuequery: Optional[Union[dict, "PropertyQueryReference"]] = None
+    entityQuery: Optional[Union[dict, "AssociatedEntitiesReference"]] = None
+    valueQuery: Optional[Union[dict, "PropertyQueryReference"]] = None
     entitylist: Optional[Union[dict, "SpecificEntityList"]] = None
-    valueset: Optional[Union[dict, "CompleteValueSetReference"]] = None
-    codesystem: Optional[Union[dict, "CompleteCodeSystemReference"]] = None
-    externaldefinition: Optional[Union[dict, "ExternalValueSetDefinition"]] = None
+    valueSet: Optional[Union[dict, "CompleteValueSetReference"]] = None
+    codeSystem: Optional[Union[dict, "CompleteCodeSystemReference"]] = None
+    externalDefinition: Optional[Union[dict, "ExternalValueSetDefinition"]] = None
     definition: Optional[Union[dict, ValueSetDefinitionEntry]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
-        if self.entityquery is not None and not isinstance(self.entityquery, AssociatedEntitiesReference):
-            self.entityquery = AssociatedEntitiesReference(**self.entityquery)
-        if self.valuequery is not None and not isinstance(self.valuequery, PropertyQueryReference):
-            self.valuequery = PropertyQueryReference(**self.valuequery)
+        if self.entityQuery is not None and not isinstance(self.entityQuery, AssociatedEntitiesReference):
+            self.entityQuery = AssociatedEntitiesReference(**self.entityQuery)
+        if self.valueQuery is not None and not isinstance(self.valueQuery, PropertyQueryReference):
+            self.valueQuery = PropertyQueryReference(**self.valueQuery)
         if self.entitylist is not None and not isinstance(self.entitylist, SpecificEntityList):
             self.entitylist = SpecificEntityList(self.entitylist)
-        if self.valueset is not None and not isinstance(self.valueset, CompleteValueSetReference):
-            self.valueset = CompleteValueSetReference(**self.valueset)
-        if self.codesystem is not None and not isinstance(self.codesystem, CompleteCodeSystemReference):
-            self.codesystem = CompleteCodeSystemReference(**self.codesystem)
-        if self.externaldefinition is not None and not isinstance(self.externaldefinition, ExternalValueSetDefinition):
-            self.externaldefinition = ExternalValueSetDefinition(**self.externaldefinition)
+        if self.valueSet is not None and not isinstance(self.valueSet, CompleteValueSetReference):
+            self.valueSet = CompleteValueSetReference(**self.valueSet)
+        if self.codeSystem is not None and not isinstance(self.codeSystem, CompleteCodeSystemReference):
+            self.codeSystem = CompleteCodeSystemReference(**self.codeSystem)
+        if self.externalDefinition is not None and not isinstance(self.externalDefinition, ExternalValueSetDefinition):
+            self.externalDefinition = ExternalValueSetDefinition(**self.externalDefinition)
         if self.definition is not None and not isinstance(self.definition, ValueSetDefinitionEntry):
             self.definition = ValueSetDefinitionEntry(**self.definition)
         super().__post_init__(**kwargs)
@@ -211,7 +214,7 @@ class PropertyQueryReference(YAMLRoot):
 
 
 @dataclass
-class CompleteCodeSystemReference(FormalDefinition):
+class CompleteCodeSystemReference(YAMLRoot):
     """
     An entry that, when resolved, returns all of the active entity references in a given code system. This includes
     all entity references that appear as the source of one or more statements in the code system, whether the
@@ -226,7 +229,7 @@ class CompleteCodeSystemReference(FormalDefinition):
     class_name: ClassVar[str] = "CompleteCodeSystemReference"
     class_model_uri: ClassVar[URIRef] = TCCM.CompleteCodeSystemReference
 
-    codeSystem: Union[dict, CodeSystemReference] = None
+    codeSystem: Union[dict, CodeSystemReference]
     codeSystemVersion: Optional[Union[dict, CodeSystemVersionReference]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
@@ -370,30 +373,30 @@ slots.valueSetDefinition__entry = Slot(uri=TCCM.entry, name="valueSetDefinition_
                       model_uri=TCCM.valueSetDefinition__entry, domain=None, range=List[Union[dict, ValueSetDefinitionEntry]])
 
 slots.valueSetDefinitionEntry__include = Slot(uri=TCCM.include, name="valueSetDefinitionEntry__include", curie=TCCM.curie('include'),
-                      model_uri=TCCM.valueSetDefinitionEntry__include, domain=None, range=Optional[Union[dict, FormalDefinition]])
+                      model_uri=TCCM.valueSetDefinitionEntry__include, domain=None, range=List[Union[dict, FormalDefinition]])
 
 slots.valueSetDefinitionEntry__exclude = Slot(uri=TCCM.exclude, name="valueSetDefinitionEntry__exclude", curie=TCCM.curie('exclude'),
-                      model_uri=TCCM.valueSetDefinitionEntry__exclude, domain=None, range=Optional[Union[dict, FormalDefinition]])
+                      model_uri=TCCM.valueSetDefinitionEntry__exclude, domain=None, range=List[Union[dict, FormalDefinition]])
 
 slots.valueSetDefinitionEntry__intersect = Slot(uri=TCCM.intersect, name="valueSetDefinitionEntry__intersect", curie=TCCM.curie('intersect'),
-                      model_uri=TCCM.valueSetDefinitionEntry__intersect, domain=None, range=Optional[Union[dict, FormalDefinition]])
+                      model_uri=TCCM.valueSetDefinitionEntry__intersect, domain=None, range=List[Union[dict, FormalDefinition]])
 
-slots.formalDefinition__associated_entities = Slot(uri=TCCM.entityquery, name="formalDefinition__associated_entities", curie=TCCM.curie('entityquery'),
+slots.formalDefinition__associated_entities = Slot(uri=TCCM.entityQuery, name="formalDefinition__associated_entities", curie=TCCM.curie('entityQuery'),
                       model_uri=TCCM.formalDefinition__associated_entities, domain=None, range=Optional[Union[dict, AssociatedEntitiesReference]])
 
-slots.formalDefinition__property_query = Slot(uri=TCCM.valuequery, name="formalDefinition__property_query", curie=TCCM.curie('valuequery'),
+slots.formalDefinition__property_query = Slot(uri=TCCM.valueQuery, name="formalDefinition__property_query", curie=TCCM.curie('valueQuery'),
                       model_uri=TCCM.formalDefinition__property_query, domain=None, range=Optional[Union[dict, PropertyQueryReference]])
 
 slots.formalDefinition__entity_list = Slot(uri=TCCM.entitylist, name="formalDefinition__entity_list", curie=TCCM.curie('entitylist'),
                       model_uri=TCCM.formalDefinition__entity_list, domain=None, range=Optional[Union[dict, SpecificEntityList]])
 
-slots.formalDefinition__complete_value_set = Slot(uri=TCCM.valueset, name="formalDefinition__complete_value_set", curie=TCCM.curie('valueset'),
+slots.formalDefinition__complete_value_set = Slot(uri=TCCM.valueSet, name="formalDefinition__complete_value_set", curie=TCCM.curie('valueSet'),
                       model_uri=TCCM.formalDefinition__complete_value_set, domain=None, range=Optional[Union[dict, CompleteValueSetReference]])
 
-slots.formalDefinition__complete_code_system = Slot(uri=TCCM.codesystem, name="formalDefinition__complete_code_system", curie=TCCM.curie('codesystem'),
+slots.formalDefinition__complete_code_system = Slot(uri=TCCM.codeSystem, name="formalDefinition__complete_code_system", curie=TCCM.curie('codeSystem'),
                       model_uri=TCCM.formalDefinition__complete_code_system, domain=None, range=Optional[Union[dict, CompleteCodeSystemReference]])
 
-slots.formalDefinition__external_value_set_definition = Slot(uri=TCCM.externaldefinition, name="formalDefinition__external_value_set_definition", curie=TCCM.curie('externaldefinition'),
+slots.formalDefinition__external_value_set_definition = Slot(uri=TCCM.externalDefinition, name="formalDefinition__external_value_set_definition", curie=TCCM.curie('externalDefinition'),
                       model_uri=TCCM.formalDefinition__external_value_set_definition, domain=None, range=Optional[Union[dict, ExternalValueSetDefinition]])
 
 slots.formalDefinition__value_set_definition = Slot(uri=TCCM.definition, name="formalDefinition__value_set_definition", curie=TCCM.curie('definition'),
@@ -471,6 +474,12 @@ slots.entityReference__href = Slot(uri=TCCM.href, name="entityReference__href", 
 slots.entityReference__see_also = Slot(uri=TCCM.see_also, name="entityReference__see_also", curie=TCCM.curie('see_also'),
                       model_uri=TCCM.entityReference__see_also, domain=None, range=List[Union[URIorCURIE, RenderingURI]])
 
+slots.entityExpression__ontologyLanguage = Slot(uri=TCCM.ontologyLanguage, name="entityExpression__ontologyLanguage", curie=TCCM.curie('ontologyLanguage'),
+                      model_uri=TCCM.entityExpression__ontologyLanguage, domain=None, range=Union[dict, OntologyLanguageReference])
+
+slots.entityExpression__expression = Slot(uri=TCCM.expression, name="entityExpression__expression", curie=TCCM.curie('expression'),
+                      model_uri=TCCM.entityExpression__expression, domain=None, range=Union[dict, OpaqueData])
+
 slots.nameAndMeaningReference__name = Slot(uri=TCCM.name, name="nameAndMeaningReference__name", curie=TCCM.curie('name'),
                       model_uri=TCCM.nameAndMeaningReference__name, domain=None, range=URIRef)
 
@@ -484,7 +493,7 @@ slots.nameAndMeaningReference__href = Slot(uri=TCCM.href, name="nameAndMeaningRe
                       model_uri=TCCM.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
 slots.codeSystemVersionReference__codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystemVersionReference__codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
+                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Union[dict, CodeSystemReference])
 
 slots.mapVersionReference__map = Slot(uri=TCCM.map, name="mapVersionReference__map", curie=TCCM.curie('map'),
                       model_uri=TCCM.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])
@@ -521,6 +530,9 @@ slots.filterComponent__matchAlgorithm = Slot(uri=TCCM.matchAlgorithm, name="filt
 
 slots.filterComponent__matchValue = Slot(uri=TCCM.matchValue, name="filterComponent__matchValue", curie=TCCM.curie('matchValue'),
                       model_uri=TCCM.filterComponent__matchValue, domain=None, range=Optional[str])
+
+slots.resourceDescription__describedResourceType = Slot(uri=TCCM.describedResourceType, name="resourceDescription__describedResourceType", curie=TCCM.curie('describedResourceType'),
+                      model_uri=TCCM.resourceDescription__describedResourceType, domain=None, range=Optional[str])
 
 slots.resourceDescription__resourceSynopsis = Slot(uri=TCCM.resourceSynopsis, name="resourceDescription__resourceSynopsis", curie=TCCM.curie('resourceSynopsis'),
                       model_uri=TCCM.resourceDescription__resourceSynopsis, domain=None, range=Optional[str])

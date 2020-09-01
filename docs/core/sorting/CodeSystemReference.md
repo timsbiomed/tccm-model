@@ -15,7 +15,7 @@ URI: [https://hotecosystem.org/tccm/sorting/CodeSystemReference](https://hotecos
 
 ## Referenced by class
 
- *  **None** *[➞codeSystem](codeSystemVersionReference__codeSystem.md)*  <sub>OPT</sub>  **[CodeSystemReference](CodeSystemReference.md)**
+ *  **None** *[➞codeSystem](codeSystemVersionReference__codeSystem.md)*  <sub>REQ</sub>  **[CodeSystemReference](CodeSystemReference.md)**
 
 ## Attributes
 

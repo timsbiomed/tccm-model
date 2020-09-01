@@ -18,7 +18,7 @@ URI: [https://hotecosystem.org/tccm/sorting/CodeSystemVersionReference](https://
 
 ### Own
 
- * [➞codeSystem](codeSystemVersionReference__codeSystem.md)  <sub>OPT</sub>
+ * [➞codeSystem](codeSystemVersionReference__codeSystem.md)  <sub>REQ</sub>
     * range: [CodeSystemReference](CodeSystemReference.md)
 
 ### Inherited from NameAndMeaningReference:

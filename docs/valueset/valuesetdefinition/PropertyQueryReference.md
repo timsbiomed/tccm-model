@@ -12,7 +12,7 @@ URI: [tccm:PropertyQueryReference](https://hotecosystem.org/tccm/PropertyQueryRe
 
 ## Referenced by class
 
- *  **None** *[➞valuequery](formalDefinition__property_query.md)*  <sub>OPT</sub>  **[PropertyQueryReference](PropertyQueryReference.md)**
+ *  **None** *[➞valueQuery](formalDefinition__property_query.md)*  <sub>OPT</sub>  **[PropertyQueryReference](PropertyQueryReference.md)**
 
 ## Attributes
 

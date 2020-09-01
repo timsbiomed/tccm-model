@@ -1,5 +1,5 @@
 # Auto generated from entityreference.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-31 11:37
+# Generation date: 2020-09-01 13:04
 # Schema: entityreference
 #
 # id: https://hotecosystem.org/tccm/entityreference
@@ -33,8 +33,10 @@ from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
 from src.core.datatypes import LocalIdentifier
+from src.core.entrydescription import OpaqueData
 from src.core.localidentifiers import CodeSystemName
-from src.core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
+from src.core.references import CodeSystemReference, CodeSystemReferenceName, FormatReference, FormatReferenceName, LanguageReference, LanguageReferenceName, MapReference, MapReferenceName, OntologyLanguageReference, OntologyLanguageReferenceName, RoleReference, RoleReferenceName
+from src.core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import URIorCURIE
 from includes.types import String
 
@@ -121,6 +123,34 @@ class EntityReference(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
+@dataclass
+class EntityExpression(YAMLRoot):
+    """
+    An expression in a given ontology language and syntax that describes or defines an entity. Examples might include
+    descriptions of entities in Manchester OWL Syntax, RDF, SNOMED Concept Expression, etc.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = TCCM.EntityExpression
+    class_class_curie: ClassVar[str] = "tccm:EntityExpression"
+    class_name: ClassVar[str] = "EntityExpression"
+    class_model_uri: ClassVar[URIRef] = TCCM.EntityExpression
+
+    ontologyLanguage: Union[dict, OntologyLanguageReference]
+    expression: Union[dict, OpaqueData]
+
+    def __post_init__(self, **kwargs: Dict[str, Any]):
+        if self.ontologyLanguage is None:
+            raise ValueError(f"ontologyLanguage must be supplied")
+        if not isinstance(self.ontologyLanguage, OntologyLanguageReference):
+            self.ontologyLanguage = OntologyLanguageReference(self.ontologyLanguage)
+        if self.expression is None:
+            raise ValueError(f"expression must be supplied")
+        if not isinstance(self.expression, OpaqueData):
+            self.expression = OpaqueData(**self.expression)
+        super().__post_init__(**kwargs)
+
+
 
 # Slots
 class slots:
@@ -152,3 +182,57 @@ slots.entityReference__href = Slot(uri=TCCM.href, name="entityReference__href", 
 
 slots.entityReference__see_also = Slot(uri=TCCM.see_also, name="entityReference__see_also", curie=TCCM.curie('see_also'),
                       model_uri=TCCM.entityReference__see_also, domain=None, range=List[Union[URIorCURIE, RenderingURI]])
+
+slots.entityExpression__ontologyLanguage = Slot(uri=TCCM.ontologyLanguage, name="entityExpression__ontologyLanguage", curie=TCCM.curie('ontologyLanguage'),
+                      model_uri=TCCM.entityExpression__ontologyLanguage, domain=None, range=Union[dict, OntologyLanguageReference])
+
+slots.entityExpression__expression = Slot(uri=TCCM.expression, name="entityExpression__expression", curie=TCCM.curie('expression'),
+                      model_uri=TCCM.entityExpression__expression, domain=None, range=Union[dict, OpaqueData])
+
+slots.nameAndMeaningReference__name = Slot(uri=TCCM.name, name="nameAndMeaningReference__name", curie=TCCM.curie('name'),
+                      model_uri=TCCM.nameAndMeaningReference__name, domain=None, range=URIRef)
+
+slots.nameAndMeaningReference__synopsis = Slot(uri=TCCM.synopsis, name="nameAndMeaningReference__synopsis", curie=TCCM.curie('synopsis'),
+                      model_uri=TCCM.nameAndMeaningReference__synopsis, domain=None, range=Optional[str])
+
+slots.nameAndMeaningReference__uri = Slot(uri=TCCM.uri, name="nameAndMeaningReference__uri", curie=TCCM.curie('uri'),
+                      model_uri=TCCM.nameAndMeaningReference__uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
+
+slots.nameAndMeaningReference__href = Slot(uri=TCCM.href, name="nameAndMeaningReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
+
+slots.codeSystemVersionReference__codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystemVersionReference__codeSystem", curie=TCCM.curie('codeSystem'),
+                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Union[dict, CodeSystemReference])
+
+slots.mapVersionReference__map = Slot(uri=TCCM.map, name="mapVersionReference__map", curie=TCCM.curie('map'),
+                      model_uri=TCCM.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])
+
+slots.predicateReference__uri = Slot(uri=TCCM.uri, name="predicateReference__uri", curie=TCCM.curie('uri'),
+                      model_uri=TCCM.predicateReference__uri, domain=None, range=Union[URIorCURIE, ExternalURI])
+
+slots.predicateReference__name = Slot(uri=TCCM.name, name="predicateReference__name", curie=TCCM.curie('name'),
+                      model_uri=TCCM.predicateReference__name, domain=None, range=Optional[Union[str, LocalIdentifier]])
+
+slots.predicateReference__href = Slot(uri=TCCM.href, name="predicateReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.predicateReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
+
+slots.predicateReference__designation = Slot(uri=TCCM.designation, name="predicateReference__designation", curie=TCCM.curie('designation'),
+                      model_uri=TCCM.predicateReference__designation, domain=None, range=Optional[str])
+
+slots.sourceAndRoleReference__role = Slot(uri=TCCM.role, name="sourceAndRoleReference__role", curie=TCCM.curie('role'),
+                      model_uri=TCCM.sourceAndRoleReference__role, domain=None, range=Optional[Union[dict, RoleReference]])
+
+slots.sourceAndRoleReference__bibliographicLink = Slot(uri=TCCM.bibliographicLink, name="sourceAndRoleReference__bibliographicLink", curie=TCCM.curie('bibliographicLink'),
+                      model_uri=TCCM.sourceAndRoleReference__bibliographicLink, domain=None, range=Optional[Union[dict, OpaqueData]])
+
+slots.opaqueData__format = Slot(uri=TCCM.format, name="opaqueData__format", curie=TCCM.curie('format'),
+                      model_uri=TCCM.opaqueData__format, domain=None, range=Optional[Union[dict, FormatReference]])
+
+slots.opaqueData__schema = Slot(uri=TCCM.schema, name="opaqueData__schema", curie=TCCM.curie('schema'),
+                      model_uri=TCCM.opaqueData__schema, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
+
+slots.opaqueData__language = Slot(uri=TCCM.language, name="opaqueData__language", curie=TCCM.curie('language'),
+                      model_uri=TCCM.opaqueData__language, domain=None, range=Optional[Union[dict, LanguageReference]])
+
+slots.opaqueData__value = Slot(uri=TCCM.value, name="opaqueData__value", curie=TCCM.curie('value'),
+                      model_uri=TCCM.opaqueData__value, domain=None, range=str)

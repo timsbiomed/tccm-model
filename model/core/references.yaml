@@ -87,6 +87,7 @@ classes:
     attributes:
       codeSystem:
         range: CodeSystemReference
+        required: true
 
   ConceptDomainReference:
     is_a: NameAndMeaningReference

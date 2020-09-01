@@ -1,5 +1,5 @@
 # Auto generated from resourcedescription.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-31 11:40
+# Generation date: 2020-09-01 13:07
 # Schema: resourcedescription
 #
 # id: https://hotecosystem.org/tccm/resourcedescription
@@ -71,6 +71,7 @@ class ResourceDescription(YAMLRoot):
 
     id: Union[str, ResourceDescriptionId]
     about: Union[URIorCURIE, ExternalURI]
+    describedResourceType: Optional[str] = None
     resourceSynopsis: Optional[str] = None
     formalName: Optional[str] = None
     keyword: List[str] = empty_list()
@@ -188,6 +189,9 @@ class ResourceVersionDescription(ResourceDescription):
 class slots:
     pass
 
+slots.resourceDescription__describedResourceType = Slot(uri=TCCM.describedResourceType, name="resourceDescription__describedResourceType", curie=TCCM.curie('describedResourceType'),
+                      model_uri=TCCM.resourceDescription__describedResourceType, domain=None, range=Optional[str])
+
 slots.resourceDescription__resourceSynopsis = Slot(uri=TCCM.resourceSynopsis, name="resourceDescription__resourceSynopsis", curie=TCCM.curie('resourceSynopsis'),
                       model_uri=TCCM.resourceDescription__resourceSynopsis, domain=None, range=Optional[str])
 
@@ -261,7 +265,7 @@ slots.nameAndMeaningReference__href = Slot(uri=TCCM.href, name="nameAndMeaningRe
                       model_uri=TCCM.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
 slots.codeSystemVersionReference__codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystemVersionReference__codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
+                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Union[dict, CodeSystemReference])
 
 slots.mapVersionReference__map = Slot(uri=TCCM.map, name="mapVersionReference__map", curie=TCCM.curie('map'),
                       model_uri=TCCM.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])

@@ -58,7 +58,7 @@
 <path d='M506,-154.522C506,-134.748 506,-108.286 506,-85.6771' fill='none' stroke='black'/>
 <polygon fill='black' points='506,-154.797 510,-160.797 506,-166.797 502,-160.797 506,-154.797' stroke='black'/>
 <polygon fill='black' points='506,-75.5984 510.5,-85.5984 506,-80.5984 506,-85.5984 506,-85.5984 506,-85.5984 506,-80.5984 501.5,-85.5984 506,-75.5984 506,-75.5984' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='499.16' y='-90.6923'> codeSystem 0..1</text>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='499.16' y='-90.6923'> codeSystem 1..1</text>
 </g><g class='node' id='node5'><title>CompleteCodeSystemReference</title>
 <polygon fill='white' points='622,-167 622,-203 828,-203 828,-167 622,-167' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='725' y='-181.3'>CompleteCodeSystemReference</text>

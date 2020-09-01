@@ -1,5 +1,5 @@
 # Auto generated from entrydescription.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-31 11:38
+# Generation date: 2020-09-01 13:05
 # Schema: entrydescription
 #
 # id: https://hotecosystem.org/tccm/entrydescription
@@ -127,7 +127,7 @@ slots.nameAndMeaningReference__href = Slot(uri=TCCM.href, name="nameAndMeaningRe
                       model_uri=TCCM.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
 slots.codeSystemVersionReference__codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystemVersionReference__codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
+                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Union[dict, CodeSystemReference])
 
 slots.mapVersionReference__map = Slot(uri=TCCM.map, name="mapVersionReference__map", curie=TCCM.curie('map'),
                       model_uri=TCCM.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])

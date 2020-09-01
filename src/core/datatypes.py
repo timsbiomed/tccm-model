@@ -1,5 +1,5 @@
 # Auto generated from datatypes.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-31 11:37
+# Generation date: 2020-09-01 13:04
 # Schema: datatypes
 #
 # id: https://hotecosystem.org/tccm/datatype

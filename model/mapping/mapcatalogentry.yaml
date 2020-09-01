@@ -60,7 +60,6 @@ classes:
           The "`ValueSet`" from which the source codes in the Map are drawn. Note that the source codes may be drawn from
           either a x60CodeSystemx60 or a x60ValueSetx60, but not both.
 
-
       toCodeSystem:
         range: CodeSystemReference
         description: |-

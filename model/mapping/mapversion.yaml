@@ -14,6 +14,12 @@ prefixes:
 default_prefix: tccm
 
 imports:
+  - ../core/localidentifiers
+  - ../core/references
+  - ../core/uritypes
+  - ../core/directorytypes
+  - ../core/entityreference
+
 
 
 classes:
@@ -22,5 +28,217 @@ classes:
       A specific version of a Map. MapVersion is bound to specific code system versions and/or value set
       versions andreferences a set of mapping entries (mapSet) that, if the resource is FINAL, are fixed with respect
       to this version.
+    attributes:
+      mapVersionName:
+        description: A local identifier that uniquely names this version within the context of the CTS2 service implementation.
+        range: MapVersionName
+        required: true
+
+      versionOf:
+        description: A reference to the Map resource that this is a version of.
+        range: MapReference
+        inlined: true
+        required: true
+
+      fromValueSetDefinition:
+        description: The specific value set definition that was used to resolve the from entities in this map.
+        range: ValueSetDefinitionReference
+        required: true
+        inlined: true
+
+      fromCodeSystemVersion:
+        description: The specific code system version that provided the from entities in this map.
+        range: CodeSystemVersionReference
+        inlined: true
+        deprecated: "`fromValueSetDefinition` should be used instead"
+
+      toValueSetDefinition:
+        description: The specific value set definition that was used to resolve the to entities in this map.
+        range: ValueSetDefinitionReference
+        required: true
+        inlined: true
+
+      toCodeSystemVersion:
+        description: The specific code system version that provided the to entities in this map.
+        range: CodeSystemVersionReference
+        inlined: true
+        deprecated: "`toValueSetDefinition` should be used instead"
+
+      useCodeSystemVersion:
+        description: |-
+          A list of code system versions that should be used in the resolution of fromValueSetDefinition and/or
+          toValueSetDefinition. If present, this states that, for these code systems, these specific versions are to be
+          used.
+        range: CodeSystemVersionReference
+        inlined: true
+        multivalued: true
+
+      applicableContext:
+        description: |-
+          References to the realm, context, or other external factor that determines the applicability of this
+          particular map version.
+        range: ContextReference
+        inlined: true
+        multivalued: true
+
+      versionTag:
+        description: A version tag assigned to this MapVersion instance by the implementing service.
+        range: VersionTagReference
+        inlined: true
+        multivalued: true
 
 
+  SimpleMapVersion:
+    is_a: MapVersion
+    attributes:
+      entries:
+        description: A set of entries in this map
+        range: SimpleMapEntry
+        inlined: true
+        multivalued: true
+
+  SimpleMapEntry:
+    description: |-
+      A map entry represents the set of mappings that share the same mapFrom entity identifier. There may be at most
+      one MapEntry for any unique EntityDescription within the context of a given MapVersion. Note also that is
+      considered unidirectional from the perspective of the TCCM model. If one wishes that, class A in code system C1
+      maps to class T in code system C2, and visa versa, one needs to create two map versions - the first from a
+      version of C1 to a version of C2 and the second from a version of C2 to a version of C1.
+
+      "`SimpleMapEntry`" is used to represent simple maps that don't involve cascading rules, target expressions, etc.
+
+    attributes:
+      mapFrom:
+        description: |-
+          The source entity.  EntityReference must be a member of the fromValueSetDefinition part of the map definition.
+          EntityReferences in the fromValueSetDefinition that do not occur in a "`mapFrom`" entry are considered as
+          "unmapped" - meaning that the mapping is incomplete.
+        notes:
+          - |-
+            Should we consider adding an attribute to "`MapVersion`" indicating that missing entities should be treated
+            as unmappable vs. not mapped?
+        range: EntityReference
+        required: true
+        inlined: true
+
+      mapTo:
+        description: |-
+          The target entity.  EntityReference must be a member of the toValueSetDefinition part of the map definition.
+          The absence of a mapTo asserts that *no* map exists for "`mapFrom`".
+        range: EntityReference
+        required: false
+        inlined: true
+
+      correlation:
+        description: |-
+          A reference to how well the mapping correlates. Example correlations might be Exact, not mappable, partial
+          overlap, narrower than, etc.
+        range: MapCorrelationReference
+        inlined: true
+
+  FullMapVersion:
+    is_a: MapVersion
+    description: |-
+      A "complex map" that defines an ordered set of rules for mapping from "`mapFrom`" to one or more targets
+    attributes:
+      entries:
+        description: An ordered set of rules for performing a complex map
+        range: MapEntry
+        inlined: true
+        multivalued: true
+
+
+  MapEntry:
+    description: |-
+      A "complex map" that defines an ordered set of rules for mapping from "`mapFrom`" to one or more targets
+    attributes:
+      mapFrom:
+        description: |-
+          The source entity.  EntityReference must be a member of the fromValueSetDefinition part of the map definition.
+          EntityReferences in the fromValueSetDefinition that do not occur in a "`mapFrom`" entry are considered as
+          "unmapped" - meaning that the mapping is incomplete.
+        comments:
+          - At most one of allMatchesFrom or firstMatchFrom must be supplied.
+        range: EntityReference
+        required: true
+        inlined: true
+      allMatchesFrom:
+        description: Process all map sets, returning every set that has a matching target
+        range: MapSet
+        multivalued: true
+        inlined: true
+      firstMatchFrom:
+        description: Processing stop at the first map set that has a matching target.
+        range: MapSet
+        multivalued: true
+        inlined: true
+
+  MapSet:
+    attributes:
+      allMatchesFrom:
+        description: Process all map targets returning every target that has a matching rule
+        range: MapTarget
+        multivalued: true
+        inlined: true
+      firstMatchFrom:
+        description: Processing stops on the first target with a matching rule
+        range: MapTarget
+        multivalued: true
+        inlined: true
+
+  MapTarget:
+    attributes:
+      rule:
+        description: |-
+          A predicate of some sort that can be used to determine whether this entry meets the mapping criteria. If
+          absent, the mapping is considered unconditional.
+        range: MapRule
+        inlined: true
+
+      mapTo:
+        description: |-
+          The target entity to be used if the rule is satisfied. If not present, the assumption is that the source
+          entity maps to nothing in this set / rule
+        comments:
+          - Either mapTo or targetExpression may be supplied, but not both
+        range: EntityReference
+        inlined: true
+
+      targetDescription:
+        description: |-
+          A description of the resulting rule. Can be used to carry text to instruct human beings how to do the
+          mapping as well as additional machine readable instructions.
+        range: OpaqueData
+        inlined: true
+
+      targetExpression:
+        description: |-
+          A formal expression that, when interpreted, results in the map target. This expression could carry an RDF
+          fragment, an expression in the SNOMED-CT compositional grammar or something else.
+        range: EntityExpression
+        inlined: true
+
+      correlation:
+        description: |-
+          A reference to how well the mapping correlates. Example correlations might be Exact, not mappable, partial
+          overlap, narrower than, etc.
+        range: MapCorrelationReference
+        inlined: true
+
+#        externalEntryId:
+#          description: |-
+#             An identifier assigned to this particular source/set/target tuple by an outside body
+#          comments:
+#            - |-
+#              The primary purpose of this entry is to carry the row UUID from the SNOMED CT ComplexMap refset
+#          notes:
+#            - Should we consider removing this and making it an extension?
+#          range: string
+
+
+  MapRule:
+    is_a: OpaqueData
+    description: |-
+      A set of instructions that, when interpreted in the proper context, returns a true/false value, where true means
+      that the context meets the requirements set forth by the rule and false means that it doesn’t. Neither the syntax
+      nor the semantics of map rules are included as part of the TCCM specification.

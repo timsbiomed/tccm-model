@@ -70,38 +70,43 @@ classes:
       include:
         description: Include the resolution of this definition in the valueset
         range: FormalDefinition
+        multivalued: true
         inlined: true
       exclude:
         description: Exclude the resolution of this definition in the valueset
         range: FormalDefinition
+        multivalued: true
         inlined: true
       intersect:
         description: Include only the elements that are common between this definition and the valueset to this point
         range: FormalDefinition
+        multivalued: true
         inlined: true
 
 
 
   FormalDefinition:
     description: A value set definition choice
+    comments:
+      - A "`FormalDefinition`" must be exactly one of the attributes below
     attributes:
       associated_entities:
-        alias: entityquery
+        alias: entityQuery
         range: AssociatedEntitiesReference
       property_query:
-        alias: valuequery
+        alias: valueQuery
         range: PropertyQueryReference
       entity_list:
         alias: entitylist
         range: SpecificEntityList
       complete_value_set:
-        alias: valueset
+        alias: valueSet
         range: CompleteValueSetReference
       complete_code_system:
-        alias: codesystem
+        alias: codeSystem
         range: CompleteCodeSystemReference
       external_value_set_definition:
-        alias: externaldefinition
+        alias: externalDefinition
         range: ExternalValueSetDefinition
       value_set_definition:
         alias: definition
@@ -203,7 +208,6 @@ classes:
       assertions are made directly by a version of the code system or indirectly by a version of a different code
       system that is imported. Note that targets are not included to prevent codes from rdf, rdfs, owl, etc. being
       included in this resolution set.
-    is_a: FormalDefinition
     attributes:
       codeSystem:
         description: A reference to the code system whose codes are to be included.

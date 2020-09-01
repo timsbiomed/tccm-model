@@ -50,6 +50,6 @@
 <path d='M265.32,-158.271C252.347,-138.259 233.997,-109.952 218.428,-85.9371' fill='none' stroke='black'/>
 <polygon fill='black' points='270.848,-166.797 261.632,-160.854 268.128,-162.602 265.408,-158.406 265.408,-158.406 265.408,-158.406 268.128,-162.602 269.184,-155.958 270.848,-166.797 270.848,-166.797' stroke='black'/>
 <polygon fill='black' points='218.254,-85.6677 211.633,-82.8089 211.726,-75.5984 218.346,-78.4571 218.254,-85.6677' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='266.364' y='-143.606'>codeSystem 0..1</text>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='266.364' y='-143.606'>codeSystem 1..1</text>
 </g></g>
 <text style='fill: lightslategray; font-size: 6pt; font-family: Verdana' x='269' y='232'>CREATED WITH YUML</text></svg>
