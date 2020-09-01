@@ -29,24 +29,15 @@ Manchester OWL, or SNOMED CT Compositional Grammar.
 
 ### Slots
 
- * [about](about.md) - The external, permanant URI by which this entity is known.
-    * [EntityReference➞about](EntityReference_about.md)
- * [code](code.md) - The namespace and name by which this entity is known within the context of the service implementation
-    * [EntityReference➞code](EntityReference_code.md)
- * [description](description.md) - A description or definition of the referenced entity determined by the service
-    * [EntityReference➞description](EntityReference_description.md)
- * [designation](designation.md) - The preferred label for the entity in the context of the service
-    * [EntityReference➞designation](EntityReference_designation.md)
- * [entities](entities.md) - The entity references ("concept codes") in the list
-    * [EntityReferenceList➞entities](EntityReferenceList_entities.md)
- * [href](href.md) - A reference to the "official" description of the entity in the context of the defining code system
-    * [EntityReference➞href](EntityReference_href.md)
- * [namespaceName](namespaceName.md) - The local identifier assigned to this namespace
-    * [EntityReferenceList➞namespaceName](EntityReferenceList_namespaceName.md)
- * [namespaceURI](namespaceURI.md) - The URI associated with the supplied namespace as determined by the author/service instance
-    * [EntityReferenceList➞namespaceURI](EntityReferenceList_namespaceURI.md)
- * [see_also](see_also.md) - Additional external links that serve to define or otherwise clarify the intent of the reference
-    * [EntityReference➞see_also](EntityReference_see_also.md)
+ * [➞entities](entityReferenceList__entities.md) - The entity references ("concept codes") in the list
+ * [➞namespaceName](entityReferenceList__namespaceName.md) - The local identifier assigned to this namespace
+ * [➞namespaceURI](entityReferenceList__namespaceURI.md) - The URI associated with the supplied namespace as determined by the author/service instance
+ * [➞about](entityReference__about.md) - The external, permanant URI by which this entity is known.
+ * [➞code](entityReference__code.md) - The namespace and name by which this entity is known within the context of the service implementation
+ * [➞description](entityReference__description.md) - A description or definition of the referenced entity determined by the service
+ * [➞designation](entityReference__designation.md) - The preferred label for the entity in the context of the service
+ * [➞href](entityReference__href.md) - A reference to the "official" description of the entity in the context of the defining code system
+ * [➞see_also](entityReference__see_also.md) - Additional external links that serve to define or otherwise clarify the intent of the reference
 
 ### Types
 
@@ -54,7 +45,6 @@ Manchester OWL, or SNOMED CT Compositional Grammar.
 #### Built in
 
  * **Bool**
- * **Curie**
  * **ElementIdentifier**
  * **NCName**
  * **NodeIdentifier**
@@ -69,7 +59,6 @@ Manchester OWL, or SNOMED CT Compositional Grammar.
 
 #### Defined
 
- * [CURIE](types/CURIE.md)  (**Curie**) 
  * [ChangeSetURI](types/ChangeSetURI.md)  ([PersistentURI](types/PersistentURI.md))  - The unique identifier of a set of change instructions that can potentially transform the contents of a TCCM
  * [CodeSystemName](types/CodeSystemName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a CodeSystem.
  * [CodeSystemVersionName](types/CodeSystemVersionName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a CodeSystemVersion.
@@ -79,16 +68,14 @@ Manchester OWL, or SNOMED CT Compositional Grammar.
  * [DocumentURI](types/DocumentURI.md)  ([PersistentURI](types/PersistentURI.md))  - A reference to a “work” in the bibliographic sense. It is not necessary that a Document URI be directly or
  * [ExternalURI](types/ExternalURI.md)  ([PersistentURI](types/PersistentURI.md))  - A URI that names a unique resource. CTS2 implementations should never assume that ExternalURI is resolvable
  * [LocalIdentifier](types/LocalIdentifier.md)  ([String](types/String.md))  - An identifier that uniquely references a class, individual, property, or other resource within the context of a
- * [LocalURI](types/LocalURI.md)  ([URIorCurie](types/URIorCurie.md))  - A URI or handle whose scope is local to the implementing service. LocalURI cannot be used as a permanent
+ * [LocalURI](types/LocalURI.md)  (**URIorCURIE**)  - A URI or handle whose scope is local to the implementing service. LocalURI cannot be used as a permanent
  * [MapName](types/MapName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a Map.
  * [MapVersionName](types/MapVersionName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a MapVersion.
  * [NamespaceIdentifier](types/NamespaceIdentifier.md)  (**NCName**)  - An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)
  * [NaturalNumber](types/NaturalNumber.md)  (**int**)  - A non-negative integer (N). NatrualNumber is used exclusively for representing quantities.
- * [PersistentURI](types/PersistentURI.md)  ([URIorCurie](types/URIorCurie.md))  - A Universal Resource Identifier (URI) that persists across service instances. PersistentURIs have enduring
+ * [PersistentURI](types/PersistentURI.md)  (**URIorCURIE**)  - A Universal Resource Identifier (URI) that persists across service instances. PersistentURIs have enduring
  * [RenderingURI](types/RenderingURI.md)  ([LocalURI](types/LocalURI.md))  - A URI or handle that is directly readable by a specific instance of a TCCM service implementation. RenderingURI
  * [ServiceURI](types/ServiceURI.md)  ([LocalURI](types/LocalURI.md))  - The URI or CURIE of a service implementation
- * [URI](types/URI.md)  (**URI**)  - A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
- * [URIorCurie](types/URIorCurie.md)  (**URIorCURIE**)  - a URI or a CURIE
  * [ValueSetName](types/ValueSetName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a ValueSet.
  * [VersionTagName](types/VersionTagName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a VersionTag.
  * [Boolean](types/Boolean.md)  (**Bool**)  - A binary (true or false) value

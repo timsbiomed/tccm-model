@@ -1,10 +1,10 @@
 
-# Type: URIorCurie
+# Type: uriorcurie
 
 
 a URI or a CURIE
 
-URI: [tccm:URIorCurie](https://hotecosystem.org/tccm/URIorCurie)
+URI: [metatype:Uriorcurie](https://w3id.org/biolink/biolinkml/meta/types/Uriorcurie)
 
 |  |  |  |
 | --- | --- | --- |

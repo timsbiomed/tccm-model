@@ -6,26 +6,25 @@ An EntityReference that serves the role of predicate. Note that this varies slig
 NameAndMeaningReference because the name attribute is a namespace/name combination rather than a simple name
 scoped exclusively by the domain.
 
-URI: [https://hotecosystem.org/tccm/filtersandsorting/PredicateReference](https://hotecosystem.org/tccm/filtersandsorting/PredicateReference)
+URI: [https://hotecosystem.org/tccm/sorting/PredicateReference](https://hotecosystem.org/tccm/sorting/PredicateReference)
 
 
 ![img](images/PredicateReference.svg)
 
 ## Referenced by class
 
- *  **[SortCriterion](SortCriterion.md)** *[SortCriterion➞sortElement](SortCriterion_sortElement.md)*  <sub>REQ</sub>  **[PredicateReference](PredicateReference.md)**
- *  **None** *[sortElement](sortElement.md)*  <sub>REQ</sub>  **[PredicateReference](PredicateReference.md)**
+ *  **None** *[➞sortElement](sortCriterion__sortElement.md)*  <sub>REQ</sub>  **[PredicateReference](PredicateReference.md)**
 
 ## Attributes
 
 
 ### Own
 
- * [PredicateReference➞designation](PredicateReference_designation.md)  <sub>OPT</sub>
+ * [➞designation](predicateReference__designation.md)  <sub>OPT</sub>
     * range: [String](types/String.md)
- * [PredicateReference➞href](PredicateReference_href.md)  <sub>OPT</sub>
+ * [➞href](predicateReference__href.md)  <sub>OPT</sub>
     * range: [RenderingURI](types/RenderingURI.md)
- * [PredicateReference➞name](PredicateReference_name.md)  <sub>REQ</sub>
-    * range: [CURIE](types/CURIE.md)
- * [PredicateReference➞uri](PredicateReference_uri.md)  <sub>REQ</sub>
+ * [➞name](predicateReference__name.md)  <sub>OPT</sub>
+    * range: [LocalIdentifier](types/LocalIdentifier.md)
+ * [➞uri](predicateReference__uri.md)  <sub>REQ</sub>
     * range: [ExternalURI](types/ExternalURI.md)

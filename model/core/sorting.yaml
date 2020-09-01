@@ -20,7 +20,7 @@ classes:
     description: |-
       An ordered list of sort criterion. The first entry in the list identifies the primary sort order, the second
       entry the sub sort order, etc.
-    slot_usage:
+    attributes:
       entry:
         description: a rule for sorting
         multivalued: true
@@ -30,7 +30,7 @@ classes:
   SortCriterion:
     description: |-
       The particular attribute, property, or special element to be sorted along with the sort direction.
-    slot_usage:
+    attributes:
       sortElement:
         description: The type and name of the attribute, property, or special element to be sorted.
         range: PredicateReference

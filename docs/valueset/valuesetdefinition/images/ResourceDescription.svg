@@ -49,7 +49,7 @@
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='231' y='-252.3'>ResourceDescription</text>
 <polyline fill='none' points='102.5,-248.5 359.5,-248.5 ' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='231' y='-237.3'>resourceSynopsis:string ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='231' y='-222.3'>resourceID(pk):LocalIdentifier</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='231' y='-222.3'>id(pk):LocalIdentifier</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='231' y='-207.3'>about:ExternalURI</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='231' y='-192.3'>formalName:string ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='231' y='-177.3'>keyword:string *</text>

@@ -20,7 +20,6 @@ Terminology Core Common Model Value Sets
 #### Built in
 
  * **Bool**
- * **Curie**
  * **ElementIdentifier**
  * **NCName**
  * **NodeIdentifier**
@@ -43,7 +42,6 @@ Terminology Core Common Model Value Sets
  * [CODESYSTEMVERSION](types/CODESYSTEMVERSION.md)  ([ValueSet](types/ValueSet.md))  - A collection of metadata about content and distribution format of a particular version or release of a code system.
  * [CONCEPTDOMAIN](types/CONCEPTDOMAIN.md)  ([ValueSet](types/ValueSet.md))  - The description of the conceptual domain of a field in a message, column in a database, field on a form, etc.
  * [CONTEXT](types/CONTEXT.md)  ([ValueSet](types/ValueSet.md))  - External and environmental factors that serve to discriminate among multiple possible selections. While it is
- * [CURIE](types/CURIE.md)  (**Curie**) 
  * [DESIGNATIONFIDELITY](types/DESIGNATIONFIDELITY.md)  ([ValueSet](types/ValueSet.md))  - Identifies how well a particular designation represents the intended meaning of the referenced entity. TCCM
  * [DESIGNATIONTYPE](types/DESIGNATIONTYPE.md)  ([ValueSet](types/ValueSet.md))  - The particular form or type of a given designation: can be “short name,” “long name,” “abbreviation,” “eponym.”
  * [DateAndTime](types/DateAndTime.md)  (**XSDDateTime**)  - Represents an “Instant” as defined in the OWL Time Specification . Implementations must be able to support
@@ -73,12 +71,10 @@ Terminology Core Common Model Value Sets
  * [SOURCE](types/SOURCE.md)  ([ValueSet](types/ValueSet.md))  - An individual, organization, or bibliographic reference.
  * [STATEMENT](types/STATEMENT.md)  ([ValueSet](types/ValueSet.md))  - An atomic assertion about a CTS2 resource.
  * [STATUS](types/STATUS.md)  ([ValueSet](types/ValueSet.md))  - The state of a resource or other entry in an external workflow.
- * [URI](types/URI.md)  (**URI**)  - A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
- * [URIorCurie](types/URIorCurie.md)  (**URIorCURIE**)  - a URI or a CURIE
  * [VALUESET](types/VALUESET.md)  ([ValueSet](types/ValueSet.md))  - A set of entity references.
  * [VALUESETDEFINITION](types/VALUESETDEFINITION.md)  ([ValueSet](types/ValueSet.md))  - A set of rules that can be applied to specified versions or one or more code systems to yield a set of entity
  * [VERSIONTAG](types/VERSIONTAG.md)  ([ValueSet](types/ValueSet.md))  - An identifier that can be assigned to resource versions by a service implementation to identify their state
- * [ValueSet](types/ValueSet.md)  ([URIorCurie](types/URIorCurie.md))  - A URI that can be indirectly resolved to a set of entity descriptions
+ * [ValueSet](types/ValueSet.md)  (**URIorCURIE**)  - A URI that can be indirectly resolved to a set of entity descriptions
  * [Boolean](types/Boolean.md)  (**Bool**)  - A binary (true or false) value
  * [Date](types/Date.md)  (**XSDDate**)  - a date (year, month and day) in an idealized calendar
  * [Datetime](types/Datetime.md)  (**XSDDateTime**)  - The combination of a date and time

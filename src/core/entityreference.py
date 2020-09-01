@@ -1,5 +1,5 @@
 # Auto generated from entityreference.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-27 15:27
+# Generation date: 2020-08-31 11:37
 # Schema: entityreference
 #
 # id: https://hotecosystem.org/tccm/entityreference
@@ -126,56 +126,29 @@ class EntityReference(YAMLRoot):
 class slots:
     pass
 
-slots.namespaceURI = Slot(uri=TCCM.namespaceURI, name="namespaceURI", curie=TCCM.curie('namespaceURI'),
-                      model_uri=TCCM.namespaceURI, domain=None, range=URIRef)
+slots.entityReferenceList__namespaceURI = Slot(uri=TCCM.namespaceURI, name="entityReferenceList__namespaceURI", curie=TCCM.curie('namespaceURI'),
+                      model_uri=TCCM.entityReferenceList__namespaceURI, domain=None, range=URIRef)
 
-slots.namespaceName = Slot(uri=TCCM.namespaceName, name="namespaceName", curie=TCCM.curie('namespaceName'),
-                      model_uri=TCCM.namespaceName, domain=None, range=Optional[Union[str, CodeSystemName]])
+slots.entityReferenceList__namespaceName = Slot(uri=TCCM.namespaceName, name="entityReferenceList__namespaceName", curie=TCCM.curie('namespaceName'),
+                      model_uri=TCCM.entityReferenceList__namespaceName, domain=None, range=Optional[Union[str, CodeSystemName]])
 
-slots.entities = Slot(uri=TCCM.entities, name="entities", curie=TCCM.curie('entities'),
-                      model_uri=TCCM.entities, domain=None, range=Dict[Union[str, EntityReferenceCode], Union[dict, EntityReference]])
+slots.entityReferenceList__entities = Slot(uri=TCCM.entities, name="entityReferenceList__entities", curie=TCCM.curie('entities'),
+                      model_uri=TCCM.entityReferenceList__entities, domain=None, range=Dict[Union[str, EntityReferenceCode], Union[dict, EntityReference]])
 
-slots.about = Slot(uri=TCCM.about, name="about", curie=TCCM.curie('about'),
-                      model_uri=TCCM.about, domain=None, range=Optional[URIorCURIE])
+slots.entityReference__about = Slot(uri=TCCM.about, name="entityReference__about", curie=TCCM.curie('about'),
+                      model_uri=TCCM.entityReference__about, domain=None, range=Optional[URIorCURIE])
 
-slots.code = Slot(uri=RDF.id, name="code", curie=RDF.curie('id'),
-                      model_uri=TCCM.code, domain=None, range=URIRef)
+slots.entityReference__code = Slot(uri=RDF.id, name="entityReference__code", curie=RDF.curie('id'),
+                      model_uri=TCCM.entityReference__code, domain=None, range=URIRef)
 
-slots.designation = Slot(uri=SKOS.prefLabel, name="designation", curie=SKOS.curie('prefLabel'),
-                      model_uri=TCCM.designation, domain=None, range=Optional[str])
+slots.entityReference__designation = Slot(uri=SKOS.prefLabel, name="entityReference__designation", curie=SKOS.curie('prefLabel'),
+                      model_uri=TCCM.entityReference__designation, domain=None, range=Optional[str])
 
-slots.description = Slot(uri=SKOS.definition, name="description", curie=SKOS.curie('definition'),
-                      model_uri=TCCM.description, domain=None, range=Optional[str])
+slots.entityReference__description = Slot(uri=SKOS.definition, name="entityReference__description", curie=SKOS.curie('definition'),
+                      model_uri=TCCM.entityReference__description, domain=None, range=Optional[str])
 
-slots.href = Slot(uri=TCCM.href, name="href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
+slots.entityReference__href = Slot(uri=TCCM.href, name="entityReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.entityReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.see_also = Slot(uri=TCCM.see_also, name="see_also", curie=TCCM.curie('see_also'),
-                      model_uri=TCCM.see_also, domain=None, range=List[Union[URIorCURIE, RenderingURI]])
-
-slots.EntityReferenceList_namespaceURI = Slot(uri=TCCM.namespaceURI, name="EntityReferenceList_namespaceURI", curie=TCCM.curie('namespaceURI'),
-                      model_uri=TCCM.EntityReferenceList_namespaceURI, domain=EntityReferenceList, range=Union[URIorCURIE, EntityReferenceListNamespaceURI])
-
-slots.EntityReferenceList_namespaceName = Slot(uri=TCCM.namespaceName, name="EntityReferenceList_namespaceName", curie=TCCM.curie('namespaceName'),
-                      model_uri=TCCM.EntityReferenceList_namespaceName, domain=EntityReferenceList, range=Optional[Union[str, CodeSystemName]])
-
-slots.EntityReferenceList_entities = Slot(uri=TCCM.entities, name="EntityReferenceList_entities", curie=TCCM.curie('entities'),
-                      model_uri=TCCM.EntityReferenceList_entities, domain=EntityReferenceList, range=Dict[Union[str, EntityReferenceCode], Union[dict, "EntityReference"]])
-
-slots.EntityReference_about = Slot(uri=TCCM.about, name="EntityReference_about", curie=TCCM.curie('about'),
-                      model_uri=TCCM.EntityReference_about, domain=EntityReference, range=Optional[URIorCURIE])
-
-slots.EntityReference_code = Slot(uri=RDF.id, name="EntityReference_code", curie=RDF.curie('id'),
-                      model_uri=TCCM.EntityReference_code, domain=EntityReference, range=Union[str, EntityReferenceCode])
-
-slots.EntityReference_designation = Slot(uri=SKOS.prefLabel, name="EntityReference_designation", curie=SKOS.curie('prefLabel'),
-                      model_uri=TCCM.EntityReference_designation, domain=EntityReference, range=Optional[str])
-
-slots.EntityReference_description = Slot(uri=SKOS.definition, name="EntityReference_description", curie=SKOS.curie('definition'),
-                      model_uri=TCCM.EntityReference_description, domain=EntityReference, range=Optional[str])
-
-slots.EntityReference_href = Slot(uri=TCCM.href, name="EntityReference_href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.EntityReference_href, domain=EntityReference, range=Optional[Union[URIorCURIE, RenderingURI]])
-
-slots.EntityReference_see_also = Slot(uri=TCCM.see_also, name="EntityReference_see_also", curie=TCCM.curie('see_also'),
-                      model_uri=TCCM.EntityReference_see_also, domain=EntityReference, range=List[Union[URIorCURIE, RenderingURI]])
+slots.entityReference__see_also = Slot(uri=TCCM.see_also, name="entityReference__see_also", curie=TCCM.curie('see_also'),
+                      model_uri=TCCM.entityReference__see_also, domain=None, range=List[Union[URIorCURIE, RenderingURI]])

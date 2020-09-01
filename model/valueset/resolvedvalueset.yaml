@@ -17,18 +17,21 @@ prefixes:
 default_prefix: tccm
 default_range: string
 
+imports:
+  - valuesetdefinition
+
 classes:
   ResolvedValueSetHeader:
     description: The information required to completely resolve a value set definition.
-    slot_usage:
+    attributes:
       resolutionOf:
         description: The specific value set definition that was resolved
         range: ValueSetDefinitionReference
-        optional: true
+        required: true
       resolvedUsingCodeSystem:
         description: A reference to a code system version that was used in the resolution of this value set definition.
         range: CodeSystemVersionReference
-        mutivalued: true
+        multivalued: true
       includesResolvedValueSet:
         description: |-
           If the value set includes other value sets, this contains the resolution information used to resolve the
@@ -37,6 +40,6 @@ classes:
         multivalued: true
 
   ResolvedValueSet:
-    slot_usage:
+    attributes:
       header:
         range: ResolvedValueSetHeader

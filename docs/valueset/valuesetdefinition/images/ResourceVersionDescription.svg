@@ -50,7 +50,7 @@
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-267.3'>officialReleaseDate:DateAndTime ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-252.3'>officialActivationDate:DateAndTime ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-237.3'>resourceSynopsis(i):string ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-222.3'>resourceID(pk)(i):LocalIdentifier</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-222.3'>id(pk)(i):LocalIdentifier</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-207.3'>about(i):ExternalURI</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-192.3'>formalName(i):string ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-177.3'>keyword(i):string *</text>

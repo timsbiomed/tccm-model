@@ -32,47 +32,49 @@
 <g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(4 194)'><title>structs</title><g class='node' id='node1'><title>PredicateReference</title>
 <polygon fill='white' points='0,-153 0,-189 134,-189 134,-153 0,-153' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='67' y='-167.3'>PredicateReference</text>
-</g><g class='node' id='node6'><title>AssociatedEntitiesReference</title>
-<polygon fill='white' points='260,-1 260,-61 444,-61 444,-1 260,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='352' y='-49.8'>AssociatedEntitiesReference</text>
-<polyline fill='none' points='260,-46 444,-46 ' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='352' y='-34.8'>objectToSubject:boolean ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='352' y='-19.8'>transitiveClosure:boolean ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='352' y='-4.8'>leafOnly:boolean ?</text>
+</g><g class='node' id='node5'><title>AssociatedEntitiesReference</title>
+<polygon fill='white' points='291,-1 291,-61 475,-61 475,-1 291,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='383' y='-49.8'>AssociatedEntitiesReference</text>
+<polyline fill='none' points='291,-46 475,-46 ' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='383' y='-34.8'>objectToSubject:boolean ?</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='383' y='-19.8'>transitiveClosure:boolean ?</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='383' y='-4.8'>leafOnly:boolean ?</text>
 </g><g class='edge' id='edge1'><title>PredicateReference-&gt;AssociatedEntitiesReference</title>
-<path d='M111.233,-148.582C156.547,-126.64 227.702,-92.1866 280.926,-66.4149' fill='none' stroke='black'/>
-<polygon fill='black' points='102.232,-152.94 109.272,-144.532 106.733,-150.761 111.233,-148.582 111.233,-148.582 111.233,-148.582 106.733,-150.761 113.194,-152.632 102.232,-152.94 102.232,-152.94' stroke='black'/>
-<polygon fill='black' points='281.195,-66.2846 284.852,-60.0696 291.995,-61.0549 288.338,-67.2699 281.195,-66.2846' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='122.129' y='-147.206'>predicate 1..1</text>
-</g><g class='node' id='node2'><title>FormalDefinition</title>
-<polygon fill='white' points='152,-153 152,-189 276,-189 276,-153 152,-153' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='214' y='-167.3'>FormalDefinition</text>
-</g><g class='edge' id='edge5'><title>FormalDefinition-&gt;AssociatedEntitiesReference</title>
-<path d='M238.394,-145.606C261.957,-122.043 297.667,-86.3332 322.746,-61.2537' fill='none' stroke='black'/>
-<polygon fill='none' points='235.795,-143.255 231.199,-152.801 240.745,-148.205 235.795,-143.255' stroke='black'/>
-</g><g class='node' id='node3'><title>EntityReference</title>
-<polygon fill='white' points='294,-153 294,-189 410,-189 410,-153 294,-153' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='352' y='-167.3'>EntityReference</text>
+<path d='M115.375,-148.874C165.884,-126.816 245.868,-91.8866 305.256,-65.9514' fill='none' stroke='black'/>
+<polygon fill='black' points='106.065,-152.94 113.428,-144.814 110.647,-150.939 115.229,-148.938 115.229,-148.938 115.229,-148.938 110.647,-150.939 117.03,-153.062 106.065,-152.94 106.065,-152.94' stroke='black'/>
+<polygon fill='black' points='305.471,-65.8574 309.369,-59.7905 316.469,-61.0549 312.571,-67.1218 305.471,-65.8574' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='126.025' y='-147.987'>predicate 1..1</text>
+</g><g class='node' id='node2'><title>EntityReference</title>
+<polygon fill='white' points='152,-153 152,-189 268,-189 268,-153 152,-153' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='210' y='-167.3'>EntityReference</text>
 </g><g class='edge' id='edge4'><title>EntityReference-&gt;AssociatedEntitiesReference</title>
-<path d='M352,-142.798C352,-123.044 352,-95.9545 352,-73.5066' fill='none' stroke='black'/>
-<polygon fill='black' points='352,-152.801 347.5,-142.801 352,-147.801 352,-142.801 352,-142.801 352,-142.801 352,-147.801 356.5,-142.801 352,-152.801 352,-152.801' stroke='black'/>
-<polygon fill='black' points='352,-73.2537 348,-67.2538 352,-61.2537 356,-67.2537 352,-73.2537' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='358.84' y='-130.307'>referencedEntity 1..1</text>
-</g><g class='node' id='node4'><title>CodeSystemVersionReference</title>
-<polygon fill='white' points='427.5,-153 427.5,-189 622.5,-189 622.5,-153 427.5,-153' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='525' y='-167.3'>CodeSystemVersionReference</text>
+<path d='M239.437,-146.518C266.072,-125.272 305.74,-93.6296 336.633,-68.9867' fill='none' stroke='black'/>
+<polygon fill='black' points='231.561,-152.801 236.572,-143.047 235.47,-149.683 239.378,-146.565 239.378,-146.565 239.378,-146.565 235.47,-149.683 242.184,-150.083 231.561,-152.801 231.561,-152.801' stroke='black'/>
+<polygon fill='black' points='336.946,-68.7369 339.142,-61.8683 346.327,-61.2537 344.131,-68.1223 336.946,-68.7369' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='250.518' y='-142.729'>referencedEntity 1..1</text>
+</g><g class='node' id='node3'><title>CodeSystemVersionReference</title>
+<polygon fill='white' points='285.5,-153 285.5,-189 480.5,-189 480.5,-153 285.5,-153' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='383' y='-167.3'>CodeSystemVersionReference</text>
 </g><g class='edge' id='edge2'><title>CodeSystemVersionReference-&gt;AssociatedEntitiesReference</title>
-<path d='M495.563,-146.518C468.928,-125.272 429.26,-93.6296 398.367,-68.9867' fill='none' stroke='black'/>
-<polygon fill='black' points='503.439,-152.801 492.816,-150.083 499.53,-149.683 495.622,-146.565 495.622,-146.565 495.622,-146.565 499.53,-149.683 498.428,-143.047 503.439,-152.801 503.439,-152.801' stroke='black'/>
-<polygon fill='black' points='398.054,-68.7369 390.869,-68.1223 388.673,-61.2537 395.858,-61.8683 398.054,-68.7369' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='493.013' y='-132.034'>codeSystemVersion 0..1</text>
-</g><g class='node' id='node5'><title>CodeSystemReference</title>
-<polygon fill='white' points='641,-153 641,-189 793,-189 793,-153 641,-153' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='717' y='-167.3'>CodeSystemReference</text>
+<path d='M383,-142.798C383,-123.044 383,-95.9545 383,-73.5066' fill='none' stroke='black'/>
+<polygon fill='black' points='383,-152.801 378.5,-142.801 383,-147.801 383,-142.801 383,-142.801 383,-142.801 383,-147.801 387.5,-142.801 383,-152.801 383,-152.801' stroke='black'/>
+<polygon fill='black' points='383,-73.2537 379,-67.2538 383,-61.2537 387,-67.2537 383,-73.2537' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='389.84' y='-130.307'>codeSystemVersion 0..1</text>
+</g><g class='node' id='node4'><title>CodeSystemReference</title>
+<polygon fill='white' points='499,-153 499,-189 651,-189 651,-153 499,-153' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='575' y='-167.3'>CodeSystemReference</text>
 </g><g class='edge' id='edge3'><title>CodeSystemReference-&gt;AssociatedEntitiesReference</title>
-<path d='M662.277,-149.31C603.544,-127.104 509.372,-91.4997 440.164,-65.3332' fill='none' stroke='black'/>
-<polygon fill='black' points='671.878,-152.94 660.933,-153.613 667.201,-151.172 662.524,-149.404 662.524,-149.404 662.524,-149.404 667.201,-151.172 664.115,-145.194 671.878,-152.94 671.878,-152.94' stroke='black'/>
-<polygon fill='black' points='440.073,-65.2987 433.046,-66.9183 428.848,-61.0549 435.875,-59.4353 440.073,-65.2987' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='656.718' y='-136.195'>codeSystem 1..1</text>
+<path d='M542.749,-146.82C512.945,-125.398 468.181,-93.2241 433.615,-68.3795' fill='none' stroke='black'/>
+<polygon fill='black' points='551.071,-152.801 540.325,-150.619 547.011,-149.883 542.951,-146.965 542.951,-146.965 542.951,-146.965 547.011,-149.883 545.577,-143.311 551.071,-152.801 551.071,-152.801' stroke='black'/>
+<polygon fill='black' points='433.445,-68.2574 426.238,-68.0036 423.701,-61.2537 430.907,-61.5075 433.445,-68.2574' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='539.803' y='-132.578'>codeSystem 1..1</text>
+</g><g class='node' id='node6'><title>FormalDefinition</title>
+<polygon fill='white' points='669,-153 669,-189 793,-189 793,-153 669,-153' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='731' y='-167.3'>FormalDefinition</text>
+</g><g class='edge' id='edge5'><title>FormalDefinition-&gt;AssociatedEntitiesReference</title>
+<path d='M676.619,-148.435C620.105,-126.024 530.965,-90.6757 465.716,-64.801' fill='none' stroke='black'/>
+<polygon fill='black' points='676.824,-148.517 683.876,-147.01 687.979,-152.94 680.927,-154.447 676.824,-148.517' stroke='black'/>
+<polygon fill='black' points='456.269,-61.0549 467.223,-60.5581 460.917,-62.898 465.565,-64.7412 465.565,-64.7412 465.565,-64.7412 460.917,-62.898 463.906,-68.9243 456.269,-61.0549 456.269,-61.0549' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='471.218' y='-70.6414'> entityquery 0..1</text>
 </g></g>
 <text style='fill: lightslategray; font-size: 6pt; font-family: Verdana' x='704' y='218'>CREATED WITH YUML</text></svg>

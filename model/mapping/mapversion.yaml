@@ -1,0 +1,26 @@
+id: https://hotecosystem.org/tccm/mapversion
+name: mapversion
+title: Map Version Definition
+license: https://creativecommons.org/publicdomain/zero/1.0/
+description: |-
+  `MapVersion` contains information about a specific version of a Map, including release information, the particular
+  format of the release being described, etc. It also provides a link to the actual contents of the particular version
+  if the implementation is available.
+
+prefixes:
+  tccm: https://hotecosystem.org/tccm/
+  biolinkml: https://w3id.org/biolink/biolinkml/
+
+default_prefix: tccm
+
+imports:
+
+
+classes:
+  MapVersion:
+    description: |-
+      A specific version of a Map. MapVersion is bound to specific code system versions and/or value set
+      versions andreferences a set of mapping entries (mapSet) that, if the resource is FINAL, are fixed with respect
+      to this version.
+
+

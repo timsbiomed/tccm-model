@@ -50,7 +50,34 @@
 </g><g class='node' id='node7'><title>RoleReference</title>
 <polygon fill='white' points='984.5,-1 984.5,-37 1093.5,-37 1093.5,-1 984.5,-1' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1039' y='-15.3'>RoleReference</text>
-</g><g class='node' id='node8'><title>ResourceVersionDescription</title>
+</g><g class='node' id='node8'><title>ReasoningAlgorithmReference</title>
+<polygon fill='white' points='1111.5,-1 1111.5,-37 1308.5,-37 1308.5,-1 1111.5,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1210' y='-15.3'>ReasoningAlgorithmReference</text>
+</g><g class='node' id='node9'><title>OntologyTypeReference</title>
+<polygon fill='white' points='1327,-1 1327,-37 1489,-37 1489,-1 1327,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1408' y='-15.3'>OntologyTypeReference</text>
+</g><g class='node' id='node10'><title>OntologyTaskReference</title>
+<polygon fill='white' points='1507.5,-1 1507.5,-37 1668.5,-37 1668.5,-1 1507.5,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1588' y='-15.3'>OntologyTaskReference</text>
+</g><g class='node' id='node11'><title>OntologySyntaxReference</title>
+<polygon fill='white' points='1687,-1 1687,-37 1859,-37 1859,-1 1687,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1773' y='-15.3'>OntologySyntaxReference</text>
+</g><g class='node' id='node12'><title>OntologyLanguageReference</title>
+<polygon fill='white' points='1877,-1 1877,-37 2065,-37 2065,-1 1877,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1971' y='-15.3'>OntologyLanguageReference</text>
+</g><g class='node' id='node13'><title>OntologyEngineeringToolReference</title>
+<polygon fill='white' points='2083,-1 2083,-37 2309,-37 2309,-1 2083,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='2196' y='-15.3'>OntologyEngineeringToolReference</text>
+</g><g class='node' id='node14'><title>OntologyEngineeringMethodologyReference</title>
+<polygon fill='white' points='2327,-1 2327,-37 2601,-37 2601,-1 2327,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='2464' y='-15.3'>OntologyEngineeringMethodologyReference</text>
+</g><g class='node' id='node15'><title>OntologyDomainReference</title>
+<polygon fill='white' points='2619.5,-1 2619.5,-37 2798.5,-37 2798.5,-1 2619.5,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='2709' y='-15.3'>OntologyDomainReference</text>
+</g><g class='node' id='node16'><title>NamespaceReference</title>
+<polygon fill='white' points='2817,-1 2817,-37 2963,-37 2963,-1 2817,-1' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='2890' y='-15.3'>NamespaceReference</text>
+</g><g class='node' id='node17'><title>ResourceVersionDescription</title>
 <polygon fill='white' points='3067.5,-295 3067.5,-331 3252.5,-331 3252.5,-295 3067.5,-295' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='3160' y='-309.3'>ResourceVersionDescription</text>
 </g><g class='node' id='node18'><title>NameAndMeaningReference</title>
@@ -66,33 +93,6 @@
 <polygon fill='black' points='3160,-282.797 3164,-288.797 3160,-294.797 3156,-288.797 3160,-282.797' stroke='black'/>
 <polygon fill='black' points='3160,-203.598 3164.5,-213.598 3160,-208.598 3160,-213.598 3160,-213.598 3160,-213.598 3160,-208.598 3155.5,-213.598 3160,-203.598 3160,-203.598' stroke='black'/>
 <text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='3153.16' y='-218.692'> predecessor 0..1</text>
-</g><g class='node' id='node9'><title>ReasoningAlgorithmReference</title>
-<polygon fill='white' points='1111.5,-1 1111.5,-37 1308.5,-37 1308.5,-1 1111.5,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1210' y='-15.3'>ReasoningAlgorithmReference</text>
-</g><g class='node' id='node10'><title>OntologyTypeReference</title>
-<polygon fill='white' points='1327,-1 1327,-37 1489,-37 1489,-1 1327,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1408' y='-15.3'>OntologyTypeReference</text>
-</g><g class='node' id='node11'><title>OntologyTaskReference</title>
-<polygon fill='white' points='1507.5,-1 1507.5,-37 1668.5,-37 1668.5,-1 1507.5,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1588' y='-15.3'>OntologyTaskReference</text>
-</g><g class='node' id='node12'><title>OntologySyntaxReference</title>
-<polygon fill='white' points='1687,-1 1687,-37 1859,-37 1859,-1 1687,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1773' y='-15.3'>OntologySyntaxReference</text>
-</g><g class='node' id='node13'><title>OntologyLanguageReference</title>
-<polygon fill='white' points='1877,-1 1877,-37 2065,-37 2065,-1 1877,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='1971' y='-15.3'>OntologyLanguageReference</text>
-</g><g class='node' id='node14'><title>OntologyEngineeringToolReference</title>
-<polygon fill='white' points='2083,-1 2083,-37 2309,-37 2309,-1 2083,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='2196' y='-15.3'>OntologyEngineeringToolReference</text>
-</g><g class='node' id='node15'><title>OntologyEngineeringMethodologyReference</title>
-<polygon fill='white' points='2327,-1 2327,-37 2601,-37 2601,-1 2327,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='2464' y='-15.3'>OntologyEngineeringMethodologyReference</text>
-</g><g class='node' id='node16'><title>OntologyDomainReference</title>
-<polygon fill='white' points='2619.5,-1 2619.5,-37 2798.5,-37 2798.5,-1 2619.5,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='2709' y='-15.3'>OntologyDomainReference</text>
-</g><g class='node' id='node17'><title>NamespaceReference</title>
-<polygon fill='white' points='2817,-1 2817,-37 2963,-37 2963,-1 2817,-1' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='2890' y='-15.3'>NamespaceReference</text>
 </g><g class='edge' id='edge2'><title>NameAndMeaningReference-&gt;VersionTagReference</title>
 <path d='M3055.65,-163.026C2594.15,-153.923 733.939,-113.195 155,-38 152.254,-37.6433 149.464,-37.2404 146.651,-36.8001' fill='none' stroke='black'/>
 <polygon fill='none' points='3055.89,-166.532 3065.96,-163.229 3056.03,-159.533 3055.89,-166.532' stroke='black'/>

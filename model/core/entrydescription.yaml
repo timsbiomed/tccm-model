@@ -26,7 +26,7 @@ classes:
       The OpaqueData data type must be encoded in such a way that the content can be represented by a character string.
       Binary data is not permitted, although hyperlinks to binary data are.
 
-    slot_usage:
+    attributes:
       format:
         description: The format or encoding for value. This is typically recorded as the URI of a Mime Type
         range: FormatReference

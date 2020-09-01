@@ -47,7 +47,7 @@
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-139.3'>officialReleaseDate:DateAndTime ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-124.3'>officialActivationDate:DateAndTime ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-109.3'>resourceSynopsis(i):string ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-94.3'>resourceID(pk)(i):LocalIdentifier</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-94.3'>id(pk)(i):LocalIdentifier</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-79.3'>about(i):ExternalURI</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-64.3'>formalName(i):string ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='457' y='-49.3'>keyword(i):string *</text>

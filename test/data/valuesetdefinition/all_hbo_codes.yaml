@@ -1,7 +1,7 @@
 resourceID: HPO
 about: http://ontologies.r.us/valueset/allofHPO
 entry:
-- include: !!python/object:valueset.valuesetdefinition.CompleteCodeSystemReference
+- include:
     codeSystem:
       name: HPO
       synopsis: Human Phenotype Ontology

@@ -18,21 +18,6 @@ imports:
   - biolinkml:extensions
   - biolinkml:annotations
 
-slots:
-    resourceSynopsis:
-      description: A textual summary of the resource - what it is, what it is for, etc.
-      range: string
-
-    resourceID:
-      description: |-
-        A local identifier that uniquely names the resource within the context of the describedResourceType and
-        implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a
-        SNOMED-CT code system version.
-      range: LocalIdentifier
-      alias: id
-      key: true
-      required: true
-
 classes:
   ResourceDescription:
     description: |-
@@ -43,10 +28,21 @@ classes:
       - extensible
       - annotatable
     abstract: true
-    slots:
-      - resourceSynopsis
-      - resourceID
-    slot_usage:
+    attributes:
+      resourceSynopsis:
+        description: A textual summary of the resource - what it is, what it is for, etc.
+        range: string
+
+      resourceID:
+        description: |-
+          A local identifier that uniquely names the resource within the context of the describedResourceType and
+          implementing service. As an example, this might be “SCT” for the SNOMED-CT code system, “SCT-2010AA” for a
+          SNOMED-CT code system version.
+        range: LocalIdentifier
+        alias: id
+        key: true
+        required: true
+
       about:
         description: |-
           The (or a) definitive URI that represents the resource being described. Note that this is NOT the URI of the
@@ -57,20 +53,25 @@ classes:
           be “urn:oid:2.16.840. 1.113883.3.26.1.1”
         range: ExternalURI
         required: true
+
       formalName:
         description: The formal or officially assigned name of this resource, if any.
         range: string
+
       keyword:
         description: Additional identifiers that are used to index and locate the resource.
         range: string
         multivalued: true
+
       additionalDocumentation:
         description: A reference to a document that provide additional information about the resource.
         range: PersistentURI
         multivalued: true
+
       rights:
         description: Copyright and IP information. Note that rights applies to the source resource, not the CTS2 rendering.
         range: string
+
       alternateID:
         description: |-
           An alternative identifier that uniquely names this resource in other environments as contexts.
@@ -80,7 +81,7 @@ classes:
 
   SourceAndNotation:
     description: Format and notation that some or all the releases (versions) of this resource are published in
-    slot_usage:
+    attributes:
       sourceAndNotationDescription:
         description: |-
           A textual description of where the specified resource version was derived from. This parameter
@@ -107,7 +108,7 @@ classes:
     is_a: ResourceDescription
     abstract: true
     description: The description of the characteristics of a resource that are independent of the resource content.
-    slot_usage:
+    attributes:
       releaseDocumentation:
         description: Documentation about the frequency and nature of releases (version) of this resource.
         range: string
@@ -123,7 +124,7 @@ classes:
     description: |-
       Information about the source, format, release date, version identifier, etc. of a specific version of an
       abstract resource.
-    slot_usage:
+    attributes:
       documentURI:
         description:
           A URI that identifies the specific version, language, and notation of the about resource. This URI needs to

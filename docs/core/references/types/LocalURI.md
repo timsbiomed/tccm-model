@@ -9,6 +9,4 @@ URI: [tccm:LocalURI](https://hotecosystem.org/tccm/LocalURI)
 
 |  |  |  |
 | --- | --- | --- |
-| Parent type | | [URIorCurie](types/URIorCurie.md) |
 | Root (builtin) type | | **URIorCURIE** |
-| Representation | | str |

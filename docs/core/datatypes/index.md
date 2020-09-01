@@ -21,7 +21,6 @@ Ths module identifies the core data types that are used in the TCCM. The term ‚Ä
 #### Built in
 
  * **Bool**
- * **Curie**
  * **ElementIdentifier**
  * **NCName**
  * **NodeIdentifier**
@@ -36,13 +35,10 @@ Ths module identifies the core data types that are used in the TCCM. The term ‚Ä
 
 #### Defined
 
- * [CURIE](types/CURIE.md)  (**Curie**) 
  * [DateAndTime](types/DateAndTime.md)  (**XSDDateTime**)  - Represents an ‚ÄúInstant‚Äù as defined in the OWL Time Specification . Implementations must be able to support
  * [LocalIdentifier](types/LocalIdentifier.md)  ([String](types/String.md))  - An identifier that uniquely references a class, individual, property, or other resource within the context of a
  * [NamespaceIdentifier](types/NamespaceIdentifier.md)  (**NCName**)  - An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)
  * [NaturalNumber](types/NaturalNumber.md)  (**int**)  - A non-negative integer (N). NatrualNumber is used exclusively for representing quantities.
- * [URI](types/URI.md)  (**URI**)  - A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
- * [URIorCurie](types/URIorCurie.md)  (**URIorCURIE**)  - a URI or a CURIE
  * [Boolean](types/Boolean.md)  (**Bool**)  - A binary (true or false) value
  * [Date](types/Date.md)  (**XSDDate**)  - a date (year, month and day) in an idealized calendar
  * [Datetime](types/Datetime.md)  (**XSDDateTime**)  - The combination of a date and time

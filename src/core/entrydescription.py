@@ -1,5 +1,5 @@
 # Auto generated from entrydescription.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-27 15:27
+# Generation date: 2020-08-31 11:38
 # Schema: entrydescription
 #
 # id: https://hotecosystem.org/tccm/entrydescription
@@ -102,50 +102,50 @@ class EntryDescription(OpaqueData):
 class slots:
     pass
 
-slots.format = Slot(uri=TCCM.format, name="format", curie=TCCM.curie('format'),
-                      model_uri=TCCM.format, domain=None, range=Optional[Union[dict, FormatReference]])
+slots.opaqueData__format = Slot(uri=TCCM.format, name="opaqueData__format", curie=TCCM.curie('format'),
+                      model_uri=TCCM.opaqueData__format, domain=None, range=Optional[Union[dict, FormatReference]])
 
-slots.schema = Slot(uri=TCCM.schema, name="schema", curie=TCCM.curie('schema'),
-                      model_uri=TCCM.schema, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
+slots.opaqueData__schema = Slot(uri=TCCM.schema, name="opaqueData__schema", curie=TCCM.curie('schema'),
+                      model_uri=TCCM.opaqueData__schema, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
 
-slots.language = Slot(uri=TCCM.language, name="language", curie=TCCM.curie('language'),
-                      model_uri=TCCM.language, domain=None, range=Optional[Union[dict, LanguageReference]])
+slots.opaqueData__language = Slot(uri=TCCM.language, name="opaqueData__language", curie=TCCM.curie('language'),
+                      model_uri=TCCM.opaqueData__language, domain=None, range=Optional[Union[dict, LanguageReference]])
 
-slots.value = Slot(uri=TCCM.value, name="value", curie=TCCM.curie('value'),
-                      model_uri=TCCM.value, domain=None, range=str)
+slots.opaqueData__value = Slot(uri=TCCM.value, name="opaqueData__value", curie=TCCM.curie('value'),
+                      model_uri=TCCM.opaqueData__value, domain=None, range=str)
 
-slots.name = Slot(uri=TCCM.name, name="name", curie=TCCM.curie('name'),
-                      model_uri=TCCM.name, domain=None, range=URIRef)
+slots.nameAndMeaningReference__name = Slot(uri=TCCM.name, name="nameAndMeaningReference__name", curie=TCCM.curie('name'),
+                      model_uri=TCCM.nameAndMeaningReference__name, domain=None, range=URIRef)
 
-slots.synopsis = Slot(uri=TCCM.synopsis, name="synopsis", curie=TCCM.curie('synopsis'),
-                      model_uri=TCCM.synopsis, domain=None, range=Optional[str])
+slots.nameAndMeaningReference__synopsis = Slot(uri=TCCM.synopsis, name="nameAndMeaningReference__synopsis", curie=TCCM.curie('synopsis'),
+                      model_uri=TCCM.nameAndMeaningReference__synopsis, domain=None, range=Optional[str])
 
-slots.uri = Slot(uri=TCCM.uri, name="uri", curie=TCCM.curie('uri'),
-                      model_uri=TCCM.uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
+slots.nameAndMeaningReference__uri = Slot(uri=TCCM.uri, name="nameAndMeaningReference__uri", curie=TCCM.curie('uri'),
+                      model_uri=TCCM.nameAndMeaningReference__uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
 
-slots.href = Slot(uri=TCCM.href, name="href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
+slots.nameAndMeaningReference__href = Slot(uri=TCCM.href, name="nameAndMeaningReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
+slots.codeSystemVersionReference__codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystemVersionReference__codeSystem", curie=TCCM.curie('codeSystem'),
+                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
 
-slots.map = Slot(uri=TCCM.map, name="map", curie=TCCM.curie('map'),
-                      model_uri=TCCM.map, domain=None, range=Optional[Union[dict, MapReference]])
+slots.mapVersionReference__map = Slot(uri=TCCM.map, name="mapVersionReference__map", curie=TCCM.curie('map'),
+                      model_uri=TCCM.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])
 
-slots.designation = Slot(uri=TCCM.designation, name="designation", curie=TCCM.curie('designation'),
-                      model_uri=TCCM.designation, domain=None, range=Optional[str])
+slots.predicateReference__uri = Slot(uri=TCCM.uri, name="predicateReference__uri", curie=TCCM.curie('uri'),
+                      model_uri=TCCM.predicateReference__uri, domain=None, range=Union[URIorCURIE, ExternalURI])
 
-slots.role = Slot(uri=TCCM.role, name="role", curie=TCCM.curie('role'),
-                      model_uri=TCCM.role, domain=None, range=Optional[Union[dict, RoleReference]])
+slots.predicateReference__name = Slot(uri=TCCM.name, name="predicateReference__name", curie=TCCM.curie('name'),
+                      model_uri=TCCM.predicateReference__name, domain=None, range=Optional[Union[str, LocalIdentifier]])
 
-slots.OpaqueData_format = Slot(uri=TCCM.format, name="OpaqueData_format", curie=TCCM.curie('format'),
-                      model_uri=TCCM.OpaqueData_format, domain=OpaqueData, range=Optional[Union[dict, FormatReference]])
+slots.predicateReference__href = Slot(uri=TCCM.href, name="predicateReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.predicateReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.OpaqueData_schema = Slot(uri=TCCM.schema, name="OpaqueData_schema", curie=TCCM.curie('schema'),
-                      model_uri=TCCM.OpaqueData_schema, domain=OpaqueData, range=Optional[Union[URIorCURIE, DocumentURI]])
+slots.predicateReference__designation = Slot(uri=TCCM.designation, name="predicateReference__designation", curie=TCCM.curie('designation'),
+                      model_uri=TCCM.predicateReference__designation, domain=None, range=Optional[str])
 
-slots.OpaqueData_language = Slot(uri=TCCM.language, name="OpaqueData_language", curie=TCCM.curie('language'),
-                      model_uri=TCCM.OpaqueData_language, domain=OpaqueData, range=Optional[Union[dict, LanguageReference]])
+slots.sourceAndRoleReference__role = Slot(uri=TCCM.role, name="sourceAndRoleReference__role", curie=TCCM.curie('role'),
+                      model_uri=TCCM.sourceAndRoleReference__role, domain=None, range=Optional[Union[dict, RoleReference]])
 
-slots.OpaqueData_value = Slot(uri=TCCM.value, name="OpaqueData_value", curie=TCCM.curie('value'),
-                      model_uri=TCCM.OpaqueData_value, domain=OpaqueData, range=str)
+slots.sourceAndRoleReference__bibliographicLink = Slot(uri=TCCM.bibliographicLink, name="sourceAndRoleReference__bibliographicLink", curie=TCCM.curie('bibliographicLink'),
+                      model_uri=TCCM.sourceAndRoleReference__bibliographicLink, domain=None, range=Optional[Union[dict, OpaqueData]])

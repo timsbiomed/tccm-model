@@ -13,29 +13,26 @@ URI: [tccm:CompleteValueSetReference](https://hotecosystem.org/tccm/CompleteValu
 
 ![img](images/CompleteValueSetReference.svg)
 
-## Parents
-
- *  is_a: [CompleteValueSet](CompleteValueSet.md)
-
 ## Referenced by class
 
+ *  **None** *[➞valueset](formalDefinition__complete_value_set.md)*  <sub>OPT</sub>  **[CompleteValueSetReference](CompleteValueSetReference.md)**
 
 ## Attributes
 
 
 ### Own
 
- * [CompleteValueSetReference➞referenceCodeSystemVersion](CompleteValueSetReference_referenceCodeSystemVersion.md)  <sub>OPT</sub>
+ * [➞referenceCodeSystemVersion](completeValueSetReference__referenceCodeSystemVersion.md)  <sub>OPT</sub>
     * Description: A reference to a CodeSystemVersion that will be used to resolve this call. referenceCodeSy will only be used
 if one or more components of the resolution of value Set identify a code system without specifying a specific
 version. At most, only one version of a given code system may appear in the referenceCodeSystemVersion list.
 While CTS2 service implementations must resolve resolution calls for definitions that carry unused reference
 Code SystemV entries, they may choose to issue a warning at the time the definition is created or loaded.
     * range: [CodeSystemVersionReference](CodeSystemVersionReference.md)
- * [CompleteValueSetReference➞valueSet](CompleteValueSetReference_valueSet.md)  <sub>REQ</sub>
+ * [➞valueSet](completeValueSetReference__valueSet.md)  <sub>REQ</sub>
     * Description: A reference to the value set whose definition supplies a set of entity references.
     * range: [ValueSetReference](ValueSetReference.md)
- * [CompleteValueSetReference➞valueSetDefinition](CompleteValueSetReference_valueSetDefinition.md)  <sub>OPT</sub>
+ * [➞valueSetDefinition](completeValueSetReference__valueSetDefinition.md)  <sub>OPT</sub>
     * Description: A reference to a particular definition of valueSet that is to be used in resolving this reference. If absent,
 the specific definition is determined by the resolve value set call. If present, valueSetDefinition must be
 a definition of valueSet and will always be used to resolve this entity set.

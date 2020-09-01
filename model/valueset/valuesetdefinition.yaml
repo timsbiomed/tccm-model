@@ -27,62 +27,6 @@ imports:
   - ../core/entrydescription
 
 
-# TODO: Move these to attributes once that gets implemented in biolinkml
-slots:
-  # ValueSetDefinition slots
-  definitionOf:
-    description: A reference to the value set being defined.
-    range: ValueSetReference
-    inlined: true
-  versionTag:
-    description: A version tag assigned to this definition by the implementing service.
-    range: VersionTagReference
-    inlined: true
-    multivalued: true
-  entry:
-    description: A component in a value set definitio
-    range: ValueSetDefinitionEntry
-    inlined: true
-    multivalued: true
-    required: true
-
-  # ValueSetDefinitionEntry slots
-  include:
-    description: Include the resolution of this definition in the valueset
-    range: FormalDefinition
-    inlined: true
-  exclude:
-    description: Exclude the resolution of this definition in the valueset
-    range: FormalDefinition
-    inlined: true
-  intersect:
-    description: Include only the elements that are common between this definition and the valueset to this point
-    range: FormalDefinition
-    inlined: true
-
-  # FormalDefinitionEntry slots
-  associated_entities:
-    alias: entityquery
-    range: AssociatedEntitiesReference
-  property_query:
-    alias: valuequery
-    range: PropertyQueryReference
-  entity_list:
-    alias: entitylist
-    range: SpecificEntityList
-  complete_value_set:
-    alias: valueset
-    range: CompleteValueSetReference
-  complete_code_system:
-    alias: codesystem
-    range: CompleteCodeSystemReference
-  external_value_set_definition:
-    alias: externaldefinition
-    range: ExternalValueSetDefinition
-  value_set_definition:
-    alias: definition
-    range: ValueSetDefinitionEntry
-
 classes:
   ValueSetDefinition:
     is_a: ResourceVersionDescription
@@ -95,10 +39,23 @@ classes:
       and needs of the community. ValueSetDefinition and the supporting model has been designed to allow multiple
       variations on the “binding” of definitions to value sets, code system versions to definitions, and the
       combination to concept domains.
-    slots:
-      - definitionOf
-      - versionTag
-      - entry
+    attributes:
+      definitionOf:
+        description: A reference to the value set being defined.
+        range: ValueSetReference
+        inlined: true
+      versionTag:
+        description: A version tag assigned to this definition by the implementing service.
+        range: VersionTagReference
+        inlined: true
+        multivalued: true
+      entry:
+        description: A component in a value set definitio
+        range: ValueSetDefinitionEntry
+        inlined: true
+        multivalued: true
+        required: true
+
 
 
   ValueSetDefinitionEntry:
@@ -109,23 +66,46 @@ classes:
       Note that only ACTIVE entity references are included. INACTIVE entity references may never be considered for
       inclusion or exclusion in the resolution of a value set definition.
     abstract: true
-    slots:
-      - include
-      - exclude
-      - intersect
+    attributes:
+      include:
+        description: Include the resolution of this definition in the valueset
+        range: FormalDefinition
+        inlined: true
+      exclude:
+        description: Exclude the resolution of this definition in the valueset
+        range: FormalDefinition
+        inlined: true
+      intersect:
+        description: Include only the elements that are common between this definition and the valueset to this point
+        range: FormalDefinition
+        inlined: true
 
 
-        
+
   FormalDefinition:
     description: A value set definition choice
-    slots:
-      - associated_entities
-      - property_query
-      - entity_list
-      - complete_value_set
-      - value_set_definition
-      - complete_code_system
-      - external_value_set_definition
+    attributes:
+      associated_entities:
+        alias: entityquery
+        range: AssociatedEntitiesReference
+      property_query:
+        alias: valuequery
+        range: PropertyQueryReference
+      entity_list:
+        alias: entitylist
+        range: SpecificEntityList
+      complete_value_set:
+        alias: valueset
+        range: CompleteValueSetReference
+      complete_code_system:
+        alias: codesystem
+        range: CompleteCodeSystemReference
+      external_value_set_definition:
+        alias: externaldefinition
+        range: ExternalValueSetDefinition
+      value_set_definition:
+        alias: definition
+        range: ValueSetDefinitionEntry
 
   AssociatedEntitiesReference:
     description: |-
@@ -138,7 +118,7 @@ classes:
 
       Note that the terms “parent” and “children” are asserted in reference to the predicate itself. As an example, in
       the association “arm subClassOf bodyPart,” the “parent” is arm and the “child” is bodyPart.
-    slot_usage:
+    attributes:
       referencedEntity:
         description: |-
           The entity reference that is the root of the association description. referencedEntity is not considered to
@@ -197,7 +177,7 @@ classes:
     description: |-
       A description of a set of entity references that are determined by applying a filter to the attribute(s) or
       property(s) that appear in an EntityDescription in a specified code system.
-    slot_usage:
+    attributes:
       codeSystem:
         description: The code system that contains the assertions that form the attributes or properties to be tested.
         range: CodeSystemReference
@@ -224,7 +204,7 @@ classes:
       system that is imported. Note that targets are not included to prevent codes from rdf, rdfs, owl, etc. being
       included in this resolution set.
     is_a: FormalDefinition
-    slot_usage:
+    attributes:
       codeSystem:
         description: A reference to the code system whose codes are to be included.
         range: CodeSystemReference
@@ -244,7 +224,7 @@ classes:
       resolve value set call, can name both a value set and value set definition, meaning that the specific definition
       is always used in the resolution. It can also specify one or more code system versions to be used in the
       resolution of the named value set.
-    slot_usage:
+    attributes:
       valueSet:
         description: A reference to the value set whose definition supplies a set of entity references.
         range: ValueSetReference

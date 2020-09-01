@@ -3,12 +3,12 @@ name: references
 title: Decorated value set references
 license: https://creativecommons.org/publicdomain/zero/1.0/
 description: |-
-  his diagram identifies all of the value domains that are used within the TCCM service itself. Each reference has a 
-  domain, which frequently isn’t necessary to carry through to PSMs with strong type systems, a name that serves as a 
-  unique permissible value within the context of the domain, a uri that references the intended meaning of name, and an 
-  optional href that, if present, provides a link to a TCCM EntityDescription that provides definitions, descriptions, 
+  his diagram identifies all of the value domains that are used within the TCCM service itself. Each reference has a
+  domain, which frequently isn’t necessary to carry through to PSMs with strong type systems, a name that serves as a
+  unique permissible value within the context of the domain, a uri that references the intended meaning of name, and an
+  optional href that, if present, provides a link to a TCCM EntityDescription that provides definitions, descriptions,
   etc. of the meaning.
-  
+
   The NameAndMeaningReference pattern represents, at the meta-level, one of the key purposes for a TCCM based service
   to establish lists of value domains (identified here by ReferenceType) from which sets of permissible values and
   meanings can be drawn.
@@ -29,6 +29,7 @@ imports:
   - ../core/prefixes
   - ../core/valuesets
   - ../core/uritypes
+  - ../core/entrydescription
 
 
 classes:
@@ -37,7 +38,7 @@ classes:
       A NameAndMeaningReference consists of a local identifier that references a unique meaning within the context of
       a given domain in a TCCM service instance and a globally unique URI that identifies the intended meaning of the
       identifier.
-    slot_usage:
+    attributes:
       name:
         description: An identifier that uniquely names the reference within the context of the particular reference type.
         range: LocalIdentifier
@@ -55,14 +56,14 @@ classes:
     is_a: NameAndMeaningReference
     description: |-
       A name or identifier that uniquely names an association instance in a code system.
-      
+
   BindingQualifierReference:
     is_a: NameAndMeaningReference
     description: |-
       A reference to an entity that describes the role that a given value set binding plays for a concept domain. T
       ypical values represent “overall,” “minimum” or “maximum,” the significance of which can be found in H
       L7 Version 3 documentation.
-      
+
   CaseSignificanceReference:
     is_a: NameAndMeaningReference
     description: |-
@@ -83,7 +84,7 @@ classes:
     is_a: NameAndMeaningReference
     description: |-
       A reference to a specific version of code system and, if known, the code system which it is a version of.
-    slot_usage:
+    attributes:
       codeSystem:
         range: CodeSystemReference
 
@@ -136,7 +137,7 @@ classes:
     is_a: NameAndMeaningReference
     description: |-
       A reference to a map version and the corresponding map, if known.
-    slot_usage:
+    attributes:
       map:
         range: MapReference
 
@@ -196,7 +197,7 @@ classes:
       An EntityReference that serves the role of predicate. Note that this varies slightly from the base class of
       NameAndMeaningReference because the name attribute is a namespace/name combination rather than a simple name
       scoped exclusively by the domain.
-    slot_usage:
+    attributes:
       uri:
         range: ExternalURI
         required: True
@@ -223,11 +224,11 @@ classes:
     description: |-
       A reference to a source that also includes the role that the source played and/or fixes the particular chapter,
       page, or other element within the reference.
-    slot_usage:
+    attributes:
       role:
         range: RoleReference
-#      bibliographicLink:
-#        range: OpaqueData
+      bibliographicLink:
+        range: OpaqueData
 
   SourceReference:
     is_a: NameAndMeaningReference

@@ -9,20 +9,17 @@ URI: [tccm:EntityReferenceList](https://hotecosystem.org/tccm/EntityReferenceLis
 
 ![img](images/EntityReferenceList.svg)
 
-## Referenced by class
-
-
 ## Attributes
 
 
 ### Own
 
- * [EntityReferenceList➞entities](EntityReferenceList_entities.md)  <sub>0..*</sub>
+ * [➞entities](entityReferenceList__entities.md)  <sub>0..*</sub>
     * Description: The entity references ("concept codes") in the list
     * range: [EntityReference](EntityReference.md)
- * [EntityReferenceList➞namespaceName](EntityReferenceList_namespaceName.md)  <sub>OPT</sub>
+ * [➞namespaceName](entityReferenceList__namespaceName.md)  <sub>OPT</sub>
     * Description: The local identifier assigned to this namespace
     * range: [CodeSystemName](types/CodeSystemName.md)
- * [EntityReferenceList➞namespaceURI](EntityReferenceList_namespaceURI.md)  <sub>REQ</sub>
+ * [➞namespaceURI](entityReferenceList__namespaceURI.md)  <sub>REQ</sub>
     * Description: The URI associated with the supplied namespace as determined by the author/service instance
     * range: [ExternalURI](types/ExternalURI.md)

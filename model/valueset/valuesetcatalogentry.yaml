@@ -10,6 +10,11 @@ prefixes:
 default_prefix: tccm
 default_range: string
 
+imports:
+  - ../core/localidentifiers
+  - ../core/references
+  - ../core/resourcedescription
+
 classes:
   ValueSetCatalogEntryOrReference:
     description: Either a description of ana abstract value set or a reference to an official entry
@@ -27,7 +32,7 @@ classes:
       A ValueSetCatalogEntry carries information about the creators, distributors, purpose, use, etc. about a value set.
       The catalog does not carry the actual definition of a value set as (a) this may vary over time and (b) it is
       possible for more than one definition to be in use at any given point in time.
-    slot_usage:
+    attributes:
       valueSetName:
         range: ValueSetName
         required: true
@@ -37,4 +42,4 @@ classes:
       currentDefinition:
         range: ValueSetDefinitionReference
       currentResolution:
-        range: ValueSetResolutionReference
+        range: RenderingURI

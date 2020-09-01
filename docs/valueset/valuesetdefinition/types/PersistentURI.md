@@ -9,6 +9,4 @@ URI: [tccm:PersistentURI](https://hotecosystem.org/tccm/PersistentURI)
 
 |  |  |  |
 | --- | --- | --- |
-| Parent type | | [URIorCurie](types/URIorCurie.md) |
 | Root (builtin) type | | **URIorCURIE** |
-| Representation | | str |

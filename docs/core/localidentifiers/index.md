@@ -26,7 +26,6 @@ Standardized Category Terms” value set.
 #### Built in
 
  * **Bool**
- * **Curie**
  * **ElementIdentifier**
  * **NCName**
  * **NodeIdentifier**
@@ -41,7 +40,6 @@ Standardized Category Terms” value set.
 
 #### Defined
 
- * [CURIE](types/CURIE.md)  (**Curie**) 
  * [CodeSystemName](types/CodeSystemName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a CodeSystem.
  * [CodeSystemVersionName](types/CodeSystemVersionName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a CodeSystemVersion.
  * [ConceptDomainName](types/ConceptDomainName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a ConceptDomain.
@@ -51,8 +49,6 @@ Standardized Category Terms” value set.
  * [MapVersionName](types/MapVersionName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a MapVersion.
  * [NamespaceIdentifier](types/NamespaceIdentifier.md)  (**NCName**)  - An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)
  * [NaturalNumber](types/NaturalNumber.md)  (**int**)  - A non-negative integer (N). NatrualNumber is used exclusively for representing quantities.
- * [URI](types/URI.md)  (**URI**)  - A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
- * [URIorCurie](types/URIorCurie.md)  (**URIorCURIE**)  - a URI or a CURIE
  * [ValueSetName](types/ValueSetName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a ValueSet.
  * [VersionTagName](types/VersionTagName.md)  ([LocalIdentifier](types/LocalIdentifier.md))  - A local identifier for a VersionTag.
  * [Boolean](types/Boolean.md)  (**Bool**)  - A binary (true or false) value

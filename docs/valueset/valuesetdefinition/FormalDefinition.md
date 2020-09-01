@@ -11,23 +11,30 @@ URI: [tccm:FormalDefinition](https://hotecosystem.org/tccm/FormalDefinition)
 
 ## Children
 
- * [AssociatedEntitiesReference](AssociatedEntitiesReference.md) - The description of a set of entities that are associated with a referenced entity. This description names a
  * [CompleteCodeSystemReference](CompleteCodeSystemReference.md) - An entry that, when resolved, returns all of the active entity references in a given code system. This includes
- * [PropertyQueryReference](PropertyQueryReference.md) - A description of a set of entity references that are determined by applying a filter to the attribute(s) or
- * [SpecificEntityList](SpecificEntityList.md) - A list of specific entity references that are to be included in the definition. When specified in this form,
-
-## Mixin for
-
- * [CompleteValueSetDefinition](CompleteValueSetDefinition.md) (mixin)  - An embedded value set definition
 
 ## Referenced by class
 
- *  **[ValueSetDefinitionEntry](ValueSetDefinitionEntry.md)** *[ValueSetDefinitionEntry➞exclude](ValueSetDefinitionEntry_exclude.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
- *  **[ValueSetDefinitionEntry](ValueSetDefinitionEntry.md)** *[ValueSetDefinitionEntry➞include](ValueSetDefinitionEntry_include.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
- *  **[ValueSetDefinitionEntry](ValueSetDefinitionEntry.md)** *[ValueSetDefinitionEntry➞intersect](ValueSetDefinitionEntry_intersect.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
- *  **None** *[exclude](exclude.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
- *  **None** *[include](include.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
- *  **None** *[intersect](intersect.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
+ *  **None** *[➞exclude](valueSetDefinitionEntry__exclude.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
+ *  **None** *[➞include](valueSetDefinitionEntry__include.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
+ *  **None** *[➞intersect](valueSetDefinitionEntry__intersect.md)*  <sub>OPT</sub>  **[FormalDefinition](FormalDefinition.md)**
 
 ## Attributes
 
+
+### Own
+
+ * [➞entityquery](formalDefinition__associated_entities.md)  <sub>OPT</sub>
+    * range: [AssociatedEntitiesReference](AssociatedEntitiesReference.md)
+ * [➞codesystem](formalDefinition__complete_code_system.md)  <sub>OPT</sub>
+    * range: [CompleteCodeSystemReference](CompleteCodeSystemReference.md)
+ * [➞valueset](formalDefinition__complete_value_set.md)  <sub>OPT</sub>
+    * range: [CompleteValueSetReference](CompleteValueSetReference.md)
+ * [➞entitylist](formalDefinition__entity_list.md)  <sub>OPT</sub>
+    * range: [SpecificEntityList](SpecificEntityList.md)
+ * [➞externaldefinition](formalDefinition__external_value_set_definition.md)  <sub>OPT</sub>
+    * range: [ExternalValueSetDefinition](ExternalValueSetDefinition.md)
+ * [➞valuequery](formalDefinition__property_query.md)  <sub>OPT</sub>
+    * range: [PropertyQueryReference](PropertyQueryReference.md)
+ * [➞definition](formalDefinition__value_set_definition.md)  <sub>OPT</sub>
+    * range: [ValueSetDefinitionEntry](ValueSetDefinitionEntry.md)

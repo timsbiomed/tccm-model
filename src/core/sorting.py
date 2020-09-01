@@ -1,5 +1,5 @@
 # Auto generated from sorting.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-27 15:28
+# Generation date: 2020-08-31 11:40
 # Schema: sorting
 #
 # id: https://hotecosystem.org/tccm/sorting
@@ -21,8 +21,9 @@ from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
 from src.core.datatypes import LocalIdentifier
-from src.core.references import CodeSystemReference, CodeSystemReferenceName, MapReference, MapReferenceName, PredicateReference, PredicateReferenceName, RoleReference, RoleReferenceName
-from src.core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
+from src.core.entrydescription import OpaqueData
+from src.core.references import CodeSystemReference, CodeSystemReferenceName, FormatReference, FormatReferenceName, LanguageReference, LanguageReferenceName, MapReference, MapReferenceName, PredicateReference, RoleReference, RoleReferenceName
+from src.core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import Bool, URIorCURIE
 from includes.types import Boolean, String
 
@@ -83,7 +84,7 @@ class SortCriterion(YAMLRoot):
         if self.sortElement is None:
             raise ValueError(f"sortElement must be supplied")
         if not isinstance(self.sortElement, PredicateReference):
-            self.sortElement = PredicateReference(self.sortElement)
+            self.sortElement = PredicateReference(**self.sortElement)
         super().__post_init__(**kwargs)
 
 
@@ -92,44 +93,59 @@ class SortCriterion(YAMLRoot):
 class slots:
     pass
 
-slots.entry = Slot(uri=DEFAULT_.entry, name="entry", curie=DEFAULT_.curie('entry'),
-                      model_uri=DEFAULT_.entry, domain=None, range=List[Union[dict, SortCriterion]])
+slots.sortCriteria__entry = Slot(uri=DEFAULT_.entry, name="sortCriteria__entry", curie=DEFAULT_.curie('entry'),
+                      model_uri=DEFAULT_.sortCriteria__entry, domain=None, range=List[Union[dict, SortCriterion]])
 
-slots.sortElement = Slot(uri=DEFAULT_.sortElement, name="sortElement", curie=DEFAULT_.curie('sortElement'),
-                      model_uri=DEFAULT_.sortElement, domain=None, range=Union[dict, PredicateReference])
+slots.sortCriterion__sortElement = Slot(uri=DEFAULT_.sortElement, name="sortCriterion__sortElement", curie=DEFAULT_.curie('sortElement'),
+                      model_uri=DEFAULT_.sortCriterion__sortElement, domain=None, range=Union[dict, PredicateReference])
 
-slots.sortDescending = Slot(uri=DEFAULT_.sortDescending, name="sortDescending", curie=DEFAULT_.curie('sortDescending'),
-                      model_uri=DEFAULT_.sortDescending, domain=None, range=Optional[Bool])
+slots.sortCriterion__sortDescending = Slot(uri=DEFAULT_.sortDescending, name="sortCriterion__sortDescending", curie=DEFAULT_.curie('sortDescending'),
+                      model_uri=DEFAULT_.sortCriterion__sortDescending, domain=None, range=Optional[Bool])
 
-slots.name = Slot(uri=DEFAULT_.name, name="name", curie=DEFAULT_.curie('name'),
-                      model_uri=DEFAULT_.name, domain=None, range=URIRef)
+slots.nameAndMeaningReference__name = Slot(uri=DEFAULT_.name, name="nameAndMeaningReference__name", curie=DEFAULT_.curie('name'),
+                      model_uri=DEFAULT_.nameAndMeaningReference__name, domain=None, range=URIRef)
 
-slots.synopsis = Slot(uri=DEFAULT_.synopsis, name="synopsis", curie=DEFAULT_.curie('synopsis'),
-                      model_uri=DEFAULT_.synopsis, domain=None, range=Optional[str])
+slots.nameAndMeaningReference__synopsis = Slot(uri=DEFAULT_.synopsis, name="nameAndMeaningReference__synopsis", curie=DEFAULT_.curie('synopsis'),
+                      model_uri=DEFAULT_.nameAndMeaningReference__synopsis, domain=None, range=Optional[str])
 
-slots.uri = Slot(uri=DEFAULT_.uri, name="uri", curie=DEFAULT_.curie('uri'),
-                      model_uri=DEFAULT_.uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
+slots.nameAndMeaningReference__uri = Slot(uri=DEFAULT_.uri, name="nameAndMeaningReference__uri", curie=DEFAULT_.curie('uri'),
+                      model_uri=DEFAULT_.nameAndMeaningReference__uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
 
-slots.href = Slot(uri=DEFAULT_.href, name="href", curie=DEFAULT_.curie('href'),
-                      model_uri=DEFAULT_.href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
+slots.nameAndMeaningReference__href = Slot(uri=DEFAULT_.href, name="nameAndMeaningReference__href", curie=DEFAULT_.curie('href'),
+                      model_uri=DEFAULT_.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.codeSystem = Slot(uri=DEFAULT_.codeSystem, name="codeSystem", curie=DEFAULT_.curie('codeSystem'),
-                      model_uri=DEFAULT_.codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
+slots.codeSystemVersionReference__codeSystem = Slot(uri=DEFAULT_.codeSystem, name="codeSystemVersionReference__codeSystem", curie=DEFAULT_.curie('codeSystem'),
+                      model_uri=DEFAULT_.codeSystemVersionReference__codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
 
-slots.map = Slot(uri=DEFAULT_.map, name="map", curie=DEFAULT_.curie('map'),
-                      model_uri=DEFAULT_.map, domain=None, range=Optional[Union[dict, MapReference]])
+slots.mapVersionReference__map = Slot(uri=DEFAULT_.map, name="mapVersionReference__map", curie=DEFAULT_.curie('map'),
+                      model_uri=DEFAULT_.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])
 
-slots.designation = Slot(uri=DEFAULT_.designation, name="designation", curie=DEFAULT_.curie('designation'),
-                      model_uri=DEFAULT_.designation, domain=None, range=Optional[str])
+slots.predicateReference__uri = Slot(uri=DEFAULT_.uri, name="predicateReference__uri", curie=DEFAULT_.curie('uri'),
+                      model_uri=DEFAULT_.predicateReference__uri, domain=None, range=Union[URIorCURIE, ExternalURI])
 
-slots.role = Slot(uri=DEFAULT_.role, name="role", curie=DEFAULT_.curie('role'),
-                      model_uri=DEFAULT_.role, domain=None, range=Optional[Union[dict, RoleReference]])
+slots.predicateReference__name = Slot(uri=DEFAULT_.name, name="predicateReference__name", curie=DEFAULT_.curie('name'),
+                      model_uri=DEFAULT_.predicateReference__name, domain=None, range=Optional[Union[str, LocalIdentifier]])
 
-slots.SortCriteria_entry = Slot(uri=DEFAULT_.entry, name="SortCriteria_entry", curie=DEFAULT_.curie('entry'),
-                      model_uri=DEFAULT_.SortCriteria_entry, domain=SortCriteria, range=List[Union[dict, "SortCriterion"]])
+slots.predicateReference__href = Slot(uri=DEFAULT_.href, name="predicateReference__href", curie=DEFAULT_.curie('href'),
+                      model_uri=DEFAULT_.predicateReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.SortCriterion_sortElement = Slot(uri=DEFAULT_.sortElement, name="SortCriterion_sortElement", curie=DEFAULT_.curie('sortElement'),
-                      model_uri=DEFAULT_.SortCriterion_sortElement, domain=SortCriterion, range=Union[dict, PredicateReference])
+slots.predicateReference__designation = Slot(uri=DEFAULT_.designation, name="predicateReference__designation", curie=DEFAULT_.curie('designation'),
+                      model_uri=DEFAULT_.predicateReference__designation, domain=None, range=Optional[str])
 
-slots.SortCriterion_sortDescending = Slot(uri=DEFAULT_.sortDescending, name="SortCriterion_sortDescending", curie=DEFAULT_.curie('sortDescending'),
-                      model_uri=DEFAULT_.SortCriterion_sortDescending, domain=SortCriterion, range=Optional[Bool])
+slots.sourceAndRoleReference__role = Slot(uri=DEFAULT_.role, name="sourceAndRoleReference__role", curie=DEFAULT_.curie('role'),
+                      model_uri=DEFAULT_.sourceAndRoleReference__role, domain=None, range=Optional[Union[dict, RoleReference]])
+
+slots.sourceAndRoleReference__bibliographicLink = Slot(uri=DEFAULT_.bibliographicLink, name="sourceAndRoleReference__bibliographicLink", curie=DEFAULT_.curie('bibliographicLink'),
+                      model_uri=DEFAULT_.sourceAndRoleReference__bibliographicLink, domain=None, range=Optional[Union[dict, OpaqueData]])
+
+slots.opaqueData__format = Slot(uri=DEFAULT_.format, name="opaqueData__format", curie=DEFAULT_.curie('format'),
+                      model_uri=DEFAULT_.opaqueData__format, domain=None, range=Optional[Union[dict, FormatReference]])
+
+slots.opaqueData__schema = Slot(uri=DEFAULT_.schema, name="opaqueData__schema", curie=DEFAULT_.curie('schema'),
+                      model_uri=DEFAULT_.opaqueData__schema, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
+
+slots.opaqueData__language = Slot(uri=DEFAULT_.language, name="opaqueData__language", curie=DEFAULT_.curie('language'),
+                      model_uri=DEFAULT_.opaqueData__language, domain=None, range=Optional[Union[dict, LanguageReference]])
+
+slots.opaqueData__value = Slot(uri=DEFAULT_.value, name="opaqueData__value", curie=DEFAULT_.curie('value'),
+                      model_uri=DEFAULT_.opaqueData__value, domain=None, range=str)

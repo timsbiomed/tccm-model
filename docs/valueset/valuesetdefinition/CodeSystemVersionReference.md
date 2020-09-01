@@ -15,30 +15,28 @@ URI: [tccm:CodeSystemVersionReference](https://hotecosystem.org/tccm/CodeSystemV
 
 ## Referenced by class
 
- *  **[AssociatedEntitiesReference](AssociatedEntitiesReference.md)** *[AssociatedEntitiesReference➞codeSystemVersion](AssociatedEntitiesReference_codeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
- *  **[CompleteCodeSystemReference](CompleteCodeSystemReference.md)** *[CompleteCodeSystemReference➞codeSystemVersion](CompleteCodeSystemReference_codeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
- *  **[CompleteValueSetReference](CompleteValueSetReference.md)** *[CompleteValueSetReference➞referenceCodeSystemVersion](CompleteValueSetReference_referenceCodeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
- *  **[PropertyQueryReference](PropertyQueryReference.md)** *[PropertyQueryReference➞codeSystemVersion](PropertyQueryReference_codeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
- *  **None** *[codeSystemVersion](codeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
- *  **None** *[referenceCodeSystemVersion](referenceCodeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
+ *  **None** *[➞codeSystemVersion](associatedEntitiesReference__codeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
+ *  **None** *[➞codeSystemVersion](completeCodeSystemReference__codeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
+ *  **None** *[➞referenceCodeSystemVersion](completeValueSetReference__referenceCodeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
+ *  **None** *[➞codeSystemVersion](propertyQueryReference__codeSystemVersion.md)*  <sub>OPT</sub>  **[CodeSystemVersionReference](CodeSystemVersionReference.md)**
 
 ## Attributes
 
 
 ### Own
 
- * [CodeSystemVersionReference➞codeSystem](CodeSystemVersionReference_codeSystem.md)  <sub>REQ</sub>
+ * [➞codeSystem](codeSystemVersionReference__codeSystem.md)  <sub>OPT</sub>
     * range: [CodeSystemReference](CodeSystemReference.md)
 
 ### Inherited from NameAndMeaningReference:
 
- * [NameAndMeaningReference➞href](NameAndMeaningReference_href.md)  <sub>OPT</sub>
+ * [➞href](nameAndMeaningReference__href.md)  <sub>OPT</sub>
     * range: [RenderingURI](types/RenderingURI.md)
- * [NameAndMeaningReference➞name](NameAndMeaningReference_name.md)  <sub>REQ</sub>
+ * [➞name](nameAndMeaningReference__name.md)  <sub>REQ</sub>
     * Description: An identifier that uniquely names the reference within the context of the particular reference type.
     * range: [LocalIdentifier](types/LocalIdentifier.md)
- * [NameAndMeaningReference➞synopsis](NameAndMeaningReference_synopsis.md)  <sub>OPT</sub>
+ * [➞synopsis](nameAndMeaningReference__synopsis.md)  <sub>OPT</sub>
     * Description: A summary of the role and purpose of the actual reference
     * range: [String](types/String.md)
- * [NameAndMeaningReference➞uri](NameAndMeaningReference_uri.md)  <sub>OPT</sub>
+ * [➞uri](nameAndMeaningReference__uri.md)  <sub>OPT</sub>
     * range: [ExternalURI](types/ExternalURI.md)

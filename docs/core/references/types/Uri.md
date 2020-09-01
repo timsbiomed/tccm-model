@@ -1,11 +1,10 @@
 
-# Type: URI
+# Type: uri
 
 
-A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
-consider implementing this data type using the IRI (RFC3987) specification
+a complete URI
 
-URI: [tccm:URI](https://hotecosystem.org/tccm/URI)
+URI: [metatype:Uri](https://w3id.org/biolink/biolinkml/meta/types/Uri)
 
 |  |  |  |
 | --- | --- | --- |

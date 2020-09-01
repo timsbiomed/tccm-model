@@ -73,14 +73,14 @@ alternative -- mark the containing directory as a source directory in PyCharm (D
 ---- Input ---
 classes:
    c1:
-      slot_usage:
+      attributes:
          s1:
             key: true
             required: true
             
          
    c2:
-      slot_usage:
+      attributes:
          s1:
             identifier: true
             required: false
@@ -115,7 +115,7 @@ classes:
         
     c2:
        is_a: c1
-       slot_usage:
+       attributes:
           s1:
             required: true
 slots:
@@ -136,6 +136,6 @@ classes:
         slots:
         - c2_s1
         
-    slot_usage:
+    attributes:
         - s1
    

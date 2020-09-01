@@ -9,16 +9,8 @@ valuesetdefinition:
     entities:
       namespace: http://snomed.info/id/
       codes:
-        10368-9:
-          about: http://loinc.org/10368-9
-          designation: A loinc test to do something
-          description: A description of this test
-          href: http://ontologies.r.us/entitydescription/loinc/10368-9
-          error_message:
-          see_also:
-            - http://loinc.org/10368-9
-            - https://wikidata.org/jklklllll
-            - https://bioportal.org/....
+        - 74400008: Appendicitis
+
 
 
 value set resolution(valuesetdefinition, [using versions], expansion rules, return format) --> valuesetresolution

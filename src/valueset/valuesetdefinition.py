@@ -1,5 +1,5 @@
 # Auto generated from valuesetdefinition.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-27 16:22
+# Generation date: 2020-08-31 12:53
 # Schema: valuesetdefinition
 #
 # id: https://hotecosystem.org/tccm/valuesetdefinition
@@ -33,7 +33,7 @@ from src.core.entityreference import EntityReference, EntityReferenceCode, Entit
 from src.core.entrydescription import OpaqueData
 from src.core.filters import FilterComponent
 from src.core.localidentifiers import CodeSystemName
-from src.core.references import CodeSystemReference, CodeSystemReferenceName, CodeSystemVersionReference, CodeSystemVersionReferenceName, FormatReference, FormatReferenceName, LanguageReference, LanguageReferenceName, MapReference, MapReferenceName, MatchAlgorithmReference, MatchAlgorithmReferenceName, NameAndMeaningReference, NameAndMeaningReferenceName, OntologyLanguageReference, OntologyLanguageReferenceName, OntologySyntaxReference, OntologySyntaxReferenceName, PredicateReference, PredicateReferenceName, RoleReference, RoleReferenceName, ValueSetDefinitionReference, ValueSetDefinitionReferenceName, ValueSetReference, ValueSetReferenceName, VersionTagReference, VersionTagReferenceName
+from src.core.references import CodeSystemReference, CodeSystemReferenceName, CodeSystemVersionReference, CodeSystemVersionReferenceName, FormatReference, FormatReferenceName, LanguageReference, LanguageReferenceName, MapReference, MapReferenceName, MatchAlgorithmReference, MatchAlgorithmReferenceName, NameAndMeaningReference, NameAndMeaningReferenceName, OntologyLanguageReference, OntologyLanguageReferenceName, OntologySyntaxReference, OntologySyntaxReferenceName, PredicateReference, RoleReference, RoleReferenceName, ValueSetDefinitionReference, ValueSetDefinitionReferenceName, ValueSetReference, ValueSetReferenceName, VersionTagReference, VersionTagReferenceName
 from src.core.resourcedescription import ResourceVersionDescription, ResourceVersionDescriptionId, SourceAndNotation
 from src.core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import Bool, URIorCURIE, XSDDateTime
@@ -111,9 +111,9 @@ class FormalDefinition(YAMLRoot):
     valuequery: Optional[Union[dict, "PropertyQueryReference"]] = None
     entitylist: Optional[Union[dict, "SpecificEntityList"]] = None
     valueset: Optional[Union[dict, "CompleteValueSetReference"]] = None
-    definition: Optional[Union[dict, ValueSetDefinitionEntry]] = None
     codesystem: Optional[Union[dict, "CompleteCodeSystemReference"]] = None
     externaldefinition: Optional[Union[dict, "ExternalValueSetDefinition"]] = None
+    definition: Optional[Union[dict, ValueSetDefinitionEntry]] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
         if self.entityquery is not None and not isinstance(self.entityquery, AssociatedEntitiesReference):
@@ -124,12 +124,12 @@ class FormalDefinition(YAMLRoot):
             self.entitylist = SpecificEntityList(self.entitylist)
         if self.valueset is not None and not isinstance(self.valueset, CompleteValueSetReference):
             self.valueset = CompleteValueSetReference(**self.valueset)
-        if self.definition is not None and not isinstance(self.definition, ValueSetDefinitionEntry):
-            self.definition = ValueSetDefinitionEntry(**self.definition)
         if self.codesystem is not None and not isinstance(self.codesystem, CompleteCodeSystemReference):
             self.codesystem = CompleteCodeSystemReference(**self.codesystem)
         if self.externaldefinition is not None and not isinstance(self.externaldefinition, ExternalValueSetDefinition):
             self.externaldefinition = ExternalValueSetDefinition(**self.externaldefinition)
+        if self.definition is not None and not isinstance(self.definition, ValueSetDefinitionEntry):
+            self.definition = ValueSetDefinitionEntry(**self.definition)
         super().__post_init__(**kwargs)
 
 
@@ -175,7 +175,7 @@ class AssociatedEntitiesReference(YAMLRoot):
         if self.predicate is None:
             raise ValueError(f"predicate must be supplied")
         if not isinstance(self.predicate, PredicateReference):
-            self.predicate = PredicateReference(self.predicate)
+            self.predicate = PredicateReference(**self.predicate)
         super().__post_init__(**kwargs)
 
 
@@ -360,236 +360,236 @@ class ExternalValueSetDefinition(OpaqueData):
 class slots:
     pass
 
-slots.definitionOf = Slot(uri=TCCM.definitionOf, name="definitionOf", curie=TCCM.curie('definitionOf'),
-                      model_uri=TCCM.definitionOf, domain=None, range=Optional[Union[dict, ValueSetReference]])
+slots.valueSetDefinition__definitionOf = Slot(uri=TCCM.definitionOf, name="valueSetDefinition__definitionOf", curie=TCCM.curie('definitionOf'),
+                      model_uri=TCCM.valueSetDefinition__definitionOf, domain=None, range=Optional[Union[dict, ValueSetReference]])
 
-slots.versionTag = Slot(uri=TCCM.versionTag, name="versionTag", curie=TCCM.curie('versionTag'),
-                      model_uri=TCCM.versionTag, domain=None, range=Dict[Union[str, VersionTagReferenceName], Union[dict, VersionTagReference]])
+slots.valueSetDefinition__versionTag = Slot(uri=TCCM.versionTag, name="valueSetDefinition__versionTag", curie=TCCM.curie('versionTag'),
+                      model_uri=TCCM.valueSetDefinition__versionTag, domain=None, range=Dict[Union[str, VersionTagReferenceName], Union[dict, VersionTagReference]])
 
-slots.entry = Slot(uri=TCCM.entry, name="entry", curie=TCCM.curie('entry'),
-                      model_uri=TCCM.entry, domain=None, range=List[Union[dict, ValueSetDefinitionEntry]])
+slots.valueSetDefinition__entry = Slot(uri=TCCM.entry, name="valueSetDefinition__entry", curie=TCCM.curie('entry'),
+                      model_uri=TCCM.valueSetDefinition__entry, domain=None, range=List[Union[dict, ValueSetDefinitionEntry]])
 
-slots.include = Slot(uri=TCCM.include, name="include", curie=TCCM.curie('include'),
-                      model_uri=TCCM.include, domain=None, range=Optional[Union[dict, FormalDefinition]])
+slots.valueSetDefinitionEntry__include = Slot(uri=TCCM.include, name="valueSetDefinitionEntry__include", curie=TCCM.curie('include'),
+                      model_uri=TCCM.valueSetDefinitionEntry__include, domain=None, range=Optional[Union[dict, FormalDefinition]])
 
-slots.exclude = Slot(uri=TCCM.exclude, name="exclude", curie=TCCM.curie('exclude'),
-                      model_uri=TCCM.exclude, domain=None, range=Optional[Union[dict, FormalDefinition]])
+slots.valueSetDefinitionEntry__exclude = Slot(uri=TCCM.exclude, name="valueSetDefinitionEntry__exclude", curie=TCCM.curie('exclude'),
+                      model_uri=TCCM.valueSetDefinitionEntry__exclude, domain=None, range=Optional[Union[dict, FormalDefinition]])
 
-slots.intersect = Slot(uri=TCCM.intersect, name="intersect", curie=TCCM.curie('intersect'),
-                      model_uri=TCCM.intersect, domain=None, range=Optional[Union[dict, FormalDefinition]])
+slots.valueSetDefinitionEntry__intersect = Slot(uri=TCCM.intersect, name="valueSetDefinitionEntry__intersect", curie=TCCM.curie('intersect'),
+                      model_uri=TCCM.valueSetDefinitionEntry__intersect, domain=None, range=Optional[Union[dict, FormalDefinition]])
 
-slots.associated_entities = Slot(uri=TCCM.entityquery, name="associated_entities", curie=TCCM.curie('entityquery'),
-                      model_uri=TCCM.associated_entities, domain=None, range=Optional[Union[dict, AssociatedEntitiesReference]])
+slots.formalDefinition__associated_entities = Slot(uri=TCCM.entityquery, name="formalDefinition__associated_entities", curie=TCCM.curie('entityquery'),
+                      model_uri=TCCM.formalDefinition__associated_entities, domain=None, range=Optional[Union[dict, AssociatedEntitiesReference]])
 
-slots.property_query = Slot(uri=TCCM.valuequery, name="property_query", curie=TCCM.curie('valuequery'),
-                      model_uri=TCCM.property_query, domain=None, range=Optional[Union[dict, PropertyQueryReference]])
+slots.formalDefinition__property_query = Slot(uri=TCCM.valuequery, name="formalDefinition__property_query", curie=TCCM.curie('valuequery'),
+                      model_uri=TCCM.formalDefinition__property_query, domain=None, range=Optional[Union[dict, PropertyQueryReference]])
 
-slots.entity_list = Slot(uri=TCCM.entitylist, name="entity_list", curie=TCCM.curie('entitylist'),
-                      model_uri=TCCM.entity_list, domain=None, range=Optional[Union[dict, SpecificEntityList]])
+slots.formalDefinition__entity_list = Slot(uri=TCCM.entitylist, name="formalDefinition__entity_list", curie=TCCM.curie('entitylist'),
+                      model_uri=TCCM.formalDefinition__entity_list, domain=None, range=Optional[Union[dict, SpecificEntityList]])
 
-slots.complete_value_set = Slot(uri=TCCM.valueset, name="complete_value_set", curie=TCCM.curie('valueset'),
-                      model_uri=TCCM.complete_value_set, domain=None, range=Optional[Union[dict, CompleteValueSetReference]])
+slots.formalDefinition__complete_value_set = Slot(uri=TCCM.valueset, name="formalDefinition__complete_value_set", curie=TCCM.curie('valueset'),
+                      model_uri=TCCM.formalDefinition__complete_value_set, domain=None, range=Optional[Union[dict, CompleteValueSetReference]])
 
-slots.complete_code_system = Slot(uri=TCCM.codesystem, name="complete_code_system", curie=TCCM.curie('codesystem'),
-                      model_uri=TCCM.complete_code_system, domain=None, range=Optional[Union[dict, CompleteCodeSystemReference]])
+slots.formalDefinition__complete_code_system = Slot(uri=TCCM.codesystem, name="formalDefinition__complete_code_system", curie=TCCM.curie('codesystem'),
+                      model_uri=TCCM.formalDefinition__complete_code_system, domain=None, range=Optional[Union[dict, CompleteCodeSystemReference]])
 
-slots.external_value_set_definition = Slot(uri=TCCM.externaldefinition, name="external_value_set_definition", curie=TCCM.curie('externaldefinition'),
-                      model_uri=TCCM.external_value_set_definition, domain=None, range=Optional[Union[dict, ExternalValueSetDefinition]])
+slots.formalDefinition__external_value_set_definition = Slot(uri=TCCM.externaldefinition, name="formalDefinition__external_value_set_definition", curie=TCCM.curie('externaldefinition'),
+                      model_uri=TCCM.formalDefinition__external_value_set_definition, domain=None, range=Optional[Union[dict, ExternalValueSetDefinition]])
 
-slots.value_set_definition = Slot(uri=TCCM.definition, name="value_set_definition", curie=TCCM.curie('definition'),
-                      model_uri=TCCM.value_set_definition, domain=None, range=Optional[Union[dict, ValueSetDefinitionEntry]])
+slots.formalDefinition__value_set_definition = Slot(uri=TCCM.definition, name="formalDefinition__value_set_definition", curie=TCCM.curie('definition'),
+                      model_uri=TCCM.formalDefinition__value_set_definition, domain=None, range=Optional[Union[dict, ValueSetDefinitionEntry]])
 
-slots.about = Slot(uri=TCCM.about, name="about", curie=TCCM.curie('about'),
-                      model_uri=TCCM.about, domain=None, range=Union[URIorCURIE, ExternalURI])
+slots.associatedEntitiesReference__referencedEntity = Slot(uri=TCCM.referencedEntity, name="associatedEntitiesReference__referencedEntity", curie=TCCM.curie('referencedEntity'),
+                      model_uri=TCCM.associatedEntitiesReference__referencedEntity, domain=None, range=Union[dict, EntityReference])
 
-slots.formalName = Slot(uri=TCCM.formalName, name="formalName", curie=TCCM.curie('formalName'),
-                      model_uri=TCCM.formalName, domain=None, range=Optional[str])
+slots.associatedEntitiesReference__codeSystem = Slot(uri=TCCM.codeSystem, name="associatedEntitiesReference__codeSystem", curie=TCCM.curie('codeSystem'),
+                      model_uri=TCCM.associatedEntitiesReference__codeSystem, domain=None, range=Union[dict, CodeSystemReference])
 
-slots.keyword = Slot(uri=TCCM.keyword, name="keyword", curie=TCCM.curie('keyword'),
-                      model_uri=TCCM.keyword, domain=None, range=List[str])
+slots.associatedEntitiesReference__codeSystemVersion = Slot(uri=TCCM.codeSystemVersion, name="associatedEntitiesReference__codeSystemVersion", curie=TCCM.curie('codeSystemVersion'),
+                      model_uri=TCCM.associatedEntitiesReference__codeSystemVersion, domain=None, range=Optional[Union[dict, CodeSystemVersionReference]])
 
-slots.additionalDocumentation = Slot(uri=TCCM.additionalDocumentation, name="additionalDocumentation", curie=TCCM.curie('additionalDocumentation'),
-                      model_uri=TCCM.additionalDocumentation, domain=None, range=List[URIorCURIE])
+slots.associatedEntitiesReference__predicate = Slot(uri=TCCM.predicate, name="associatedEntitiesReference__predicate", curie=TCCM.curie('predicate'),
+                      model_uri=TCCM.associatedEntitiesReference__predicate, domain=None, range=Union[dict, PredicateReference])
 
-slots.rights = Slot(uri=TCCM.rights, name="rights", curie=TCCM.curie('rights'),
-                      model_uri=TCCM.rights, domain=None, range=Optional[str])
+slots.associatedEntitiesReference__objectToSubject = Slot(uri=TCCM.objectToSubject, name="associatedEntitiesReference__objectToSubject", curie=TCCM.curie('objectToSubject'),
+                      model_uri=TCCM.associatedEntitiesReference__objectToSubject, domain=None, range=Optional[Bool])
 
-slots.alternateID = Slot(uri=TCCM.alternateID, name="alternateID", curie=TCCM.curie('alternateID'),
-                      model_uri=TCCM.alternateID, domain=None, range=Optional[str])
+slots.associatedEntitiesReference__transitiveClosure = Slot(uri=TCCM.transitiveClosure, name="associatedEntitiesReference__transitiveClosure", curie=TCCM.curie('transitiveClosure'),
+                      model_uri=TCCM.associatedEntitiesReference__transitiveClosure, domain=None, range=Optional[Bool])
 
-slots.documentURI = Slot(uri=TCCM.documentURI, name="documentURI", curie=TCCM.curie('documentURI'),
-                      model_uri=TCCM.documentURI, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
+slots.associatedEntitiesReference__leafOnly = Slot(uri=TCCM.leafOnly, name="associatedEntitiesReference__leafOnly", curie=TCCM.curie('leafOnly'),
+                      model_uri=TCCM.associatedEntitiesReference__leafOnly, domain=None, range=Optional[Bool])
 
-slots.sourceAndNotation = Slot(uri=TCCM.sourceAndNotation, name="sourceAndNotation", curie=TCCM.curie('sourceAndNotation'),
-                      model_uri=TCCM.sourceAndNotation, domain=None, range=Optional[Union[dict, SourceAndNotation]])
+slots.propertyQueryReference__codeSystem = Slot(uri=TCCM.codeSystem, name="propertyQueryReference__codeSystem", curie=TCCM.curie('codeSystem'),
+                      model_uri=TCCM.propertyQueryReference__codeSystem, domain=None, range=Union[dict, CodeSystemReference])
 
-slots.predecessor = Slot(uri=TCCM.predecessor, name="predecessor", curie=TCCM.curie('predecessor'),
-                      model_uri=TCCM.predecessor, domain=None, range=Optional[Union[dict, NameAndMeaningReference]])
+slots.propertyQueryReference__codeSystemVersion = Slot(uri=TCCM.codeSystemVersion, name="propertyQueryReference__codeSystemVersion", curie=TCCM.curie('codeSystemVersion'),
+                      model_uri=TCCM.propertyQueryReference__codeSystemVersion, domain=None, range=Optional[Union[dict, CodeSystemVersionReference]])
 
-slots.officialResourceVersionID = Slot(uri=TCCM.officialResourceVersionID, name="officialResourceVersionID", curie=TCCM.curie('officialResourceVersionID'),
-                      model_uri=TCCM.officialResourceVersionID, domain=None, range=Optional[str])
+slots.propertyQueryReference__filter = Slot(uri=TCCM.filter, name="propertyQueryReference__filter", curie=TCCM.curie('filter'),
+                      model_uri=TCCM.propertyQueryReference__filter, domain=None, range=Union[dict, FilterComponent])
 
-slots.officialReleaseDate = Slot(uri=TCCM.officialReleaseDate, name="officialReleaseDate", curie=TCCM.curie('officialReleaseDate'),
-                      model_uri=TCCM.officialReleaseDate, domain=None, range=Optional[Union[str, XSDDateTime]])
+slots.completeCodeSystemReference__codeSystem = Slot(uri=TCCM.codeSystem, name="completeCodeSystemReference__codeSystem", curie=TCCM.curie('codeSystem'),
+                      model_uri=TCCM.completeCodeSystemReference__codeSystem, domain=None, range=Union[dict, CodeSystemReference])
 
-slots.officialActivationDate = Slot(uri=TCCM.officialActivationDate, name="officialActivationDate", curie=TCCM.curie('officialActivationDate'),
-                      model_uri=TCCM.officialActivationDate, domain=None, range=Optional[Union[str, XSDDateTime]])
+slots.completeCodeSystemReference__codeSystemVersion = Slot(uri=TCCM.codeSystemVersion, name="completeCodeSystemReference__codeSystemVersion", curie=TCCM.curie('codeSystemVersion'),
+                      model_uri=TCCM.completeCodeSystemReference__codeSystemVersion, domain=None, range=Optional[Union[dict, CodeSystemVersionReference]])
 
-slots.referencedEntity = Slot(uri=TCCM.referencedEntity, name="referencedEntity", curie=TCCM.curie('referencedEntity'),
-                      model_uri=TCCM.referencedEntity, domain=None, range=Union[dict, EntityReference])
+slots.completeValueSetReference__valueSet = Slot(uri=TCCM.valueSet, name="completeValueSetReference__valueSet", curie=TCCM.curie('valueSet'),
+                      model_uri=TCCM.completeValueSetReference__valueSet, domain=None, range=Union[dict, ValueSetReference])
 
-slots.codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.codeSystem, domain=None, range=Union[dict, CodeSystemReference])
+slots.completeValueSetReference__valueSetDefinition = Slot(uri=TCCM.valueSetDefinition, name="completeValueSetReference__valueSetDefinition", curie=TCCM.curie('valueSetDefinition'),
+                      model_uri=TCCM.completeValueSetReference__valueSetDefinition, domain=None, range=Optional[Union[dict, ValueSetDefinitionReference]])
 
-slots.codeSystemVersion = Slot(uri=TCCM.codeSystemVersion, name="codeSystemVersion", curie=TCCM.curie('codeSystemVersion'),
-                      model_uri=TCCM.codeSystemVersion, domain=None, range=Optional[Union[dict, CodeSystemVersionReference]])
+slots.completeValueSetReference__referenceCodeSystemVersion = Slot(uri=TCCM.referenceCodeSystemVersion, name="completeValueSetReference__referenceCodeSystemVersion", curie=TCCM.curie('referenceCodeSystemVersion'),
+                      model_uri=TCCM.completeValueSetReference__referenceCodeSystemVersion, domain=None, range=Optional[Union[dict, CodeSystemVersionReference]])
 
-slots.predicate = Slot(uri=TCCM.predicate, name="predicate", curie=TCCM.curie('predicate'),
-                      model_uri=TCCM.predicate, domain=None, range=Union[dict, PredicateReference])
+slots.entityReferenceList__namespaceURI = Slot(uri=TCCM.namespaceURI, name="entityReferenceList__namespaceURI", curie=TCCM.curie('namespaceURI'),
+                      model_uri=TCCM.entityReferenceList__namespaceURI, domain=None, range=URIRef)
 
-slots.objectToSubject = Slot(uri=TCCM.objectToSubject, name="objectToSubject", curie=TCCM.curie('objectToSubject'),
-                      model_uri=TCCM.objectToSubject, domain=None, range=Optional[Bool])
+slots.entityReferenceList__namespaceName = Slot(uri=TCCM.namespaceName, name="entityReferenceList__namespaceName", curie=TCCM.curie('namespaceName'),
+                      model_uri=TCCM.entityReferenceList__namespaceName, domain=None, range=Optional[Union[str, CodeSystemName]])
 
-slots.transitiveClosure = Slot(uri=TCCM.transitiveClosure, name="transitiveClosure", curie=TCCM.curie('transitiveClosure'),
-                      model_uri=TCCM.transitiveClosure, domain=None, range=Optional[Bool])
+slots.entityReferenceList__entities = Slot(uri=TCCM.entities, name="entityReferenceList__entities", curie=TCCM.curie('entities'),
+                      model_uri=TCCM.entityReferenceList__entities, domain=None, range=Dict[Union[str, EntityReferenceCode], Union[dict, EntityReference]])
 
-slots.leafOnly = Slot(uri=TCCM.leafOnly, name="leafOnly", curie=TCCM.curie('leafOnly'),
-                      model_uri=TCCM.leafOnly, domain=None, range=Optional[Bool])
+slots.entityReference__about = Slot(uri=TCCM.about, name="entityReference__about", curie=TCCM.curie('about'),
+                      model_uri=TCCM.entityReference__about, domain=None, range=Optional[URIorCURIE])
 
-slots.namespaceURI = Slot(uri=TCCM.namespaceURI, name="namespaceURI", curie=TCCM.curie('namespaceURI'),
-                      model_uri=TCCM.namespaceURI, domain=None, range=URIRef)
+slots.entityReference__code = Slot(uri=RDF.id, name="entityReference__code", curie=RDF.curie('id'),
+                      model_uri=TCCM.entityReference__code, domain=None, range=URIRef)
 
-slots.namespaceName = Slot(uri=TCCM.namespaceName, name="namespaceName", curie=TCCM.curie('namespaceName'),
-                      model_uri=TCCM.namespaceName, domain=None, range=Optional[Union[str, CodeSystemName]])
+slots.entityReference__designation = Slot(uri=SKOS.prefLabel, name="entityReference__designation", curie=SKOS.curie('prefLabel'),
+                      model_uri=TCCM.entityReference__designation, domain=None, range=Optional[str])
 
-slots.entities = Slot(uri=TCCM.entities, name="entities", curie=TCCM.curie('entities'),
-                      model_uri=TCCM.entities, domain=None, range=Dict[Union[str, EntityReferenceCode], Union[dict, EntityReference]])
+slots.entityReference__description = Slot(uri=SKOS.definition, name="entityReference__description", curie=SKOS.curie('definition'),
+                      model_uri=TCCM.entityReference__description, domain=None, range=Optional[str])
 
-slots.filter = Slot(uri=TCCM.filter, name="filter", curie=TCCM.curie('filter'),
-                      model_uri=TCCM.filter, domain=None, range=Union[dict, FilterComponent])
+slots.entityReference__href = Slot(uri=TCCM.href, name="entityReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.entityReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.valueSet = Slot(uri=TCCM.valueSet, name="valueSet", curie=TCCM.curie('valueSet'),
-                      model_uri=TCCM.valueSet, domain=None, range=Union[dict, ValueSetReference])
+slots.entityReference__see_also = Slot(uri=TCCM.see_also, name="entityReference__see_also", curie=TCCM.curie('see_also'),
+                      model_uri=TCCM.entityReference__see_also, domain=None, range=List[Union[URIorCURIE, RenderingURI]])
 
-slots.valueSetDefinition = Slot(uri=TCCM.valueSetDefinition, name="valueSetDefinition", curie=TCCM.curie('valueSetDefinition'),
-                      model_uri=TCCM.valueSetDefinition, domain=None, range=Optional[Union[dict, ValueSetDefinitionReference]])
+slots.nameAndMeaningReference__name = Slot(uri=TCCM.name, name="nameAndMeaningReference__name", curie=TCCM.curie('name'),
+                      model_uri=TCCM.nameAndMeaningReference__name, domain=None, range=URIRef)
 
-slots.referenceCodeSystemVersion = Slot(uri=TCCM.referenceCodeSystemVersion, name="referenceCodeSystemVersion", curie=TCCM.curie('referenceCodeSystemVersion'),
-                      model_uri=TCCM.referenceCodeSystemVersion, domain=None, range=Optional[Union[dict, CodeSystemVersionReference]])
+slots.nameAndMeaningReference__synopsis = Slot(uri=TCCM.synopsis, name="nameAndMeaningReference__synopsis", curie=TCCM.curie('synopsis'),
+                      model_uri=TCCM.nameAndMeaningReference__synopsis, domain=None, range=Optional[str])
 
-slots.format = Slot(uri=TCCM.format, name="format", curie=TCCM.curie('format'),
-                      model_uri=TCCM.format, domain=None, range=Optional[Union[dict, FormatReference]])
+slots.nameAndMeaningReference__uri = Slot(uri=TCCM.uri, name="nameAndMeaningReference__uri", curie=TCCM.curie('uri'),
+                      model_uri=TCCM.nameAndMeaningReference__uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
 
-slots.schema = Slot(uri=TCCM.schema, name="schema", curie=TCCM.curie('schema'),
-                      model_uri=TCCM.schema, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
+slots.nameAndMeaningReference__href = Slot(uri=TCCM.href, name="nameAndMeaningReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.language = Slot(uri=TCCM.language, name="language", curie=TCCM.curie('language'),
-                      model_uri=TCCM.language, domain=None, range=Optional[Union[dict, LanguageReference]])
+slots.codeSystemVersionReference__codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystemVersionReference__codeSystem", curie=TCCM.curie('codeSystem'),
+                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
 
-slots.value = Slot(uri=TCCM.value, name="value", curie=TCCM.curie('value'),
-                      model_uri=TCCM.value, domain=None, range=str)
+slots.mapVersionReference__map = Slot(uri=TCCM.map, name="mapVersionReference__map", curie=TCCM.curie('map'),
+                      model_uri=TCCM.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])
 
-slots.code = Slot(uri=RDF.id, name="code", curie=RDF.curie('id'),
-                      model_uri=TCCM.code, domain=None, range=URIRef)
+slots.predicateReference__uri = Slot(uri=TCCM.uri, name="predicateReference__uri", curie=TCCM.curie('uri'),
+                      model_uri=TCCM.predicateReference__uri, domain=None, range=Union[URIorCURIE, ExternalURI])
 
-slots.designation = Slot(uri=SKOS.prefLabel, name="designation", curie=SKOS.curie('prefLabel'),
-                      model_uri=TCCM.designation, domain=None, range=Optional[str])
+slots.predicateReference__name = Slot(uri=TCCM.name, name="predicateReference__name", curie=TCCM.curie('name'),
+                      model_uri=TCCM.predicateReference__name, domain=None, range=Optional[Union[str, LocalIdentifier]])
 
-slots.description = Slot(uri=SKOS.definition, name="description", curie=SKOS.curie('definition'),
-                      model_uri=TCCM.description, domain=None, range=Optional[str])
+slots.predicateReference__href = Slot(uri=TCCM.href, name="predicateReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.predicateReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.href = Slot(uri=TCCM.href, name="href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
+slots.predicateReference__designation = Slot(uri=TCCM.designation, name="predicateReference__designation", curie=TCCM.curie('designation'),
+                      model_uri=TCCM.predicateReference__designation, domain=None, range=Optional[str])
 
-slots.see_also = Slot(uri=TCCM.see_also, name="see_also", curie=TCCM.curie('see_also'),
-                      model_uri=TCCM.see_also, domain=None, range=List[Union[URIorCURIE, RenderingURI]])
+slots.sourceAndRoleReference__role = Slot(uri=TCCM.role, name="sourceAndRoleReference__role", curie=TCCM.curie('role'),
+                      model_uri=TCCM.sourceAndRoleReference__role, domain=None, range=Optional[Union[dict, RoleReference]])
 
-slots.name = Slot(uri=TCCM.name, name="name", curie=TCCM.curie('name'),
-                      model_uri=TCCM.name, domain=None, range=URIRef)
+slots.sourceAndRoleReference__bibliographicLink = Slot(uri=TCCM.bibliographicLink, name="sourceAndRoleReference__bibliographicLink", curie=TCCM.curie('bibliographicLink'),
+                      model_uri=TCCM.sourceAndRoleReference__bibliographicLink, domain=None, range=Optional[Union[dict, OpaqueData]])
 
-slots.synopsis = Slot(uri=TCCM.synopsis, name="synopsis", curie=TCCM.curie('synopsis'),
-                      model_uri=TCCM.synopsis, domain=None, range=Optional[str])
+slots.filter__component = Slot(uri=TCCM.component, name="filter__component", curie=TCCM.curie('component'),
+                      model_uri=TCCM.filter__component, domain=None, range=List[Union[dict, FilterComponent]])
 
-slots.uri = Slot(uri=TCCM.uri, name="uri", curie=TCCM.curie('uri'),
-                      model_uri=TCCM.uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
+slots.filter__description = Slot(uri=TCCM.description, name="filter__description", curie=TCCM.curie('description'),
+                      model_uri=TCCM.filter__description, domain=None, range=Optional[str])
 
-slots.map = Slot(uri=TCCM.map, name="map", curie=TCCM.curie('map'),
-                      model_uri=TCCM.map, domain=None, range=Optional[Union[dict, MapReference]])
+slots.filterComponent__filterComponent = Slot(uri=TCCM.filterComponent, name="filterComponent__filterComponent", curie=TCCM.curie('filterComponent'),
+                      model_uri=TCCM.filterComponent__filterComponent, domain=None, range=List[Union[dict, PredicateReference]])
 
-slots.role = Slot(uri=TCCM.role, name="role", curie=TCCM.curie('role'),
-                      model_uri=TCCM.role, domain=None, range=Optional[Union[dict, RoleReference]])
+slots.filterComponent__matchAlgorithm = Slot(uri=TCCM.matchAlgorithm, name="filterComponent__matchAlgorithm", curie=TCCM.curie('matchAlgorithm'),
+                      model_uri=TCCM.filterComponent__matchAlgorithm, domain=None, range=Union[dict, MatchAlgorithmReference])
 
-slots.component = Slot(uri=TCCM.component, name="component", curie=TCCM.curie('component'),
-                      model_uri=TCCM.component, domain=None, range=List[Union[dict, FilterComponent]])
+slots.filterComponent__matchValue = Slot(uri=TCCM.matchValue, name="filterComponent__matchValue", curie=TCCM.curie('matchValue'),
+                      model_uri=TCCM.filterComponent__matchValue, domain=None, range=Optional[str])
 
-slots.filterComponent = Slot(uri=TCCM.filterComponent, name="filterComponent", curie=TCCM.curie('filterComponent'),
-                      model_uri=TCCM.filterComponent, domain=None, range=Dict[Union[str, PredicateReferenceName], Union[dict, PredicateReference]])
+slots.resourceDescription__resourceSynopsis = Slot(uri=TCCM.resourceSynopsis, name="resourceDescription__resourceSynopsis", curie=TCCM.curie('resourceSynopsis'),
+                      model_uri=TCCM.resourceDescription__resourceSynopsis, domain=None, range=Optional[str])
 
-slots.matchAlgorithm = Slot(uri=TCCM.matchAlgorithm, name="matchAlgorithm", curie=TCCM.curie('matchAlgorithm'),
-                      model_uri=TCCM.matchAlgorithm, domain=None, range=Union[dict, MatchAlgorithmReference])
+slots.resourceDescription__resourceID = Slot(uri=TCCM.id, name="resourceDescription__resourceID", curie=TCCM.curie('id'),
+                      model_uri=TCCM.resourceDescription__resourceID, domain=None, range=URIRef)
 
-slots.matchValue = Slot(uri=TCCM.matchValue, name="matchValue", curie=TCCM.curie('matchValue'),
-                      model_uri=TCCM.matchValue, domain=None, range=Optional[str])
+slots.resourceDescription__about = Slot(uri=TCCM.about, name="resourceDescription__about", curie=TCCM.curie('about'),
+                      model_uri=TCCM.resourceDescription__about, domain=None, range=Union[URIorCURIE, ExternalURI])
 
-slots.sourceAndNotationDescription = Slot(uri=TCCM.sourceAndNotationDescription, name="sourceAndNotationDescription", curie=TCCM.curie('sourceAndNotationDescription'),
-                      model_uri=TCCM.sourceAndNotationDescription, domain=None, range=Optional[str])
+slots.resourceDescription__formalName = Slot(uri=TCCM.formalName, name="resourceDescription__formalName", curie=TCCM.curie('formalName'),
+                      model_uri=TCCM.resourceDescription__formalName, domain=None, range=Optional[str])
 
-slots.sourceDocument = Slot(uri=TCCM.sourceDocument, name="sourceDocument", curie=TCCM.curie('sourceDocument'),
-                      model_uri=TCCM.sourceDocument, domain=None, range=Optional[URIorCURIE])
+slots.resourceDescription__keyword = Slot(uri=TCCM.keyword, name="resourceDescription__keyword", curie=TCCM.curie('keyword'),
+                      model_uri=TCCM.resourceDescription__keyword, domain=None, range=List[str])
 
-slots.sourceLanguage = Slot(uri=TCCM.sourceLanguage, name="sourceLanguage", curie=TCCM.curie('sourceLanguage'),
-                      model_uri=TCCM.sourceLanguage, domain=None, range=Optional[Union[dict, OntologyLanguageReference]])
+slots.resourceDescription__additionalDocumentation = Slot(uri=TCCM.additionalDocumentation, name="resourceDescription__additionalDocumentation", curie=TCCM.curie('additionalDocumentation'),
+                      model_uri=TCCM.resourceDescription__additionalDocumentation, domain=None, range=List[URIorCURIE])
 
-slots.sourceDocumentSyntax = Slot(uri=TCCM.sourceDocumentSyntax, name="sourceDocumentSyntax", curie=TCCM.curie('sourceDocumentSyntax'),
-                      model_uri=TCCM.sourceDocumentSyntax, domain=None, range=Optional[Union[dict, OntologySyntaxReference]])
+slots.resourceDescription__rights = Slot(uri=TCCM.rights, name="resourceDescription__rights", curie=TCCM.curie('rights'),
+                      model_uri=TCCM.resourceDescription__rights, domain=None, range=Optional[str])
 
-slots.releaseDocumentation = Slot(uri=TCCM.releaseDocumentation, name="releaseDocumentation", curie=TCCM.curie('releaseDocumentation'),
-                      model_uri=TCCM.releaseDocumentation, domain=None, range=Optional[str])
+slots.resourceDescription__alternateID = Slot(uri=TCCM.alternateID, name="resourceDescription__alternateID", curie=TCCM.curie('alternateID'),
+                      model_uri=TCCM.resourceDescription__alternateID, domain=None, range=Optional[str])
 
-slots.releaseFormat = Slot(uri=TCCM.releaseFormat, name="releaseFormat", curie=TCCM.curie('releaseFormat'),
-                      model_uri=TCCM.releaseFormat, domain=None, range=List[Union[dict, SourceAndNotation]])
+slots.sourceAndNotation__sourceAndNotationDescription = Slot(uri=TCCM.sourceAndNotationDescription, name="sourceAndNotation__sourceAndNotationDescription", curie=TCCM.curie('sourceAndNotationDescription'),
+                      model_uri=TCCM.sourceAndNotation__sourceAndNotationDescription, domain=None, range=Optional[str])
 
-slots.AssociatedEntitiesReference_referencedEntity = Slot(uri=TCCM.referencedEntity, name="AssociatedEntitiesReference_referencedEntity", curie=TCCM.curie('referencedEntity'),
-                      model_uri=TCCM.AssociatedEntitiesReference_referencedEntity, domain=AssociatedEntitiesReference, range=Union[dict, EntityReference])
+slots.sourceAndNotation__sourceDocument = Slot(uri=TCCM.sourceDocument, name="sourceAndNotation__sourceDocument", curie=TCCM.curie('sourceDocument'),
+                      model_uri=TCCM.sourceAndNotation__sourceDocument, domain=None, range=Optional[URIorCURIE])
 
-slots.AssociatedEntitiesReference_codeSystem = Slot(uri=TCCM.codeSystem, name="AssociatedEntitiesReference_codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.AssociatedEntitiesReference_codeSystem, domain=AssociatedEntitiesReference, range=Union[dict, CodeSystemReference])
+slots.sourceAndNotation__sourceLanguage = Slot(uri=TCCM.sourceLanguage, name="sourceAndNotation__sourceLanguage", curie=TCCM.curie('sourceLanguage'),
+                      model_uri=TCCM.sourceAndNotation__sourceLanguage, domain=None, range=Optional[Union[dict, OntologyLanguageReference]])
 
-slots.AssociatedEntitiesReference_codeSystemVersion = Slot(uri=TCCM.codeSystemVersion, name="AssociatedEntitiesReference_codeSystemVersion", curie=TCCM.curie('codeSystemVersion'),
-                      model_uri=TCCM.AssociatedEntitiesReference_codeSystemVersion, domain=AssociatedEntitiesReference, range=Optional[Union[dict, CodeSystemVersionReference]])
+slots.sourceAndNotation__sourceDocumentSyntax = Slot(uri=TCCM.sourceDocumentSyntax, name="sourceAndNotation__sourceDocumentSyntax", curie=TCCM.curie('sourceDocumentSyntax'),
+                      model_uri=TCCM.sourceAndNotation__sourceDocumentSyntax, domain=None, range=Optional[Union[dict, OntologySyntaxReference]])
 
-slots.AssociatedEntitiesReference_predicate = Slot(uri=TCCM.predicate, name="AssociatedEntitiesReference_predicate", curie=TCCM.curie('predicate'),
-                      model_uri=TCCM.AssociatedEntitiesReference_predicate, domain=AssociatedEntitiesReference, range=Union[dict, PredicateReference])
+slots.abstractResourceDescription__releaseDocumentation = Slot(uri=TCCM.releaseDocumentation, name="abstractResourceDescription__releaseDocumentation", curie=TCCM.curie('releaseDocumentation'),
+                      model_uri=TCCM.abstractResourceDescription__releaseDocumentation, domain=None, range=Optional[str])
 
-slots.AssociatedEntitiesReference_objectToSubject = Slot(uri=TCCM.objectToSubject, name="AssociatedEntitiesReference_objectToSubject", curie=TCCM.curie('objectToSubject'),
-                      model_uri=TCCM.AssociatedEntitiesReference_objectToSubject, domain=AssociatedEntitiesReference, range=Optional[Bool])
+slots.abstractResourceDescription__releaseFormat = Slot(uri=TCCM.releaseFormat, name="abstractResourceDescription__releaseFormat", curie=TCCM.curie('releaseFormat'),
+                      model_uri=TCCM.abstractResourceDescription__releaseFormat, domain=None, range=List[Union[dict, SourceAndNotation]])
 
-slots.AssociatedEntitiesReference_transitiveClosure = Slot(uri=TCCM.transitiveClosure, name="AssociatedEntitiesReference_transitiveClosure", curie=TCCM.curie('transitiveClosure'),
-                      model_uri=TCCM.AssociatedEntitiesReference_transitiveClosure, domain=AssociatedEntitiesReference, range=Optional[Bool])
+slots.resourceVersionDescription__documentURI = Slot(uri=TCCM.documentURI, name="resourceVersionDescription__documentURI", curie=TCCM.curie('documentURI'),
+                      model_uri=TCCM.resourceVersionDescription__documentURI, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
 
-slots.AssociatedEntitiesReference_leafOnly = Slot(uri=TCCM.leafOnly, name="AssociatedEntitiesReference_leafOnly", curie=TCCM.curie('leafOnly'),
-                      model_uri=TCCM.AssociatedEntitiesReference_leafOnly, domain=AssociatedEntitiesReference, range=Optional[Bool])
+slots.resourceVersionDescription__sourceAndNotation = Slot(uri=TCCM.sourceAndNotation, name="resourceVersionDescription__sourceAndNotation", curie=TCCM.curie('sourceAndNotation'),
+                      model_uri=TCCM.resourceVersionDescription__sourceAndNotation, domain=None, range=Optional[Union[dict, SourceAndNotation]])
 
-slots.PropertyQueryReference_codeSystem = Slot(uri=TCCM.codeSystem, name="PropertyQueryReference_codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.PropertyQueryReference_codeSystem, domain=PropertyQueryReference, range=Union[dict, CodeSystemReference])
+slots.resourceVersionDescription__predecessor = Slot(uri=TCCM.predecessor, name="resourceVersionDescription__predecessor", curie=TCCM.curie('predecessor'),
+                      model_uri=TCCM.resourceVersionDescription__predecessor, domain=None, range=Optional[Union[dict, NameAndMeaningReference]])
 
-slots.PropertyQueryReference_codeSystemVersion = Slot(uri=TCCM.codeSystemVersion, name="PropertyQueryReference_codeSystemVersion", curie=TCCM.curie('codeSystemVersion'),
-                      model_uri=TCCM.PropertyQueryReference_codeSystemVersion, domain=PropertyQueryReference, range=Optional[Union[dict, CodeSystemVersionReference]])
+slots.resourceVersionDescription__officialResourceVersionID = Slot(uri=TCCM.officialResourceVersionID, name="resourceVersionDescription__officialResourceVersionID", curie=TCCM.curie('officialResourceVersionID'),
+                      model_uri=TCCM.resourceVersionDescription__officialResourceVersionID, domain=None, range=Optional[str])
 
-slots.PropertyQueryReference_filter = Slot(uri=TCCM.filter, name="PropertyQueryReference_filter", curie=TCCM.curie('filter'),
-                      model_uri=TCCM.PropertyQueryReference_filter, domain=PropertyQueryReference, range=Union[dict, FilterComponent])
+slots.resourceVersionDescription__officialReleaseDate = Slot(uri=TCCM.officialReleaseDate, name="resourceVersionDescription__officialReleaseDate", curie=TCCM.curie('officialReleaseDate'),
+                      model_uri=TCCM.resourceVersionDescription__officialReleaseDate, domain=None, range=Optional[Union[str, XSDDateTime]])
 
-slots.CompleteCodeSystemReference_codeSystem = Slot(uri=TCCM.codeSystem, name="CompleteCodeSystemReference_codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.CompleteCodeSystemReference_codeSystem, domain=CompleteCodeSystemReference, range=Union[dict, CodeSystemReference])
+slots.resourceVersionDescription__officialActivationDate = Slot(uri=TCCM.officialActivationDate, name="resourceVersionDescription__officialActivationDate", curie=TCCM.curie('officialActivationDate'),
+                      model_uri=TCCM.resourceVersionDescription__officialActivationDate, domain=None, range=Optional[Union[str, XSDDateTime]])
 
-slots.CompleteCodeSystemReference_codeSystemVersion = Slot(uri=TCCM.codeSystemVersion, name="CompleteCodeSystemReference_codeSystemVersion", curie=TCCM.curie('codeSystemVersion'),
-                      model_uri=TCCM.CompleteCodeSystemReference_codeSystemVersion, domain=CompleteCodeSystemReference, range=Optional[Union[dict, CodeSystemVersionReference]])
+slots.opaqueData__format = Slot(uri=TCCM.format, name="opaqueData__format", curie=TCCM.curie('format'),
+                      model_uri=TCCM.opaqueData__format, domain=None, range=Optional[Union[dict, FormatReference]])
 
-slots.CompleteValueSetReference_valueSet = Slot(uri=TCCM.valueSet, name="CompleteValueSetReference_valueSet", curie=TCCM.curie('valueSet'),
-                      model_uri=TCCM.CompleteValueSetReference_valueSet, domain=CompleteValueSetReference, range=Union[dict, ValueSetReference])
+slots.opaqueData__schema = Slot(uri=TCCM.schema, name="opaqueData__schema", curie=TCCM.curie('schema'),
+                      model_uri=TCCM.opaqueData__schema, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
 
-slots.CompleteValueSetReference_valueSetDefinition = Slot(uri=TCCM.valueSetDefinition, name="CompleteValueSetReference_valueSetDefinition", curie=TCCM.curie('valueSetDefinition'),
-                      model_uri=TCCM.CompleteValueSetReference_valueSetDefinition, domain=CompleteValueSetReference, range=Optional[Union[dict, ValueSetDefinitionReference]])
+slots.opaqueData__language = Slot(uri=TCCM.language, name="opaqueData__language", curie=TCCM.curie('language'),
+                      model_uri=TCCM.opaqueData__language, domain=None, range=Optional[Union[dict, LanguageReference]])
 
-slots.CompleteValueSetReference_referenceCodeSystemVersion = Slot(uri=TCCM.referenceCodeSystemVersion, name="CompleteValueSetReference_referenceCodeSystemVersion", curie=TCCM.curie('referenceCodeSystemVersion'),
-                      model_uri=TCCM.CompleteValueSetReference_referenceCodeSystemVersion, domain=CompleteValueSetReference, range=Optional[Union[dict, CodeSystemVersionReference]])
+slots.opaqueData__value = Slot(uri=TCCM.value, name="opaqueData__value", curie=TCCM.curie('value'),
+                      model_uri=TCCM.opaqueData__value, domain=None, range=str)

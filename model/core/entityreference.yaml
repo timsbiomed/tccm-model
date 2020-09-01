@@ -53,7 +53,7 @@ classes:
     description: A collection (set) of zero or more entity references that belong to the same scoping namespace
     notes:
       - We need to determine whether the URI or the name is canonical
-    slot_usage:
+    attributes:
       namespaceURI:
         description: The URI associated with the supplied namespace as determined by the author/service instance
         range: ExternalURI
@@ -69,7 +69,7 @@ classes:
 
   EntityReference:
     description: The URI, namespace/name (if known) and a list of code systems that make assertions about the entity.
-    slot_usage:
+    attributes:
       about:
         description: The external, permanant URI by which this entity is known.
         range: PersistentURI

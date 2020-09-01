@@ -35,21 +35,23 @@ classes:
         A ResolvedValueSetHeader entry carries all of the information that is necessary to completely resolve a value
         set, meaning that
 
-    resolutionOf:
-      description: The specific value set definition that was resolved.
-      range: ValueSetDefinitionReference
-      inlined: true
-      required: true
-    resolvedUsingCodeSystem:
-      description: A reference to a code system version that was used in the resolution of this value set definition.
-      range: CodeSystemVersionReference
-      inlined: true
-      mutivalued: true
-    includesResolvedValueSet:
-      description: |-
-        If the value set includes other value sets, this contains the resolution information used to resolve the inner
-        value sets.
-      inlined: true
-      multivalued: true
+    attributes:
+      resolutionOf:
+        description: The specific value set definition that was resolved.
+        range: ValueSetDefinitionReference
+        inlined: true
+        required: true
+      resolvedUsingCodeSystem:
+        description: A reference to a code system version that was used in the resolution of this value set definition.
+        range: CodeSystemVersionReference
+        inlined: true
+        multivalued: true
+      includesResolvedValueSet:
+        description: |-
+          If the value set includes other value sets, this contains the resolution information used to resolve the inner
+          value sets.
+        range: ResolvedValueSetHeader
+        inlined: true
+        multivalued: true
 
 

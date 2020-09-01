@@ -33,11 +33,11 @@
 <polygon fill='white' points='0,-167 0,-203 184,-203 184,-167 0,-167' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='92' y='-181.3'>AssociatedEntitiesReference</text>
 </g><g class='node' id='node2'><title>PredicateReference</title>
-<polygon fill='white' points='80.5,-0.5 80.5,-75.5 223.5,-75.5 223.5,-0.5 80.5,-0.5' stroke='black'/>
+<polygon fill='white' points='75.5,-0.5 75.5,-75.5 228.5,-75.5 228.5,-0.5 75.5,-0.5' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='152' y='-64.3'>PredicateReference</text>
-<polyline fill='none' points='80.5,-60.5 223.5,-60.5 ' stroke='black'/>
+<polyline fill='none' points='75.5,-60.5 228.5,-60.5 ' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='152' y='-49.3'>uri:ExternalURI</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='152' y='-34.3'>name(pk):CURIE</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='152' y='-34.3'>name:LocalIdentifier ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='152' y='-19.3'>href:RenderingURI ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='152' y='-4.3'>designation:string ?</text>
 </g><g class='edge' id='edge1'><title>AssociatedEntitiesReference-&gt;PredicateReference</title>

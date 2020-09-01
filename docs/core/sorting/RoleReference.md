@@ -5,7 +5,7 @@
 A reference to a role that an individual, organization, or bibliographic reference can play in the construction
 of a resource or resource component.
 
-URI: [https://hotecosystem.org/tccm/filtersandsorting/RoleReference](https://hotecosystem.org/tccm/filtersandsorting/RoleReference)
+URI: [https://hotecosystem.org/tccm/sorting/RoleReference](https://hotecosystem.org/tccm/sorting/RoleReference)
 
 
 ![img](images/RoleReference.svg)
@@ -16,21 +16,20 @@ URI: [https://hotecosystem.org/tccm/filtersandsorting/RoleReference](https://hot
 
 ## Referenced by class
 
- *  **[SourceAndRoleReference](SourceAndRoleReference.md)** *[SourceAndRoleReference➞role](SourceAndRoleReference_role.md)*  <sub>OPT</sub>  **[RoleReference](RoleReference.md)**
- *  **None** *[role](role.md)*  <sub>OPT</sub>  **[RoleReference](RoleReference.md)**
+ *  **None** *[➞role](sourceAndRoleReference__role.md)*  <sub>OPT</sub>  **[RoleReference](RoleReference.md)**
 
 ## Attributes
 
 
 ### Inherited from NameAndMeaningReference:
 
- * [NameAndMeaningReference➞href](NameAndMeaningReference_href.md)  <sub>OPT</sub>
+ * [➞href](nameAndMeaningReference__href.md)  <sub>OPT</sub>
     * range: [RenderingURI](types/RenderingURI.md)
- * [NameAndMeaningReference➞name](NameAndMeaningReference_name.md)  <sub>REQ</sub>
+ * [➞name](nameAndMeaningReference__name.md)  <sub>REQ</sub>
     * Description: An identifier that uniquely names the reference within the context of the particular reference type.
     * range: [LocalIdentifier](types/LocalIdentifier.md)
- * [NameAndMeaningReference➞synopsis](NameAndMeaningReference_synopsis.md)  <sub>OPT</sub>
+ * [➞synopsis](nameAndMeaningReference__synopsis.md)  <sub>OPT</sub>
     * Description: A summary of the role and purpose of the actual reference
     * range: [String](types/String.md)
- * [NameAndMeaningReference➞uri](NameAndMeaningReference_uri.md)  <sub>OPT</sub>
+ * [➞uri](nameAndMeaningReference__uri.md)  <sub>OPT</sub>
     * range: [ExternalURI](types/ExternalURI.md)

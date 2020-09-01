@@ -22,23 +22,24 @@ URI: [tccm:OpaqueData](https://hotecosystem.org/tccm/OpaqueData)
 
 ## Referenced by class
 
+ *  **None** *[➞bibliographicLink](sourceAndRoleReference__bibliographicLink.md)*  <sub>OPT</sub>  **[OpaqueData](OpaqueData.md)**
 
 ## Attributes
 
 
 ### Own
 
- * [OpaqueData➞format](OpaqueData_format.md)  <sub>OPT</sub>
+ * [➞format](opaqueData__format.md)  <sub>OPT</sub>
     * Description: The format or encoding for value. This is typically recorded as the URI of a Mime Type
     * range: [FormatReference](FormatReference.md)
- * [OpaqueData➞language](OpaqueData_language.md)  <sub>OPT</sub>
+ * [➞language](opaqueData__language.md)  <sub>OPT</sub>
     * Description: A reference to the written or spoken language used in value.
     * range: [LanguageReference](LanguageReference.md)
- * [OpaqueData➞schema](OpaqueData_schema.md)  <sub>OPT</sub>
+ * [➞schema](opaqueData__schema.md)  <sub>OPT</sub>
     * Description: If the format of the document involves an XML encoding, this contains the URI of a document that carries
 the corresponding XML Schema or DTD.
     * range: [DocumentURI](types/DocumentURI.md)
- * [OpaqueData➞value](OpaqueData_value.md)  <sub>REQ</sub>
+ * [➞value](opaqueData__value.md)  <sub>REQ</sub>
     * Description: The instance value. Note that instance value should be encoded in such a way that it allows embedded
 structures. As an example, in XML Schema, this encoding should be to xs:anyType or an equivalent.
     * range: [String](types/String.md)

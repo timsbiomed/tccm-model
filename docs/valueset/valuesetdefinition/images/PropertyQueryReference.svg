@@ -60,7 +60,9 @@
 <polygon fill='white' points='524,-129 524,-165 648,-165 648,-129 524,-129' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='586' y='-143.3'>FormalDefinition</text>
 </g><g class='edge' id='edge4'><title>FormalDefinition-&gt;PropertyQueryReference</title>
-<path d='M542.588,-124.294C493.151,-99.5755 413.395,-59.6977 368.173,-37.0866' fill='none' stroke='black'/>
-<polygon fill='none' points='541.242,-127.534 551.752,-128.876 544.373,-121.273 541.242,-127.534' stroke='black'/>
+<path d='M540.724,-123.362C494.361,-100.18 422.81,-64.4048 377.211,-41.6056' fill='none' stroke='black'/>
+<polygon fill='black' points='541.019,-123.509 548.174,-122.615 551.752,-128.876 544.596,-129.77 541.019,-123.509' stroke='black'/>
+<polygon fill='black' points='368.173,-37.0866 379.13,-37.5339 372.645,-39.3227 377.118,-41.5588 377.118,-41.5588 377.118,-41.5588 372.645,-39.3227 375.105,-45.5837 368.173,-37.0866 368.173,-37.0866' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='381.924' y='-47.9097'> valuequery 0..1</text>
 </g></g>
 <text style='fill: lightslategray; font-size: 6pt; font-family: Verdana' x='559' y='194'>CREATED WITH YUML</text></svg>

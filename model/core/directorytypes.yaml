@@ -1,0 +1,72 @@
+id: https://hotecosystem.org/tccm/directorytypes
+name: directorytypes
+title: Typed directory URIs
+description: URI's for various TCCM directories
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+prefixes:
+    tccm: https://hotecosystem.org/tccm/
+
+default_prefix: tccm
+
+imports:
+  - ../core/uritypes
+
+types:
+  AssociationDirectoryURI:
+    description: A DirectoryURI that references a set of Associations.
+    typeof: DirectoryURI
+
+  ChangeSetDirectoryURI:
+    description: A DirectoryURI that references a set of ChangeSets.
+    typeof: DirectoryURI
+
+  CodeSystemCatalogEntryDirectoryURI:
+    description: A DirectoryURI that references a set of CodeSystemCatalogEntries.
+    typeof: DirectoryURI
+
+  CodeSystemVersionCatalogEntryDirectoryURI:
+    description: A DirectoryURI that references a set of CodeSystemVersionCatalogEntries.
+    typeof: DirectoryURI
+
+  ConceptDomainBindingDirectoryURI:
+    description: A DirectoryURI that references a set of ConceptDomainBindings.
+    typeof: DirectoryURI
+
+  ConceptDomainCatalogEntryDirectoryURI:
+    description: A DirectoryURI that references a set of ConceptDomainCatalogEntries.
+    typeof: DirectoryURI
+
+  EntityDirectoryURI:
+    description: A DirectoryURI that references a set of EntityDescriptionDirectory.
+    typeof: DirectoryURI
+
+  MapCatalogEntryDirectoryURI:
+    description: A DirectoryURI that references a set of MapCatalogEntries.
+    typeof: DirectoryURI
+
+  MapEntryDirectoryURI:
+    description: A DirectoryURI that references a set of MapEntries.
+    typeof: DirectoryURI
+
+  MapVersionDirectoryURI:
+    description: A DirectoryURI that references a set of MapVersions.
+    typeof: DirectoryURI
+
+  ResolvedValueSetDirectoryURI:
+    description: A DirectoryURI that references a set of ValueSetCatalogEntries.
+    typeof: DirectoryURI
+
+  StatementDirectoryURI:
+    description: A DirectoryURI that references a set of Statements.
+    typeof: DirectoryURI
+
+  ValueSetCatalogEntryDirectoryURI:
+    description: A DirectoryURI that references a set of ValueSetCatalogEntries.
+    typeof: DirectoryURI
+
+  ValueSetDefinitionDirectoryURI:
+    description: A DirectoryURI that references a set of ValueSetDefinitions.
+    typeof: DirectoryURI
+
+

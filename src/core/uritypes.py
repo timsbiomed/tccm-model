@@ -1,5 +1,5 @@
 # Auto generated from uritypes.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-27 15:28
+# Generation date: 2020-08-31 11:41
 # Schema: tccm
 #
 # id: https://hotecosystem.org/tccm

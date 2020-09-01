@@ -19,16 +19,34 @@ URI: [tccm:CompleteCodeSystemReference](https://hotecosystem.org/tccm/CompleteCo
 
 ## Referenced by class
 
+ *  **None** *[➞codesystem](formalDefinition__complete_code_system.md)*  <sub>OPT</sub>  **[CompleteCodeSystemReference](CompleteCodeSystemReference.md)**
 
 ## Attributes
 
 
 ### Own
 
- * [CompleteCodeSystemReference➞codeSystem](CompleteCodeSystemReference_codeSystem.md)  <sub>REQ</sub>
+ * [➞codeSystem](completeCodeSystemReference__codeSystem.md)  <sub>REQ</sub>
     * Description: A reference to the code system whose codes are to be included.
     * range: [CodeSystemReference](CodeSystemReference.md)
- * [CompleteCodeSystemReference➞codeSystemVersion](CompleteCodeSystemReference_codeSystemVersion.md)  <sub>OPT</sub>
+ * [➞codeSystemVersion](completeCodeSystemReference__codeSystemVersion.md)  <sub>OPT</sub>
     * Description: A reference to the specific version of the code system to include. If not supplied, the specific
 version of the code system is determined in the resolution call itself.
     * range: [CodeSystemVersionReference](CodeSystemVersionReference.md)
+
+### Inherited from FormalDefinition:
+
+ * [➞entityquery](formalDefinition__associated_entities.md)  <sub>OPT</sub>
+    * range: [AssociatedEntitiesReference](AssociatedEntitiesReference.md)
+ * [➞codesystem](formalDefinition__complete_code_system.md)  <sub>OPT</sub>
+    * range: [CompleteCodeSystemReference](CompleteCodeSystemReference.md)
+ * [➞valueset](formalDefinition__complete_value_set.md)  <sub>OPT</sub>
+    * range: [CompleteValueSetReference](CompleteValueSetReference.md)
+ * [➞entitylist](formalDefinition__entity_list.md)  <sub>OPT</sub>
+    * range: [SpecificEntityList](SpecificEntityList.md)
+ * [➞externaldefinition](formalDefinition__external_value_set_definition.md)  <sub>OPT</sub>
+    * range: [ExternalValueSetDefinition](ExternalValueSetDefinition.md)
+ * [➞valuequery](formalDefinition__property_query.md)  <sub>OPT</sub>
+    * range: [PropertyQueryReference](PropertyQueryReference.md)
+ * [➞definition](formalDefinition__value_set_definition.md)  <sub>OPT</sub>
+    * range: [ValueSetDefinitionEntry](ValueSetDefinitionEntry.md)

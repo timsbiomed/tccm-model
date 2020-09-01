@@ -6,6 +6,7 @@ description: |-
   “a type whose instances are identified only by their value".
 license: https://creativecommons.org/publicdomain/zero/1.0/
 
+
 prefixes:
     tccm: https://hotecosystem.org/tccm/
 
@@ -38,6 +39,10 @@ types:
       specific TCCM service implementation. LocalIdentifier syntax must match the PNAME
       production as defined in the SPARQL Query Specification . LocalIdentifiers may begin with leading digits,
       where XML Local Identifiers and NameSpaceIdentifiers may not.
+    notes:
+      - |-
+        We may want to tighten this definition up to meet the `irelative-ref` pattern --
+        see: https://www.w3.org/TR/curie/#s_syntax and https://www.ietf.org/rfc/rfc3987.txt
 
   NamespaceIdentifier:
     uri: xsd:NMTOKEN
@@ -46,24 +51,3 @@ types:
       An identifier that uniquely references the scoping namespace of an Entity (class, role, or individual)
       within the context of a TCCM service. NameSpaceIdentifier syntax must match the PNAME NS production as defined
       in the SPARQL Query Specification - meaning that it must begin with an alphabetic character
-
-#  Uri:
-#    uri: xsd:anyURI
-#    base: URI
-#    repr: str
-#    description: |-
-#      A Universal Resource Identifier (URI) as defined in IETF RFC 3986. TCCM implementations are encouraged to
-#      consider implementing this data type using the IRI (RFC3987) specification
-#
-#  Curie:
-#    uri: xsd:anyURI
-#    base: CURIE
-#
-#  UriOrCurie:
-#    uri: xsd:anyURI
-#    base: URIorCURIE
-#    repr: str
-#    description: a URI or a CURIE
-
-
-

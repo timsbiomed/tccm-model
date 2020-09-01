@@ -1,5 +1,5 @@
 # Auto generated from prefixes.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-27 15:27
+# Generation date: 2020-08-31 11:39
 # Schema: prefixes
 #
 # id: https://hotecosystem.org/tccm/prefixes

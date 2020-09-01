@@ -1,5 +1,5 @@
 # Auto generated from filters.yaml by pythongen.py version: 0.4.0
-# Generation date: 2020-08-27 15:27
+# Generation date: 2020-08-31 11:38
 # Schema: filters
 #
 # id: https://hotecosystem.org/tccm/filters
@@ -21,8 +21,9 @@ from biolinkml.utils.formatutils import camelcase, underscore, sfx
 from rdflib import Namespace, URIRef
 from biolinkml.utils.curienamespace import CurieNamespace
 from src.core.datatypes import LocalIdentifier
-from src.core.references import CodeSystemReference, CodeSystemReferenceName, MapReference, MapReferenceName, MatchAlgorithmReference, MatchAlgorithmReferenceName, PredicateReference, PredicateReferenceName, RoleReference, RoleReferenceName
-from src.core.uritypes import ExternalURI, LocalURI, PersistentURI, RenderingURI
+from src.core.entrydescription import OpaqueData
+from src.core.references import CodeSystemReference, CodeSystemReferenceName, FormatReference, FormatReferenceName, LanguageReference, LanguageReferenceName, MapReference, MapReferenceName, MatchAlgorithmReference, MatchAlgorithmReferenceName, PredicateReference, RoleReference, RoleReferenceName
+from src.core.uritypes import DocumentURI, ExternalURI, LocalURI, PersistentURI, RenderingURI
 from biolinkml.utils.metamodelcore import URIorCURIE
 from includes.types import String
 
@@ -82,13 +83,13 @@ class FilterComponent(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = TCCM.FilterComponent
 
     matchAlgorithm: Union[dict, MatchAlgorithmReference]
-    filterComponent: Dict[Union[str, PredicateReferenceName], Union[dict, PredicateReference]] = empty_dict()
+    filterComponent: List[Union[dict, PredicateReference]] = empty_list()
     matchValue: Optional[str] = None
 
     def __post_init__(self, **kwargs: Dict[str, Any]):
-        for k, v in self.filterComponent.items():
-            if not isinstance(v, PredicateReference):
-                self.filterComponent[k] = PredicateReference(name=k, **({} if v is None else v))
+        self.filterComponent = [PredicateReference(*e) for e in self.filterComponent.items()] if isinstance(self.filterComponent, dict) \
+                                else [v if isinstance(v, PredicateReference) else PredicateReference(**v)
+                                      for v in ([self.filterComponent] if isinstance(self.filterComponent, str) else self.filterComponent)]
         if self.matchAlgorithm is None:
             raise ValueError(f"matchAlgorithm must be supplied")
         if not isinstance(self.matchAlgorithm, MatchAlgorithmReference):
@@ -101,56 +102,65 @@ class FilterComponent(YAMLRoot):
 class slots:
     pass
 
-slots.component = Slot(uri=TCCM.component, name="component", curie=TCCM.curie('component'),
-                      model_uri=TCCM.component, domain=None, range=List[Union[dict, FilterComponent]])
+slots.filter__component = Slot(uri=TCCM.component, name="filter__component", curie=TCCM.curie('component'),
+                      model_uri=TCCM.filter__component, domain=None, range=List[Union[dict, FilterComponent]])
 
-slots.description = Slot(uri=TCCM.description, name="description", curie=TCCM.curie('description'),
-                      model_uri=TCCM.description, domain=None, range=Optional[str])
+slots.filter__description = Slot(uri=TCCM.description, name="filter__description", curie=TCCM.curie('description'),
+                      model_uri=TCCM.filter__description, domain=None, range=Optional[str])
 
-slots.filterComponent = Slot(uri=TCCM.filterComponent, name="filterComponent", curie=TCCM.curie('filterComponent'),
-                      model_uri=TCCM.filterComponent, domain=None, range=Dict[Union[str, PredicateReferenceName], Union[dict, PredicateReference]])
+slots.filterComponent__filterComponent = Slot(uri=TCCM.filterComponent, name="filterComponent__filterComponent", curie=TCCM.curie('filterComponent'),
+                      model_uri=TCCM.filterComponent__filterComponent, domain=None, range=List[Union[dict, PredicateReference]])
 
-slots.matchAlgorithm = Slot(uri=TCCM.matchAlgorithm, name="matchAlgorithm", curie=TCCM.curie('matchAlgorithm'),
-                      model_uri=TCCM.matchAlgorithm, domain=None, range=Union[dict, MatchAlgorithmReference])
+slots.filterComponent__matchAlgorithm = Slot(uri=TCCM.matchAlgorithm, name="filterComponent__matchAlgorithm", curie=TCCM.curie('matchAlgorithm'),
+                      model_uri=TCCM.filterComponent__matchAlgorithm, domain=None, range=Union[dict, MatchAlgorithmReference])
 
-slots.matchValue = Slot(uri=TCCM.matchValue, name="matchValue", curie=TCCM.curie('matchValue'),
-                      model_uri=TCCM.matchValue, domain=None, range=Optional[str])
+slots.filterComponent__matchValue = Slot(uri=TCCM.matchValue, name="filterComponent__matchValue", curie=TCCM.curie('matchValue'),
+                      model_uri=TCCM.filterComponent__matchValue, domain=None, range=Optional[str])
 
-slots.name = Slot(uri=TCCM.name, name="name", curie=TCCM.curie('name'),
-                      model_uri=TCCM.name, domain=None, range=URIRef)
+slots.nameAndMeaningReference__name = Slot(uri=TCCM.name, name="nameAndMeaningReference__name", curie=TCCM.curie('name'),
+                      model_uri=TCCM.nameAndMeaningReference__name, domain=None, range=URIRef)
 
-slots.synopsis = Slot(uri=TCCM.synopsis, name="synopsis", curie=TCCM.curie('synopsis'),
-                      model_uri=TCCM.synopsis, domain=None, range=Optional[str])
+slots.nameAndMeaningReference__synopsis = Slot(uri=TCCM.synopsis, name="nameAndMeaningReference__synopsis", curie=TCCM.curie('synopsis'),
+                      model_uri=TCCM.nameAndMeaningReference__synopsis, domain=None, range=Optional[str])
 
-slots.uri = Slot(uri=TCCM.uri, name="uri", curie=TCCM.curie('uri'),
-                      model_uri=TCCM.uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
+slots.nameAndMeaningReference__uri = Slot(uri=TCCM.uri, name="nameAndMeaningReference__uri", curie=TCCM.curie('uri'),
+                      model_uri=TCCM.nameAndMeaningReference__uri, domain=None, range=Optional[Union[URIorCURIE, ExternalURI]])
 
-slots.href = Slot(uri=TCCM.href, name="href", curie=TCCM.curie('href'),
-                      model_uri=TCCM.href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
+slots.nameAndMeaningReference__href = Slot(uri=TCCM.href, name="nameAndMeaningReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.nameAndMeaningReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystem", curie=TCCM.curie('codeSystem'),
-                      model_uri=TCCM.codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
+slots.codeSystemVersionReference__codeSystem = Slot(uri=TCCM.codeSystem, name="codeSystemVersionReference__codeSystem", curie=TCCM.curie('codeSystem'),
+                      model_uri=TCCM.codeSystemVersionReference__codeSystem, domain=None, range=Optional[Union[dict, CodeSystemReference]])
 
-slots.map = Slot(uri=TCCM.map, name="map", curie=TCCM.curie('map'),
-                      model_uri=TCCM.map, domain=None, range=Optional[Union[dict, MapReference]])
+slots.mapVersionReference__map = Slot(uri=TCCM.map, name="mapVersionReference__map", curie=TCCM.curie('map'),
+                      model_uri=TCCM.mapVersionReference__map, domain=None, range=Optional[Union[dict, MapReference]])
 
-slots.designation = Slot(uri=TCCM.designation, name="designation", curie=TCCM.curie('designation'),
-                      model_uri=TCCM.designation, domain=None, range=Optional[str])
+slots.predicateReference__uri = Slot(uri=TCCM.uri, name="predicateReference__uri", curie=TCCM.curie('uri'),
+                      model_uri=TCCM.predicateReference__uri, domain=None, range=Union[URIorCURIE, ExternalURI])
 
-slots.role = Slot(uri=TCCM.role, name="role", curie=TCCM.curie('role'),
-                      model_uri=TCCM.role, domain=None, range=Optional[Union[dict, RoleReference]])
+slots.predicateReference__name = Slot(uri=TCCM.name, name="predicateReference__name", curie=TCCM.curie('name'),
+                      model_uri=TCCM.predicateReference__name, domain=None, range=Optional[Union[str, LocalIdentifier]])
 
-slots.Filter_component = Slot(uri=TCCM.component, name="Filter_component", curie=TCCM.curie('component'),
-                      model_uri=TCCM.Filter_component, domain=Filter, range=List[Union[dict, "FilterComponent"]])
+slots.predicateReference__href = Slot(uri=TCCM.href, name="predicateReference__href", curie=TCCM.curie('href'),
+                      model_uri=TCCM.predicateReference__href, domain=None, range=Optional[Union[URIorCURIE, RenderingURI]])
 
-slots.Filter_description = Slot(uri=TCCM.description, name="Filter_description", curie=TCCM.curie('description'),
-                      model_uri=TCCM.Filter_description, domain=Filter, range=Optional[str])
+slots.predicateReference__designation = Slot(uri=TCCM.designation, name="predicateReference__designation", curie=TCCM.curie('designation'),
+                      model_uri=TCCM.predicateReference__designation, domain=None, range=Optional[str])
 
-slots.FilterComponent_filterComponent = Slot(uri=TCCM.filterComponent, name="FilterComponent_filterComponent", curie=TCCM.curie('filterComponent'),
-                      model_uri=TCCM.FilterComponent_filterComponent, domain=FilterComponent, range=Dict[Union[str, PredicateReferenceName], Union[dict, PredicateReference]])
+slots.sourceAndRoleReference__role = Slot(uri=TCCM.role, name="sourceAndRoleReference__role", curie=TCCM.curie('role'),
+                      model_uri=TCCM.sourceAndRoleReference__role, domain=None, range=Optional[Union[dict, RoleReference]])
 
-slots.FilterComponent_matchAlgorithm = Slot(uri=TCCM.matchAlgorithm, name="FilterComponent_matchAlgorithm", curie=TCCM.curie('matchAlgorithm'),
-                      model_uri=TCCM.FilterComponent_matchAlgorithm, domain=FilterComponent, range=Union[dict, MatchAlgorithmReference])
+slots.sourceAndRoleReference__bibliographicLink = Slot(uri=TCCM.bibliographicLink, name="sourceAndRoleReference__bibliographicLink", curie=TCCM.curie('bibliographicLink'),
+                      model_uri=TCCM.sourceAndRoleReference__bibliographicLink, domain=None, range=Optional[Union[dict, OpaqueData]])
 
-slots.FilterComponent_matchValue = Slot(uri=TCCM.matchValue, name="FilterComponent_matchValue", curie=TCCM.curie('matchValue'),
-                      model_uri=TCCM.FilterComponent_matchValue, domain=FilterComponent, range=Optional[str])
+slots.opaqueData__format = Slot(uri=TCCM.format, name="opaqueData__format", curie=TCCM.curie('format'),
+                      model_uri=TCCM.opaqueData__format, domain=None, range=Optional[Union[dict, FormatReference]])
+
+slots.opaqueData__schema = Slot(uri=TCCM.schema, name="opaqueData__schema", curie=TCCM.curie('schema'),
+                      model_uri=TCCM.opaqueData__schema, domain=None, range=Optional[Union[URIorCURIE, DocumentURI]])
+
+slots.opaqueData__language = Slot(uri=TCCM.language, name="opaqueData__language", curie=TCCM.curie('language'),
+                      model_uri=TCCM.opaqueData__language, domain=None, range=Optional[Union[dict, LanguageReference]])
+
+slots.opaqueData__value = Slot(uri=TCCM.value, name="opaqueData__value", curie=TCCM.curie('value'),
+                      model_uri=TCCM.opaqueData__value, domain=None, range=str)
