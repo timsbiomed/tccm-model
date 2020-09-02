@@ -1,4 +1,5 @@
 resourceID: HPO
+resourceType: VALUE_SET_DEFINITION
 about: http://ontologies.r.us/valueset/allofHPO
 entry:
 - include:

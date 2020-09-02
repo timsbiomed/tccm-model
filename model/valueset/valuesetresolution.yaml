@@ -54,4 +54,13 @@ classes:
         inlined: true
         multivalued: true
 
+  ResolvedValueSet:
+    attributes:
+      header:
+        range: ResolvedValueSetHeader
+      entities:
+        range: EntityReferenceList
+
+
+
 

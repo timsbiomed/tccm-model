@@ -24,6 +24,7 @@ imports:
 
 classes:
   MapVersion:
+    is_a: ResourceVersionDescription
     description: |-
       A specific version of a Map. MapVersion is bound to specific code system versions and/or value set
       versions andreferences a set of mapping entries (mapSet) that, if the resource is FINAL, are fixed with respect
