@@ -45,7 +45,6 @@ default_range: string
 imports:
   - ../core/datatypes
   - ../core/uritypes
-  - ../core/localidentifiers
   - ../core/references
 
 
@@ -61,7 +60,7 @@ classes:
         key: true
       namespaceName:
         description: The local identifier assigned to this namespace
-        range: CodeSystemName
+        range: LocalIdentifier
       entities:
         description: The entity references ("concept codes") in the list
         range: EntityReference

@@ -14,7 +14,6 @@ prefixes:
 default_prefix: tccm
 
 imports:
-  - ../core/localidentifiers
   - ../core/references
   - ../core/uritypes
   - ../core/entityreference
@@ -31,7 +30,7 @@ classes:
     attributes:
       mapVersionName:
         description: A local identifier that uniquely names this version within the context of the CTS2 service implementation.
-        range: MapVersionName
+        range: LocalIdentifier
         required: true
 
       versionOf:

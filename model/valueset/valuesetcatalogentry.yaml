@@ -11,7 +11,6 @@ default_prefix: tccm
 default_range: string
 
 imports:
-  - ../core/localidentifiers
   - ../core/references
   - ../core/resourcedescription
 
@@ -34,7 +33,7 @@ classes:
       possible for more than one definition to be in use at any given point in time.
     attributes:
       valueSetName:
-        range: ValueSetName
+        range: LocalIdentifier
         required: true
       definitions:
         range: NameAndMeaningReference
