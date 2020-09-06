@@ -98,7 +98,7 @@ classes:
         range: NameAndMeaningReference
       entity_list:
         alias: entitylist
-        range: SpecificEntityList
+        range: EntityReferenceList
       complete_value_set:
         alias: valueSet
         range: CompleteValueSetReference
@@ -170,13 +170,6 @@ classes:
         notes:
           - Question: do subjects of BNodes qualify?
         range: boolean
-
-  SpecificEntityList:
-    is_a: EntityReferenceList
-    description: |-
-      A list of specific entity references that are to be included in the definition. When specified in this form,
-      the service must include all entities in this list whether they are known to the service or not, and whether
-      they are currently ACTIVE or not.
 
   PropertyQueryReference:
     description: |-
