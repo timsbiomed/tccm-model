@@ -54,7 +54,7 @@ classes:
           has, among others, the about URI of http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#. HL7 uses ISO Object
           Identifiers (OIDs) to label resources so, from the HL7 perspective, the about URI of the NCI Thesaurus would
           be “urn:oid:2.16.840. 1.113883.3.26.1.1”
-        range: ExternalURI
+        range: PersistentURI
         required: true
 
       formalName:
@@ -136,7 +136,7 @@ classes:
           a resource that was in Manchester Syntax, it should be given a different URI than the image loaded from the
           RDF/XML syntax. The reasoning behind this is, even in cases where different syntaxes are 100% compatible
           the transformation into the TCCM model may not be identical.
-        range: DocumentURI
+        range: PersistentURI
       sourceAndNotation:
         description: |-
           A description of where the (or a) source of the version may be found, what format and language it is
@@ -159,7 +159,3 @@ classes:
         description: |-
           The date that this version of the resource is stated by its publishers to go into effect.
         range: DateAndTime
-
-
-
-

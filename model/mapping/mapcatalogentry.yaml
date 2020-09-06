@@ -77,7 +77,7 @@ classes:
         required: true
 
       versions:
-        range: MapVersionDirectoryURI
+        range: LocalURI
         description: A URI that, when resolved, returns the known versions of the containing Map
 
       currentVersion:

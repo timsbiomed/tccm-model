@@ -19,7 +19,7 @@ imports:
   - ../core/uritypes
   - ../core/directorytypes
   - ../core/entityreference
-
+  - ../core/resourcedescription
 
 
 classes:

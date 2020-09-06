@@ -57,7 +57,7 @@ classes:
     attributes:
       namespaceURI:
         description: The URI associated with the supplied namespace as determined by the author/service instance
-        range: ExternalURI
+        range: PersistentURI
         key: true
       namespaceName:
         description: The local identifier assigned to this namespace
@@ -93,11 +93,11 @@ classes:
         readonly: This is supplied by the TCCM service
       href:
         description: A reference to the "official" description of the entity in the context of the defining code system
-        range: RenderingURI
+        range: LocalURI
         readonly: This is supplied by the TCCM service
       see_also:
         description: Additional external links that serve to define or otherwise clarify the intent of the reference
-        range: RenderingURI
+        range: LocalURI
         multivalued: true
 
 

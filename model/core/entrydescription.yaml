@@ -36,7 +36,7 @@ classes:
         description: |-
           If the format of the document involves an XML encoding, this contains the URI of a document that carries
           the corresponding XML Schema or DTD.
-        range: DocumentURI
+        range: PersistentURI
         inlined: true
 
       language:

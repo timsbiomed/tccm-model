@@ -42,4 +42,4 @@ classes:
       currentDefinition:
         range: ValueSetDefinitionReference
       currentResolution:
-        range: RenderingURI
+        range: LocalURI

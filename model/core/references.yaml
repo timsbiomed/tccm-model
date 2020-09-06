@@ -48,9 +48,9 @@ classes:
         description: A summary of the role and purpose of the actual reference
         range: string
       uri:
-        range: ExternalURI
+        range: PersistentURI
       href:
-        range: RenderingURI
+        range: LocalURI
 
   AssociationReference:
     is_a: NameAndMeaningReference
@@ -200,12 +200,14 @@ classes:
       scoped exclusively by the domain.
     attributes:
       uri:
-        range: ExternalURI
+        description: TODO
+        range: PersistentURI
         required: True
       name:
         range: LocalIdentifier
       href:
-        range: RenderingURI
+        description: TODO
+        range: LocalURI
       designation:
         range: string
 
