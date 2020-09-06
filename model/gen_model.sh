@@ -15,8 +15,8 @@ for filename in $MODULE/*.yaml; do
       if [[ $? -ne 0 ]]; then
         exit 1
       fi
-      rm -rf ../docs/$MODULE/$BASE
-      gen-markdown $PARMS $MODULE/$BASE.yaml -d ../docs/$MODULE/$BASE -i
+#      rm -rf ../docs/$MODULE/$BASE
+#      gen-markdown $PARMS $MODULE/$BASE.yaml -d ../docs/$MODULE/$BASE -i
     fi
     ALLS=$ALLS"'$BASE', "
     IMPS=$IMPS$BASE", "

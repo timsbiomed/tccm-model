@@ -38,7 +38,7 @@ classes:
     attributes:
       resolutionOf:
         description: The specific value set definition that was resolved.
-        range: ValueSetDefinitionReference
+        range: NameAndMeaningReference
         inlined: true
         required: true
       resolvedUsingCodeSystem:

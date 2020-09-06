@@ -37,9 +37,9 @@ classes:
         range: ValueSetName
         required: true
       definitions:
-        range: ValueSetDefinitionReference
+        range: NameAndMeaningReference
         multivalued: true
       currentDefinition:
-        range: ValueSetDefinitionReference
+        range: NameAndMeaningReference
       currentResolution:
         range: LocalURI

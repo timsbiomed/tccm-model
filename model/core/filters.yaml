@@ -48,7 +48,7 @@ classes:
         description: |-
           The algorithm to be used for testing the referenced component. Examples might include “starts with,”
           “regular expression match,” “exists,” “inRange,” etc.
-        range: MatchAlgorithmReference
+        range: NameAndMeaningReference
         required: true
       matchValue:
         description: |-

@@ -29,7 +29,7 @@ classes:
     attributes:
       format:
         description: The format or encoding for value. This is typically recorded as the URI of a Mime Type
-        range: FormatReference
+        range: NameAndMeaningReference
         inlined: true
 
       schema:
@@ -41,7 +41,7 @@ classes:
 
       language:
         description: A reference to the written or spoken language used in value.
-        range: LanguageReference
+        range: NameAndMeaningReference
         inlined: true
 
       value:

@@ -19,9 +19,6 @@ imports:
   - ../core/localidentifiers
   - ../core/references
   - ../core/resourcedescription
-  - ../core/directorytypes
-
-
 
 classes:
   mapcatalogentry:
@@ -45,7 +42,7 @@ classes:
           information about the Map across time or service instances.
 
       fromCodeSystem:
-        range: CodeSystemReference
+        range: NameAndMeaningReference
         description: |-
           The CodeSystem from which the source codes in the Map are drawn. Note that the source codes may be drawn from
           either a CodeSystem or a ValueSet, but not both.
@@ -53,7 +50,7 @@ classes:
         deprecated: "`fromValueSet` should be used instead"
 
       fromValueSet:
-        range: ValueSetReference
+        range: NameAndMeaningReference
         required: true
         inlined: true
         description: |-
@@ -61,7 +58,7 @@ classes:
           either a x60CodeSystemx60 or a x60ValueSetx60, but not both.
 
       toCodeSystem:
-        range: CodeSystemReference
+        range: NameAndMeaningReference
         description: |-
           the x60CodeSystemx60 from which the target codes in the Map are drawn. Note that the target codes may be drawn from
           either a x60CodeSystemx60 or a x60ValueSetx60, but not both.
@@ -69,7 +66,7 @@ classes:
         deprecated: x60toValueSetx60 should be used instead
 
       toValueSet:
-        range: ValueSetReference
+        range: NameAndMeaningReference
         description: |-
           the x60ValueSetx60 from which the source codes in the Map are drawn. Note that the target codes may be drawn from
           either a x60CodeSystemx60 or a x60ValueSetx60, but not both.
@@ -81,7 +78,7 @@ classes:
         description: A URI that, when resolved, returns the known versions of the containing Map
 
       currentVersion:
-        range: MapVersionReference
+        range: NameAndMeaningReference
         description: The map version associated with this catalog entry that has been assigned the x60CURRENTx60 tag, if any
 
 

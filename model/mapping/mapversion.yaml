@@ -17,7 +17,6 @@ imports:
   - ../core/localidentifiers
   - ../core/references
   - ../core/uritypes
-  - ../core/directorytypes
   - ../core/entityreference
   - ../core/resourcedescription
 
@@ -37,31 +36,31 @@ classes:
 
       versionOf:
         description: A reference to the Map resource that this is a version of.
-        range: MapReference
+        range: NameAndMeaningReference
         inlined: true
         required: true
 
       fromValueSetDefinition:
         description: The specific value set definition that was used to resolve the from entities in this map.
-        range: ValueSetDefinitionReference
+        range: NameAndMeaningReference
         required: true
         inlined: true
 
       fromCodeSystemVersion:
         description: The specific code system version that provided the from entities in this map.
-        range: CodeSystemVersionReference
+        range: NameAndMeaningReference
         inlined: true
         deprecated: "`fromValueSetDefinition` should be used instead"
 
       toValueSetDefinition:
         description: The specific value set definition that was used to resolve the to entities in this map.
-        range: ValueSetDefinitionReference
+        range: NameAndMeaningReference
         required: true
         inlined: true
 
       toCodeSystemVersion:
         description: The specific code system version that provided the to entities in this map.
-        range: CodeSystemVersionReference
+        range: NameAndMeaningReference
         inlined: true
         deprecated: "`toValueSetDefinition` should be used instead"
 
@@ -70,7 +69,7 @@ classes:
           A list of code system versions that should be used in the resolution of fromValueSetDefinition and/or
           toValueSetDefinition. If present, this states that, for these code systems, these specific versions are to be
           used.
-        range: CodeSystemVersionReference
+        range: NameAndMeaningReference
         inlined: true
         multivalued: true
 
@@ -78,13 +77,13 @@ classes:
         description: |-
           References to the realm, context, or other external factor that determines the applicability of this
           particular map version.
-        range: ContextReference
+        range: NameAndMeaningReference
         inlined: true
         multivalued: true
 
       versionTag:
         description: A version tag assigned to this MapVersion instance by the implementing service.
-        range: VersionTagReference
+        range: NameAndMeaningReference
         inlined: true
         multivalued: true
 
@@ -134,7 +133,7 @@ classes:
         description: |-
           A reference to how well the mapping correlates. Example correlations might be Exact, not mappable, partial
           overlap, narrower than, etc.
-        range: MapCorrelationReference
+        range: NameAndMeaningReference
         inlined: true
 
   FullMapVersion:
@@ -223,7 +222,7 @@ classes:
         description: |-
           A reference to how well the mapping correlates. Example correlations might be Exact, not mappable, partial
           overlap, narrower than, etc.
-        range: MapCorrelationReference
+        range: NameAndMeaningReference
         inlined: true
 
 #        externalEntryId:

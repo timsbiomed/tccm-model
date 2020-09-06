@@ -112,7 +112,7 @@ classes:
     attributes:
       ontologyLanguage:
         description: The ontology language of the expression.
-        range: OntologyLanguageReference
+        range: NameAndMeaningReference
         required: true
         inlined: true
       expression:

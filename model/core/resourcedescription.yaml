@@ -99,12 +99,12 @@ classes:
         description: |-
           The formal language, if any, that the source for the resource version is expressed in. Examples include
           Common Logic, OWL, OWL-DL, CLAML26, etc.
-        range: OntologyLanguageReference
+        range: NameAndMeaningReference
       sourceDocumentSyntax:
         description: |-
           The syntax of the source of the resource version, if known. Examples might include rdf/xml, Turtle,
           Manchester Syntax, CSV, etc.
-        range: OntologySyntaxReference
+        range: NameAndMeaningReference
 
 
   AbstractResourceDescription:

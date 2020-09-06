@@ -42,11 +42,11 @@ classes:
     attributes:
       definitionOf:
         description: A reference to the value set being defined.
-        range: ValueSetReference
+        range: NameAndMeaningReference
         inlined: true
       versionTag:
         description: A version tag assigned to this definition by the implementing service.
-        range: VersionTagReference
+        range: NameAndMeaningReference
         inlined: true
         multivalued: true
       entry:
@@ -92,10 +92,10 @@ classes:
     attributes:
       associated_entities:
         alias: entityQuery
-        range: AssociatedEntitiesReference
+        range: NameAndMeaningReference
       property_query:
         alias: valueQuery
-        range: PropertyQueryReference
+        range: NameAndMeaningReference
       entity_list:
         alias: entitylist
         range: SpecificEntityList
@@ -135,7 +135,7 @@ classes:
       codeSystem:
         description: |-
           The code system that makes the association assertions.
-        range: CodeSystemReference
+        range: NameAndMeaningReference
         required: true
         inlined: true
       codeSystemVersion:
@@ -185,7 +185,7 @@ classes:
     attributes:
       codeSystem:
         description: The code system that contains the assertions that form the attributes or properties to be tested.
-        range: CodeSystemReference
+        range: NameAndMeaningReference
         inlined: true
         required: true
       codeSystemVersion:
@@ -211,7 +211,7 @@ classes:
     attributes:
       codeSystem:
         description: A reference to the code system whose codes are to be included.
-        range: CodeSystemReference
+        range: NameAndMeaningReference
         required: true
         inlined: true
       codeSystemVersion:
@@ -231,7 +231,7 @@ classes:
     attributes:
       valueSet:
         description: A reference to the value set whose definition supplies a set of entity references.
-        range: ValueSetReference
+        range: NameAndMeaningReference
         inlined: true
         required: true
       valueSetDefinition:
@@ -239,7 +239,7 @@ classes:
           A reference to a particular definition of valueSet that is to be used in resolving this reference. If absent,
           the specific definition is determined by the resolve value set call. If present, valueSetDefinition must be
           a definition of valueSet and will always be used to resolve this entity set.
-        range: ValueSetDefinitionReference
+        range: NameAndMeaningReference
         inlined: true
       referenceCodeSystemVersion:
         description: |-
