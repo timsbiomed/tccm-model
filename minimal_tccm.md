@@ -11,7 +11,7 @@ sources.  A submission to TCCM must include a tool that can
 3. Support pretty much any ontology / classification system / concept scheme that one
    may encounter on the web.
 4. Access service will be based on the TCCM Code Set specification
-   * All concepts in TCCM Co
+   * All concepts in TCCM Concept Description
 
 
 ## domain: skos:Concept
@@ -19,7 +19,7 @@ sources.  A submission to TCCM must include a tool that can
 * skos:definition
 * skos:notation
 * skos:seeAlso
-* skos:broader
+* skos:broader   (We need to work UP the tree)
 * skos:inScheme
 
 ## domain: skos:ConceptScheme
@@ -41,5 +41,6 @@ sources.  A submission to TCCM must include a tool that can
 * ? -- for multilingual definitions (See Tom Baker thread)
 * (deprecated)
 * (replaced by)
+* (versioning)
 
 ## Future Items
