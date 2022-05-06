@@ -1,0 +1,5 @@
+biolinkml
+linkml
+poetry
+rdflib ~= 5.0
+rdflib-jsonld
