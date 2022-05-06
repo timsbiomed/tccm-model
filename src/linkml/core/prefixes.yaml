@@ -7,7 +7,7 @@ license: https://creativecommons.org/publicdomain/zero/1.0/
 prefixes:
     tccm: https://hotecosystem.org/tccm/
     xsd: http://www.w3.org/2001/XMLSchema#
-    biolinkml: https://w3id.org/biolink/biolinkml/
+    linkml: https://w3id.org/linkml/
     rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
     rdfs: http://www.w3.org/2000/01/rdf-schema#
     owl: http://www.w3.org/2002/07/owl#
@@ -16,4 +16,4 @@ prefixes:
 default_prefix: tccm
 
 imports:
-  - biolinkml:types
+  - linkml:types
