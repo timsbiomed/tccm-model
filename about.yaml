@@ -1,0 +1,3 @@
+name: tccm
+description: tccm
+source_schema_path: src/linkml/tccm.yaml
