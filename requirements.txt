@@ -99,7 +99,7 @@ pastel==0.2.1
 patch-ng==1.17.1
 pbr==5.4.5
 pexpect==4.8.0
-Pillow==6.1.0
+Pillow==9.0.1
 pipenv==2021.5.29
 pipx==0.15.6.0
 pkginfo==1.8.2
