@@ -8,6 +8,10 @@ metamodel/metamodel.py-PREV
 tests/test_scripts/temp/
 biolink/*-PREV
 
+# Static
+/docs/*
+!/docs/spec/
+
 # Jekyll
 Gemfile.lock
 _site
