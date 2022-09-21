@@ -181,7 +181,7 @@ typed-ast==1.4.0
 typing-extensions==3.10.0.0
 unicodecsv==0.14.1
 unittest2==1.1.0
-urllib3==1.26.2
+urllib3==1.26.5
 userpath==1.4.1
 uvicorn==0.14.0
 validators==0.18.2
