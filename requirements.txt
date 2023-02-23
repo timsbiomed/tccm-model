@@ -74,7 +74,7 @@ linkml==1.1.4
 linkml-runtime==1.1.1
 lockfile==0.12.2
 lxml==4.6.3
-markdown-it-py==1.1.0
+markdown-it-py==2.2.0
 MarkupSafe==1.1.1
 mccabe==0.6.1
 mdit-py-plugins==0.2.8
